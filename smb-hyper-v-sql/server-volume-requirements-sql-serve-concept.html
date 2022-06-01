@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You need to be aware of certain SMB server and volume requirements when creating SQL Server over SMB configurations for nondisruptive operations.">
-  <meta name="keywords" content=" smb, cifs, server, volume, requirement, sql, nondisruptive, operation"><!-- Icons -->
+  <meta name="keywords" content=" smb, cifs, server, volume, requirement, sql, nondisruptive, operation, snapcenter plug-in"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -23529,11 +23529,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-09 22:31:46 +0000">12/09/2021</time>
+    <time datetime="2022-05-27 13:58:34 +0000">05/27/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-sumathi">
+    <img  class="avatar avatar-small"
+          alt="netapp-sumathi"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/64958806?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -23605,7 +23613,7 @@
 <p>Although the volume containing the database files can contain junctions, SQL Server does not cross junctions when creating the database directory structure.</p>
 </li>
 <li>
-<p>For SnapManager for Microsoft SQL Server backup operations to succeed, you must have enough available space on the volume.</p>
+<p>For SnapCenter Plug-in for Microsoft SQL Server backup operations to succeed, you must have enough available space on the volume.</p>
 <div class="paragraph">
 <p>The volume on which the SQL Server database files reside must be large enough to hold the database directory structure and all contained files residing within the share.</p>
 </div>
