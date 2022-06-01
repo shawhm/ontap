@@ -23529,7 +23529,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-14 21:42:21 +0000">04/14/2022</time>
+    <time datetime="2022-05-13 19:51:01 +0000">05/13/2022</time>
     
   
 
@@ -23553,13 +23553,13 @@
 <p>Beginning in ONTAP 9.10.1, you can use <a href="https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts" target="_blank" rel="noopener">Azure Key Vault (AKV)</a> and <a href="https://cloud.google.com/kms/docs" target="_blank" rel="noopener">Google Cloud Platform&#8217;s Key Management Service (Cloud KMS)</a> to protect your ONTAP encryption keys in a Azure- or Google Cloud Platform-deployed application.</p>
 </div>
 <div class="paragraph">
-<p>AKV and Cloud KMS can be used to protect <a href="configure-netapp-volume-encryption-concept.html">NetApp Volume Encryption (NVE) keys</a> only for data vservers.</p>
+<p>AKV and Cloud KMS can be used to protect <a href="configure-netapp-volume-encryption-concept.html">NetApp Volume Encryption (NVE) keys</a> only for data SVMs.</p>
 </div>
 <div class="paragraph">
 <p>Key management with AKV or Cloud KMS can be enabled with the CLI or the ONTAP REST API.</p>
 </div>
 <div class="paragraph">
-<p>When using AKV or Cloud KMS, be aware that by default a data vserver LIF is used to communicate with the cloud key management endpoint. A node management network is used to communicate with the cloud provider&#8217;s authentication services (login.microsoftonline.com for Azure; oauth2.googleapis.com for Cloud KMS). If the cluster network is not configured correctly, the cluster will not properly utilize the key management service.</p>
+<p>When using AKV or Cloud KMS, be aware that by default a data SVM LIF is used to communicate with the cloud key management endpoint. A node management network is used to communicate with the cloud provider&#8217;s authentication services (login.microsoftonline.com for Azure; oauth2.googleapis.com for Cloud KMS). If the cluster network is not configured correctly, the cluster will not properly utilize the key management service.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -23574,7 +23574,7 @@
 <p>Multi-tenant Encryption Key Management (MTEKM) license installed</p>
 </li>
 <li>
-<p>You must be a cluster or vserver administrator</p>
+<p>You must be a cluster or SVM administrator</p>
 </li>
 </ul>
 </div>
@@ -23588,7 +23588,7 @@
 <p>AKV and Cloud KMS are not available for MetroCluster configurations.</p>
 </li>
 <li>
-<p>AKV and Cloud KMS can only be configured on a data vserver</p>
+<p>AKV and Cloud KMS can only be configured on a data SVM</p>
 </li>
 </ul>
 </div>
@@ -23603,7 +23603,7 @@
 <div class="exampleblock tabbed-block">
 <div class="content">
 <div class="openblock">
-<div class="title">Azure for ONTAP</div>
+<div class="title">Azure</div>
 <div class="content">
 <div class="olist arabic">
 <div class="title">Enable Azure Key Vault for ONTAP</div>
@@ -23623,55 +23623,15 @@ When prompted, enter either the client certificate or client secret from your Az
 </li>
 <li>
 <p>Verify AKV is enabled correctly:<br>
-<code>security key-manager external azure show vserver <em>vserver_name</em></code><br>
-If the service reachability is not OK, establish the connectivity to the AKV key management service via data vserver LIF.</p>
+<code>security key-manager external azure show vserver <em>SVM_name</em></code><br>
+If the service reachability is not OK, establish the connectivity to the AKV key management service via data SVM LIF.</p>
 </li>
 </ol>
 </div>
 </div>
 </div>
 <div class="openblock">
-<div class="title">Azure for Cloud Volumes ONTAP</div>
-<div class="content">
-<div class="olist arabic">
-<div class="title">Enable Azure Key Vault for Cloud Volumes ONTAP</div>
-<ol class="arabic">
-<li>
-<p>Before you begin, you need to obtain the appropriate authentication credentials from your Azure account, either a client secret or certificate.<br>
-You must also ensure all nodes in the cluster are healthy. You can check this with the command <code>cluster show</code>.</p>
-</li>
-<li>
-<p>Set privileged level to advanced<br>
-<code>set -priv advanced</code></p>
-</li>
-<li>
-<p>Enable AKV on the SVM<br>
-<code>security key-manager external azure enable -client-id <em>client_id</em> -tenant-id <em>tenant_id</em> -name -key-id <em>key_id</em> -authentication-method {certificate|client-secret}</code><br>
-When prompted, enter either the client certificate or client secret from your Azure account.</p>
-</li>
-<li>
-<p>Set up DNS for the data SVM:<br>
-<code>dns create -domains <em>domain_name</em> -name-servers <em>server_address</em> -vserver <em>vserver_name</em></code></p>
-</li>
-<li>
-<p>Go to the Azure portal for the subscription that contains your key vault. Select the <strong>Access policies</strong> menu. Provide the application the key permissions, secret permissions, and certificate permissions and then save.</p>
-<div class="imageblock">
-<div class="content">
-<img src="../media/azure-key-vault-access-policies.png" alt="Azure access policies menu showing the permissions fields that must be provided">
-</div>
-</div>
-</li>
-<li>
-<p>Verify AKV is enabled correctly:<br>
-<code>security key-manager external azure show vserver <em>vserver_name</em></code><br>
-If the service reachability is not OK, establish the connectivity to the AKV key management service via data vserver LIF.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="openblock">
-<div class="title">Google Cloud for ONTAP</div>
+<div class="title">Google Cloud</div>
 <div class="content">
 <div class="olist arabic">
 <div class="title">Enable Cloud KMS with the CLI for ONTAP</div>
@@ -23691,9 +23651,9 @@ When prompted, enter the contents of the JSON file with the Service Account Priv
 </li>
 <li>
 <p>Verify that Cloud KMS is configured with the correct parameters:<br>
-<code>security key-manager external gcp show vserver <em>vserver_name</em></code><br>
+<code>security key-manager external gcp show vserver <em>SVM_name</em></code><br>
 The status of <code>kms_wrapped_key_status</code> will be <code>“UNKNOWN”</code> if no encrypted volumes have been created.<br>
-If the service reachability is not OK, establish the connectivity to the GCP key management service via data vserver LIF.</p>
+If the service reachability is not OK, establish the connectivity to the GCP key management service via data SVM LIF.</p>
 </li>
 </ol>
 </div>
@@ -23702,9 +23662,9 @@ If the service reachability is not OK, establish the connectivity to the GCP key
 </div>
 </div>
 <div class="paragraph">
-<p>If one or more encrypted volumes is already configured for a data vserver and the corresponding NVE keys are managed by the admin vserver onboard key manager, those keys should be migrated to the external key management service. To do this with the CLI, run:<br>
-<code>security key-manager key migrate -from-Vserver <em>admin_vserver</em> -to-Vserver <em>data_vserver</em></code><br>
-New encrypted volumes cannot be created for the tenant&#8217;s data vserver until all NVE keys of the data vserver are successfully migrated.</p>
+<p>If one or more encrypted volumes is already configured for a data SVM and the corresponding NVE keys are managed by the admin SVM onboard key manager, those keys should be migrated to the external key management service. To do this with the CLI, run the command:<br>
+<code>security key-manager key migrate -from-Vserver <em>admin_SVM</em> -to-Vserver <em>data_SVM</em></code><br>
+New encrypted volumes cannot be created for the tenant&#8217;s data vserver until all NVE keys of the data SVM are successfully migrated.</p>
 </div>
 </div>
 </div>
