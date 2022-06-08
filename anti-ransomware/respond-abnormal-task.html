@@ -23521,7 +23521,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-14 22:02:42 +0000">12/14/2021</time>
+    <time datetime="2022-06-02 14:37:35 +0000">06/02/2022</time>
     
   
 
@@ -23594,6 +23594,18 @@
 <div class="paragraph">
 <p>In both cases, normal monitoring resumes after updating and clearing the notices; anti-ransomware records your evaluation, logs are updated with the new file types and using them for future analysis. However, in the case of a suspected attack, you must determine whether it is an attack, respond to it if it is, and restore protected data before clearing the notices. For more information, see <a href="index.html#how-to-recover-data-in-ontap-after-a-ransomware-attack">How to recover from a ransomware attack</a>.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+There are no notices to clear if you restored an entire volume.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -23634,7 +23646,8 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Potential Ransomware Attack</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Respond to the attack and restore protected data. Then click <strong>Update</strong> and <strong>Clear Suspect File Types</strong> to record your decision and resume normal anti-ransomware monitoring.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Respond to the attack and restore protected data. Then click <strong>Update</strong> and <strong>Clear Suspect File Types</strong> to record your decision and resume normal anti-ransomware monitoring.<br>
+There are no suspect file types to clear if you restored an entire volume.</p></td>
 </tr>
 </tbody>
 </table>
@@ -23724,6 +23737,9 @@ Number of Attacks: 1</pre>
 <code>[-seq-no <em>integer</em>]</code> Sequence number of the file in the suspect list<br>
 <code>[-extension <em>text</em>, … ]</code> File extension<br>
 <code>[-start-time <em>date_time</em> -end-time <em>date_time</em>]</code> Starting and ending times for the range of files to be cleared, in the form "MM/DD/YYYY HH:MM:SS".</p>
+</div>
+<div class="paragraph">
+<p>There are no suspect file types to clear if you restored an entire volume.</p>
 </div>
 </li>
 </ul>

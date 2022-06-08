@@ -23521,7 +23521,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-01 12:20:32 +0000">06/01/2022</time>
+    <time datetime="2022-06-07 11:22:43 +0000">06/07/2022</time>
     
   
 
@@ -23566,9 +23566,6 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>In the current release, ransomware protection is most suitable in NAS environments. Support for other environments will be available in future releases.</p>
-</div>
-<div class="paragraph">
 <p>ONTAP platform support:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -23735,15 +23732,34 @@ The anti-ransomware feature depends on distinguishing incoming data as encrypted
 <div class="paragraph">
 <p>The anti-ransomware feature can have a minimal impact on system performance as measured in throughput and peak IOPS. The impact of the anti-ransomware feature is highly dependent on volume workloads. For most typical or common workloads, the following configuration limits are recommended:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>No more than 50 volumes per node if the workload is either read-intensive or the data can be compressed.</p>
-</li>
-<li>
-<p>No more than 20 volumes per node if the workload is write-intensive and the data cannot be compressed.</p>
-</li>
-</ul>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 37.5%;">
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Workload characteristics</th>
+<th class="tableblock halign-left valign-top">Recommended volume limit per node</th>
+<th class="tableblock halign-left valign-top">Performance degradation when per-node volume limit is exceeded *</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read-intensive or the data can be compressed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4% of maximum IOPS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Write-intensive and the data cannot be compressed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10% of maximum IOPS</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>* System performance is not degraded beyond these percentages regardless of the number of volumes added in excess of the recommended limits.</p>
 </div>
 <div class="paragraph">
 <p>Because anti-ransomware analytics are run in a prioritized sequence, as the number of protected volumes increases, analytics are run on each volume less frequently.</p>
