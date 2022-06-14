@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Federal Information Processing Standards (FIPS) 140-2 compliant for all SSL connections">
-  <meta name="keywords" content=" federal, information, processing, standards, fips, 140-2, compliant, ssl, connections, tlsv1.2, tlsv1.1, tlsv1, enable, enabling, disable, disabling, view, status, federal information processing standards (fips) 140-2 compliant for all ssl connections, configure network security using federal information processing standards (fips), enable fips, disable fips, view fips compliance status"><!-- Icons -->
+  <meta name="keywords" content=" fips 140-2, compliant, ssl, connections, tlsv1.2, tlsv1.1, tlsv1, enable fips, disable fips, compliance status, SSL"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -23525,7 +23525,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-24 21:23:17 +0000">05/24/2022</time>
+    <time datetime="2022-06-14 14:44:51 +0000">06/14/2022</time>
     
   
 
@@ -23673,6 +23673,18 @@ ssh-rsa</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>It is recommended that all secure users adjust their security configuration immediately after system installation or upgrade. When SSL FIPS mode is enabled, SSL communication from ONTAP to external client or server components outside of ONTAP will use FIPS compliant crypto for SSL.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+When FIPS is enabled, you cannot install or create a certificate with an RSA key length of 4096.
+</td>
+</tr>
+</table>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
