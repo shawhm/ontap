@@ -23525,11 +23525,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-09 22:31:46 +0000">12/09/2021</time>
+    <time datetime="2022-06-16 22:20:30 +0000">06/16/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lenida">
+    <img  class="avatar avatar-small"
+          alt="netapp-lenida"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54081920?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -23550,10 +23558,7 @@
 <div class="title">What you&#8217;ll need</div>
 <ul>
 <li>
-<p>Transitioned volumes can be converted to FlexGroup volumes.</p>
-<div class="paragraph">
-<p>Converting transitioned volumes to FlexGroup volumes requires diag mode and should be performed only under NetApp Support supervision. It is highly recommended that you contact NetApp Support before you proceed with the conversion process.</p>
-</div>
+<p>Transitioned volumes can be converted to FlexGroup volumes beginning in ONTAP 9.8. If you are converting a transitioned volume to FlexGroup, see Knowledge Base article <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_To_Convert_a_Transitioned_FlexVol_to_FlexGroup">How To Convert a Transitioned FlexVol to FlexGroup</a> for more information.</p>
 </li>
 <li>
 <p>The FlexVol volume that is being converted must be online.</p>
@@ -23600,7 +23605,7 @@ vs0     my_volume online flexvol</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You cannot convert a FlexGroup volume back to a FlexVol volume. If you want to do so, you should contact support.</p>
+<p>You cannot convert a FlexGroup volume back to a FlexVol volume.</p>
 </div>
 </td>
 </tr>
