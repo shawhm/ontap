@@ -1853,6 +1853,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -16846,10 +16848,12 @@
       </a></li></ul></li></ul></li><li class="subfolders "><a href="/us-en/ontap/system-admin/command-line-interface-concept.html">
         <div class="na-navbar-padding"> Use the ONTAP command-line interface</div>
       </a>
-      <ul><li class="subfolders "><a href="/us-en/ontap/system-admin/different-shells-cli-commands-concept-cluster-admin.html">
+      <ul><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> About the different shells for CLI commands (cluster administrators only)</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/system-admin/access-nodeshell-commands-options-clustershell-concept.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/system-admin/different-shells-cli-commands-concept-cluster-admin.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/system-admin/access-nodeshell-commands-options-clustershell-concept.html">
         Access of nodeshell commands and options in the clustershell
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/system-admin/display-nodeshell-commands-task.html">
         Display available nodeshell commands
@@ -22545,19 +22549,11 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-09 22:31:46 +0000">12/09/2021</time>
+    <time datetime="2022-06-28 18:24:08 +0000">06/28/2022</time>
     
   
 
 <span>Contributors
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
-    <img  class="avatar avatar-small"
-          alt="netapp-thomi"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/54111336?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
     <img  class="avatar avatar-small"
           alt="netapp-ahibbard"
@@ -22566,24 +22562,56 @@
           style="border-radius: 50%;"/>
   </a>
   
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
+    <img  class="avatar avatar-small"
+          alt="netapp-thomi"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54111336?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
 <p>Beginning with ONTAP 9.4, you can use secure purge to non-disruptively scrub data on NVE-enabled volumes. Scrubbing data on an encrypted volume ensures that it cannot be recovered from the physical media, for example, in cases of &#8220;spillage,&#8221; where data traces may have been left behind when blocks were overwritten, or for securely deleting a vacating tenant&#8217;s data.</p>
 </div>
 <div class="paragraph">
 <p>Secure purge works only for previously deleted files on NVE-enabled volumes. You cannot scrub an unencrypted volume. You must use KMIP servers to serve keys, not the onboard key manager.</p>
 </div>
-<div class="paragraph">
-<p>Secure purge functions differently depending upon your version of ONTAP.</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="considerations-for-using-secure-purge">Considerations for using secure purge</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>In ONTAP 9.8 and later:</p>
+<p>Volumes created in an aggregate enabled for NetApp Aggregate Encryption (NAE) do not support secure purge.</p>
+</li>
+<li>
+<p>Secure purge works only for previously deleted files on NVE-enabled volumes.</p>
+</li>
+<li>
+<p>You cannot scrub an unencrypted volume.</p>
+</li>
+<li>
+<p>You must use KMIP servers to serve keys, not the onboard key manager.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Secure purge functions differently depending upon your version of ONTAP.</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">ONTAP 9.8 and later</div>
+<div class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -22609,13 +22637,15 @@
 </div>
 </li>
 <li>
-<p>By default, all Snapshot copies in FlexVol volumes are automatically deleted during the secure purge operation. By default, Snapshots in FlexGroup volumes and volumes using SnapMirror data protection are not automatically deleted during the secure purge operation. These defaults can be changed using the <code>secure purge delete-all-snapshots [true|false]</code>. command.</p>
+<p>By default, all Snapshot copies in FlexVol volumes are automatically deleted during the secure purge operation. By default, Snapshots in FlexGroup volumes and volumes using SnapMirror data protection are not automatically deleted during the secure purge operation. These defaults can be changed using the <code>secure purge delete-all-snapshots [true|false]</code> command.</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>In ONTAP 9.7 and earlier:</p>
+</div>
+</div>
+<div class="openblock">
+<div class="title">ONTAP 9.7 and earlier:</div>
+<div class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -22640,9 +22670,6 @@
 <p>If there are busy Snapshot copies in the volume, you must release the Snapshot copies before you can purge the volume. For example, you may need to split a FlexClone volume from its parent.</p>
 </div>
 </li>
-</ul>
-</div>
-</li>
 <li>
 <p>Successfully invoking the secure-purge feature triggers a volume move that re-encrypts the remaining, unpurged data with a new key.</p>
 <div class="paragraph">
@@ -22650,6 +22677,12 @@
 </div>
 </li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
     </article>
