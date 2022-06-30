@@ -1968,7 +1968,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/commands-manage-sp-from-ontap-reference.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-06-28T11:47:05+00:00</lastmod>
       
     </url>
   
@@ -2346,7 +2346,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/revert/concept_revert_process_considerations.html</loc>
       
-      <lastmod>2021-04-27T18:07:04+00:00</lastmod>
+      <lastmod>2022-06-27T15:50:22+00:00</lastmod>
       
     </url>
   
@@ -5468,7 +5468,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/determine-data-inactive-reporting-task.html</loc>
       
-      <lastmod>2022-04-05T22:18:14+00:00</lastmod>
+      <lastmod>2022-06-28T21:02:50+00:00</lastmod>
       
     </url>
   
@@ -6616,7 +6616,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/volumes/enable-deduplication-volume-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-06-27T15:24:11+00:00</lastmod>
       
     </url>
   
@@ -12475,7 +12475,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/remov-nodes-cluster-concept.html</loc>
       
-      <lastmod>2022-03-14T17:40:21+00:00</lastmod>
+      <lastmod>2022-06-29T09:26:47+00:00</lastmod>
       
     </url>
   
@@ -12545,7 +12545,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/volumes/remove-space-savings-volume-reference.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-06-27T17:16:07+00:00</lastmod>
       
     </url>
   
@@ -13350,7 +13350,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2022-06-28T19:32:28+00:00</lastmod>
+      <lastmod>2022-06-29T23:28:45+00:00</lastmod>
       
     </url>
   
@@ -15828,7 +15828,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/revert/task_reverting_an_ontap_cluster.html</loc>
       
-      <lastmod>2021-06-02T16:16:38+00:00</lastmod>
+      <lastmod>2022-06-27T15:55:51+00:00</lastmod>
       
     </url>
   
@@ -15842,7 +15842,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/revert/task_reverting_systems_with_deduplicated_volumes.html</loc>
       
-      <lastmod>2021-10-21T22:41:12+00:00</lastmod>
+      <lastmod>2022-06-29T17:59:42+00:00</lastmod>
       
     </url>
   
@@ -15989,7 +15989,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/revert/task_things_to_verify_before_revert.html</loc>
       
-      <lastmod>2022-04-25T21:42:29+00:00</lastmod>
+      <lastmod>2022-06-29T17:47:53+00:00</lastmod>
       
     </url>
   
@@ -16010,7 +16010,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_updating_an_ontap_cluster_disruptively.html</loc>
       
-      <lastmod>2022-05-23T11:35:11+00:00</lastmod>
+      <lastmod>2022-06-29T17:52:10+00:00</lastmod>
       
     </url>
   
@@ -16038,21 +16038,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_upgrade_nondisruptive_manual_cli.html</loc>
       
-      <lastmod>2022-05-10T20:43:21+00:00</lastmod>
+      <lastmod>2022-06-27T20:16:28+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verify_cluster_after_upgrade.html</loc>
       
-      <lastmod>2022-04-25T21:42:29+00:00</lastmod>
+      <lastmod>2022-06-29T17:47:53+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/revert/task_verify_health.html</loc>
       
-      <lastmod>2022-04-25T21:42:29+00:00</lastmod>
+      <lastmod>2022-06-29T17:47:53+00:00</lastmod>
       
     </url>
   
@@ -16101,7 +16101,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verifying_storage_health_verifying_that_the_cluster_is_ready.html</loc>
       
-      <lastmod>2022-05-19T17:15:21+00:00</lastmod>
+      <lastmod>2022-06-29T17:47:53+00:00</lastmod>
       
     </url>
   
@@ -16136,7 +16136,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verifying_the_networking_and_storage_status_for_metrocluster_post_upgrade.html</loc>
       
-      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      <lastmod>2022-06-29T17:47:53+00:00</lastmod>
       
     </url>
   
@@ -16360,14 +16360,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/troubleshoot-autosupport-http-https-task.html</loc>
       
-      <lastmod>2021-12-03T19:28:13+00:00</lastmod>
+      <lastmod>2022-06-29T09:35:44+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/troubleshoot-autosupport-messages-not-received-task.html</loc>
       
-      <lastmod>2021-10-19T18:27:41+00:00</lastmod>
+      <lastmod>2022-06-28T11:37:16+00:00</lastmod>
       
     </url>
   
