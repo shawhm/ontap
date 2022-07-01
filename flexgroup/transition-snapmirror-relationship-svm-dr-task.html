@@ -1287,6 +1287,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -1453,6 +1455,8 @@
             What should I do after reverting my cluster?
           </a>
           
+
+
 
 
 
@@ -10411,8 +10415,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -16649,6 +16651,8 @@
         Set the desired NT ACL permissions display level for NFS clients
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_enforcing_sha_2_on_user_account_passwords_dot_9_0_upgrade_guide.html">
         Enforce SHA-2 on administrator passwords
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/sp-user-accounts-change-concept.html">
+        Change in user accounts that can access the Service Processor
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_when_you_need_to_update_the_disk_qualification_package.html">
         Update the DQP
       </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_update_firmware.html">
@@ -16724,6 +16728,8 @@
         Revert password hash function
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/concept_support_of_sp_firmware_automatic_revert.html">
         Maually update SP firmware
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/verify-sp-user-accounts-task.html">
+        Verify user accounts that can access the Service Processor
       </a></li></ul></li></ul></li></ul></li><li class="subfolders "><a href="/us-en/ontap/cluster-admin/index.html">
         <div class="na-navbar-padding"> Cluster administration</div>
       </a>
@@ -20264,8 +20270,6 @@
         Resolve iSCSI error messages on the storage system
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/san-admin/troubleshoot-iscsi-luns-not-visible-reference.html">
         Troubleshoot iSCSI LUNs not visible on the host
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/san-admin/asa-iscsi-lif-fo-task.html">
-        iSCSI LIF failover for ASA platforms
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Manage FC protocol</div>
       </a>
@@ -22549,11 +22553,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-14 21:50:12 +0000">10/14/2021</time>
+    <time datetime="2022-06-30 18:56:04 +0000">06/30/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lenida">
+    <img  class="avatar avatar-small"
+          alt="netapp-lenida"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54081920?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -22580,10 +22592,21 @@
 <p>From the SnapMirror destination, resynchronize the FlexGroup level SnapMirror relationship: <code>snapmirror resync</code></p>
 </li>
 <li>
-<p>Create the FlexGroup SVM DR SnapMirror relationship: <code>snapmirror create -policy DPDefault -identity-preserve true -destination-path dest_svm:dest_flexgroup -source-path src_svm:src_flexgroup</code></p>
+<p>Create the FlexGroup SVM DR SnapMirror relationship. Use the same SnapMirror policy which is configured on the FlexGroup volume SnapMirror relationships: <code>snapmirror create -destination-path dest_svm: -source-path src_svm: -identity-preserve true -policy MirrorAllSnapshots</code></p>
 </li>
+</ol>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>You must use the <code>-identity-preserve true</code> option of the <code>snapmirror create</code> command when you create your replication relationship.</p>
+</div>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Verify the relationship is broken off: <code>snapmirror show -destination-path dest_svm:dest_flexgroup -source-path src_svm:src_flexgroup</code></p>
+<p>Verify the relationship is broken off: <code>snapmirror show -destination-path dest_svm: -source-path src_svm:</code></p>
 <div class="listingblock">
 <div class="content">
 <pre>snapmirror show -destination-path fg_vs_renamed: -source-path fg_vs:
@@ -22608,7 +22631,7 @@ fg_vs:        XDP  fg_vs1_renamed:     Broken-off
 </div>
 </li>
 <li>
-<p>Resynchronize the SVM SnapMirror relationship: <code>snapmirror resync -destination-path dest_svm:dest_flexgroup -source-path src_svm:src_flexgroup</code></p>
+<p>Resynchronize the SVM SnapMirror relationship: <code>snapmirror resync -destination-path dest_svm: -source-path src_svm:</code></p>
 <div class="listingblock">
 <div class="content">
 <pre>snapmirror resync -destination-path fg_vs_renamed: -source-path fg_vs:

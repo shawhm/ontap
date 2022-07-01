@@ -1287,6 +1287,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -1453,6 +1455,8 @@
             What should I do after reverting my cluster?
           </a>
           
+
+
 
 
 
@@ -10411,8 +10415,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -16649,6 +16651,8 @@
         Set the desired NT ACL permissions display level for NFS clients
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_enforcing_sha_2_on_user_account_passwords_dot_9_0_upgrade_guide.html">
         Enforce SHA-2 on administrator passwords
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/sp-user-accounts-change-concept.html">
+        Change in user accounts that can access the Service Processor
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_when_you_need_to_update_the_disk_qualification_package.html">
         Update the DQP
       </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_update_firmware.html">
@@ -16724,6 +16728,8 @@
         Revert password hash function
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/concept_support_of_sp_firmware_automatic_revert.html">
         Maually update SP firmware
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/verify-sp-user-accounts-task.html">
+        Verify user accounts that can access the Service Processor
       </a></li></ul></li></ul></li></ul></li><li class="subfolders "><a href="/us-en/ontap/cluster-admin/index.html">
         <div class="na-navbar-padding"> Cluster administration</div>
       </a>
@@ -20264,8 +20270,6 @@
         Resolve iSCSI error messages on the storage system
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/san-admin/troubleshoot-iscsi-luns-not-visible-reference.html">
         Troubleshoot iSCSI LUNs not visible on the host
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/san-admin/asa-iscsi-lif-fo-task.html">
-        iSCSI LIF failover for ASA platforms
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Manage FC protocol</div>
       </a>
@@ -22549,11 +22553,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-19 18:27:41 +0000">10/19/2021</time>
+    <time datetime="2022-06-20 15:12:59 +0000">06/20/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-forry">
+    <img  class="avatar avatar-small"
+          alt="netapp-forry"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/51911827?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-barbe">
     <img  class="avatar avatar-small"
           alt="netapp-barbe"
@@ -22568,10 +22580,33 @@
 </p>
 
 <div class="paragraph lead">
-<p>When you try to access the SP, you are prompted for credential. Cluster user accounts that are created with the <code>service-processor</code> application type have access to the SP CLI on any node of the cluster. SP user accounts are managed from ONTAP and authenticated by password.</p>
+<p>When you try to access the SP, you are prompted for credential. Cluster user accounts that are created with the <code>service-processor</code> application type have access to the SP CLI on any node of the cluster. SP user accounts are managed from ONTAP and authenticated by password. Beginning with ONTAP 9.9.1, SP user accounts must have the <code>admin</code> role.</p>
 </div>
 <div class="paragraph">
-<p>User accounts for accessing the SP are managed from ONTAP instead of the SP CLI. A cluster user account of any role can access the SP if it is created with the <code>-application</code> parameter of the <code>security login create</code> command set to <code>service-processor</code> and the <code>-authmethod</code> parameter set to <code>password</code>. The SP supports only password authentication.</p>
+<p>User accounts for accessing the SP are managed from ONTAP instead of the SP CLI. A cluster user account can access the SP if it is created with the <code>-application</code> parameter of the <code>security login create</code> command set to <code>service-processor</code> and the <code>-authmethod</code> parameter set to <code>password</code>. The SP supports only password authentication.</p>
+</div>
+<div class="paragraph">
+<p>You must specify the <code>-role</code> parameter when creating an SP user account.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In ONTAP 9.9.1 and later releases, you must specify <code>admin</code> for the <code>-role</code> parameter, and any modifications to an account require the <code>admin</code> role. Other roles are no longer permitted for security reasons.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If you are upgrading to ONTAP 9.9.1 or later releases, see <a href="../upgrade/sp-user-accounts-change-concept.html">Change in user accounts that can access the Service Processor</a>.</p>
+</li>
+<li>
+<p>If you are reverting to ONTAP 9.8 or earlier releases, see <a href="../revert/verify-sp-user-accounts-task.html">Verify user accounts that can access the Service Processor</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In ONTAP 9.8 and earlier releases, any role can access the SP, but <code>admin</code> is recommended.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>By default, the cluster user account named &#8220;admin&#8221; includes the <code>service-processor</code> application type and has access to the SP.</p>

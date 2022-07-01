@@ -148,7 +148,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/accounts-access-sp-concept.html</loc>
       
-      <lastmod>2021-10-19T18:27:41+00:00</lastmod>
+      <lastmod>2022-06-20T15:12:59+00:00</lastmod>
       
     </url>
   
@@ -575,7 +575,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/asa-iscsi-lif-fo-task.html</loc>
       
-      <lastmod>2022-06-07T10:33:10+00:00</lastmod>
+      <lastmod>2022-06-30T21:25:34+00:00</lastmod>
       
     </url>
   
@@ -2381,7 +2381,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/upgrade/concept_special_configurations_post_checks.html</loc>
       
-      <lastmod>2021-04-28T23:54:34+00:00</lastmod>
+      <lastmod>2022-06-20T15:12:59+00:00</lastmod>
       
     </url>
   
@@ -3550,7 +3550,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/file-system-analytics/considerations-concept.html</loc>
       
-      <lastmod>2022-04-25T21:20:25+00:00</lastmod>
+      <lastmod>2022-06-30T15:28:49+00:00</lastmod>
       
     </url>
   
@@ -5468,7 +5468,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/determine-data-inactive-reporting-task.html</loc>
       
-      <lastmod>2022-06-28T21:02:50+00:00</lastmod>
+      <lastmod>2022-06-30T15:43:02+00:00</lastmod>
       
     </url>
   
@@ -13350,7 +13350,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2022-06-29T23:28:45+00:00</lastmod>
+      <lastmod>2022-07-01T00:10:02+00:00</lastmod>
       
     </url>
   
@@ -14373,6 +14373,13 @@
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/sp-sensor-status-values-command-output-concept.html</loc>
       
       <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/sp-user-accounts-change-concept.html</loc>
+      
+      <lastmod>2022-06-30T09:53:13+00:00</lastmod>
       
     </url>
   
@@ -16325,7 +16332,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/flexgroup/transition-snapmirror-relationship-svm-dr-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-06-30T18:56:04+00:00</lastmod>
       
     </url>
   
@@ -16851,6 +16858,13 @@
       <loc>https://docs.netapp.com/us-en/ontap/smb-hyper-v-sql/verify-smb-server-options-task.html</loc>
       
       <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/verify-sp-user-accounts-task.html</loc>
+      
+      <lastmod>2022-06-30T09:53:13+00:00</lastmod>
       
     </url>
   
