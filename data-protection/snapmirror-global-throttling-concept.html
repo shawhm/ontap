@@ -22555,11 +22555,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-23 19:32:49 +0000">10/23/2021</time>
+    <time datetime="2022-07-13 00:17:56 +0000">07/13/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lenida">
+    <img  class="avatar avatar-small"
+          alt="netapp-lenida"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54081920?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -22624,7 +22632,7 @@
 </div>
 </li>
 <li>
-<p>Specify the maximum total bandwidth used by incoming transfers:</p>
+<p>Specify the maximum total bandwidth used by incoming transfers on the destination cluster:</p>
 <div class="paragraph">
 <p><code>options -option-name replication.throttle.incoming.max_kbs <em>KBps</em></code></p>
 </div>
@@ -22655,7 +22663,7 @@
 </div>
 </li>
 <li>
-<p>Specify the maximum total bandwidth used by outgoing transfers:</p>
+<p>Specify the maximum total bandwidth used by outgoing transfers on the source cluster:</p>
 <div class="paragraph">
 <p><code>options -option-name replication.throttle.outgoing.max_kbs <em>KBps</em></code></p>
 </div>
@@ -22667,7 +22675,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cluster_dst::&gt; options -option-name replication.throttle.outgoing.max_kbs 12500</pre>
+<pre>cluster_src::&gt; options -option-name replication.throttle.outgoing.max_kbs 12500</pre>
 </div>
 </div>
 </li>
