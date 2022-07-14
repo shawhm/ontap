@@ -22555,7 +22555,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-12 14:03:55 +0000">04/12/2022</time>
+    <time datetime="2022-07-13 19:01:37 +0000">07/13/2022</time>
     
   
 
@@ -22584,88 +22584,40 @@
 <div class="paragraph lead">
 <p>When using SM-BC, you may lose connectivity between the mediator or your peered clusters. You can diagnose the issue by checking the connection, availability, and consensus status of the different parts of the SM-BC relationship and then forcefully resuming connection.</p>
 </div>
-<div class="paragraph">
-<div class="title">Determining the cause:</div>
-<p>Check the status of Mediator from Site A with the <code>snapmirror mediator show</code> command.</p>
-</div>
-<div class="literalblock">
-<div class="title">Example:</div>
-<div class="content">
-<pre>C1_cluster::*&gt; snapmirror mediator show
-Mediator Address Peer Cluster     Connection Status Quorum Status
----------------- ---------------- ----------------- -------------
-10.237.86.17     C2_cluster       unreachable       true
-
-C1_cluster::*&gt; snapmirror list-destinations
-                                                  Progress
-Source             Destination         Transfer   Last         Relationship
-Path         Type  Path         Status Progress   Updated      Id
------------ ----- ------------ ------- --------- ------------ ---------------
-vs0:/cg/src_cg_1  XDP   vs1:/cg/dst_cg_1  OutOfSync  -         -            bba7d354-06f6-11eb-9138-005056acec19</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Check Site B connectivity with the <code>cluster peer show</code> command:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>C1_sti78-vsim-ucs188a_cluster::*&gt; cluster peer show
-Peer Cluster Name         Cluster Serial Number Availability   Authentication
-------------------------- --------------------- -------------- --------------
-C2_cluster                1-80-000011           Unavailable    ok</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Check the consensus status on the SM-BC volume with the command <code>volume show <em>volume_name</em> -fields smbc-consensus</code>:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>C1_cluster::*&gt; volume show zrto_cg_894191_188b_RW1 -fields smbc-consensus
-vserver volume                  smbc-consensus
-------- ----------------------- ------------------
-vs0     zrto_cg_894191_188b_RW1 Awaiting-consensus</pre>
-</div>
-</div>
-<div class="paragraph">
-<div class="title">Solution:</div>
-<p>Complete the following steps to override SM-BC consensus and forcefully resume I/O on Site A:</p>
-</div>
-<div class="admonitionblock note">
-<table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Determining the cause</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
 <tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
-This solution uses <code>diag</code> level commands, which requires you to contact NetApp support.
-</td>
+<th class="tableblock halign-left valign-top">What to check</th>
+<th class="tableblock halign-left valign-top">CLI command</th>
+<th class="tableblock halign-left valign-top">Indicator</th>
 </tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mediator from Site A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>snapmirror mediator show</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The connection status will be <code>unreachable</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Site B connectivity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cluster peer show</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Availability will be <code>unavailable</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Consensus status of the SM-BC volume</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>volume show <em>volume_name</em> -fields smbc-consensus</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>sm-bc consensus</code> field will read <code>Awaiting-consensus</code></p></td>
+</tr>
+</tbody>
 </table>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Unmap the LUNs on Site A.</p>
-</li>
-<li>
-<p>Issue the <code>snapmirror release</code> command using the <code>-force</code> and <code>override-smbc-consensus</code> option on Site A.</p>
-</li>
-<li>
-<p>Remap the LUNs.</p>
-</li>
-<li>
-<p>First, bring up Mediator, and then bring up the Site B nodes.</p>
-</li>
-<li>
-<p>Resync the consistency group relationship using <code>snapmirror resync</code>.</p>
-</li>
-<li>
-<p>After Site B is up, verify that the consistency group relationship is up and is in sync.</p>
-</li>
-<li>
-<p>Perform a LUN rescan on the host to restore all paths to the LUNs.</p>
-</li>
-</ol>
+<div class="paragraph">
+<p>For additional information about diagnosing and resolving this issue, refer to the Knowledge Base article <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapMirror/Link_between_Site_A_and_Mediator_down_and_Site_B_down_when_using_SM-BC" target="_blank" rel="noopener">Link between Site A and Mediator down and Site B down when using SM-BC</a>.</p>
 </div>
 
     </article>
