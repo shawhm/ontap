@@ -22559,7 +22559,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-26 16:15:34 +0000">05/26/2022</time>
+    <time datetime="2022-07-13 15:57:03 +0000">07/13/2022</time>
     
   
 
@@ -22593,14 +22593,7 @@
 <p>If you are only providing S3 object storage from this SVM, the S3 server does not require any DNS configuration. However, you might want to configure DNS on the SVM if other protocols are used.</p>
 </div>
 <div class="paragraph">
-<p>When you configure S3 access to a new or existing storage VM using System Manager, you are prompted to enter certificate and networking information, and the S3 object storage server is created in a single operation.</p>
-</div>
-<div class="paragraph">
-<div class="title">Before you begin</div>
-<p>You should be prepared to enter an S3 server name (FQDN) and IP addresses for interface role Data.</p>
-</div>
-<div class="paragraph">
-<p>If you are using an external-CA signed certificate, you will be prompted to enter it during this procedure; you also have the option to use a system-generated certificate.</p>
+<p>When you configure S3 access to a new storage VM using System Manager, you are prompted to enter certificate and networking information, and the storage VM and S3 object storage server are created in a single operation.</p>
 </div>
 <div class="exampleblock tabbed-block">
 <div class="title">Example 1. Steps</div>
@@ -22697,6 +22690,15 @@ Vserver creation completed</pre>
 <div class="openblock">
 <div class="title">System Manager</div>
 <div class="content">
+<div class="paragraph">
+<p>You should be prepared to enter the S3 server name as a Fully Qualified Domain Name (FQDN), which clients will use for S3 access. The S3 server FQDN must not begin with a bucket name.</p>
+</div>
+<div class="paragraph">
+<p>You should be prepared to enter IP addresses for interface role Data.</p>
+</div>
+<div class="paragraph">
+<p>If you are using an external-CA signed certificate, you will be prompted to enter it during this procedure; you also have the option to use a system-generated certificate.</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -22714,9 +22716,6 @@ Vserver creation completed</pre>
 </li>
 <li>
 <p>Click <strong>Enable S3</strong>, then enter the S3 Server Name.</p>
-<div class="paragraph">
-<p>This will be the Fully Qualified Domain Name (FQDN) that clients will use.</p>
-</div>
 </li>
 <li>
 <p>Select the certificate type.</p>
