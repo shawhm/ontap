@@ -4436,6 +4436,8 @@
 
 
 
+
+
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
@@ -17918,6 +17920,8 @@
         Check volume efficiency mode
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/change-efficiency-mode-task.html">
         Change volume efficiency mode
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/view-footprint-savings-task.html">
+        View temperature sensitive storage efficiency physical footprint savings
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/enable-data-compression-volume-task.html">
         Enable data compression on a volume
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/move-between-secondary-adaptive-compression-task.html">
@@ -22555,7 +22559,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-16 22:01:37 +0000">06/16/2022</time>
+    <time datetime="2022-07-02 02:39:31 +0000">07/02/2022</time>
     
   
 
@@ -22565,6 +22569,14 @@
           alt="netapp-barbe"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/55463742?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lisa">
+    <img  class="avatar avatar-small"
+          alt="netapp-lisa"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/77256372?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -22654,6 +22666,18 @@
 </li>
 <li>
 <p>When you create a network interface with a subnet, ONTAP automatically selects an available IP address from the selected subnet and assigns it to the network interface. You can change the subnet if there is more than one subnet, but you cannot change the IP address.</p>
+</li>
+<li>
+<p>Beginning with ONTAP 9.11.1, the iSCSI LIF failover feature is available on All SAN Array (ASA) platforms.</p>
+<div class="paragraph">
+<p>iSCSI LIF failover is automatically enabled (the failover policy is set to <code>sfo-partner-only</code> and the auto-revert value is set to <code>true</code>) on newly created iSCSI LIFs if no iSCSI LIFs exist in the specified storage VM or if all existing iSCSI LIFs in the specified storage VM are already enabled with iSCSI LIF failover.</p>
+</div>
+<div class="paragraph">
+<p>If after you upgrade to ONTAP 9.11.1 or later, you have existing iSCSI LIFs in a storage VM that have not been enabled with the iSCSI LIF failover feature and you create new iSCSI LIFs in the same storage VM, the new iSCSI LIFs assume the same failover policy (<code>disabled</code>) of the existing iSCSI LIFs in the storage VM.</p>
+</div>
+<div class="paragraph">
+<p><a href="../san-admin/asa-iscsi-lif-fo-task.html">iSCSI LIF failover for ASA platforms</a></p>
+</div>
 </li>
 </ul>
 </div>

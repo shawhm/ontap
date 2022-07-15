@@ -4436,6 +4436,8 @@
 
 
 
+
+
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
@@ -17918,6 +17920,8 @@
         Check volume efficiency mode
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/change-efficiency-mode-task.html">
         Change volume efficiency mode
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/view-footprint-savings-task.html">
+        View temperature sensitive storage efficiency physical footprint savings
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/enable-data-compression-volume-task.html">
         Enable data compression on a volume
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/move-between-secondary-adaptive-compression-task.html">
@@ -22555,11 +22559,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-09 22:31:46 +0000">12/09/2021</time>
+    <time datetime="2022-07-02 02:39:31 +0000">07/02/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lisa">
+    <img  class="avatar avatar-small"
+          alt="netapp-lisa"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/77256372?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -22617,7 +22629,29 @@ If a LIF&#8217;s service policy is changed in a way that further restricts failo
 </div>
 </li>
 <li>
+<p>Beginning with ONTAP 9.11.1, on All SAN Array (ASA) platforms, iSCSI LIF failover is automatically enabled on newly created iSCSI LIFs on newly created storage VMs.</p>
+<div class="paragraph">
+<p>Additionally, you can manually enable iSCSI LIF failover on pre-existing iSCSI LIFs, meaning LIFs that were created prior to upgrading to ONTAP 9.11.1 or later.<br>
+<a href="../san-admin/asa-iscsi-lif-fo-task.html">iSCSI LIF failover for ASA platforms</a></p>
+</div>
+</li>
+<li>
 <p>The following list describes how the -failover-policy setting affects the target ports that are selected from the failover group:</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+For iSCSI LIF failover, only the failover policies <code>local-only</code>, <code>sfo-partner-only</code> and <code>disabled</code> are supported.
+</td>
+</tr>
+</table>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -22634,21 +22668,6 @@ If a LIF&#8217;s service policy is changed in a way that further restricts failo
 </li>
 <li>
 <p><code>disabled</code> indicates the LIF is not configured for failover.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
-Logical interfaces for SAN protocols do not support failover, therefore, these LIFs are always set to disabled.
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ul>
-</div>
 </li>
 </ul>
 </div>

@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="There are several additional restrictions and limitations when using the SnapMirror Business Continuity solution.">
-  <meta name="keywords" content=" SM-BC, SMBC, restrictions, consistency group, endpoint limits, solaris"><!-- Icons -->
+  <meta name="keywords" content=" SM-BC, SMBC, restrictions, consistency group, endpoint limits, solaris, aix"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -4401,6 +4401,8 @@
             Use deduplication, data compression, and data compaction to increase storage efficiency
           </a>
           
+
+
 
 
 
@@ -17918,6 +17920,8 @@
         Check volume efficiency mode
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/change-efficiency-mode-task.html">
         Change volume efficiency mode
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/view-footprint-savings-task.html">
+        View temperature sensitive storage efficiency physical footprint savings
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/enable-data-compression-volume-task.html">
         Enable data compression on a volume
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/move-between-secondary-adaptive-compression-task.html">
@@ -22555,7 +22559,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-07 20:07:10 +0000">04/07/2022</time>
+    <time datetime="2022-07-14 16:44:53 +0000">07/14/2022</time>
     
   
 
@@ -22589,14 +22593,6 @@
           alt="netapp-lenida"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/54081920?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/dmp-netapp">
-    <img  class="avatar avatar-small"
-          alt="dmp-netapp"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/50704017?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -22779,6 +22775,20 @@
 </div>
 <div class="paragraph">
 <p>If you experience a failover on the SM-BC destination in a fan-out configuration, you will have to manually <a href="resume-protection-fan-out-configuration.html">resume protection in the fan-out configuration</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="aix">AIX</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Beginning with ONTAP 9.11.1, AIX is supported with SM-BC. With an AIX configuration, the primary cluster is the "active" cluster.</p>
+</div>
+<div class="paragraph">
+<p>In an AIX configuration, failovers are disruptive. With each failover, you will need to perform a re-scan on the host for I/O operations to resume.</p>
+</div>
+<div class="paragraph">
+<p>To configure for AIX host with SM-BC, refer to the Knowledge Base article <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapMirror/How_to_configure_an_AIX_host_for_SnapMirror_Business_Continuity_(SM-BC)">How to configure an AIX host for SnapMirror Business Continuity (SM-BC)</a>.</p>
 </div>
 </div>
 </div>

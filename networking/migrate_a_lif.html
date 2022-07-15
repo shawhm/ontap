@@ -4436,6 +4436,8 @@
 
 
 
+
+
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
@@ -17918,6 +17920,8 @@
         Check volume efficiency mode
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/change-efficiency-mode-task.html">
         Change volume efficiency mode
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/view-footprint-savings-task.html">
+        View temperature sensitive storage efficiency physical footprint savings
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/enable-data-compression-volume-task.html">
         Enable data compression on a volume
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/move-between-secondary-adaptive-compression-task.html">
@@ -22555,7 +22559,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-14 22:02:42 +0000">12/14/2021</time>
+    <time datetime="2022-06-30 05:39:25 +0000">06/30/2022</time>
     
   
 
@@ -22565,6 +22569,14 @@
           alt="netapp-barbe"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/55463742?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lisa">
+    <img  class="avatar avatar-small"
+          alt="netapp-lisa"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/77256372?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -22617,7 +22629,17 @@
 </div>
 </li>
 <li>
-<p>You cannot migrate iSCSI LIFs from one node to another node.</p>
+<p>You can migrate iSCSI LIFs on All SAN Array (ASA) platforms running ONTAP 9.11.1 or later.</p>
+<div class="paragraph">
+<p>Migrating iSCSI LIFs is limited to ports on the home-node or the HA partner.</p>
+</div>
+<div class="paragraph">
+<p>You can also use System Manager to migrate iSCSI LIFs.<br>
+<a href="../san-admin/asa-iscsi-lif-fo-task.html">iSCSI LIF failover for ASA platforms</a></p>
+</div>
+</li>
+<li>
+<p>If your platform is not an All SAN Array (ASA) platform running ONTAP version 9.11.1 or later, you cannot migrate iSCSI LIFs from one node to another node.</p>
 <div class="paragraph">
 <p>To work around this restriction, you must create an iSCSI LIF on the destination node. For information about guidelines for creating an iSCSI LIF, see <a href="../san-admin/index.html" target="_blank" rel="noopener">SAN administration</a>.</p>
 </div>

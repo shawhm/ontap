@@ -4436,6 +4436,8 @@
 
 
 
+
+
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
@@ -17918,6 +17920,8 @@
         Check volume efficiency mode
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/change-efficiency-mode-task.html">
         Change volume efficiency mode
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/view-footprint-savings-task.html">
+        View temperature sensitive storage efficiency physical footprint savings
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/enable-data-compression-volume-task.html">
         Enable data compression on a volume
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/volumes/move-between-secondary-adaptive-compression-task.html">
@@ -22555,11 +22559,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-09 22:31:46 +0000">12/09/2021</time>
+    <time datetime="2022-07-02 02:39:31 +0000">07/02/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lisa">
+    <img  class="avatar avatar-small"
+          alt="netapp-lisa"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/77256372?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-barbe">
     <img  class="avatar avatar-small"
           alt="netapp-barbe"
@@ -22621,6 +22633,15 @@
 <p>Beginning with ONTAP 9.5, you can modify the service policy associated with a LIF.</p>
 <div class="paragraph">
 <p>In ONTAP 9.5, service policies are supported only for intercluster and BGP peer services. In ONTAP 9.6, you can create service policies for several data and management services.</p>
+</div>
+</li>
+<li>
+<p>Beginning with ONTAP 9.11.1, the iSCSI LIF failover feature is available on All SAN Array (ASA) platforms.</p>
+<div class="paragraph">
+<p>For pre-existing iSCSI LIFs, meaning LIFs created prior to upgrading to 9.11.1 or later, you can modify the failover policy to enable the iSCSI LIF failover feature.</p>
+</div>
+<div class="paragraph">
+<p><a href="../san-admin/asa-iscsi-lif-fo-task.html">iSCSI LIF failover for ASA platforms</a></p>
 </div>
 </li>
 </ul>
