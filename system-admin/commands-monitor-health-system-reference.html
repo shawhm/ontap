@@ -10419,6 +10419,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -20276,6 +20278,8 @@
         Resolve iSCSI error messages on the storage system
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/san-admin/troubleshoot-iscsi-luns-not-visible-reference.html">
         Troubleshoot iSCSI LUNs not visible on the host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/san-admin/asa-iscsi-lif-fo-task.html">
+        iSCSI LIF failover for ASA platforms
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Manage FC protocol</div>
       </a>
@@ -22559,11 +22563,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-19 18:27:41 +0000">10/19/2021</time>
+    <time datetime="2022-07-18 20:12:03 +0000">07/18/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
+    <img  class="avatar avatar-small"
+          alt="netapp-ahibbard"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/85892662?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-barbe">
     <img  class="avatar avatar-small"
           alt="netapp-barbe"
@@ -22727,25 +22739,6 @@
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><code>system cluster-switch modify -disable-monitoring</code></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Display the interval in which the health monitor polls switches to gather information</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>system cluster-switch polling-interval show</code></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Modify the interval in which the health monitor polls switches to gather information.</p>
-</div>
-<div class="paragraph">
-<p>This command is available at the advanced privilege level.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>system cluster-switch polling-interval modify</code></p>
 </div></div></td>
 </tr>
 <tr>
@@ -22969,9 +22962,6 @@
 <div class="sect1">
 <h2 id="downgrade-software-versions-between-minor-releases">Downgrade software versions between minor releases</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>When downgrading a cluster from Data ONTAP 8.2.1 to Data ONTAP 8.2, ONTAP clears the history of deleted switches. It also sets the <code>Model</code> column to <code>OTHER</code> if a switch that it automatically discovers is not supported for health monitoring.</p>
-</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
