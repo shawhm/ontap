@@ -22563,7 +22563,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-02 19:39:44 +0000">02/02/2022</time>
+    <time datetime="2022-07-20 00:44:44 +0000">07/20/2022</time>
     
   
 
@@ -22613,7 +22613,102 @@
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p>Quiesce the existing DP-type relationship:</p>
+<p>From the destination cluster, ensure that the SnapMirror relationship is type DP, that the mirror state is SnapMirrored, the relationship status is Idle, and the relationship is healthy:</p>
+<div class="paragraph">
+<p><code>snapmirror show -destination-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em></code></p>
+</div>
+<div class="paragraph">
+<p>The following example shows the output from the <code>snapmirror show</code> command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster_dst::&gt;snapmirror show -destination-path svm_backup:volA_dst
+
+Source Path: svm1:volA
+Destination Path: svm_backup:volA_dst
+Relationship Type: DP
+SnapMirror Schedule: -
+Tries Limit: -
+Throttle (KB/sec): unlimited
+Mirror State: Snapmirrored
+Relationship Status: Idle
+Transfer Snapshot: -
+Snapshot Progress: -
+Total Progress: -
+Snapshot Checkpoint: -
+Newest Snapshot: snapmirror.10af643c-32d1-11e3-954b-123478563412_2147484682.2014-06-27_100026
+Newest Snapshot Timestamp: 06/27 10:00:55
+Exported Snapshot: snapmirror.10af643c-32d1-11e3-954b-123478563412_2147484682.2014-06-27_100026
+Exported Snapshot Timestamp: 06/27 10:00:55
+Healthy: true</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You might find it helpful to retain a copy of the <code>snapmirror show</code> command output to keep track existing of the relationship settings.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>From the source and the destination volumes, ensure that both volumes have a common Snapshot copy:</p>
+<div class="paragraph">
+<p><code>volume snapshot show -vserver <em>SVM</em> -volume <em>volume</em></code></p>
+</div>
+<div class="paragraph">
+<p>The following example shows the <code>volume snapshot show</code> output for the souce and the destination volumes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster_src:&gt; volume snapshot show -vserver vsm1 -volume volA
+---Blocks---
+Vserver Volume Snapshot State Size Total% Used%
+-------- ------- ------------------------------- -------- -------- ------ -----
+svm1 volA
+weekly.2014-06-09_0736 valid 76KB 0% 28%
+weekly.2014-06-16_1305 valid 80KB 0% 29%
+daily.2014-06-26_0842 valid 76KB 0% 28%
+hourly.2014-06-26_1205 valid 72KB 0% 27%
+hourly.2014-06-26_1305 valid 72KB 0% 27%
+hourly.2014-06-26_1405 valid 76KB 0% 28%
+hourly.2014-06-26_1505 valid 72KB 0% 27%
+hourly.2014-06-26_1605 valid 72KB 0% 27%
+daily.2014-06-27_0921 valid 60KB 0% 24%
+hourly.2014-06-27_0921 valid 76KB 0% 28%
+snapmirror.10af643c-32d1-11e3-954b-123478563412_2147484682.2014-06-27_100026
+valid 44KB 0% 19%
+11 entries were displayed.
+
+
+cluster_dest:&gt; volume snapshot show -vserver svm_backup -volume volA_dst
+---Blocks---
+Vserver Volume Snapshot State Size Total% Used%
+-------- ------- ------------------------------- -------- -------- ------ -----
+svm_backup volA_dst
+weekly.2014-06-09_0736 valid 76KB 0% 30%
+weekly.2014-06-16_1305 valid 80KB 0% 31%
+daily.2014-06-26_0842 valid 76KB 0% 30%
+hourly.2014-06-26_1205 valid 72KB 0% 29%
+hourly.2014-06-26_1305 valid 72KB 0% 29%
+hourly.2014-06-26_1405 valid 76KB 0% 30%
+hourly.2014-06-26_1505 valid 72KB 0% 29%
+hourly.2014-06-26_1605 valid 72KB 0% 29%
+daily.2014-06-27_0921 valid 60KB 0% 25%
+hourly.2014-06-27_0921 valid 76KB 0% 30%
+snapmirror.10af643c-32d1-11e3-954b-123478563412_2147484682.2014-06-27_100026</pre>
+</div>
+</div>
+</li>
+<li>
+<p>To ensure scheduled updates will not run during the conversion, quiesce the existing DP-type relationship:</p>
 <div class="paragraph">
 <p><code>snapmirror quiesce -source-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203; -destination-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203;</code></p>
 </div>
@@ -22720,7 +22815,7 @@
 </div>
 </li>
 <li>
-<p>Create the new XDP-type relationship:</p>
+<p>You can use the output you retained from the <code>snapmirror show</code> command to create the new XDP-type relationship:</p>
 <div class="paragraph">
 <p><code>snapmirror create -source-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203; -destination-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203; -type XDP -schedule <em>schedule</em> -policy <em>policy</em></code></p>
 </div>
@@ -22780,6 +22875,12 @@
 <div class="content">
 <pre>cluster_dst::&gt; snapmirror resync -source-path svm1:volA -destination-path svm_backup:volA_dst</pre>
 </div>
+</div>
+</li>
+<li>
+<p>If you disabled automatic deletion of Snapshot copies, reenable it:</p>
+<div class="paragraph">
+<p><code>volume snapshot autodelete modify -vserver <em>SVM</em> -volume <em>volume</em> -enabled true</code></p>
 </div>
 </li>
 </ol>
