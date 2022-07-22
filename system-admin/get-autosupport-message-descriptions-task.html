@@ -9,15 +9,15 @@
   <meta property="og:title" content="Get AutoSupport message descriptions" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/system-admin/get-autosupport-message-descriptions-task.html" />
-	<meta property="og:description" content="The descriptions of the AutoSupport messages that you receive are available through the online AutoSupport Message Matrices page." />
+	<meta property="og:description" content="The descriptions of the AutoSupport messages that you receive are available through the ONTAP Syslog Translator." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="The descriptions of the AutoSupport messages that you receive are available through the online AutoSupport Message Matrices page.">
-  <meta name="keywords" content=" getting, autosupport, message, descriptions, matrices"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="The descriptions of the AutoSupport messages that you receive are available through the ONTAP Syslog Translator.">
+  <meta name="keywords" content=" getting, autosupport, message, descriptions, matrices, syslog translator"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -22563,33 +22563,38 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-14 21:50:12 +0000">10/14/2021</time>
+    <time datetime="2022-07-21 20:28:44 +0000">07/21/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
+    <img  class="avatar avatar-small"
+          alt="netapp-ahibbard"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/85892662?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
 </p>
 
 <div class="paragraph lead">
-<p>The descriptions of the AutoSupport messages that you receive are available through the online AutoSupport Message Matrices page.</p>
+<p>The descriptions of the AutoSupport messages that you receive are available through the ONTAP Syslog Translator.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p>Go to the AutoSupport Message Matrices page.</p>
-<div class="paragraph">
-<p><a href="http://support.netapp.com/NOW/knowledge/docs/olio/autosupport/matrices/">support.netapp.com/NOW/knowledge/docs/olio/autosupport/matrices/</a></p>
-</div>
+<p>Go to the <a href="https://mysupport.netapp.com/site/bugs-online/syslog-translator" target="_blank" rel="noopener">Syslog Translator</a>.</p>
 </li>
 <li>
-<p>On the AutoSupport Message Matrices page under Select a Release, select your version of ONTAP, and then click <strong>View Matrix</strong>.</p>
-<div class="paragraph">
-<p>The Syslog Translator page appears with all AutoSupport message descriptions listed alphabetically by subject line.</p>
-</div>
+<p>In the <strong>Release</strong> field, enter the the version of ONTAP you are using. In the <strong>Search String</strong> field, enter "callhome". Select <strong>Translate</strong>.</p>
+</li>
+<li>
+<p>The Syslog Translator will alphabetically list all Ems Identifiers that match the message string you entered.</p>
 </li>
 </ol>
 </div>
