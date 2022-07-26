@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can use SnapMirror to create a data protection relationship between SVM. In this type of data protection relationship, all or part of the SVM’s configura...">
-  <meta name="keywords" content=" understand, snapmirror, svm, replication"><!-- Icons -->
+  <meta name="keywords" content=" understand, snapmirror, svm, replication, SVM DR storage limits"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -22563,7 +22563,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-05 19:19:24 +0000">05/05/2022</time>
+    <time datetime="2022-07-25 00:13:50 +0000">07/25/2022</time>
     
   
 
@@ -23714,6 +23714,50 @@ SVM.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="svm-dr-storage-limits">SVM DR storage limits</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following table shows the recommended maximum number of volumes and SVM DR relationships supported per storage object. You should be aware that limits are often platform dependent. Refer to the <a href="https://hwu.netapp.com/" target="_blank" rel="noopener">Hardware Universe</a> to learn the limits for your specific configuration.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Storage object</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Limit</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>SVM</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>300 Flexible volumes</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>HA pair</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>1,000 Flexible Volumes</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Cluster</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>128 SVM DR relationships</p>
 </div></div></td>
 </tr>
 </tbody>

@@ -22757,6 +22757,20 @@
 </li>
 <li>
 <p>Scheduled transfers that were canceled or missed during the migration are not automatically started after the migrate completes.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When a SnapMirror source is migrated, ONTAP does not prevent deletion of the volume after migration until the SnapMirror update takes place after. This happens because SnapMirror-related information for migrated SnapMirror source volumes is known only after first update after migrate is complete.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </li>
 </ul>
 </div></div></td>

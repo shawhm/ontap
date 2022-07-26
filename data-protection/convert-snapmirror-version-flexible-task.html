@@ -22563,7 +22563,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-07-20 00:44:44 +0000">07/20/2022</time>
+    <time datetime="2022-07-22 21:40:15 +0000">07/22/2022</time>
     
   
 
@@ -22734,14 +22734,14 @@ snapmirror.10af643c-32d1-11e3-954b-123478563412_2147484682.2014-06-27_100026</pr
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cluster_dst::&gt; snapmirror quiesce -source-path svm1:volA -destination-path svm_backup:volA_dst</pre>
+<pre>cluster_dst::&gt; snapmirror quiesce -destination-path svm_backup:volA_dst</pre>
 </div>
 </div>
 </li>
 <li>
 <p>Break the existing DP-type relationship:</p>
 <div class="paragraph">
-<p><code>snapmirror break -source-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203; -destination-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203;</code></p>
+<p><code>snapmirror break -destination-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203;</code></p>
 </div>
 <div class="paragraph">
 <p>For complete command syntax, see the man page.</p>
@@ -22765,12 +22765,12 @@ snapmirror.10af643c-32d1-11e3-954b-123478563412_2147484682.2014-06-27_100026</pr
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cluster_dst::&gt; snapmirror break -source-path svm1:volA -destination-path svm_backup:volA_dst</pre>
+<pre>cluster_dst::&gt; snapmirror break -destination-path svm_backup:volA_dst</pre>
 </div>
 </div>
 </li>
 <li>
-<p>Disable automatic deletion of Snapshot copies on the destination volume:</p>
+<p>If automatic deletion of Snapshot copies is enabled on the destination volume, disable it:</p>
 <div class="paragraph">
 <p><code>volume snapshot autodelete modify -vserver <em>SVM</em> -volume <em>volume</em> -enabled false</code></p>
 </div>
@@ -22786,7 +22786,7 @@ snapmirror.10af643c-32d1-11e3-954b-123478563412_2147484682.2014-06-27_100026</pr
 <li>
 <p>Delete the existing DP-type relationship:</p>
 <div class="paragraph">
-<p><code>snapmirror delete -source-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203; -destination-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203;</code></p>
+<p><code>snapmirror delete -destination-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203;</code></p>
 </div>
 <div class="paragraph">
 <p>For complete command syntax, see the man page.</p>
@@ -22810,7 +22810,7 @@ snapmirror.10af643c-32d1-11e3-954b-123478563412_2147484682.2014-06-27_100026</pr
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cluster_dst::&gt; snapmirror delete -source-path svm1:volA -destination-path svm_backup:volA_dst</pre>
+<pre>cluster_dst::&gt; snapmirror delete -destination-path svm_backup:volA_dst</pre>
 </div>
 </div>
 </li>
@@ -22885,9 +22885,16 @@ snapmirror.10af643c-32d1-11e3-954b-123478563412_2147484682.2014-06-27_100026</pr
 </li>
 </ol>
 </div>
-<div class="paragraph">
+<div class="olist arabic">
 <div class="title">After you finish</div>
+<ol class="arabic">
+<li>
 <p>Use the <code>snapmirror show</code> command to verify that the SnapMirror relationship was created. For complete command syntax, see the man page.</p>
+</li>
+<li>
+<p>Once the SnapMirror XDP destination volume begins updating Snapshot copies as defined by the SnapMirror policy, you can use the output of <code>snapmirror list-destinations</code> command from the source cluster to display the new SnapMirror XDP relationship.</p>
+</li>
+</ol>
 </div>
 
     </article>
