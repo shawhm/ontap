@@ -22567,7 +22567,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-19 19:37:08 +0000">05/19/2022</time>
+    <time datetime="2022-07-28 22:17:01 +0000">07/28/2022</time>
     
   
 
@@ -22858,7 +22858,8 @@ LUNs and NVMe namespaces are not supported on the same volume or SVM.</p>
 <ul>
 <li>
 <p><strong>Sync mode</strong><br>
-In Sync mode, an I/O to primary storage is first replicated to secondary storage. Then the I/O is written to primary storage, and acknowledgment is sent to the application that issued the I/O. If the write to the secondary storage is not completed for any reason, the application is allowed to continue writing to the primary storage. When the error condition is corrected, SnapMirror Synchronous technology automatically resynchronizes with the secondary storage and resumes replicating from primary storage to secondary storage in Synchronous mode.<br>
+In Sync mode, application I/O operations are sent in parallel to the primary and secondary<br>
+storage systems. If the write to the secondary storage is not completed for any reason, the application is allowed to continue writing to the primary storage. When the error condition is corrected, SnapMirror Synchronous technology automatically resynchronizes with the secondary storage and resumes replicating from primary storage to secondary storage in Synchronous mode.<br>
 In Sync mode, RPO=0 and RTO is very low until a secondary replication failure occurs at which time RPO and RTO become indeterminate, but equal the time to repair the issue that caused secondary replication to fail and for the resync to complete.</p>
 </li>
 <li>
@@ -22884,7 +22885,7 @@ In StrictSync mode RPO is always zero, and RTO is very low.</p>
 </div>
 <div class="paragraph">
 <div class="title">Related information</div>
-<p><a href="http://www.netapp.com/us/media/tr-4733.pdf" target="_blank" rel="noopener">NetApp Technical Report 4733: SnapMirror Synchronous for ONTAP 9.6</a></p>
+<p><a href="http://www.netapp.com/us/media/tr-4733.pdf" target="_blank" rel="noopener">NetApp Technical Report 4733: SnapMirror Synchronous for ONTAP 9.11.1</a></p>
 </div>
 </div>
 </div>
