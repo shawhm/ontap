@@ -22567,11 +22567,19 @@
 <p class="page-details">
   
     
-    <time datetime="2020-01-13 21:09:56 +0000">01/13/2020</time>
+    <time datetime="2022-07-28 13:53:06 +0000">07/28/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-forry">
+    <img  class="avatar avatar-small"
+          alt="netapp-forry"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/51911827?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -22585,14 +22593,6 @@
           alt="netapp-aherbin"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/38955266?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-forry">
-    <img  class="avatar avatar-small"
-          alt="netapp-forry"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/51911827?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -22610,10 +22610,10 @@
 </p>
 
 <div class="paragraph lead">
-<p>Modify storage VMs to enable NFS servers for serving data to Linux clients.</p>
+<p>Create or modify storage VMs to enable NFS servers for serving data to Linux clients.</p>
 </div>
 <div class="paragraph">
-<p>This procedure enables an existing storage VM. It is assumed that configuration details are available for any authentication or security services required in your environment.</p>
+<p>This procedure enables a new or existing storage VM for the NFS protocol. It is assumed that configuration details are available for any networking, authentication, or security services required in your environment.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/workflow_nas_enable_linux_nfs.gif" alt="workflow diagram for enabling NAS for Linux servers using NFS"></span></p>
@@ -22622,7 +22622,30 @@
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p>Enable NFS on an existing VM: click <strong>Storage &gt; Storage VMs</strong>, select a storage VM, click <strong>Settings</strong>, and then click <span class="image"><img src="./media/icon_gear.gif" alt="settings icon"></span> under <strong>NFS</strong>.</p>
+<p>Enable NFS on a storage VM.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>For new storage VMs: click <strong>Storage &gt; Storage VMs</strong>, click <strong>Add</strong>, enter a storage VM name, and in the <strong>SMB/CIFS, NFS, S3</strong> tab, select <strong>Enable NFS</strong>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Confirm the default language.</p>
+</li>
+<li>
+<p>Add network interfaces.</p>
+</li>
+<li>
+<p>Update storage VM administrator account information (optional).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>For existing storage VMs: click <strong>Storage &gt; Storage VMs</strong>, select a storage VM, click <strong>Settings</strong>, and then click <span class="image"><img src="./media/icon_gear.gif" alt="settings icon"></span> under <strong>NFS</strong>.</p>
+</li>
+</ol>
+</div>
 </li>
 <li>
 <p>Open the export policy of the storage VM root volume:</p>
