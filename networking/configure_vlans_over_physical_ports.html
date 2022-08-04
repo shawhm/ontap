@@ -5536,6 +5536,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -18352,6 +18354,8 @@
         About broadcast domains for ONTAP 9.8 and later
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/example_of_using_broadcast_domains.html">
         Example of using broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_broadcast_domain.html">
+        Add a broadcast domain
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_or_remove_ports_from_a_broadcast_domain.html">
         Add or remove ports from a broadcast domain
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/split_broadcast_domains.html">
@@ -22567,11 +22571,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-09 22:31:46 +0000">12/09/2021</time>
+    <time datetime="2022-08-03 15:28:35 +0000">08/03/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -22625,11 +22637,11 @@ You should not create a VLAN on a network interface with the same identifier as 
 <h2 id="create-a-vlan">Create a VLAN</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can create a VLAN for maintaining separate broadcast domains within the same network domain by using the <code>network port vlan create</code> command.</p>
+<p>You can create a VLAN for maintaining separate broadcast domains within the same network domain by using System Manager or the <code>network port vlan create</code> command.</p>
 </div>
 <div class="paragraph">
 <div class="title">Before you begin</div>
-<p>Your network administrator must have confirmed that the following requirements have been met:</p>
+<p>Confirm that the following requirements have been met:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -22652,9 +22664,6 @@ You should not create a VLAN on a network interface with the same identifier as 
 </div>
 <div class="paragraph">
 <div class="title">About this task</div>
-<p>In certain circumstances, if you want to create the VLAN port on a degraded port without correcting the hardware issue or any software misconfiguration, then you can set the <code>-ignore- health-status</code> parameter of the <code>network port modify</code> command as true.</p>
-</div>
-<div class="paragraph">
 <p>Creating a VLAN attaches the VLAN to the network port on a specified node in a cluster.</p>
 </div>
 <div class="paragraph">
@@ -22672,8 +22681,66 @@ You should not create a VLAN on a network interface with the same identifier as 
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>The procedure you follow depends on the interface that you use—System Manager or the CLI:</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">System Manager</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use System Manager to create a VLAN</strong></p>
+</div>
+<div class="paragraph">
+<p>Beginning with ONTAP 9.12.0, you can automatically select the broadcast domain or manually select on from the list. Previously, broadcast domains were always automatically selected based on layer 2 connectivity. If you manually select a broadcast domain, a warning appears indicating that manually selecting a broadcast domain could result in loss of connectivity.</p>
+</div>
 <div class="olist arabic">
-<div class="title">Step</div>
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>Network &gt; Ethernet port &gt; + VLAN</strong>.</p>
+</li>
+<li>
+<p>Select the node from the drop-down list.</p>
+</li>
+<li>
+<p>Choose from the following:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>ONTAP to <strong>Automatically select broadcast domain (recommended)</strong>.</p>
+</li>
+<li>
+<p>To manually select a broadcast domain from the list.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Select the ports to form the VLAN.</p>
+</li>
+<li>
+<p>Specify the VLAN ID.</p>
+</li>
+<li>
+<p>Save your changes.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">CLI</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use the CLI to create a VLAN</strong></p>
+</div>
+<div class="paragraph">
+<p>In certain circumstances, if you want to create the VLAN port on a degraded port without correcting the hardware issue or any software misconfiguration, then you can set the <code>-ignore-health-status</code> parameter of the <code>network port modify</code> command as <code>true</code>.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
 <ol class="arabic">
 <li>
 <p>Use the <code>network port vlan create</code> command to create a VLAN.</p>
@@ -22700,6 +22767,49 @@ The VLAN name is a combination of the name of the port (or interface group) and 
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="edit-a-vlan">Edit a VLAN</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can change the broadcast domain or disable a VLAN.</p>
+</div>
+<div class="paragraph">
+<div class="title">Use System Manager to edit a VLAN</div>
+<p>Beginning with ONTAP 9.12.0, you can automatically select the broadcast domain or manually select on from the list. Previously broadcast domains were always automatically selected based on layer 2 connectivity. If you manually select a broadcast domain, a warning appears indicating that manually selecting a broadcast domain could result in loss of connectivity.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>Network &gt; Ethernet port &gt; VLAN</strong>.</p>
+</li>
+<li>
+<p>Select the edit icon.</p>
+</li>
+<li>
+<p>Do one of the following:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Change the broadcast domain by selecting a different one from the list.</p>
+</li>
+<li>
+<p>Clear the <strong>Enabled</strong> check box.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Save your changes.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="delete-a-vlan">Delete a VLAN</h2>
 <div class="sectionbody">
@@ -22715,6 +22825,39 @@ The VLAN name is a combination of the name of the port (or interface group) and 
 <p>Deletion of the last VLAN from a port might cause a temporary disconnection of the network from the port.</p>
 </div>
 <div class="paragraph">
+<p>The procedure you follow depends on the interface that you use—System Manager or the CLI:</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">System Manager</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use System Manager to delete a VLAN</strong></p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>Network &gt; Ethernet port &gt; VLAN</strong>.</p>
+</li>
+<li>
+<p>Select the VLAN you want to remove.</p>
+</li>
+<li>
+<p>Click <strong>Delete</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">CLI</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use the CLI to delete a VLAN</strong></p>
+</div>
+<div class="paragraph">
 <div class="title">Step</div>
 <p>Use the <code>network port vlan delete</code> command to delete a VLAN.</p>
 </div>
@@ -22724,6 +22867,10 @@ The VLAN name is a combination of the name of the port (or interface group) and 
 <div class="literalblock">
 <div class="content">
 <pre>network port vlan delete -node cluster-1-01 -vlan-name e1c-80</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

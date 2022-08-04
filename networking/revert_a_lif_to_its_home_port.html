@@ -5534,6 +5534,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -18352,6 +18354,8 @@
         About broadcast domains for ONTAP 9.8 and later
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/example_of_using_broadcast_domains.html">
         Example of using broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_broadcast_domain.html">
+        Add a broadcast domain
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_or_remove_ports_from_a_broadcast_domain.html">
         Add or remove ports from a broadcast domain
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/split_broadcast_domains.html">
@@ -22567,11 +22571,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-14 22:02:42 +0000">12/14/2021</time>
+    <time datetime="2022-07-29 11:51:17 +0000">07/29/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-barbe">
     <img  class="avatar avatar-small"
           alt="netapp-barbe"
@@ -22611,6 +22623,39 @@
 </ul>
 </div>
 <div class="paragraph">
+<p>The procedure you follow depends on the interface that you use—System Manager or the CLI:</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">System Manager</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use System Manager to revert a network interface to its home port</strong></p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>Network &gt; Overview &gt; Network Interfaces</strong>.</p>
+</li>
+<li>
+<p>Select <span class="image"><img src="./media/icon_kabob.gif" alt="kebob icon"></span> <strong>&gt; Revert</strong> beside the network interface you want to change.</p>
+</li>
+<li>
+<p>Save your changes.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">CLI</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use the CLI to revert a LIF to its home port</strong></p>
+</div>
+<div class="paragraph">
 <div class="title">Step</div>
 <p>Revert a LIF to its home port manually or automatically:</p>
 </div>
@@ -22626,14 +22671,18 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Manually</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">network interface revert -vserver vserver_name -lif lif_name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>network interface revert -vserver vserver_name -lif lif_name</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Automatically</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">network interface modify -vserver vserver_name -lif lif_name -auto-revert true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>network interface modify -vserver vserver_name -lif lif_name -auto-revert true</code></p></td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
+</div>
 
     </article>
     <!-- Page Container -->

@@ -356,6 +356,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/add_broadcast_domain.html</loc>
+      
+      <lastmod>2022-08-03T18:33:00+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/add_or_remove_a_lif_from_a_load_balancing_zone.html</loc>
       
       <lastmod>2022-02-04T20:44:16+00:00</lastmod>
@@ -365,7 +372,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/add_or_remove_ip_addresses_from_a_subnet.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-07-29T11:51:17+00:00</lastmod>
       
     </url>
   
@@ -1240,7 +1247,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/change_subnet_properties.html</loc>
       
-      <lastmod>2021-05-14T01:04:54+00:00</lastmod>
+      <lastmod>2022-07-29T11:51:17+00:00</lastmod>
       
     </url>
   
@@ -1506,7 +1513,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-08-02T15:29:12+00:00</lastmod>
       
     </url>
   
@@ -2143,7 +2150,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html</loc>
       
-      <lastmod>2022-06-09T18:39:40+00:00</lastmod>
+      <lastmod>2022-08-03T21:14:43+00:00</lastmod>
       
     </url>
   
@@ -2178,7 +2185,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/concept_admin_viewing_managing_network.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-07-29T11:51:17+00:00</lastmod>
       
     </url>
   
@@ -3529,7 +3536,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/configure_vlans_over_physical_ports.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-08-03T15:28:35+00:00</lastmod>
       
     </url>
   
@@ -4838,7 +4845,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html</loc>
       
-      <lastmod>2022-07-02T02:39:31+00:00</lastmod>
+      <lastmod>2022-07-29T16:39:52+00:00</lastmod>
       
     </url>
   
@@ -4852,7 +4859,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/create_a_subnet.html</loc>
       
-      <lastmod>2021-05-14T01:04:54+00:00</lastmod>
+      <lastmod>2022-08-03T15:28:35+00:00</lastmod>
       
     </url>
   
@@ -5356,7 +5363,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/delete_a_broadcast_domain.html</loc>
       
-      <lastmod>2021-05-15T00:30:31+00:00</lastmod>
+      <lastmod>2022-08-03T15:28:35+00:00</lastmod>
       
     </url>
   
@@ -5384,7 +5391,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/delete_a_subnet.html</loc>
       
-      <lastmod>2021-05-15T00:30:31+00:00</lastmod>
+      <lastmod>2022-08-03T15:28:35+00:00</lastmod>
       
     </url>
   
@@ -6350,7 +6357,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/display_subnets.html</loc>
       
-      <lastmod>2021-05-15T00:30:31+00:00</lastmod>
+      <lastmod>2022-07-29T11:51:17+00:00</lastmod>
       
     </url>
   
@@ -10459,7 +10466,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/migrate_a_lif.html</loc>
       
-      <lastmod>2022-06-30T05:39:25+00:00</lastmod>
+      <lastmod>2022-07-29T11:51:17+00:00</lastmod>
       
     </url>
   
@@ -10697,7 +10704,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/modify_a_lif.html</loc>
       
-      <lastmod>2022-07-02T02:39:31+00:00</lastmod>
+      <lastmod>2022-07-29T11:51:17+00:00</lastmod>
       
     </url>
   
@@ -11173,7 +11180,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/network_features_by_release.html</loc>
       
-      <lastmod>2022-07-09T01:18:35+00:00</lastmod>
+      <lastmod>2022-08-03T18:33:00+00:00</lastmod>
       
     </url>
   
@@ -13126,7 +13133,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/revert_a_lif_to_its_home_port.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-07-29T11:51:17+00:00</lastmod>
       
     </url>
   
@@ -13357,7 +13364,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2022-08-04T13:03:01+00:00</lastmod>
+      <lastmod>2022-08-04T14:24:58+00:00</lastmod>
       
     </url>
   
@@ -14190,7 +14197,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/snaplock-concept.html</loc>
       
-      <lastmod>2022-08-03T21:02:42+00:00</lastmod>
+      <lastmod>2022-08-04T01:57:36+00:00</lastmod>
       
     </url>
   

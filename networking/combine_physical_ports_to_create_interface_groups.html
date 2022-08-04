@@ -5536,6 +5536,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -18352,6 +18354,8 @@
         About broadcast domains for ONTAP 9.8 and later
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/example_of_using_broadcast_domains.html">
         Example of using broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_broadcast_domain.html">
+        Add a broadcast domain
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_or_remove_ports_from_a_broadcast_domain.html">
         Add or remove ports from a broadcast domain
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/split_broadcast_domains.html">
@@ -22567,11 +22571,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-09 22:31:46 +0000">12/09/2021</time>
+    <time datetime="2022-08-02 15:29:12 +0000">08/02/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -22596,7 +22608,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>An interface group is created by combining two or more physical ports into a single logical port. The logical port provides increased resiliency, increased availability, and load sharing.</p>
+<p>An interface group, also known as a Link Aggregation Group (LAG), is created by combining two or more physical ports into a single logical port. The logical port provides increased resiliency, increased availability, and load sharing.</p>
 </div>
 </div>
 </div>
@@ -22811,35 +22823,117 @@ Do not select the MAC address load balancing method when creating interface grou
 </div>
 </div>
 <div class="sect1">
-<h2 id="create-an-interface-group">Create an interface group</h2>
+<h2 id="create-an-interface-group-or-lag">Create an interface group or LAG</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can create an interface group—single-mode, static multimode, or dynamic multimode (LACP)—to present a single interface to clients by combining the capabilities of the aggregated network ports.</p>
+<p>You can create an interface group or LAG—single-mode, static multimode, or dynamic multimode (LACP)—to present a single interface to clients by combining the capabilities of the aggregated network ports.</p>
 </div>
-<div class="ulist">
-<div class="title">About this task</div>
-<ul>
+<div class="paragraph">
+<p>The procedure you follow depends on the interface that you use—System Manager or the CLI:</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">System Manager</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use System Manager to create a LAG</strong></p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
 <li>
+<p>Select <strong>Network &gt; Ethernet port &gt; + Link Aggregation Group</strong> to create a LAG.</p>
+</li>
+<li>
+<p>Select the node from the drop-down list.</p>
+</li>
+<li>
+<p>Choose from the following:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>ONTAP to <strong>Automatically select broadcast domain (recommended)</strong>.</p>
+</li>
+<li>
+<p>To manually select a broadcast domain.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Select the ports to form the LAG.</p>
+</li>
+<li>
+<p>Select the mode:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Single: Only one port is used at a time.</p>
+</li>
+<li>
+<p>Multiple: All ports can be used simultaneously.</p>
+</li>
+<li>
+<p>LACP: The LACP protocol determines the ports that can be used.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Select the load balancing:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>IP based</p>
+</li>
+<li>
+<p>MAC based</p>
+</li>
+<li>
+<p>Port</p>
+</li>
+<li>
+<p>Sequential</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Save your changes.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/AddLag01.png" alt="Add lag graphic"></span></p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">CLI</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use the CLI to create an interface group</strong></p>
+</div>
+<div class="paragraph">
 <p>For a complete list of configuration restrictions that apply to port interface groups, see the <code>network port ifgrp add-port</code> man page.</p>
-</li>
-<li>
+</div>
+<div class="paragraph">
 <p>When creating a multimode interface group, you can specify any of the following load-balancing methods:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>port: Network traffic is distributed on the basis of the transport layer (TCP/UDP) ports. This is the recommended load-balancing method.</p>
+<p><code>port</code>: Network traffic is distributed on the basis of the transport layer (TCP/UDP) ports. This is the recommended load-balancing method.</p>
 </li>
 <li>
-<p>mac: Network traffic is distributed on the basis of MAC addresses.</p>
+<p><code>mac</code>: Network traffic is distributed on the basis of MAC addresses.</p>
 </li>
 <li>
-<p>ip: Network traffic is distributed on the basis of IP addresses.</p>
+<p><code>ip</code>: Network traffic is distributed on the basis of IP addresses.</p>
 </li>
 <li>
-<p>sequential: Network traffic is distributed as it is received.</p>
-</li>
-</ul>
-</div>
+<p><code>sequential</code>: Network traffic is distributed as it is received.</p>
 </li>
 </ul>
 </div>
@@ -22873,11 +22967,48 @@ The MAC address of an interface group is determined by the order of the underlyi
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
 <div class="sect1">
-<h2 id="add-a-port-to-an-interface-group">Add a port to an interface group</h2>
+<h2 id="add-a-port-to-an-interface-group-or-lag">Add a port to an interface group or LAG</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can add up to 16 physical ports to an interface group for all port speeds.</p>
+<p>You can add up to 16 physical ports to an interface group or LAG for all port speeds.</p>
+</div>
+<div class="paragraph">
+<p>The procedure you follow depends on the interface that you use—System Manager or the CLI:</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">System Manager</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use System Manager to add a port to a LAG</strong></p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>Network &gt; Ethernet port &gt; LAG</strong> to edit a LAG.</p>
+</li>
+<li>
+<p>Select additional ports on the same node to add to the LAG.</p>
+</li>
+<li>
+<p>Save your changes.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">CLI</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use the CLI to add ports to an interface group</strong></p>
 </div>
 <div class="paragraph">
 <div class="title">Step</div>
@@ -22900,15 +23031,52 @@ The MAC address of an interface group is determined by the order of the underlyi
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
 <div class="sect1">
-<h2 id="remove-a-port-from-an-interface-group">Remove a port from an interface group</h2>
+<h2 id="remove-a-port-from-an-interface-group-or-lag">Remove a port from an interface group or LAG</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>You can remove a port from an interface group that hosts LIFs, as long as it is not the last port in the interface group. There is no requirement that the interface group must not host LIFs or that the interface group must not be the home port of a LIF considering that you are not removing the last port from the interface group. However, if you are removing the last port, then you must migrate or move the LIFs from the interface group first.</p>
 </div>
 <div class="paragraph">
 <div class="title">About this task</div>
-<p>You can remove up to 16 ports (physical interfaces) from an interface group.</p>
+<p>You can remove up to 16 ports (physical interfaces) from an interface group or LAG.</p>
+</div>
+<div class="paragraph">
+<p>The procedure you follow depends on the interface that you use—System Manager or the CLI:</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">System Manager</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use System Manager to remove a port from a LAG</strong></p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>Network &gt; Ethernet port &gt; LAG</strong> to edit a LAG.</p>
+</li>
+<li>
+<p>Select the ports to remove from the LAG.</p>
+</li>
+<li>
+<p>Save your changes.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">CLI</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use the CLI to remove ports from an interface group</strong></p>
 </div>
 <div class="paragraph">
 <div class="title">Step</div>
@@ -22925,22 +23093,59 @@ The MAC address of an interface group is determined by the order of the underlyi
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
 <div class="sect1">
-<h2 id="delete-an-interface-group">Delete an interface group</h2>
+<h2 id="delete-an-interface-group-or-lag">Delete an interface group or LAG</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can delete interface groups if you want to configure LIFs directly on the underlying physical ports or decide to change the interface group mode or distribution function.</p>
+<p>You can delete interface groups or LAGs if you want to configure LIFs directly on the underlying physical ports or decide to change the interface group or LAG mode or distribution function.</p>
 </div>
 <div class="ulist">
 <div class="title">Before you begin</div>
 <ul>
 <li>
-<p>The interface group must not be hosting a LIF.</p>
+<p>The interface group or LAG must not be hosting a LIF.</p>
 </li>
 <li>
-<p>The interface group must be neither the home port nor the failover target of a LIF.</p>
+<p>The interface group or LAG must be neither the home port nor the failover target of a LIF.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>The procedure you follow depends on the interface that you use—System Manager or the CLI:</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">System Manager</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use System Manager to delete a LAG</strong></p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>Network &gt; Ethernet port &gt; LAG</strong> to delete a LAG.</p>
+</li>
+<li>
+<p>Select the LAG you want to remove.</p>
+</li>
+<li>
+<p>Delete the LAG.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">CLI</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use the CLI to delete an interface group</strong></p>
 </div>
 <div class="paragraph">
 <div class="title">Step</div>
@@ -22954,6 +23159,10 @@ The MAC address of an interface group is determined by the order of the underlyi
 </div>
 <div class="paragraph">
 <p><code>network port ifgrp delete -node <em>cluster-1-01</em> -ifgrp <em>a0b</em></code></p>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

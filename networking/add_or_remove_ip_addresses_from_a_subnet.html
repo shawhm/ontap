@@ -5534,6 +5534,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -18352,6 +18354,8 @@
         About broadcast domains for ONTAP 9.8 and later
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/example_of_using_broadcast_domains.html">
         Example of using broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_broadcast_domain.html">
+        Add a broadcast domain
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_or_remove_ports_from_a_broadcast_domain.html">
         Add or remove ports from a broadcast domain
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/split_broadcast_domains.html">
@@ -22567,11 +22571,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-14 22:02:42 +0000">12/14/2021</time>
+    <time datetime="2022-07-29 11:51:17 +0000">07/29/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -22597,11 +22609,58 @@
 <p>You can add IP addresses when initially creating a subnet, or you can add IP addresses to a subnet that already exists. You can also remove IP addresses from an existing subnet. This enables you to allocate only the required IP addresses for SVMs.</p>
 </div>
 <div class="paragraph">
-<div class="title">About this task</div>
-<p>When adding IP addresses, you will receive an error if any service processor or network interfaces are using the IP addresses in the range being added. If you want to associate any manually addressed interfaces with the current subnet, you can set the "-force-update-lif-associations" option to true.</p>
+<p>The procedure you follow depends on the interface that you use—System Manager or the CLI:</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">System Manager</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Beginning with ONTAP 9.12.0, you can use System Manager to add or remove IP addresses to or from a subnet</strong></p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>Network &gt; Overview &gt; Subnets</strong>.</p>
+</li>
+<li>
+<p>Select <span class="image"><img src="./media/icon_kabob.gif" alt="kebob icon"></span> <strong>&gt; Edit</strong> beside the subnet you want to change.</p>
+</li>
+<li>
+<p>Add or remove IP addresses.</p>
+</li>
+<li>
+<p>Save your changes.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If the IP address or range entered is already used by an interface, the following message is displayed:<br>
+<code>An IP address in this range is already in use by a LIF. Associate the LIF with this subnet?</code></p>
+</li>
+<li>
+<p>When you click <strong>OK</strong>, the existing LIF will be associated with the subnet.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">CLI</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use the CLI to add or remove IP addresses to or from a subnet</strong></p>
 </div>
 <div class="paragraph">
-<p>When removing IP addresses, you will receive an error if any service processor or network interfaces are using the IP addresses being removed. If you want the interfaces to continue to use the IP addresses after they are removed from the subnet, you can set the "-force-update-lif-associations" option to true.</p>
+<div class="title">About this task</div>
+<p>When adding IP addresses, you will receive an error if any service processor or network interfaces are using the IP addresses in the range being added. If you want to associate any manually addressed interfaces with the current subnet, you can set the <code>-force-update-lif-associations</code> option to <code>true</code>.</p>
+</div>
+<div class="paragraph">
+<p>When removing IP addresses, you will receive an error if any service processor or network interfaces are using the IP addresses being removed. If you want the interfaces to continue to use the IP addresses after they are removed from the subnet, you can set the <code>-force-update-lif-associations</code> option to <code>true</code>.</p>
 </div>
 <div class="paragraph">
 <div class="title">Step</div>
@@ -22660,6 +22719,10 @@
 <div class="literalblock">
 <div class="content">
 <pre>network subnet add-ranges -subnet-name &lt;sub3&gt; -ip-ranges &lt;198.51.10.1-198.51.10.50&gt;</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 

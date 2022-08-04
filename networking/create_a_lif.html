@@ -5534,6 +5534,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -18352,6 +18354,8 @@
         About broadcast domains for ONTAP 9.8 and later
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/example_of_using_broadcast_domains.html">
         Example of using broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_broadcast_domain.html">
+        Add a broadcast domain
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_or_remove_ports_from_a_broadcast_domain.html">
         Add or remove ports from a broadcast domain
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/split_broadcast_domains.html">
@@ -22567,11 +22571,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-07-02 02:39:31 +0000">07/02/2022</time>
+    <time datetime="2022-07-29 16:39:52 +0000">07/29/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-barbe">
     <img  class="avatar avatar-small"
           alt="netapp-barbe"
@@ -22601,8 +22613,6 @@
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>A LIF is an IP address associated with a physical or logical port. If there is a component failure, a LIF can fail over to or be migrated to a different physical port, thereby continuing to communicate with the network.</p>
 </div>
@@ -22615,7 +22625,7 @@
 <li>
 <p>If you are planning to use a subnet name to allocate the IP address and network mask value for a LIF, the subnet must already exist.</p>
 <div class="paragraph">
-<p>Subnets contain a pool of IP addresses that belong to the same layer 3 subnet. They are created using the <code>network subnet create</code> command.</p>
+<p>Subnets contain a pool of IP addresses that belong to the same layer 3 subnet. They are created using System Manager or the <code>network subnet create</code> command.</p>
 </div>
 </li>
 <li>
@@ -22645,7 +22655,17 @@
 <p>Creating a LIF that does not have a valid failover target results in a warning message.</p>
 </li>
 <li>
-<p>If you have a large number of LIFs in your cluster, you can verify the LIF capacity supported on the cluster by using the <code>network interface capacity show</code> command and the LIF capacity supported on each node by using the <code>network interface capacity details show</code> command (at the advanced privilege level).</p>
+<p>If you have a large number of LIFs in your cluster, you can verify the LIF capacity supported on the cluster:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>System Manager: Beginning with ONTAP 9.12.0, view the throughput on the Network Interface grid.</p>
+</li>
+<li>
+<p>CLI: Use the <code>network interface capacity show</code> command and the LIF capacity supported on each node by using the <code>network interface capacity details show</code> command (at the advanced privilege level).</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Beginning with ONTAP 9.7, if other LIFs already exist for the SVM in the same subnet, you do not need to specify the home port of the LIF. ONTAP automatically chooses a random port on the specified home node in the same broadcast domain as the other LIFs already configured in the same subnet.</p>
@@ -22676,18 +22696,124 @@
 <p>When you create a network interface with a subnet, ONTAP automatically selects an available IP address from the selected subnet and assigns it to the network interface. You can change the subnet if there is more than one subnet, but you cannot change the IP address.</p>
 </li>
 <li>
+<p>When you create (add) an SVM, for a network interface, you cannot specify an IP address that is in the range of an existing subnet. You will receive a subnet conflict error. This issue occurs in other workflows for a network interface, such as creating or modifying inter-cluster network interfaces in SVM settings or cluster settings.</p>
+</li>
+<li>
 <p>Beginning with ONTAP 9.11.1, the iSCSI LIF failover feature is available on All SAN Array (ASA) platforms.</p>
 <div class="paragraph">
-<p>iSCSI LIF failover is automatically enabled (the failover policy is set to <code>sfo-partner-only</code> and the auto-revert value is set to <code>true</code>) on newly created iSCSI LIFs if no iSCSI LIFs exist in the specified storage VM or if all existing iSCSI LIFs in the specified storage VM are already enabled with iSCSI LIF failover.</p>
+<p>iSCSI LIF failover is automatically enabled (the failover policy is set to <code>sfo-partner-only</code> and the auto-revert value is set to <code>true</code>) on newly created iSCSI LIFs if no iSCSI LIFs exist in the specified SVM or if all existing iSCSI LIFs in the specified SVM are already enabled with iSCSI LIF failover.</p>
 </div>
 <div class="paragraph">
-<p>If after you upgrade to ONTAP 9.11.1 or later, you have existing iSCSI LIFs in a storage VM that have not been enabled with the iSCSI LIF failover feature and you create new iSCSI LIFs in the same storage VM, the new iSCSI LIFs assume the same failover policy (<code>disabled</code>) of the existing iSCSI LIFs in the storage VM.</p>
+<p>If after you upgrade to ONTAP 9.11.1 or later, you have existing iSCSI LIFs in an SVM that have not been enabled with the iSCSI LIF failover feature and you create new iSCSI LIFs in the same SVM, the new iSCSI LIFs assume the same failover policy (<code>disabled</code>) of the existing iSCSI LIFs in the SVM.</p>
 </div>
 <div class="paragraph">
 <p><a href="../san-admin/asa-iscsi-lif-fo-task.html">iSCSI LIF failover for ASA platforms</a></p>
 </div>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Beginning with ONTAP 9.12.0, the procedure you follow depends on the interface that you use—System Manager or the CLI:</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">System Manager</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use System Manager to add a network interface</strong></p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>Network &gt; Overview &gt; Network Interfaces</strong>.</p>
+</li>
+<li>
+<p>Select <span class="image"><img src="./media/icon_add.gif" alt="add icon"></span>.</p>
+</li>
+<li>
+<p>Select one of the following interface roles:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Data</p>
+</li>
+<li>
+<p>Intercluster</p>
+</li>
+<li>
+<p>SVM Management</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Select the protocol:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>SMB/CIFS and NFS</p>
+</li>
+<li>
+<p>iSCSI</p>
+</li>
+<li>
+<p>FC</p>
+</li>
+<li>
+<p>NVMe/FC</p>
+</li>
+<li>
+<p>NVMe/TCP</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Name the LIF or accept the name generated from your previous selections.</p>
+</li>
+<li>
+<p>Accept the home node or use the drop-down to select one.</p>
+</li>
+<li>
+<p>If at least one subnet is configured in the IPspace of the selected SVM, the subnet drop-down is displayed.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If you select a subnet, choose it from the drop-down.</p>
+</li>
+<li>
+<p>If you proceed without a subnet, the broadcast domain drop-down is displayed:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Specify the IP address. If the IP address is in use, a warning message will display.</p>
+</li>
+<li>
+<p>Specify a subnet mask.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Select the home port from the broadcast domain, either automatically (recommended) or by selecting one from the drop=down menu. The Home port control is displayed based on the broadcast domain or subnet selection.</p>
+</li>
+<li>
+<p>Save the network interface.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">CLI</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use the CLI to create a LIF</strong></p>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
@@ -22720,20 +22846,20 @@
 <p>If you assign IP addresses manually (without using a subnet), you might need to configure a default route to a gateway if there are clients or domain controllers on a different IP subnet. The <code>network route create</code> man page contains information about creating a static route within an SVM.</p>
 </li>
 <li>
-<p><code>-auto-revert</code> allows you to specify whether a data LIF is automatically reverted to its home node under circumstances such as startup, changes to the status of the management database, or when the network connection is made. The default setting is <code>false</code>, but you can set it to <code>true</code> depending on network management policies in your environment.</p>
+<p><code>-auto-revert</code> enables you to specify whether a data LIF is automatically reverted to its home node under circumstances such as startup, changes to the status of the management database, or when the network connection is made. The default setting is <code>false</code>, but you can set it to <code>true</code> depending on network management policies in your environment.</p>
 </li>
 <li>
 <p><code>-service-policy</code> Beginning with ONTAP 9.5, you can assign a service policy for the LIF with the <code>-service-policy</code> option.<br>
 When a service policy is specified for a LIF, the policy is used to construct a default role, failover policy, and data protocol list for the LIF. In ONTAP 9.5, service policies are supported only for intercluster and BGP peer services. In ONTAP 9.6, you can create service policies for several data and management services.</p>
 </li>
 <li>
-<p><code>-data-protocol</code> allows you to create a LIF that supports the Fibre Channel Protocol (FCP) or NVMe/FC protocols. This option is not required when creating an IP LIF.</p>
+<p><code>-data-protocol</code> enables you to create a LIF that supports the FCP or NVMe/FC protocols. This option is not required when creating an IP LIF.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Optional</strong>: If you want to assign an IPv6 address in the -address option:</p>
+<p><strong>Optional</strong>: Assign an IPv6 address in the -address option:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -22755,7 +22881,7 @@ When a service policy is specified for a LIF, the policy is used to construct a 
 </div>
 </li>
 <li>
-<p>Verify that the LIF was created successfully by using the <code>network interface show</code> command.</p>
+<p>Verify that the LIF was created by using the <code>network interface show</code> command.</p>
 </li>
 <li>
 <p>Verify that the configured IP address is reachable:</p>
@@ -22782,12 +22908,8 @@ When a service policy is specified for a LIF, the policy is used to construct a 
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="examples">Examples</h2>
-<div class="sectionbody">
 <div class="paragraph">
+<div class="title">Examples</div>
 <p>The following command creates a LIF and specifies the IP address and network mask values using the <code>-address</code> and <code>-netmask</code> parameters:</p>
 </div>
 <div class="literalblock">
@@ -22809,6 +22931,8 @@ When a service policy is specified for a LIF, the policy is used to construct a 
 <div class="literalblock">
 <div class="content">
 <pre>network interface create -vserver vs1.example.com -lif datalif1 -data-protocol nvme-fc -home-node node-4 -home-port 1c -address 192.0.2.145 -netmask 255.255.255.0 -auto-revert true</pre>
+</div>
+</div>
 </div>
 </div>
 </div>

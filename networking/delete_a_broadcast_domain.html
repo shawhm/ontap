@@ -5532,6 +5532,8 @@
 
 
 
+
+
     <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
   
 
@@ -18352,6 +18354,8 @@
         About broadcast domains for ONTAP 9.8 and later
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/example_of_using_broadcast_domains.html">
         Example of using broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_broadcast_domain.html">
+        Add a broadcast domain
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_or_remove_ports_from_a_broadcast_domain.html">
         Add or remove ports from a broadcast domain
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/split_broadcast_domains.html">
@@ -22567,11 +22571,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-15 00:30:31 +0000">05/15/2021</time>
+    <time datetime="2022-08-03 15:28:35 +0000">08/03/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-barbe">
     <img  class="avatar avatar-small"
           alt="netapp-barbe"
@@ -22604,20 +22616,53 @@
 </ul>
 </div>
 <div class="paragraph">
+<p>The procedure you follow depends on the interface that you use—System Manager or the CLI:</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">System Manager</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Beginning with ONTAP 9.12.0, you can use System Manager to delete a broadcast domain</strong></p>
+</div>
+<div class="paragraph">
+<p>The delete option is not shown when the broadcast domain contains ports or is associated with a subnet.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>Network &gt; Overview &gt; Broadcast domain</strong>.</p>
+</li>
+<li>
+<p>Select <span class="image"><img src="./media/icon_kabob.gif" alt="kebob icon"></span> <strong>&gt; Delete</strong> beside the broadcast domain you want to remove.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">CLI</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use the CLI to delete a broadcast domain</strong></p>
+</div>
+<div class="paragraph">
 <div class="title">Step</div>
 <p>Delete a broadcast domain:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>network port broadcast-domain delete -broadcast-domain &lt;broadcast_domain_name&gt; [-ipspace &lt;ipspace_name&gt;]</pre>
-</div>
+<div class="paragraph">
+<p><code>network port broadcast-domain delete -broadcast-domain <em>broadcast_domain_name</em> [-ipspace <em>ipspace_name</em>]</code></p>
 </div>
 <div class="paragraph">
 <p>The following command deletes broadcast domain Default-1 in IPspace ipspace1:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>network port broadcast-domain delete -broadcast-domain &lt;Default-1&gt; -ipspace &lt;ipspace1&gt;</pre>
+<div class="paragraph">
+<p><code>network port broadcast-domain delete -broadcast-domain <em>Default-1</em> -ipspace <em>ipspace1</em></code></p>
+</div>
+</div>
+</div>
 </div>
 </div>
 

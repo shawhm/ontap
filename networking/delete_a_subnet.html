@@ -5534,6 +5534,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -18352,6 +18354,8 @@
         About broadcast domains for ONTAP 9.8 and later
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/example_of_using_broadcast_domains.html">
         Example of using broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_broadcast_domain.html">
+        Add a broadcast domain
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_or_remove_ports_from_a_broadcast_domain.html">
         Add or remove ports from a broadcast domain
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/split_broadcast_domains.html">
@@ -22567,11 +22571,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-15 00:30:31 +0000">05/15/2021</time>
+    <time datetime="2022-08-03 15:28:35 +0000">08/03/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-barbe">
     <img  class="avatar avatar-small"
           alt="netapp-barbe"
@@ -22589,6 +22601,39 @@
 <p>If you no longer need a subnet and want to deallocate the IP addresses that were assigned to the subnet, you can delete it.</p>
 </div>
 <div class="paragraph">
+<p>The procedure you follow depends on the interface that you use—System Manager or the CLI:</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">System Manager</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Beginning with ONTAP 9.12.0, you can use System Manager to delete a subnet</strong></p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>Network &gt; Overview &gt; Subnets</strong>.</p>
+</li>
+<li>
+<p>Select <span class="image"><img src="./media/icon_kabob.gif" alt="kebob icon"></span> <strong>&gt; Delete</strong> beside the subnet you want to remove.</p>
+</li>
+<li>
+<p>Save your changes.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">CLI</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use the CLI to delete a subnet</strong></p>
+</div>
+<div class="paragraph">
 <div class="title">About this task</div>
 <p>You will receive an error if any service processor or network interfaces are currently using IP addresses in the specified ranges. If you want the interfaces to continue to use the IP addresses even after the subnet is deleted, you can set the -force-update-lif-associations option to true to remove the subnet&#8217;s association with the LIFs.</p>
 </div>
@@ -22596,17 +22641,17 @@
 <div class="title">Step</div>
 <p>Delete a subnet:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>network subnet delete -subnet-name subnet_name [-ipspace ipspace_name] [-force-update-lif- associations true]</pre>
-</div>
+<div class="paragraph">
+<p><code>network subnet delete -subnet-name subnet_name [-ipspace ipspace_name] [-force-update-lif- associations true]</code></p>
 </div>
 <div class="paragraph">
 <p>The following command deletes subnet sub1 in IPspace ipspace1:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>network subnet delete -subnet-name sub1 -ipspace ipspace1</pre>
+<div class="paragraph">
+<p><code>network subnet delete -subnet-name sub1 -ipspace ipspace1</code></p>
+</div>
+</div>
+</div>
 </div>
 </div>
 

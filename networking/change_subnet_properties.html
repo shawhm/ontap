@@ -5534,6 +5534,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -18352,6 +18354,8 @@
         About broadcast domains for ONTAP 9.8 and later
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/example_of_using_broadcast_domains.html">
         Example of using broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_broadcast_domain.html">
+        Add a broadcast domain
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_or_remove_ports_from_a_broadcast_domain.html">
         Add or remove ports from a broadcast domain
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/split_broadcast_domains.html">
@@ -22567,11 +22571,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-14 01:04:54 +0000">05/14/2021</time>
+    <time datetime="2022-07-29 11:51:17 +0000">07/29/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-barbe">
     <img  class="avatar avatar-small"
           alt="netapp-barbe"
@@ -22598,6 +22610,53 @@
 <p>If you add or change the gateway IP address, the modified gateway is applied to new SVMs when a LIF is created in them using the subnet. A default route to the gateway is created for the SVM if the route does not already exist. You may need to manually add a new route to the SVM when you change the gateway IP address.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>The procedure you follow depends on the interface that you use—System Manager or the CLI:</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">System Manager</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Beginning with ONTAP 9.12.0, you can use System Manager to change subnet properties</strong></p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>Network &gt; Overview &gt; Subnets</strong>.</p>
+</li>
+<li>
+<p>Select <span class="image"><img src="./media/icon_kabob.gif" alt="kabob icon"></span><strong>&gt; Edit</strong> beside the subnet you want to change.</p>
+</li>
+<li>
+<p>Make changes.</p>
+</li>
+<li>
+<p>Save your changes.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If the IP address or range entered is already used by an interface, the following message is displayed:<br>
+<code>An IP address in this range is already in use by a LIF. Associate the LIF with this subnet?</code></p>
+</li>
+<li>
+<p>When you click <strong>OK</strong>, the existing LIF will be associated with the subnet.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">CLI</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>Use the CLI to change subnet properties</strong></p>
 </div>
 <div class="paragraph">
 <div class="title">Step</div>
@@ -22636,6 +22695,10 @@
 <div class="literalblock">
 <div class="content">
 <pre>network subnet modify -subnet-name &lt;sub3&gt; -gateway &lt;192.0.3.1&gt;</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
