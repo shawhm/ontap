@@ -22567,7 +22567,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-18 04:07:48 +0000">05/18/2022</time>
+    <time datetime="2022-08-03 21:02:42 +0000">08/03/2022</time>
     
   
 
@@ -22853,26 +22853,36 @@
 <p>MetroCluster configurations</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SnapLock Compliance or Enterprise aggregates are supported to host SnapLock audit log volumes on MetroCluster configurations, with the following limitation:</p>
+<p>Yes, under the following conditions:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>SnapLock Enterprise is supported on mirrored and unmirrored aggregates.</p>
+<p>Beginning with ONTAP 9.3, SnapLock Compliance is supported on unmirrored MetroCluster aggregates.</p>
 </li>
 <li>
-<p>SnapLock Compliance is supported only on unmirrored aggregates only.</p>
+<p>Beginning with ONTAP 9.3, SnapLock Compliance is supported on mirrored aggregates, but only if the aggregate is used to host SnapLock audit log volumes.</p>
+</li>
+<li>
+<p>SVM-specific SnapLock configurations can be replicated to primary and secondary sites using MetroCluster.</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>All MetroCluster configurations support mirrored aggregates. See the ONTAP release notes to determine if your MetroCluster configuration supports unmirrored aggregates.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://library.netapp.com/ecmdocs/ECMLP2492508/html/frameset.html" target="_blank" rel="noopener">ONTAP 9 Release Notes</a></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No</p>
+<p>Yes, under the following conditions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Beginning with ONTAP 9, SnapLock Enterprise aggregates are supported.</p>
+</li>
+<li>
+<p>Beginning with ONTAP 9.3, SnapLock Enterprise aggregates with privileged delete are supported.</p>
+</li>
+<li>
+<p>SVM-specific SnapLock configurations can be replicated to both sites using MetroCluster.</p>
+</li>
+</ul>
 </div></div></td>
 </tr>
 <tr>
