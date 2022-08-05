@@ -22571,7 +22571,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-26 21:59:52 +0000">01/26/2022</time>
+    <time datetime="2022-08-04 21:11:58 +0000">08/04/2022</time>
     
   
 
@@ -22608,7 +22608,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>In certain situations, you might need to manage your automatic giveback settings using ONTAP commands.</p>
+<p>By default, the take-over partner node automatically gives back storage when the off-line node is brought back on line, thus restoring the high-availability pair relationship. In most cases, this is the desired behavior. If you need to disable automatic giveback - for example, if you want to investigate the cause of the takeover before giving back – you need to be aware of the interaction of non-default settings.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -22669,7 +22669,7 @@
 <p>The operation of automatic giveback depends on how you configure the parameters of the storage failover modify command.</p>
 </div>
 <div class="paragraph">
-<p>The following table lists the storage failover modify command parameters that apply to takeover events not caused by a panic:</p>
+<p>The following table lists the default settings for the <code>storage failover modify</code> command parameters that apply to takeover events not caused by a panic.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -22748,7 +22748,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">halt command, or power cycle operation issued from the Service Processor</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" rowspan="2"><div class="content"><div class="paragraph">
