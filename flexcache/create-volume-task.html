@@ -22571,7 +22571,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-04 13:59:47 +0000">04/04/2022</time>
+    <time datetime="2022-08-08 13:51:39 +0000">08/08/2022</time>
     
   
 
@@ -22627,7 +22627,7 @@
 <li>
 <p>On the destination cluster, create a peer relationship with the data protection source cluster:
 <br>
-<code>cluster peer create -generate-passphrase -offer-expiration MM/DD/YYYY HH:MM:SS|1&#8230;&#8203;7days|1&#8230;&#8203;168hours -peer-addrs peer_LIF_IPs -initial-allowed-vserver-peers svm_name,..|* -ipspace ipspace_name</code></p>
+<code>cluster peer create -generate-passphrase -offer-expiration MM/DD/YYYY HH:MM:SS|1&#8230;&#8203;7days|1&#8230;&#8203;168hours -peer-addrs <em>peer_LIF_IPs</em> -initial-allowed-vserver-peers <em>svm_name</em>,..|* -ipspace <em>ipspace_name</em></code></p>
 <div class="paragraph">
 <p>Beginning with ONTAP 9.6, TLS encryption is enabled by default when creating a cluster peer relationship. TLS encryption is supported for the intercluster communication between the origin and FlexCache volumes. You can also disable TLS encryption for the cluster peer relationship, if required.</p>
 </div>
@@ -22648,7 +22648,7 @@ Warning: make a note of the passphrase - it cannot be displayed again.</pre>
 <li>
 <p>On the source cluster, authenticate the source cluster to the destination cluster:
 <br>
-<code>cluster peer create -peer-addrs peer_LIF_IPs -ipspace ipspace</code></p>
+<code>cluster peer create -peer-addrs <em>peer_LIF_IPs</em> -ipspace <em>ipspace</em></code></p>
 <div class="listingblock">
 <div class="content">
 <pre>cluster01::&gt; cluster peer create -peer-addrs 192.140.112.101,192.140.112.102
@@ -22673,7 +22673,7 @@ Clusters cluster02 and cluster01 are peered.</pre>
 <li>
 <p>If the SVM is in a different cluster, create an SVM permission for the peering SVMs:
 <br>
-<code>vserver peer permission create -peer-cluster cluster_name -vserver svm-name -applications flexcache</code></p>
+<code>vserver peer permission create -peer-cluster <em>cluster_name</em> -vserver <em>svm-name</em> -applications flexcache</code></p>
 <div class="paragraph">
 <p>The following example illustrates how to create an SVM peer permission that applies for all of the local SVMs:</p>
 </div>
@@ -22690,7 +22690,7 @@ from peer cluster "cluster2" with any of the local Vservers. Do you want to cont
 <li>
 <p>Create the SVM peer relationship:
 <br>
-<code>vserver peer create -vserver local_SVM -peer-vserver remote_SVM -peer cluster cluster_name -applications flexcache</code></p>
+<code>vserver peer create -vserver local_SVM -peer-vserver <em>remote_SVM</em> -peer-cluster <em>cluster_name</em> -applications flexcache</code></p>
 </li>
 </ol>
 </div>
@@ -22698,7 +22698,7 @@ from peer cluster "cluster2" with any of the local Vservers. Do you want to cont
 <li>
 <p>Create a FlexCache volume:</p>
 <div class="paragraph">
-<p><code>volume flexcache create -vserver cache_svm -volume cache_vol_name -auto-provision-as flexgroup -size vol_size -origin-vserver origin_svm -origin-volume origin_vol_name</code></p>
+<p><code>volume flexcache create -vserver <em>cache_svm</em> -volume <em>cache_vol_name</em> -auto-provision-as flexgroup -size <em>vol_size</em> -origin-vserver <em>origin_svm</em> -origin-volume <em>origin_vol_name</em></code></p>
 </div>
 <div class="paragraph">
 <p>The following example creates a FlexCache volume and automatically selects existing aggregates for provisioning:</p>
