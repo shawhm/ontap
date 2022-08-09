@@ -22571,7 +22571,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-11 19:49:03 +0000">05/11/2022</time>
+    <time datetime="2022-08-08 17:48:23 +0000">08/08/2022</time>
     
   
 
@@ -22608,7 +22608,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>With System Manager, you can apply a firmware update to supported devices in your cluster, such as disks, disk shelves, the Disk Qualification Package (DQP) the service processor (SP), or the Baseboard Management Controller (BMC).</p>
+<p>With System Manager, you can apply a firmware update to supported devices in your cluster, such as disks, disk shelves, the Disk Qualification Package (DQP), the service processor (SP), or the Baseboard Management Controller (BMC).</p>
 </div>
 <div class="paragraph">
 <p>You can apply firmware updates manually or automatically.  Select either procedure:</p>
@@ -22849,7 +22849,7 @@ For ONTAP 9.8, you must navigate to the NetApp Support Site to download an updat
 <img src="/us-en/ontap/images/note.svg" alt="Note">
 </td>
 <td class="content">
-You can monitor or verify updates under <strong>Firmware Update Summary</strong>.
+You can monitor or verify updates under <strong>Firmware Update Summary</strong>. Updates that were dismissed or failed to install can be viewed in System Manager.  Go to <strong>Cluster &gt; Settings &gt; Automatic Update &gt; View All Automatic Updates</strong>.
 </td>
 </tr>
 </table>
@@ -22874,7 +22874,7 @@ You can monitor or verify updates under <strong>Firmware Update Summary</strong>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Storage firmware</strong>:  Storage devices, disks, and disk shelves</p>
+<p><strong>Storage firmware</strong>:  Storage devices, Disk Qualification Package (DQP), disks, and disk shelves</p>
 </li>
 <li>
 <p><strong>SP/BMC firmware</strong>:  Service processors and BMC modules</p>
@@ -22936,7 +22936,7 @@ You can monitor or verify updates under <strong>Firmware Update Summary</strong>
 <div class="sect2">
 <h3 id="specify-default-actions-for-update-recommendations">Specify default actions for update recommendations</h3>
 <div class="paragraph">
-<p>You can set a default action that you want performed for storage firmware updates and SP/BMC firmware updates.</p>
+<p>ONTAP automatically detects when an update is available.  It initiates the download and installation without any intervention.  However, you can specify a different default behavior to be performed for storage firmware updates and SP/BMC firmware updates.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
@@ -23077,6 +23077,18 @@ You can monitor or verify updates under <strong>Firmware Update Summary</strong>
 </table>
 </li>
 </ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Updates that were dismissed or failed to install can be viewed in System Manager.  Go to <strong>Cluster &gt; Settings &gt; Automatic Update &gt; View All Automatic Updates</strong>.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
