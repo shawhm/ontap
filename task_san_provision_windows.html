@@ -22571,7 +22571,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-10 20:43:21 +0000">05/10/2022</time>
+    <time datetime="2022-08-08 16:53:15 +0000">08/08/2022</time>
     
   
 
@@ -22662,9 +22662,10 @@ Beginning with ONTAP 9.8, when you provision storage, QoS is enabled by default.
 <th class="tableblock halign-left valign-top"><p class="tableblock">Available beginning with</p></th>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
 <p>Assign QoS policy to LUNs instead of parent volume</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
@@ -22675,10 +22676,11 @@ Beginning with ONTAP 9.8, when you provision storage, QoS is enabled by default.
 </li>
 <li>
 <p>To apply the QoS policy to individual LUNs instead of the entire volume, select <strong>Apply these performance limits enforcements to each LUN</strong>.</p>
-<div class="literalblock">
-<div class="content">
-<pre>By default, performance limits are applied at the volume level.</pre>
+<div class="paragraph">
+<p>By default, performance limits are applied at the volume level.</p>
 </div>
+</li>
+</ul>
 </div>
 </li>
 </ul>
@@ -22686,9 +22688,10 @@ Beginning with ONTAP 9.8, when you provision storage, QoS is enabled by default.
 <td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 9.10.1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
 <p>Create a new initiator group using existing initiator groups</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
@@ -22701,13 +22704,17 @@ Beginning with ONTAP 9.8, when you provision storage, QoS is enabled by default.
 </div>
 </li>
 </ul>
+</div>
+</li>
+</ul>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 9.9.1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
 <p>Add a description to your igroup or host initiator</p>
-</div>
 <div class="paragraph">
 <p>The description serves as an alias for the igroup or host initiator.</p>
 </div>
@@ -22717,13 +22724,17 @@ Beginning with ONTAP 9.8, when you provision storage, QoS is enabled by default.
 <p><strong>More Options &gt; HOST INFORMATION</strong></p>
 </li>
 </ul>
+</div>
+</li>
+</ul>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 9.9.1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
 <p>Create your LUN on an existing volume</p>
-</div>
 <div class="paragraph">
 <p>By default, a new LUN is created in a new volume.</p>
 </div>
@@ -22736,13 +22747,17 @@ Beginning with ONTAP 9.8, when you provision storage, QoS is enabled by default.
 <p>Select <strong>Group related LUNs</strong>.</p>
 </li>
 </ul>
+</div>
+</li>
+</ul>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 9.9.1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
 <p>Disable QoS or choose a custom QoS policy</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
@@ -22752,6 +22767,9 @@ Beginning with ONTAP 9.8, when you provision storage, QoS is enabled by default.
 <p>Select <strong>Performance Service Level</strong>.</p>
 <div class="paragraph">
 <p><strong>NOTE</strong>: In ONTAP 9.9.1 and later, if you select a custom QoS policy, you can also select manual placement on a specified local tier.</p>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ul>
@@ -22765,10 +22783,6 @@ Beginning with ONTAP 9.8, when you provision storage, QoS is enabled by default.
 </div>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<div class="title">Related Information</div>
-<p><a href="san-admin/manage-san-initiators-task.html">View and manage SAN initiators and igroups</a></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic" start="3">
@@ -22786,9 +22800,16 @@ Beginning with ONTAP 9.8, when you provision storage, QoS is enabled by default.
 </li>
 </ol>
 </div>
-<div class="paragraph">
+<div class="ulist">
 <div class="title">Related information</div>
-<p>If you want additional details about SAN administration, consult the <a href="./san-admin/index.html">SAN Administration overview</a>.</p>
+<ul>
+<li>
+<p><a href="./san-admin/index.html">SAN Administration overview</a></p>
+</li>
+<li>
+<p><a href="san-admin/manage-san-initiators-task.html">View and manage SAN initiators and igroups</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
