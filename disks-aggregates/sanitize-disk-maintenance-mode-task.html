@@ -22571,7 +22571,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-02 19:18:32 +0000">05/02/2022</time>
+    <time datetime="2022-08-10 16:13:20 +0000">08/10/2022</time>
     
   
 
@@ -22629,7 +22629,7 @@
 <h2 id="maintenance-mode-method">Maintenance mode method</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Starting with ONTAP 9.6, you can perform disk sanitization in maintenance mode.</p>
+<p>Beginning with ONTAP 9.6, you can perform disk sanitization in maintenance mode.</p>
 </div>
 <div class="ulist">
 <div class="title">Before you begin</div>
@@ -22661,14 +22661,17 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The command to unpartition a disk is only available at the diag level and should be performed only under NetApp Support supervision. It is highly recommended that you contact NetApp Support before you proceed.</p>
+<p>The command to unpartition a disk is only available at the diag level and should be performed only under NetApp Support supervision. <strong>It is highly recommended that you contact NetApp Support before you proceed.</strong></p>
+</div>
+<div class="paragraph">
+<p>You can also refer to the Knowledge Base article <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/How_to_unpartition_a_spare_drive_in_ONTAP" target="_blank" rel="noopener">How to unpartition a spare drive in ONTAP</a>.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><code>disk unpartition disk_name</code></p>
+<p><code>disk unpartition <em>disk_name</em></code></p>
 </div>
 </li>
 <li>
@@ -22753,6 +22756,29 @@ Do not turn off power to the node, disrupt the storage connectivity, or remove t
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
+<p>If the disks you want to sanitize are partitioned, unpartition each disk:</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The command to unpartition a disk is only available at the diag level and should be performed only under NetApp Support supervision. <strong>It is highly recommended that you contact NetApp Support before you proceed.</strong></p>
+</div>
+<div class="paragraph">
+<p>You can also refer to the Knowledge Base article <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/How_to_unpartition_a_spare_drive_in_ONTAP" target="_blank" rel="noopener">How to unpartition a spare drive in ONTAP</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><code>disk unpartition <em>disk_name</em></code></p>
+</div>
+</li>
+<li>
 <p>Enter the nodeshell for the node that owns the disks you want to sanitize:</p>
 <div class="paragraph">
 <p><code>system node run -node <em>node_name</em></code></p>
@@ -22771,26 +22797,6 @@ Do not turn off power to the node, disrupt the storage connectivity, or remove t
 <p>Switch to the nodeshell advanced privilege level:</p>
 <div class="paragraph">
 <p><code>priv set advanced</code></p>
-</div>
-</li>
-<li>
-<p>If the disks you want to sanitize are partitioned, unpartition each disk:</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The command to unpartition a disk is only available at the diag level and should be performed only under NetApp Support supervision. It is highly recommended that you contact NetApp Support before you proceed.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><code>disk unpartition <em>disk_name</em></code></p>
 </div>
 </li>
 <li>
@@ -22848,7 +22854,7 @@ third pass.</p>
 <li>
 <p>After the sanitization process is complete, return the disks to spare status:</p>
 <div class="paragraph">
-<p><code>disk sanitize release disk_name</code></p>
+<p><code>disk sanitize release <em>disk_name</em></code></p>
 </div>
 </li>
 <li>
