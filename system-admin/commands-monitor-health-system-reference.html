@@ -22571,7 +22571,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-07-18 20:12:03 +0000">07/18/2022</time>
+    <time datetime="2022-08-08 15:53:05 +0000">08/08/2022</time>
     
   
 
@@ -22692,23 +22692,28 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="manage-the-discovery-of-cluster-and-management-network-switches">Manage the discovery of cluster and management network switches</h2>
+<h2 id="manage-the-discovery-of-cluster-storage-and-management-network-switches">Manage the discovery of cluster, storage, and management network switches</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">If you want to&#8230;&#8203;</th>
-<th class="tableblock halign-left valign-top">Use this command&#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">Use this command.. (ONTAP 9.8 and later)</th>
+<th class="tableblock halign-left valign-top">Use this command.. (ONTAP 9.7 and earlier)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Display the switches that the cluster monitors</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>system switch ethernet show</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><code>system cluster-switch show</code></p>
@@ -22722,12 +22727,18 @@
 <p>This command is available at the advanced privilege level.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>system switch ethernet show-all</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><code>system cluster-switch show-all</code></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Configure discovery of an undiscovered switch</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>system switch ethernet create</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><code>system cluster-switch create</code></p>
@@ -22738,12 +22749,18 @@
 <p>Modify information about a switch that the cluster monitors (for example, device name, IP address, SNMP version, and community string)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>system switch ethernet modify</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><code>system cluster-switch modify</code></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Disable monitoring of a switch</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>system switch ethernet modify -disable-monitoring</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><code>system cluster-switch modify -disable-monitoring</code></p>
@@ -22754,6 +22771,9 @@
 <p>Disable discovery and monitoring of a switch and delete switch configuration information</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>system switch ethernet delete</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><code>system cluster-switch delete</code></p>
 </div></div></td>
 </tr>
@@ -22762,15 +22782,18 @@
 <p>Permanently remove the switch configuration information which is stored in the database (doing so reenables automatic discovery of the switch)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>system switch ethernet delete -force</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><code>system cluster-switch delete -force</code></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Enable automatic logging to send with AutoSupport messages.</p>
-</div>
-<div class="paragraph">
-<p>This command is available at the advanced privilege level.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>system switch ethernet log</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><code>system cluster-switch log</code></p>
@@ -22961,33 +22984,6 @@
 </td>
 </tr>
 </table>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="downgrade-software-versions-between-minor-releases">Downgrade software versions between minor releases</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">If you want to&#8230;&#8203;</th>
-<th class="tableblock halign-left valign-top">Use this command&#8230;&#8203;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Downgrade the software version command</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>system cluster-switch prepare-to-downgrade</code></p>
 </div></div></td>
 </tr>
 </tbody>

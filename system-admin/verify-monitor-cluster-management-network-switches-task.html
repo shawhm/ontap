@@ -22571,7 +22571,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-19 18:27:41 +0000">10/19/2021</time>
+    <time datetime="2022-08-08 15:53:05 +0000">08/08/2022</time>
     
   
 
@@ -22596,7 +22596,27 @@
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p>Use the <code>system health cluster-switch show</code> command to identify the switches that the cluster switch health monitor discovered.</p>
+<p>To identify the switches that the cluster switch health monitor discovered, enter the following command:</p>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">ONTAP 9.8 and later</div>
+<div class="content">
+<div class="paragraph">
+<p><code>system switch ethernet show</code></p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">ONTAP 9.7 and earlier</div>
+<div class="content">
+<div class="paragraph">
+<p><code>system cluster-switch show</code></p>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>If the <code>Model</code> column displays the value <code>OTHER</code>, then ONTAP cannot monitor the switch. ONTAP sets the value to <code>OTHER</code> if a switch that it automatically discovers is not supported for health monitoring.</p>
 </div>
@@ -22608,7 +22628,7 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If a switch does not display in the command output, then you must configure discovery of the switch.</p>
+<p>If a switch does not display in the command output, you must configure discovery of the switch.</p>
 </div>
 </td>
 </tr>
@@ -22618,13 +22638,47 @@
 <li>
 <p>Upgrade to the latest supported switch software and reference the configuration file (RCF) from the NetApp Support Site.</p>
 <div class="paragraph">
-<p><a href="http://support.netapp.com/NOW/download/software/cm_switches/">Cisco Ethernet Switch page</a></p>
+<p><a href="http://support.netapp.com/NOW/download/software/cm_switches/" target="_blank" rel="noopener">NetApp Support Downloads page</a></p>
 </div>
 <div class="paragraph">
 <p>The community string in the switch&#8217;s RCF must match the community string that the health monitor is configured to use. By default, the health monitor uses the community string <code>cshm1!</code>.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
 <div class="paragraph">
-<p>If you need to change information about a switch that the cluster monitors, you can modify the community string that the health monitor uses by using the <code>system health cluster-switch modify</code> command.</p>
+<p>At this time, the health monitor only supports SNMPv2.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you need to change information about a switch that the cluster monitors, you can modify the community string that the health monitor uses by using the following command:</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">ONTAP 9.8 and later</div>
+<div class="content">
+<div class="paragraph">
+<p><code>system switch ethernet modify</code></p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">ONTAP 9.7 and earlier</div>
+<div class="content">
+<div class="paragraph">
+<p><code>system cluster-switch modify</code></p>
+</div>
+</div>
+</div>
+</div>
 </div>
 </li>
 <li>
