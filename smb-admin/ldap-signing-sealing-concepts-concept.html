@@ -22571,11 +22571,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-09 22:31:46 +0000">12/09/2021</time>
+    <time datetime="2022-08-19 19:31:21 +0000">08/19/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/mpittman-netapp">
+    <img  class="avatar avatar-small"
+          alt="mpittman-netapp"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/86311789?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -22593,7 +22601,7 @@
 <p>Beginning with ONTAP 9, you can configure signing and sealing to enable LDAP session security on queries to an Active Directory (AD) server. You must configure the CIFS server security settings on the storage virtual machine (SVM) to correspond to those on the LDAP server.</p>
 </div>
 <div class="paragraph">
-<p>Signing confirms the integrity of the LDAP payload data using secret key technology. Sealing encrypts the LDAP payload data to avoid transmitting sensitive information in clear text. An <em>LDAP Security Level</em> option indicates whether the LDAP traffic needs to be signed, signed and sealed, or neither. The default is <code>none</code>. test</p>
+<p>Signing confirms the integrity of the LDAP payload data using secret key technology. Sealing encrypts the LDAP payload data to avoid transmitting sensitive information in clear text. An <em>LDAP Security Level</em> option indicates whether the LDAP traffic needs to be signed, signed and sealed, or neither. The default is <code>none</code>.</p>
 </div>
 <div class="paragraph">
 <p>LDAP signing and sealing on CIFS traffic is enabled on the SVM with the <code>-session-security-for-ad-ldap</code> option to the <code>vserver cifs security modify</code> command.</p>
