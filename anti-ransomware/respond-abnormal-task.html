@@ -9,15 +9,15 @@
   <meta property="og:title" content="Respond to abnormal activity." />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/anti-ransomware/respond-abnormal-task.html" />
-	<meta property="og:description" content="When anti-ransomware detects abnormal activity in a protected volume, it issues a warning. You should evaluate the notification to determine whether the acti..." />
+	<meta property="og:description" content="When Autonomous Ransomware Protection (ARP) detects abnormal activity in a protected volume, it issues a warning. You should evaluate the notification to det..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="When anti-ransomware detects abnormal activity in a protected volume, it issues a warning. You should evaluate the notification to determine whether the acti...">
-  <meta name="keywords" content=" Respond to abnormal activity, anti-ransomware abnormal activity, data entropy, unusual file extensions, potential ransomware attack, false positive, suspected ransomware attack, abnormal activity notification, security, ransomware alert message, detected abnormal volume, suspected file types, attack report, anti-ransomware attack"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="When Autonomous Ransomware Protection (ARP) detects abnormal activity in a protected volume, it issues a warning. You should evaluate the notification to det...">
+  <meta name="keywords" content=" Respond to abnormal activity, anti-ransomware abnormal activity, data entropy, unusual file extensions, potential ransomware attack, false positive, suspected ransomware attack, abnormal activity notification, security, ransomware alert message, detected abnormal volume, suspected file types, attack report, anti-ransomware attack, autonomous, ransomware, protection, arp"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -37363,7 +37363,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-02 14:37:35 +0000">06/02/2022</time>
+    <time datetime="2022-08-25 17:23:09 +0000">08/25/2022</time>
     
   
 
@@ -37397,22 +37397,20 @@
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
-<p>When anti-ransomware detects abnormal activity in a protected volume, it issues a warning. You should evaluate the notification to determine whether the activity is expected and acceptable, or whether an attack is under way.</p>
+<p>When Autonomous Ransomware Protection (ARP) detects abnormal activity in a protected volume, it issues a warning. You should evaluate the notification to determine whether the activity is expected and acceptable, or whether an attack is under way.</p>
 </div>
 <div class="ulist">
 <div class="title">What you’ll need</div>
 <ul>
 <li>
-<p>Anti-ransomware is running in active mode.</p>
+<p>ARP is running in active mode.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <div class="title">About this task</div>
-<p>Anti-ransomware displays a list of suspected files when it detects any combination of high data entropy, abnormal volume activity with data encryption, and unusual file extensions.</p>
+<p>ARP displays a list of suspected files when it detects any combination of high data entropy, abnormal volume activity with data encryption, and unusual file extensions.</p>
 </div>
 <div class="paragraph">
 <p>When the warning is issued, you can respond by marking the file activity in one of two ways:</p>
@@ -37434,7 +37432,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>In both cases, normal monitoring resumes after updating and clearing the notices; anti-ransomware records your evaluation, logs are updated with the new file types and using them for future analysis. However, in the case of a suspected attack, you must determine whether it is an attack, respond to it if it is, and restore protected data before clearing the notices. For more information, see <a href="index.html#how-to-recover-data-in-ontap-after-a-ransomware-attack">How to recover from a ransomware attack</a>.</p>
+<p>In both cases, normal monitoring resumes after updating and clearing the notices; ARP records your evaluation, logs are updated with the new file types and using them for future analysis. However, in the case of a suspected attack, you must determine whether it is an attack, respond to it if it is, and restore protected data before clearing the notices. <a href="index.html#how-to-recover-hdata-in-ontap-after-a-ransomware-attack">Learn more about how to recover from a ransomware attack</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -37448,11 +37446,12 @@ There are no notices to clear if you restored an entire volume.
 </tr>
 </table>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="system-manager-procedure">System Manager procedure</h2>
-<div class="sectionbody">
+<div class="exampleblock tabbed-block">
+<div class="title">Example 1. Steps</div>
+<div class="content">
+<div class="openblock">
+<div class="title">System Manager</div>
+<div class="content">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -37488,16 +37487,16 @@ There are no notices to clear if you restored an entire volume.
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Potential Ransomware Attack</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Respond to the attack and restore protected data. Then click <strong>Update</strong> and <strong>Clear Suspect File Types</strong> to record your decision and resume normal anti-ransomware monitoring.<br>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Respond to the attack and restore protected data. Then click <strong>Update</strong> and <strong>Clear Suspect File Types</strong> to record your decision and resume normal ARP monitoring.<br>
 There are no suspect file types to clear if you restored an entire volume.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<div class="sect1">
-<h2 id="cli-procedure">CLI procedure</h2>
-<div class="sectionbody">
+<div class="openblock">
+<div class="title">CLI</div>
+<div class="content">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -37569,7 +37568,7 @@ Number of Attacks: 1</pre>
 <li>
 <p>Potential ransomware attack</p>
 <div class="paragraph">
-<p>Respond to the attack and restore data. Then enter the following command to record your decision and resume normal anti-ransomware monitoring:</p>
+<p>Respond to the attack and restore data. Then enter the following command to record your decision and resume normal ARP monitoring:</p>
 </div>
 <div class="paragraph">
 <p><code>anti-ransomware volume attack clear-suspect -vserver <em>svm_name</em> -volume <em>vol_name</em> [<em>extension identifiers</em>] -false-positive false</code></p>
@@ -37588,6 +37587,8 @@ Number of Attacks: 1</pre>
 </div>
 </li>
 </ol>
+</div>
+</div>
 </div>
 </div>
 </div>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Restore data after an attack</title>
+  <title>Restore data after a ransomware attack</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Restore data after an attack" />
+  <meta property="og:title" content="Restore data after a ransomware attack" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/anti-ransomware/recover-data-task.html" />
 	<meta property="og:description" content="Snapshot copies named Anti_ransomware_backup are created when anti-ransomware detects a potential attack. You can restore data from these anti-ransomware cop..." />
@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Snapshot copies named Anti_ransomware_backup are created when anti-ransomware detects a potential attack. You can restore data from these anti-ransomware cop...">
-  <meta name="keywords" content=" Restore data after an attack, anti-ransomware backup, restore data from snapshot copies, potential ransomware attack, ransomware attack, recovery snapshot copies are deleted, recover deleted snapshot copies"><!-- Icons -->
+  <meta name="keywords" content=" Restore data after an attack, anti-ransomware backup, restore data from snapshot copies, potential ransomware attack, ransomware attack, recovery snapshot copies are deleted, recover deleted snapshot copies, autonomous, ransomware, protection, arp"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -173,7 +173,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Restore data after an attack](https://docs.netapp.com/us-en/ontap/anti-ransomware/recover-data-task.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/anti-ransomware/recover-data-task.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Restore data after a ransomware attack](https://docs.netapp.com/us-en/ontap/anti-ransomware/recover-data-task.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/anti-ransomware/recover-data-task.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -37356,14 +37356,14 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Restore data after an attack</h1>
+  <h1 class="n-doc__component-detail-heading">Restore data after a ransomware attack</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-06-10 16:41:52 +0000">06/10/2022</time>
+    <time datetime="2022-08-25 21:56:03 +0000">08/25/2022</time>
     
   
 
@@ -37389,10 +37389,8 @@
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
-<p>Snapshot copies named “Anti_ransomware_backup” are created when anti-ransomware detects a potential attack. You can restore data from these anti-ransomware copies or other Snapshot copies.</p>
+<p>Snapshot copies named “Anti_ransomware_backup” are created when Autonomous Ransomware Protection (ARP) detects a potential attack. You can restore data from these ARP copies or other Snapshot copies.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -37410,18 +37408,19 @@ If a ransomware attack occurs, see the Knowledge Base article <a href="https://k
 <div class="title">What you’ll need</div>
 <ul>
 <li>
-<p>Anti-ransomware enabled</p>
+<p>ARP enabled</p>
 </li>
 <li>
 <p>Reports from potential ransomware attacks</p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="system-manager-procedure">System Manager procedure</h2>
-<div class="sectionbody">
+<div class="exampleblock tabbed-block">
+<div class="title">Example 1. Steps</div>
+<div class="content">
+<div class="openblock">
+<div class="title">System Manager</div>
+<div class="content">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -37436,9 +37435,9 @@ Click <strong>Storage &gt; Volumes</strong>, select the volume, then click the S
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="cli-procedure">CLI procedure</h2>
-<div class="sectionbody">
+<div class="openblock">
+<div class="title">CLI</div>
+<div class="content">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -37450,6 +37449,8 @@ Click <strong>Storage &gt; Volumes</strong>, select the volume, then click the S
 <a href="../data-protection/restore-contents-volume-snapshot-task.html">Restoring files from Snapshot copies</a></p>
 </li>
 </ol>
+</div>
+</div>
 </div>
 </div>
 </div>

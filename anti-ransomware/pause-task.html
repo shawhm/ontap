@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Pause anti-ransomware to exclude workload events from analysis</title>
+  <title>Pause Autonomous Ransomware Protection to exclude workload events from analysis</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Pause anti-ransomware to exclude workload events from analysis" />
+  <meta property="og:title" content="Pause Autonomous Ransomware Protection to exclude workload events from analysis" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/anti-ransomware/pause-task.html" />
-	<meta property="og:description" content="If you are expecting unusual workload events, you can temporarily suspend and resume anti-ransomware analysis at any time." />
+	<meta property="og:description" content="If you are expecting unusual workload events, you can temporarily suspend and resume Autonomous Ransomware Protection (ARP) analysis at any time." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="If you are expecting unusual workload events, you can temporarily suspend and resume anti-ransomware analysis at any time.">
-  <meta name="keywords" content=" anti-ransomware, ransomware, pause anti-ransomware, pause anti-ransomware to exclude workload events"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="If you are expecting unusual workload events, you can temporarily suspend and resume Autonomous Ransomware Protection (ARP) analysis at any time.">
+  <meta name="keywords" content=" anti-ransomware, ransomware, pause, autonomous, protection, arp"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -173,7 +173,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Pause anti-ransomware to exclude workload events from analysis](https://docs.netapp.com/us-en/ontap/anti-ransomware/pause-task.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/anti-ransomware/pause-task.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Pause Autonomous Ransomware Protection to exclude workload events from analysis](https://docs.netapp.com/us-en/ontap/anti-ransomware/pause-task.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/anti-ransomware/pause-task.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -37356,14 +37356,14 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Pause anti-ransomware to exclude workload events from analysis</h1>
+  <h1 class="n-doc__component-detail-heading">Pause Autonomous Ransomware Protection to exclude workload events from analysis</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2021-11-05 13:34:43 +0000">11/05/2021</time>
+    <time datetime="2022-08-25 21:56:03 +0000">08/25/2022</time>
     
   
 
@@ -37397,22 +37397,20 @@
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
-<p>If you are expecting unusual workload events, you can temporarily suspend and resume anti-ransomware analysis at any time.</p>
+<p>If you are expecting unusual workload events, you can temporarily suspend and resume Autonomous Ransomware Protection (ARP) analysis at any time.</p>
 </div>
 <div class="ulist">
 <div class="title">What you’ll need</div>
 <ul>
 <li>
-<p>Anti-ransomware is running in learning or active mode.</p>
+<p>ARP is running in learning or active mode.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <div class="title">About this task</div>
-<p>During an anti-ransomware pause, no events are logged nor are any actions for new writes. However, the analytics operation continues for earlier logs in the background.</p>
+<p>During an ARP pause, no events are logged nor are any actions for new writes. However, the analytics operation continues for earlier logs in the background.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -37421,42 +37419,45 @@
 <img src="/us-en/ontap/images/note.svg" alt="Note">
 </td>
 <td class="content">
-Do not use the anti-ransomware disable function to pause analytics. Doing so disables anti-ransomware on the volume and all the existing information around learned workload behavior is lost. This would require a restart of the learning period.
+Do not use the anti-ransomware disable function to pause analytics. Doing so disables ARP on the volume and all the existing information around learned workload behavior is lost. This would require a restart of the learning period.
 </td>
 </tr>
 </table>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="system-manager-procedure">System Manager procedure</h2>
-<div class="sectionbody">
+<div class="exampleblock tabbed-block">
+<div class="title">Example 1. Steps</div>
+<div class="content">
+<div class="openblock">
+<div class="title">System Manager</div>
+<div class="content">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Click <strong>Storage &gt; Volumes</strong> and then select the volume where you want to pause anti-ransomware.</p>
+<p>Click <strong>Storage &gt; Volumes</strong> and then select the volume where you want to pause ARP.</p>
 </li>
 <li>
-<p>In the Security tab of the Volumes overview, click <strong>Pause anti-ransomware</strong> in the Anti-ransomware box.</p>
+<p>In the Security tab of the Volumes overview, click <strong>Pause anti-ransomware</strong> in the <strong>Anti-ransomware</strong> box.</p>
 </li>
 </ol>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="cli-procedure">CLI procedure</h2>
-<div class="sectionbody">
+<div class="openblock">
+<div class="title">CLI</div>
+<div class="content">
 <div class="paragraph">
-<p>Pause ransomware protection on a volume:</p>
+<p>Pause ARP on a volume:</p>
 </div>
 <div class="paragraph">
 <p><code>security anti-ransomware volume pause -vserver <em>svm_name</em> -volume <em>vol_name</em></code></p>
 </div>
 <div class="paragraph">
-<p>To resume processing, use the resume parameter.</p>
+<p>To resume processing, use the <code>resume</code> parameter.</p>
 </div>
 <div class="paragraph">
 <p><code>security anti-ransomware volume resume -vserver <em>svm_name</em> -volume <em>vol_name</em></code></p>
+</div>
+</div>
 </div>
 </div>
 </div>

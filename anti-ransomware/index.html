@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Anti-ransomware overview</title>
+  <title>Autonomous Ransomware Protection overview</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Anti-ransomware overview" />
+  <meta property="og:title" content="Autonomous Ransomware Protection overview" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html" />
-	<meta property="og:description" content="Beginning with ONTAP 9.10.1, the anti-ransomware feature uses workload analysis in NAS (NFS and SMB) environments to proactively detect and warn about abnorm..." />
+	<meta property="og:description" content="Beginning with ONTAP 9.10.1, the Autonomous Ransomware Protection (ARP) feature uses workload analysis in NAS (NFS and SMB) environments to proactively detec..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Beginning with ONTAP 9.10.1, the anti-ransomware feature uses workload analysis in NAS (NFS and SMB) environments to proactively detect and warn about abnorm...">
-  <meta name="keywords" content=" anti-ransomware overview, ransomware, security, introduce, protection, detect, detection, threat, attack, suspect, what ontap anti-ransomware detects, entropy, abnormal volume activity, ransomware, antiransomware, extension conformity, recover data after a ransomware attack, ransomware protection strategy"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Beginning with ONTAP 9.10.1, the Autonomous Ransomware Protection (ARP) feature uses workload analysis in NAS (NFS and SMB) environments to proactively detec...">
+  <meta name="keywords" content=" anti-ransomware overview, ransomware, security, introduce, autonomous, protection, arp, detect, detection, threat, attack, suspect, what ontap anti-ransomware detects, entropy, abnormal volume activity, ransomware, antiransomware, extension conformity, recover data after a ransomware attack, ransomware protection strategy"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -173,7 +173,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Anti-ransomware overview](https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/anti-ransomware/index.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Autonomous Ransomware Protection overview](https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/anti-ransomware/index.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -37356,7 +37356,7 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Anti-ransomware overview</h1>
+  <h1 class="n-doc__component-detail-heading">Autonomous Ransomware Protection overview</h1>
 </div>
 
 
@@ -37420,13 +37420,13 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Beginning with ONTAP 9.10.1, the anti-ransomware feature uses workload analysis in NAS (NFS and SMB) environments to proactively detect and warn about abnormal activity that might indicate a ransomware attack.</p>
+<p>Beginning with ONTAP 9.10.1, the Autonomous Ransomware Protection (ARP) feature uses workload analysis in NAS (NFS and SMB) environments to proactively detect and warn about abnormal activity that might indicate a ransomware attack.</p>
 </div>
 <div class="paragraph">
-<p>When an attack is suspected, anti-ransomware also creates new Snapshot copies, in addition to existing protection from scheduled Snapshot copies.</p>
+<p>When an attack is suspected, ARP also creates new Snapshot copies, in addition to existing protection from scheduled Snapshot copies.</p>
 </div>
 <div class="paragraph">
-<p>The anti-ransomware feature is enabled with the following licenses.</p>
+<p>The ARP feature is enabled with the following licenses.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -37461,15 +37461,15 @@
 <div class="ulist">
 <ul>
 <li>
-<p>If you are upgrading to ONTAP 9.11.1 or later and anti-ransomware protection is already configured on your system, you do not need to purchase the new Anti-ransomware license. For new anti-ransomware configurations, the new license is required.</p>
+<p>If you are upgrading to ONTAP 9.11.1 or later and ARP is already configured on your system, you do not need to purchase the new Anti-ransomware license. For new ARP configurations, the new license is required.</p>
 </li>
 <li>
-<p>If you are reverting from ONTAP 9.11.1 or later to ONTAP 9.10.1, and you have enabled anti-ransomware protection with the Anti-ransomware license, you will see a warning message and might need to reconfigure anti-ransomware. <a href="../revert/anti-ransomware-license-task.html">Learn about reverting anti-ransomware protection</a>.</p>
+<p>If you are reverting from ONTAP 9.11.1 or later to ONTAP 9.10.1, and you have enabled ARP with the Anti-ransomware license, you will see a warning message and might need to reconfigure ARP. <a href="../revert/anti-ransomware-license-task.html">Learn about reverting ARP</a>.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>You can configure anti-ransomware protection on a per-volume basis using either ONTAP System Manager or the ONTAP command line interface (CLI).</p>
+<p>You can configure ARP on a per-volume basis using either ONTAP System Manager or the ONTAP command line interface (CLI).</p>
 </div>
 </div>
 </div>
@@ -37483,7 +37483,7 @@
 <p>An analogy would be the safety features of a vehicle. You wouldn’t want to rely on a single feature, such as a seatbelt, to completely protect you in an accident. Air bags, anti-lock brakes, and forward-collision warning are all additional safety features that will lead to a much better outcome. Ransomware protection should be viewed in the same way.</p>
 </div>
 <div class="paragraph">
-<p>While ONTAP includes features like FPolicy, Snapshot copies, SnapLock, and Active IQ Digital Advisor to help protect from ransomware, the following information focuses on the ONTAP anti-ransomware on-box feature with machine-learning capabilities.</p>
+<p>While ONTAP includes features like FPolicy, Snapshot copies, SnapLock, and Active IQ Digital Advisor to help protect from ransomware, the following information focuses on the ONTAP ARP on-box feature with machine-learning capabilities.</p>
 </div>
 <div class="paragraph">
 <p>To learn more about ONTAP&#8217;s other anti-ransomware features, see: <a href="https://www.netapp.com/media/7334-tr4572.pdf" target="_blank" rel="noopener">TR-4572: NetApp Solution for Ransomware.</a></p>
@@ -37491,7 +37491,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="what-ontap-anti-ransomware-detects">What ONTAP anti-ransomware detects</h2>
+<h2 id="what-ontap-arp-detects">What ONTAP ARP detects</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>There are two types of ransomware attacks:</p>
@@ -37509,7 +37509,7 @@ The attacker threatens to release this data to the public domain unless a ransom
 </ol>
 </div>
 <div class="paragraph">
-<p>ONTAP ransomware protection addresses the first type, with an anti-ransomware detection mechanism that is based on:</p>
+<p>ONTAP ARP addresses the first type, with an anti-ransomware detection mechanism that is based on:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -37541,7 +37541,7 @@ The attacker threatens to release this data to the public domain unless a ransom
 <img src="/us-en/ontap/images/note.svg" alt="Note">
 </td>
 <td class="content">
-No ransomware detection or prevention system can completely guarantee safety from a ransomware attack. While it&#8217;s possible an attack might go undetected, NetApp ransomware protection acts as an important additional layer of defense if anti-virus software has failed to detect an intrusion. Anti-ransomware can detect the spread of most ransomware attacks after only a small number of files are encrypted, take action automatically to protect data, and alert you that a suspected attack is happening.
+No ransomware detection or prevention system can completely guarantee safety from a ransomware attack. While it&#8217;s possible an attack might go undetected, NetApp ARP acts as an important additional layer of defense if anti-virus software has failed to detect an intrusion. ARP can detect the spread of most ransomware attacks after only a small number of files are encrypted, take action automatically to protect data, and alert you that a suspected attack is happening.
 </td>
 </tr>
 </table>
@@ -37561,7 +37561,7 @@ No ransomware detection or prevention system can completely guarantee safety fro
 <p>With the knowledge of the affected files and the time of attack, it is possible to selectively recover the affected files from various Snapshot copies, rather than simply reverting the whole volume to one of the snapshots.</p>
 </div>
 <div class="paragraph">
-<p>Anti-ransomware thus builds on proven ONTAP data protection and disaster recovery technology to respond to ransomware attacks. See the following topics for more information on recovering data.</p>
+<p>ARP thus builds on proven ONTAP data protection and disaster recovery technology to respond to ransomware attacks. See the following topics for more information on recovering data.</p>
 </div>
 <div class="ulist">
 <ul>

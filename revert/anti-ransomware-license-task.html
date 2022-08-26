@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Check anti-ransomware licensing before reverting from ONTAP 9.11.1 or later</title>
+  <title>Check Autonomous Ransomware Protection licensing before reverting from ONTAP 9.11.1 or later</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Check anti-ransomware licensing before reverting from ONTAP 9.11.1 or later" />
+  <meta property="og:title" content="Check Autonomous Ransomware Protection licensing before reverting from ONTAP 9.11.1 or later" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/revert/anti-ransomware-license-task.html" />
 	<meta property="og:description" content="If you have configured anti-ransomware protection and you revert from ONTAP 9.11.1 or later to ONTAP 9.10.1, you might experience warning messages and limite..." />
@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="If you have configured anti-ransomware protection and you revert from ONTAP 9.11.1 or later to ONTAP 9.10.1, you might experience warning messages and limite...">
-  <meta name="keywords" content=" revert, reverting, reversion, anti-ransomware, protection, license, licensing"><!-- Icons -->
+  <meta name="keywords" content=" revert, reverting, reversion, anti-ransomware, autonomous, protection, arp, license, licensing"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -173,7 +173,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Check anti-ransomware licensing before reverting from ONTAP 9.11.1 or later](https://docs.netapp.com/us-en/ontap/revert/anti-ransomware-license-task.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/revert/anti-ransomware-license-task.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Check Autonomous Ransomware Protection licensing before reverting from ONTAP 9.11.1 or later](https://docs.netapp.com/us-en/ontap/revert/anti-ransomware-license-task.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/revert/anti-ransomware-license-task.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -37356,14 +37356,14 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Check anti-ransomware licensing before reverting from ONTAP 9.11.1 or later</h1>
+  <h1 class="n-doc__component-detail-heading">Check Autonomous Ransomware Protection licensing before reverting from ONTAP 9.11.1 or later</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-03-30 15:03:15 +0000">03/30/2022</time>
+    <time datetime="2022-08-25 17:23:09 +0000">08/25/2022</time>
     
   
 
@@ -37382,16 +37382,16 @@
 </p>
 
 <div class="paragraph lead">
-<p>If you have configured anti-ransomware protection and you revert from ONTAP 9.11.1 or later to ONTAP 9.10.1 or earlier, you might experience warning messages and limited anti-ransomware functionality.</p>
+<p>If you have configured Autonomous Ransomware Protection (ARP) and you revert from ONTAP 9.11.1 or later to ONTAP 9.10.1 or earlier, you might experience warning messages and limited ARP functionality.</p>
 </div>
 <div class="paragraph">
-<p>In ONTAP 9.11.1, the Anti-ransomware license replaced the Multi-Tenant Key Management (MTKM) license. If your system has the Anti_ransomware license but no MT_EK_MGMT license, you will see a warning during revert that anti-ransomware cannot be enabled on new volumes upon revert.</p>
+<p>In ONTAP 9.11.1, the Anti-ransomware license replaced the Multi-Tenant Key Management (MTKM) license. If your system has the Anti_ransomware license but no MT_EK_MGMT license, you will see a warning during revert that ARP cannot be enabled on new volumes upon revert.</p>
 </div>
 <div class="paragraph">
-<p>The volumes with existing anti-ransomware protection will continue to work normally after revert, and anti-ransomware status can be displayed using the ONTAP CLI.  However, System Manager cannot show anti-ransomware status without the MTKM license.</p>
+<p>The volumes with existing protection will continue to work normally after revert, and ARP status can be displayed using the ONTAP CLI.  However, System Manager cannot show ARP status without the MTKM license.</p>
 </div>
 <div class="paragraph">
-<p>Therefore, if you want anti-ransomware protection to continue after reverting to ONTAP 9.10.1, be sure the MTKM license is installed before reverting. <a href="../anti-ransomware/index.html">Learn about anti-ransomware licensing.</a></p>
+<p>Therefore, if you want ARP to continue after reverting to ONTAP 9.10.1, be sure the MTKM license is installed before reverting. <a href="../anti-ransomware/index.html">Learn about ARP licensing.</a></p>
 </div>
 
     </article>

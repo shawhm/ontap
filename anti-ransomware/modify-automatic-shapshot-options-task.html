@@ -9,15 +9,15 @@
   <meta property="og:title" content="Modify options for automatic Snapshot copies" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/anti-ransomware/modify-automatic-shapshot-options-task.html" />
-	<meta property="og:description" content="Beginning with ONTAP 9.11.1, you can control the number and retention period for anti-ransomware (ARW) Snapshot copies that are automatically generated in re..." />
+	<meta property="og:description" content="Beginning with ONTAP 9.11.1, you can control the number and retention period for Autonomous Ransomware Protection (ARP) Snapshot copies that are automaticall..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Beginning with ONTAP 9.11.1, you can control the number and retention period for anti-ransomware (ARW) Snapshot copies that are automatically generated in re...">
-  <meta name="keywords" content=" anti-ransomware, automatic Snapshot copy, suspected attack, vserver options command"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Beginning with ONTAP 9.11.1, you can control the number and retention period for Autonomous Ransomware Protection (ARP) Snapshot copies that are automaticall...">
+  <meta name="keywords" content=" anti-ransomware, automatic Snapshot copy, suspected attack, vserver options command, autonomous, ransomware, protection, arp"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -37363,7 +37363,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-04 05:59:04 +0000">05/04/2022</time>
+    <time datetime="2022-08-25 21:56:03 +0000">08/25/2022</time>
     
   
 
@@ -37381,10 +37381,8 @@
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
-<p>Beginning with ONTAP 9.11.1, you can control the number and retention period for anti-ransomware (ARW) Snapshot copies that are automatically generated in response to suspected ransomware attacks.</p>
+<p>Beginning with ONTAP 9.11.1, you can use the CLI to control the number and retention period for Autonomous Ransomware Protection (ARP) Snapshot copies that are automatically generated in response to suspected ransomware attacks.</p>
 </div>
 <div class="paragraph">
 <p><strong>Note</strong>: The <code>vserver options</code> command is a hidden command. To view the man page, enter <code>man vserver options</code> at the ONTAP CLI.</p>
@@ -37396,48 +37394,42 @@
 <dl>
 <dt class="hdlist1">arw.snap.max.count</dt>
 <dd>
-<p>Specifies the maximum number of ARW Snapshot copies that can exist in a volume at any given time. Older copies are deleted to ensure that the total number of ARW Snapshot copies are within this specified limit.</p>
+<p>Specifies the maximum number of ARP Snapshot copies that can exist in a volume at any given time. Older copies are deleted to ensure that the total number of ARP Snapshot copies are within this specified limit.</p>
 </dd>
 <dt class="hdlist1">arw.snap.create.interval.hours</dt>
 <dd>
-<p>Specifies the interval (in hours) between ARW Snapshot copies. A new Snapshot copy will be created when an attack is suspected and the copy created previously is older than this specified interval.</p>
+<p>Specifies the interval (in hours) between ARP Snapshot copies. A new Snapshot copy will be created when an attack is suspected and the copy created previously is older than this specified interval.</p>
 </dd>
 <dt class="hdlist1">arw.snap.normal.retain.interval.hours</dt>
 <dd>
-<p>Specifies the duration (in hours) for which an ARW Snapshot copy is retained. When an ARW Snapshot copy becomes this old, any other ARW Snapshot copy created before the latest copy to reach this age is deleted. No ARW Snapshot copy can be older than this duration.</p>
+<p>Specifies the duration (in hours) for which an ARP Snapshot copy is retained. When an ARP Snapshot copy becomes this old, any other ARP Snapshot copy created before the latest copy to reach this age is deleted. No ARP Snapshot copy can be older than this duration.</p>
 </dd>
 <dt class="hdlist1">arw.snap.max.retain.interval.days</dt>
 <dd>
-<p>Specifies the maximum duration (in days) for which an ARW Snapshot copy can be retained. Any ARW Snapshot copy older than this duration will be deleted if there is no attack reported on the volume.</p>
+<p>Specifies the maximum duration (in days) for which an ARP Snapshot copy can be retained. Any ARP Snapshot copy older than this duration will be deleted if there is no attack reported on the volume.</p>
 </dd>
 <dt class="hdlist1">arw.snap.create.interval.hours.post.max.count</dt>
 <dd>
-<p>Specifies the interval (in hours) between ARW Snapshot copies when the volume already contains the maximum number of ARW Snapshot copies. When the maximum number is reached, an ARW Snapshot copy is deleted to make room for a new copy. The new ARW Snapshot copy creation speed can be reduced to retain the older copy using this option. If the volume already contains maximum number of ARW Snapshot copies, then this interval specified in this option is used for next ARW Snapshot copy creation, instead of arw.snap.create.interval.hours.</p>
+<p>Specifies the interval (in hours) between ARP Snapshot copies when the volume already contains the maximum number of ARP Snapshot copies. When the maximum number is reached, an ARP Snapshot copy is deleted to make room for a new copy. The new ARP Snapshot copy creation speed can be reduced to retain the older copy using this option. If the volume already contains maximum number of ARP Snapshot copies, then this interval specified in this option is used for next ARP Snapshot copy creation, instead of arw.snap.create.interval.hours.</p>
 </dd>
 <dt class="hdlist1">arw.surge.snap.interval.days</dt>
 <dd>
-<p>Specifies the interval (in days) between ARW surge Snapshot copies. A new ARW Snapshot surge copy is created when there is a surge in IO traffic and the last created ARW Snapshot copy is older than this specified interval. This option also specifies the duration (in days) for which an ARW surge Snapshot copy is retained.</p>
+<p>Specifies the interval (in days) between ARP surge Snapshot copies. A new ARP Snapshot surge copy is created when there is a surge in IO traffic and the last created ARP Snapshot copy is older than this specified interval. This option also specifies the duration (in days) for which an ARP surge Snapshot copy is retained.</p>
 </dd>
 </dl>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="cli-procedure">CLI procedure</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>To show all current ARW Snapshot copy settings, enter:<br>
+<div class="title">CLI procedure</div>
+<p>To show all current ARP Snapshot copy settings, enter:<br>
 <code>vserver options -vserver <em>svm_name</em> arw*</code></p>
 </div>
 <div class="paragraph">
-<p>To show selected current ARW Snapshot copy settings, enter:<br>
+<p>To show selected current ARP Snapshot copy settings, enter:<br>
 <code>vserver options -vserver <em>svm_name</em> -option-name <em>arw_setting_name</em></code></p>
 </div>
 <div class="paragraph">
-<p>To modify ARW Snapshot copy settings, enter:<br>
+<p>To modify ARP Snapshot copy settings, enter:<br>
 <code>vserver options -vserver <em>svm_name</em> -option-name <em>arw_setting_name</em> -option-value <em>arw_setting_value</em></code></p>
-</div>
-</div>
 </div>
 
     </article>

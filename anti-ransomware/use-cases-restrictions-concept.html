@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Anti-ransomware use cases and considerations</title>
+  <title>Autonomous Ransomware Protection use cases and considerations</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Anti-ransomware use cases and considerations" />
+  <meta property="og:title" content="Autonomous Ransomware Protection use cases and considerations" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/anti-ransomware/use-cases-restrictions-concept.html" />
 	<meta property="og:description" content="In the current release, ransomware protection is most suitable in NAS environments. Support for other environments will be available in future releases." />
@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="In the current release, ransomware protection is most suitable in NAS environments. Support for other environments will be available in future releases.">
-  <meta name="keywords" content=" anti-ransomware use cases and restrictions, anti-ransomware performance and frequency considerations, anti-ransomware workloads, anti-ransomware volume requirements, anti-ransomware performance, volumes, anti-ransomware encryption, anti-ransomware system configurations"><!-- Icons -->
+  <meta name="keywords" content=" anti-ransomware use cases and restrictions, anti-ransomware performance and frequency considerations, anti-ransomware workloads, anti-ransomware volume requirements, anti-ransomware performance, volumes, anti-ransomware encryption, anti-ransomware system configurations, autonomous ransomware protection, arp"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -173,7 +173,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Anti-ransomware use cases and considerations](https://docs.netapp.com/us-en/ontap/anti-ransomware/use-cases-restrictions-concept.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/anti-ransomware/use-cases-restrictions-concept.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Autonomous Ransomware Protection use cases and considerations](https://docs.netapp.com/us-en/ontap/anti-ransomware/use-cases-restrictions-concept.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/anti-ransomware/use-cases-restrictions-concept.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -37356,14 +37356,14 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Anti-ransomware use cases and considerations</h1>
+  <h1 class="n-doc__component-detail-heading">Autonomous Ransomware Protection use cases and considerations</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-08-01 13:41:56 +0000">08/01/2022</time>
+    <time datetime="2022-08-25 17:23:09 +0000">08/25/2022</time>
     
   
 
@@ -37413,7 +37413,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>The anti-ransomware feature is available for all on-premises ONTAP systems beginning with ONTAP 9.10.1.</p>
+<p>The Autonomous Ransomware Protection (ARP) feature is available for all on-premises ONTAP systems beginning with ONTAP 9.10.1.</p>
 </li>
 <li>
 <p>It is not currently available in Cloud Volumes ONTAP environments.</p>
@@ -37451,11 +37451,11 @@
 <p>Workloads with a high frequency of file create or delete (hundreds of thousands of files in few seconds; for example, test/dev workloads)</p>
 </li>
 <li>
-<p>The anti-ransomware feature depends on the ability to recognize an unusual surge in file create or delete activity. If the application itself is the source of the file activity, it cannot be effectively distinguished from ransomware activity</p>
+<p>ARP depends on the ability to recognize an unusual surge in file create or delete activity. If the application itself is the source of the file activity, it cannot be effectively distinguished from ransomware activity</p>
 </li>
 <li>
 <p>Workloads where the application or the host encrypts data<br>
-The anti-ransomware feature depends on distinguishing incoming data as encrypted or unencrypted. If the application itself is encrypting the data, then the effectiveness of the feature is reduced. However, the feature can still work based on file activity (create, delete, and overwrite) and file type.</p>
+ARP depends on distinguishing incoming data as encrypted or unencrypted. If the application itself is encrypting the data, then the effectiveness of the feature is reduced. However, the feature can still work based on file activity (create, delete, and overwrite) and file type.</p>
 </li>
 </ul>
 </div>
@@ -37525,10 +37525,10 @@ The anti-ransomware feature depends on distinguishing incoming data as encrypted
 </div>
 </div>
 <div class="sect1">
-<h2 id="anti-ransomware-performance-and-frequency-considerations">Anti-ransomware performance and frequency considerations</h2>
+<h2 id="arp-performance-and-frequency-considerations">ARP performance and frequency considerations</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The anti-ransomware feature can have a minimal impact on system performance as measured in throughput and peak IOPS. The impact of the anti-ransomware feature is highly dependent on volume workloads. For most typical or common workloads, the following configuration limits are recommended:</p>
+<p>The ARP feature can have a minimal impact on system performance as measured in throughput and peak IOPS. The impact of the anti-ransomware feature is highly dependent on volume workloads. For most typical or common workloads, the following configuration limits are recommended:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -37560,7 +37560,7 @@ The anti-ransomware feature depends on distinguishing incoming data as encrypted
 <p>* System performance is not degraded beyond these percentages regardless of the number of volumes added in excess of the recommended limits.</p>
 </div>
 <div class="paragraph">
-<p>Because anti-ransomware analytics are run in a prioritized sequence, as the number of protected volumes increases, analytics are run on each volume less frequently.</p>
+<p>Because ARP analytics are run in a prioritized sequence, as the number of protected volumes increases, analytics are run on each volume less frequently.</p>
 </div>
 </div>
 </div>
@@ -37568,10 +37568,10 @@ The anti-ransomware feature depends on distinguishing incoming data as encrypted
 <h2 id="how-automatic-snapshot-copies-work-when-ransomware-is-detected">How automatic Snapshot copies work when ransomware is detected</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In order to obtain the best possible recovery point, the anti-ransomware feature creates an automatic Snapshot copy as soon as it detects abnormal file activity. However, the anti-ransomware feature does not immediately flag an alert; rather, analytics need to run and confirm that the suspicious activity matches a ransomware profile before generating an alert. This process could take up to 60 minutes. If the analytics determines the activity is not suspicious, then an alert is not generated, but the automatically created Snapshot copy remains present on the file system for a minimum of two days.</p>
+<p>In order to obtain the best possible recovery point, ARP creates an automatic Snapshot copy as soon as it detects abnormal file activity. However, ARP does not immediately flag an alert; rather, analytics need to run and confirm that the suspicious activity matches a ransomware profile before generating an alert. This process could take up to 60 minutes. If the analytics determines the activity is not suspicious, then an alert is not generated, but the automatically created Snapshot copy remains present on the file system for a minimum of two days.</p>
 </div>
 <div class="paragraph">
-<p>Beginning with ONTAP 9.11.1, you can control the number and retention period for anti-ransomware Snapshot copies that are automatically generated in response to suspected ransomware attacks. Learn how to <a href="modify-automatic-shapshot-options-task.html">modify options for automatic Snapshot copies</a>.</p>
+<p>Beginning with ONTAP 9.11.1, you can control the number and retention period for ARP Snapshot copies that are automatically generated in response to suspected ransomware attacks. Learn how to <a href="modify-automatic-shapshot-options-task.html">modify options for automatic Snapshot copies</a>.</p>
 </div>
 </div>
 </div>
