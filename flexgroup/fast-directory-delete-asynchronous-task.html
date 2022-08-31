@@ -37363,7 +37363,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-21 21:24:05 +0000">04/21/2022</time>
+    <time datetime="2022-08-31 13:34:55 +0000">08/31/2022</time>
     
   
 
@@ -37418,10 +37418,10 @@
 <div class="title">Perform a fast directory delete with the CLI:</div>
 <ol class="arabic">
 <li>
-<p>Enter advanced privilege mode: <code>-privilege advance</code></p>
+<p>Enter advanced privilege mode: <code>set -privilege advance</code></p>
 </li>
 <li>
-<p>Delete files or directories on a FlexVol or FlexGroup volume: <code>volume file async-delete start -vserver vserver_name -volume volume_name -path file_path -throttle throttle</code></p>
+<p>Delete files or directories on a FlexVol or FlexGroup volume: <code>volume file async-delete start -vserver <em>SVM_name</em> -volume <em>volume_name</em> -path <em>file_path</em> -throttle <em>throttle_value</em></code></p>
 <div class="paragraph">
 <p>The minimum throttle value is 10, the maximum is 100,000, and the default is 5000.</p>
 </div>
@@ -37456,7 +37456,7 @@ MM/DD/YYYY 00:11:11  cluster-vsim     INFORMATIONAL asyncDelete.message.success:
 <li>
 <p>Enter advanced privilege mode:</p>
 <div class="paragraph">
-<p><code>-privilege advanced</code></p>
+<p><code>set -privilege advanced</code></p>
 </div>
 </li>
 <li>
@@ -37471,7 +37471,7 @@ MM/DD/YYYY 00:11:11  cluster-vsim     INFORMATIONAL asyncDelete.message.success:
 <li>
 <p>Cancel the directory delete:</p>
 <div class="paragraph">
-<p><code>volume file async-delete cancel -vserver SVM_name -volume volume_name -jobid job_id</code></p>
+<p><code>volume file async-delete cancel -vserver <em>SVM_name</em> -volume <em>volume_name</em> -jobid <em>job_id</em></code></p>
 </div>
 </li>
 </ol>
