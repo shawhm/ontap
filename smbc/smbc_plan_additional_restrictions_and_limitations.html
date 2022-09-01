@@ -22321,11 +22321,11 @@
         Configure FlexGroup volumes to automatically grow and shrink their size
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Delete files and directories rapidly on a cluster"
+      data-pdf-filename="Delete directories rapidly on a cluster"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/flexgroup/fast-directory-delete-asynchronous-task.html">
-        Delete files and directories rapidly on a cluster
+        Delete directories rapidly on a cluster
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Manage client rights to delete directories rapidly"
@@ -34987,11 +34987,11 @@
         Volume move operation stuck when primary site is down
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="release operation fails when unable to delete Snapshot copy"
+      data-pdf-filename="Release operation fails when unable to delete Snapshot copy"
       data-li-level="5#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_troubleshoot_snapmirror_release_fails.html">
-        release operation fails when unable to delete Snapshot copy
+        Release operation fails when unable to delete Snapshot copy
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Volume move reference Snapshot copy shows as the newest"
@@ -37363,7 +37363,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-07-14 16:44:53 +0000">07/14/2022</time>
+    <time datetime="2022-08-31 20:30:23 +0000">08/31/2022</time>
     
   
 
@@ -37600,7 +37600,7 @@
 <h2 id="solaris-host-setting-recommendation-for-sm-bc-configuration">Solaris Host setting recommendation for SM-BC configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Beginning with ONTAP 9.10.1, SM-BC supports Solaris 11.4. To ensure the Solaris client applications are nondisruptive when an unplanned site failover switchover occurs in an SM-BC environment, the following setting must be configured on Solaris 11.4 Host. This setting overrides failover module – <code>f_tpgs</code> to prevent the code path that detects the contradiction from being executed.</p>
+<p>Beginning with ONTAP 9.10.1, SM-BC supports Solaris 11.4. To ensure the Solaris client applications are non-disruptive when an unplanned site failover switchover occurs in an SM-BC environment, you must configure the Solaris 11.4 Host with the <code>f_tpgs</code> parameter.</p>
 </div>
 <div class="paragraph">
 <p>Follow these steps to configure the override parameter:</p>
