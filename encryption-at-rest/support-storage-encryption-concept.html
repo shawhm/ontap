@@ -37363,11 +37363,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-27 16:43:38 +0000">06/27/2022</time>
+    <time datetime="2022-09-01 15:53:15 +0000">09/01/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
     <img  class="avatar avatar-small"
           alt="netapp-ahibbard"
@@ -37441,10 +37449,10 @@ If an HA pair is using encrypting SAS or NVMe drives (SED, NSE, FIPS), you must 
 </div>
 </div>
 <div class="sect1">
-<h2 id="supported-drive-types">Supported drive types</h2>
+<h2 id="supported-self-encrypting-drive-types">Supported self-encrypting drive types</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Two types of self-encrypting drive are supported:</p>
+<p>Two types of self-encrypting drives are supported:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -37452,22 +37460,37 @@ If an HA pair is using encrypting SAS or NVMe drives (SED, NSE, FIPS), you must 
 <p>Self-encrypting FIPS-certified SAS or NVMe drives are supported on all FAS and AFF systems. These drives, called <em>FIPS drives,</em> conform to the requirements of Federal Information Processing Standard Publication 140-2, level 2. The certified capabilities enable protections in addition to encryption, such as preventing denial-of-service attacks on the drive. FIPS drives cannot be mixed with other types of drives on the same node or HA pair.</p>
 </li>
 <li>
-<p>Beginning with ONTAP 9.6, self-encrypting NVMe drives that have not undergone FIPS testing are supported on AFF A800, A320, and later systems. These drives, called <em>SEDs</em>, offer the same encryption capabilities as FIPS drives, but can be mixed with non-SEDs on the same node or HA pair.</p>
+<p>Beginning with ONTAP 9.6, self-encrypting NVMe drives that have not undergone FIPS testing are supported on AFF A800, A320, and later systems. These drives, called <em>SEDs</em>, offer the same encryption capabilities as FIPS drives, but can be mixed with non-encrypting drives on the same node or HA pair.</p>
+</li>
+<li>
+<p>All FIPS validated drives use a firmware cryptographic module that has been through FIPS validation.  The FIPS drive cryptographic module does not use any keys that are generated outside of the drive (the authentication passphrase that is input to the drive is used by the drive’s firmware cryptographic module to obtain a key encryption key).</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Non-encrypting drives are drives that are not SEDs or FIPS drives.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="when-to-use-kmip-servers">When to use KMIP servers</h2>
+<h2 id="when-to-use-external-key-management">When to use external key management</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Although it is less expensive and typically more convenient to use the onboard key manager, you should set up KMIP servers if any of the following are true:</p>
+<p>Although it is less expensive and typically more convenient to use the onboard key manager, you should use external key management if any of the following are true:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Your encryption key management solution must comply with FIPS 140-2 level 2 or higher.</p>
+<p>Your organization’s policy requires a key management solution that uses a FIPS 140-2 Level 2 (or higher) cryptographic module.</p>
 </li>
 <li>
 <p>You need a multi-cluster solution, with centralized management of encryption keys.</p>
@@ -37505,7 +37528,7 @@ If an HA pair is using encrypting SAS or NVMe drives (SED, NSE, FIPS), you must 
 <p>FIPS drives cannot be mixed with other types of drives on the same node or HA pair. Conforming HA pairs can coexist with non-conforming HA pairs in the same cluster.</p>
 </li>
 <li>
-<p>SEDs can be mixed with non-SEDs on the same node or HA pair.</p>
+<p>SEDs can be mixed with non-encrypting drives on the same node or HA pair.</p>
 </li>
 </ul>
 </div></div></td>
