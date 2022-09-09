@@ -844,8 +844,6 @@
   
 
 
-
-
         </li>
       </ul>
     
@@ -16331,11 +16329,11 @@
     ><a class="na-navbar-padding" href="/us-en/ontap/index.html">
         ONTAP docs
       </a></li><li 
-      data-pdf-exists="false" 
+      data-pdf-exists="true" 
       data-pdf-filename="Release Notes"
       data-li-level="1#" 
       class=" "
-    ><a class="na-navbar-padding" href="https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508">
+    ><a class="na-navbar-padding" href="/us-en/ontap/release-notes.html">
         Release Notes
       </a></li><li 
       data-pdf-exists="true" 
@@ -16901,14 +16899,7 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/cloud/snaplock-worm-storage-concept.html">
         SnapLock WORM storage
-      </a></li></ul></li></ul></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="ONTAP manual pages"
-      data-li-level="2#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/concepts/manual-pages.html">
-        ONTAP manual pages
-      </a></li></ul></li><li 
+      </a></li></ul></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Set up, upgrade and revert ONTAP"
       data-li-level="1" 
@@ -37302,11 +37293,11 @@
     ><a class="na-navbar-padding" href="/us-en/ontap/error-messages/convert-ems-routing-to-notifications-task.html">
         Update EMS event mapping from deprecated ONTAP commands
       </a></li></ul></li></ul></li></ul></li><li 
-      data-pdf-exists="false" 
+      data-pdf-exists="true" 
       data-pdf-filename="ONTAP manual pages"
       data-li-level="1#" 
       class=" "
-    ><a class="na-navbar-padding" href="https://docs.netapp.com/us-en/ontap-cli-9111/index.html">
+    ><a class="na-navbar-padding" href="/us-en/ontap/concepts/manual-pages.html">
         ONTAP manual pages
       </a></li><li 
       data-pdf-exists="true" 
@@ -37363,7 +37354,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-01 18:28:04 +0000">02/01/2022</time>
+    <time datetime="2022-09-06 21:27:37 +0000">09/06/2022</time>
     
   
 
@@ -37381,6 +37372,8 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
 <p>A FIPS drive or SED is protected from unauthorized access only if the authentication key ID for the node is set to a value other than the default. You can return a FIPS drive or SED to unprotected mode by using the <code>storage encryption disk modify</code> command to set the key ID to the default.</p>
 </div>
@@ -37424,7 +37417,7 @@ Info: Starting modify on 14 disks.
 <p><code>storage encryption disk show-status</code></p>
 </div>
 <div class="paragraph">
-<p>Repeat the show-status command until the numbers are the same. The operation is complete when the numbers in  “disks begun” and “disks done” are the same.</p>
+<p>Repeat the show-status command until the numbers in “Disks Begun” and “Disks Done” are the same.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -37469,6 +37462,45 @@ Info: Starting modify on 14 disks.
 </div>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="maintenance-mode">Maintenance mode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Beginning with ONTAP 9.7, you can rekey a FIPS drive from maintenance mode. You should only use maintenance mode if you cannot use the ONTAP CLI instructions in the earlier section.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Set the FIPS authentication key ID for the node back to the default MSID 0x0:</p>
+<div class="paragraph">
+<p><code>disk encrypt rekey_fips 0x0 <em>disklist</em></code></p>
+</div>
+</li>
+<li>
+<p>Set the data authentication key ID for the node back to the default MSID 0x0:</p>
+<div class="paragraph">
+<p><code>disk encrypt rekey 0x0 <em>disklist</em></code></p>
+</div>
+</li>
+<li>
+<p>Confirm the FIPS authentication key was successfully rekeyed:</p>
+<div class="paragraph">
+<p><code>disk encrypt show_fips</code></p>
+</div>
+</li>
+<li>
+<p>Confirm data authentication key was successfully rekeyed with:</p>
+<div class="paragraph">
+<p><code>disk encrypt show</code></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 
     </article>
