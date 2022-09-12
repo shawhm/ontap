@@ -37354,11 +37354,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-09 22:31:46 +0000">12/09/2021</time>
+    <time datetime="2022-09-09 22:49:58 +0000">09/09/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lenida">
+    <img  class="avatar avatar-small"
+          alt="netapp-lenida"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54081920?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -37381,7 +37389,7 @@
 </p>
 
 <div class="paragraph lead">
-<p>Beginning with ONTAP 9.8, you can use System Manager to  restore backed up data on the destination volume to a volume other than the original source.</p>
+<p>Beginning with ONTAP 9.8, you can use System Manager to restore backed up data on the destination volume to a volume other than the original source.</p>
 </div>
 <div class="paragraph">
 <p>When you restore to a different volume, you can select an existing volume, or you can create a new volume.</p>
@@ -37394,6 +37402,21 @@
 </li>
 <li>
 <p>Click <span class="image"><img src="./media/icon_kabob.gif" alt="kabob icon"></span> and click <strong>Restore</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Source</strong> section, select <strong>Other Volume</strong> and select the cluster and Storage VM.</p>
+</li>
+<li>
+<p>Select either <strong>Existing volume</strong> or <strong>Create a new volume</strong>.</p>
+</li>
+<li>
+<p>If you are creating a new volume, enter the volume name.</p>
+</li>
+<li>
+<p>In the <strong>Destination</strong> section, select the Snapshot copy to restore.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
 </li>
 <li>
 <p>Under <strong>Relationships</strong>, monitor the restore progress by viewing <strong>Transfer Status</strong> for the relationship.</p>
