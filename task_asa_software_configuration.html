@@ -37354,7 +37354,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-17 20:19:19 +0000">02/17/2022</time>
+    <time datetime="2022-09-12 18:57:04 +0000">09/12/2022</time>
     
   
 
@@ -37427,31 +37427,16 @@ With ONTAP 9.9.1, customers can now scale AFF ASA configurations up to 12 nodes.
 </div>
 </div>
 <div class="sect1">
-<h2 id="asa-limitations-and-restrictions">ASA limitations and restrictions</h2>
+<h2 id="asa-configuration-limits">ASA configuration limits</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You need to be aware of the limitations and restrictions for using AFF All SAN Array (ASA) controllers, prior to ONTAP 9.9.1.</p>
+<p>You should use the tested and supported maximum configuration limits established for AFF All SAN Array (ASA) controllers. For reliable operations, you should not exceed the current tested and supported limits listed in <a href="https://hwu.netapp.com/" target="_blank" rel="noopener">NetApp Hardware Universe</a>.</p>
 </div>
 <div class="paragraph">
-<p>ASAs do not support NVMe-oF protocol.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
-With ONTAP 9.9.1, NVMe-oF protocol support is now available with an AFF ASA system.
-</td>
-</tr>
-</table>
+<p>Beginning with ONTAP 9.9.1 AFF ASA controllers can support up to 12 nodes for non-MetroCluster IP configurations and up to 8 nodes for MetroCluster IP configurations.</p>
 </div>
 <div class="paragraph">
-<p>You should use the tested and supported maximum configuration limits established for the AFF All SAN Array (ASA) controllers. For reliable operations, you should not exceed the current tested and supported limits listed in <a href="https://hwu.netapp.com/" target="_blank" rel="noopener">NetApp Hardware Universe</a>.</p>
-</div>
-<div class="paragraph">
-<p>Note: With ONTAP 9.9.1, customers can now scale AFF ASA configurations up to 12 nodes. Customers can also now deploy 8-node MCC IP configurations on AFF platforms that support ASA.</p>
+<p>Also beginning with ONTAP 9.9.1, NVMe-oF protocol is supported on all AFF ASA controllers except those configured for MetroCluster.  Metrocluster configurations do not support NVMe-oF.</p>
 </div>
 </div>
 </div>
@@ -37515,7 +37500,7 @@ With ONTAP 9.9.1, NVMe-oF protocol support is now available with an AFF ASA syst
 <p>From the System Manager dashboard, click <strong>Cluster &gt; Overview</strong> and then select the system node. The <strong>PERSONALITY</strong> is displayed as <strong>All SAN Array</strong>.</p>
 </div>
 <div class="paragraph">
-<p>From the CLI, you can use san config show command. The "All SAN Array" value returns as true for ASA systems.</p>
+<p>From the CLI, you can use the <code>san config show</code> command. The "All SAN Array" value returns as true for ASA systems.</p>
 </div>
 </div>
 </div>
