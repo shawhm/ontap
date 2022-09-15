@@ -15,7 +15,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/flexcache/accelerate-data-access-concept.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -195,16 +195,44 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/add-capacity-disks-new-raid-group-task.html</loc>
+      
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/add-capacity-local-tier-overview-task.html</loc>
+      
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap/add-create-local-tier-task.html</loc>
       
-      <lastmod>2022-05-04T18:23:59+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/add-disks-local-tier-aggr-task.html</loc>
+      
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/add-disks-new-raid-group-task.html</loc>
+      
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/add-disks-node-task.html</loc>
       
-      <lastmod>2022-02-17T20:19:19+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -240,6 +268,13 @@
       <loc>https://docs.netapp.com/us-en/ontap/smb-admin/add-list-netbios-aliases-server-task.html</loc>
       
       <lastmod>2022-02-04T20:44:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/add-local-tier-overview-task.html</loc>
+      
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -323,7 +358,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/add-storage-ssd-pool-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -372,7 +407,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/add_or_remove_ip_addresses_from_a_subnet.html</loc>
       
-      <lastmod>2022-07-29T11:51:17+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -400,28 +435,28 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nas-audit/additional-information-reference.html</loc>
       
-      <lastmod>2022-02-04T20:44:16+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nfs-config/additional-information-reference.html</loc>
       
-      <lastmod>2022-01-06T22:11:48+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/flexcache/additional-information-reference.html</loc>
       
-      <lastmod>2021-10-21T22:41:12+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/additional-information-reference.html</loc>
       
-      <lastmod>2022-02-17T20:19:19+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -463,14 +498,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/aggregate-creation-workflow-concept.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/aggregate-expansion-workflow-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -484,14 +519,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/flexgroup/aggregate-space-requirements-concept.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/concepts/aggregates-raid-groups-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -582,7 +617,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/asa-iscsi-lif-fo-task.html</loc>
       
-      <lastmod>2022-07-13T08:09:08+00:00</lastmod>
+      <lastmod>2022-09-08T20:20:59+00:00</lastmod>
       
     </url>
   
@@ -631,7 +666,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/assign-aggregates-svms-task.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -974,7 +1009,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/before-configuring-concept.html</loc>
       
-      <lastmod>2021-11-11T19:48:01+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -1247,7 +1282,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/change_subnet_properties.html</loc>
       
-      <lastmod>2022-07-29T11:51:17+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -1408,7 +1443,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nas-audit/cli-change-events-concept.html</loc>
       
-      <lastmod>2022-02-04T20:44:16+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -1513,14 +1548,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html</loc>
       
-      <lastmod>2022-08-02T15:29:12+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/command-line-interface-concept.html</loc>
       
-      <lastmod>2021-10-23T00:32:12+00:00</lastmod>
+      <lastmod>2022-08-17T18:36:14+00:00</lastmod>
       
     </url>
   
@@ -1541,7 +1576,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/commands-aggregate-relocation-reference.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -1569,7 +1604,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/commands-display-space-usage-reference.html</loc>
       
-      <lastmod>2022-05-24T17:02:16+00:00</lastmod>
+      <lastmod>2022-05-26T14:13:21+00:00</lastmod>
       
     </url>
   
@@ -1583,14 +1618,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/commands-display-storage-shelves-reference.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/commands-manage-aggregates-reference.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -1604,14 +1639,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/commands-manage-audit-settings-reference.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/commands-manage-autosupport-reference.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -1653,14 +1688,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/commands-manage-core-dumps-reference.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/commands-manage-disks-reference.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -1702,7 +1737,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/commands-manage-feature-licenses-reference.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -1723,14 +1758,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/commands-manage-job-schedules-reference.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/commands-manage-jobs-reference.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -1793,14 +1828,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/commands-manage-mount-points-nodes-reference.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nfs-admin/commands-manage-name-mappings-reference.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-05-19T21:11:40+00:00</lastmod>
       
     </url>
   
@@ -1814,14 +1849,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nfs-admin/commands-manage-name-service-cache-reference.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nfs-admin/commands-manage-name-service-switch-entries-reference.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -1898,7 +1933,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/volumes/commands-manage-qtrees-reference.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-05-19T21:11:40+00:00</lastmod>
       
     </url>
   
@@ -1912,7 +1947,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/commands-manage-records-cli-sessions-reference.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -1982,14 +2017,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/commands-manage-sp-from-ontap-reference.html</loc>
       
-      <lastmod>2022-06-28T11:47:05+00:00</lastmod>
+      <lastmod>2022-09-08T20:20:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/commands-manage-ssd-storage-pools-reference.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -2017,14 +2052,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/commands-manage-system-time-reference.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/commands-manage-timeout-period-reference.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -2038,7 +2073,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/commands-manage-web-services-reference.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -2143,7 +2178,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nfs-config/comparison-exports-7-mode-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-05-19T21:11:40+00:00</lastmod>
       
     </url>
   
@@ -2570,7 +2605,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/configure-auto-assignment-disk-ownership-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -2969,7 +3004,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/authentication/configure-ldap-server-access-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -3165,7 +3200,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/configure-return-fqdn-host-iscsi-discovery-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -3179,14 +3214,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/authentication/configure-saml-authentication-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -3235,7 +3270,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/smb-admin/configure-security-styles-task.html</loc>
       
-      <lastmod>2021-10-21T22:41:12+00:00</lastmod>
+      <lastmod>2022-05-19T21:11:40+00:00</lastmod>
       
     </url>
   
@@ -3326,7 +3361,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/configure-switches-fcoe-task.html</loc>
       
-      <lastmod>2022-02-17T20:19:19+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -3382,7 +3417,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/error-messages/configure-webhooks-event-notifications-task.html</loc>
       
-      <lastmod>2022-05-18T17:06:59+00:00</lastmod>
+      <lastmod>2022-05-26T14:13:21+00:00</lastmod>
       
     </url>
   
@@ -3536,7 +3571,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/configure_vlans_over_physical_ports.html</loc>
       
-      <lastmod>2022-08-03T15:28:35+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -3725,14 +3760,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/convert-raid-dp-tec-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/convert-raid-tec-dp-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -3858,7 +3893,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/correct-misaligned-spare-partitions-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -3879,14 +3914,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/create-aggregates-auto-provision-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/create-aggregates-manual-task.html</loc>
       
-      <lastmod>2022-05-27T16:17:38+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -4040,7 +4075,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/s3-audit/create-enable-config-task.html</loc>
       
-      <lastmod>2021-11-05T18:08:44+00:00</lastmod>
+      <lastmod>2022-05-19T21:11:40+00:00</lastmod>
       
     </url>
   
@@ -4054,21 +4089,28 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/create-flash-pool-aggregate-physical-ssds-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/create-flash-pool-aggregate-ssd-storage-task.html</loc>
       
-      <lastmod>2022-05-27T16:18:42+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/create-flash-pool-ssds-storage-pools-overview-concept.html</loc>
+      
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/volumes/create-flexclone-file-flexclone-lun-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -4285,7 +4327,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/s3-config/create-modify-bucket-policy-task.html</loc>
       
-      <lastmod>2022-07-13T13:23:43+00:00</lastmod>
+      <lastmod>2022-08-17T18:36:14+00:00</lastmod>
       
     </url>
   
@@ -4299,7 +4341,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/s3-config/create-modifyi-object-store-server-policy-task.html</loc>
       
-      <lastmod>2022-07-13T13:23:43+00:00</lastmod>
+      <lastmod>2022-08-17T18:36:14+00:00</lastmod>
       
     </url>
   
@@ -4663,7 +4705,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/create-ssd-storage-pool-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-31T19:21:48+00:00</lastmod>
       
     </url>
   
@@ -4719,7 +4761,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/flexgroup/create-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -4740,7 +4782,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/flexcache/create-volume-task.html</loc>
       
-      <lastmod>2022-08-08T13:51:39+00:00</lastmod>
+      <lastmod>2022-09-08T20:20:59+00:00</lastmod>
       
     </url>
   
@@ -4845,7 +4887,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html</loc>
       
-      <lastmod>2022-07-29T16:39:52+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -4859,7 +4901,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/create_a_subnet.html</loc>
       
-      <lastmod>2022-08-03T15:28:35+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -4929,7 +4971,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/customize-size-raid-groups-task.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -4999,7 +5041,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/decide-aggregate-creation-method-concept.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -5097,7 +5139,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/default-raid-policies-aggregates-concept.html</loc>
       
-      <lastmod>2021-10-23T19:32:49+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -5263,6 +5305,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/delete-local-tier-task.html</loc>
+      
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap/smb-admin/delete-local-user-accounts-task.html</loc>
       
       <lastmod>2021-10-19T17:21:53+00:00</lastmod>
@@ -5363,7 +5412,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/delete_a_broadcast_domain.html</loc>
       
-      <lastmod>2022-08-03T15:28:35+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -5391,7 +5440,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/delete_a_subnet.html</loc>
       
-      <lastmod>2022-08-03T15:28:35+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -5468,7 +5517,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/determine-control-volume-space-aggregate-concept.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -5489,49 +5538,49 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/determine-drive-raid-group-info-aggregate-task.html</loc>
       
-      <lastmod>2022-05-27T16:18:42+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/determine-flash-pool-aggregate-ssd-storage-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/determine-flash-pool-candidacy-cache-size-task.html</loc>
       
-      <lastmod>2022-08-02T23:42:28+00:00</lastmod>
+      <lastmod>2022-09-08T20:20:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/determine-impact-cache-size-adding-ssds-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/determine-modify-caching-policy-flash-pool-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/determine-number-disks-partitions-aggregate-concept.html</loc>
       
-      <lastmod>2022-02-17T22:28:23+00:00</lastmod>
+      <lastmod>2022-05-16T16:00:20+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/determine-number-disks-partitions-concept.html</loc>
       
-      <lastmod>2022-02-18T17:16:33+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -5559,7 +5608,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/determine-space-usage-aggregate-concept.html</loc>
       
-      <lastmod>2021-10-22T16:28:10+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -5622,7 +5671,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/determine-volumes-reside-aggregate-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -5657,7 +5706,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/different-shells-cli-commands-concept.html</loc>
       
-      <lastmod>2022-06-27T16:51:24+00:00</lastmod>
+      <lastmod>2022-09-08T20:20:59+00:00</lastmod>
       
     </url>
   
@@ -5769,14 +5818,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/disk-autoassignment-policy-concept.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/disk-partition-ownership-overview-concept.html</loc>
+      
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/concepts/disks-aggregates-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -6112,7 +6168,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/display-partition-ownership-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -6357,7 +6413,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/display_subnets.html</loc>
       
-      <lastmod>2022-07-29T11:51:17+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -6379,6 +6435,13 @@
       <loc>https://docs.netapp.com/us-en/ontap/data-protection/dpo-systems-feature-enhancements-reference.html</loc>
       
       <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/drive-raid-group-information-local-tier-task.html</loc>
+      
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -6504,7 +6567,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/edit-local-tier-task.html</loc>
       
-      <lastmod>2022-04-07T18:52:33+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -6512,6 +6575,13 @@
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/edit-lun-qos-policy-task.html</loc>
       
       <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/edit-raid-config-local-tier-task.html</loc>
+      
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -6980,7 +7050,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/volumes/enable-inline-data-compaction-fas-systems-task.html</loc>
       
-      <lastmod>2021-10-21T20:58:27+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -7092,7 +7162,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-onboard-key-management-96-later-nve-task.html</loc>
       
-      <lastmod>2021-12-03T19:10:07+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -7295,7 +7365,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/cloud/encryption-data-at-rest-concept.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -7470,7 +7540,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/expand-aggregates-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-08T20:20:59+00:00</lastmod>
       
     </url>
   
@@ -7554,7 +7624,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nfs-config/exports-differ-concept.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -7659,7 +7729,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/flexgroup/fast-directory-delete-asynchronous-task.html</loc>
       
-      <lastmod>2022-09-01T13:04:14+00:00</lastmod>
+      <lastmod>2022-09-08T20:20:59+00:00</lastmod>
       
     </url>
   
@@ -7673,7 +7743,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/fast-zeroing-drives-concept.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -7834,14 +7904,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/flash-pool-aggregate-caching-policies-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/flash-pool-ssd-partitioning-aggregates-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -8108,6 +8178,13 @@
       <loc>https://docs.netapp.com/us-en/ontap/-vm-specific-task.html</loc>
       
       <lastmod>2022-04-06T20:31:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/relocate-aggregate-ownership-ha-pair-concept.html</loc>
+      
+      <lastmod>2022-05-24T21:23:21+00:00</lastmod>
       
     </url>
   
@@ -8380,7 +8457,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/high-availability/ha_manual_takeover.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-05-26T16:03:27+00:00</lastmod>
       
     </url>
   
@@ -8954,7 +9031,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/</loc>
       
-      <lastmod>2022-01-06T22:11:48+00:00</lastmod>
+      <lastmod>2022-09-09T15:32:43+00:00</lastmod>
       
     </url>
   
@@ -9283,7 +9360,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/io-misalignments-properly-aligned-luns-concept.html</loc>
       
-      <lastmod>2022-06-14T19:01:19+00:00</lastmod>
+      <lastmod>2022-09-08T20:20:59+00:00</lastmod>
       
     </url>
   
@@ -9414,9 +9491,9 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap//nfs-admin/ldap-fast-bind-nsswitch-authentication-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/ontap/nfs-admin/ldap-fast-bind-nsswitch-authentication-task.html</loc>
       
-      <lastmod>2022-05-03T19:53:02+00:00</lastmod>
+      <lastmod>2022-05-19T21:11:40+00:00</lastmod>
       
     </url>
   
@@ -9647,7 +9724,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/low-spare-warnings-manage-spare-disks-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -9855,6 +9932,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/manage-disks-overview-concept.html</loc>
+      
+      <lastmod>2022-09-09T15:32:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap/authentication/manage-failed-login-attempts-reference.html</loc>
       
       <lastmod>2021-10-14T21:50:12+00:00</lastmod>
@@ -9872,6 +9956,20 @@
       <loc>https://docs.netapp.com/us-en/ontap/nas-audit/manage-file-share-event-concept.html</loc>
       
       <lastmod>2022-02-04T20:44:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/manage-flash-pool-caching-policies-overview-concept.html</loc>
+      
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/manage-flash-pool-tiers-overview-concept.html</loc>
+      
+      <lastmod>2022-09-09T15:32:43+00:00</lastmod>
       
     </url>
   
@@ -9942,6 +10040,13 @@
       <loc>https://docs.netapp.com/us-en/ontap/data-protection/manage-local-snapshot-copies-concept.html</loc>
       
       <lastmod>2022-02-10T22:30:53+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/manage-local-tiers-overview-concept.html</loc>
+      
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -10030,6 +10135,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/manage-raid-configs-overview-concept.html</loc>
+      
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/manage-records-cli-sessions-concept.html</loc>
       
       <lastmod>2021-10-14T21:50:12+00:00</lastmod>
@@ -10053,7 +10165,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html</loc>
       
-      <lastmod>2022-04-06T15:57:00+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -10156,6 +10268,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/manage-use-local-tiers-overview-task.html</loc>
+      
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap/nas-audit/manage-user-account-event-concept.html</loc>
       
       <lastmod>2022-02-04T20:44:16+00:00</lastmod>
@@ -10233,30 +10352,44 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/manual-assign-disks-ownership-manage-task.html</loc>
+      
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/manual-assign-disks-ownership-prep-task.html</loc>
+      
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/manual-assign-disks-ownership-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/manual-assign-ownership-partitioned-disks-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/manual-assign-ownership-root-data-data-task.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-09-01T14:14:49+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/manual-assign-ownership-root-data-task.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-09-01T14:14:49+00:00</lastmod>
       
     </url>
   
@@ -10396,7 +10529,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/methods-create-space-aggregate-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -10473,7 +10606,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/migrate_a_lif.html</loc>
       
-      <lastmod>2022-07-29T11:51:17+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -10494,14 +10627,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/mirrored-aggregates-work-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/mirrored-unmirrored-aggregates-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -10536,7 +10669,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/modify-caching-policies-flash-pool-aggregates-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -10634,7 +10767,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nfs-admin/modify-ports-used-nfsv3-services-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-05-19T21:11:40+00:00</lastmod>
       
     </url>
   
@@ -10711,7 +10844,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/modify_a_lif.html</loc>
       
-      <lastmod>2022-07-29T11:51:17+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -11467,7 +11600,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nfs-admin/ontap-name-service-switch-config-concept.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -11740,7 +11873,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/s3-audit/plan-config-task.html</loc>
       
-      <lastmod>2022-02-03T19:53:39+00:00</lastmod>
+      <lastmod>2022-05-19T21:11:40+00:00</lastmod>
       
     </url>
   
@@ -11801,6 +11934,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/prepare-add-local-tier-overview-task.html</loc>
+      
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/prepare-config-task.html</loc>
       
       <lastmod>2021-10-14T21:50:12+00:00</lastmod>
@@ -11810,7 +11950,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/ndmp/prepare-ndmp-config-task.html</loc>
       
-      <lastmod>2022-02-17T20:19:19+00:00</lastmod>
+      <lastmod>2022-05-19T21:11:40+00:00</lastmod>
       
     </url>
   
@@ -11922,7 +12062,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/flexgroup/protect-snapshot-copies-task.html</loc>
       
-      <lastmod>2022-02-11T21:36:36+00:00</lastmod>
+      <lastmod>2022-05-26T16:03:27+00:00</lastmod>
       
     </url>
   
@@ -11964,7 +12104,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/flexgroup/provision-automatically-task.html</loc>
       
-      <lastmod>2022-07-19T21:47:55+00:00</lastmod>
+      <lastmod>2022-09-08T20:20:59+00:00</lastmod>
       
     </url>
   
@@ -12069,7 +12209,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/flexgroup/quota-reporting-task.html</loc>
       
-      <lastmod>2022-08-08T21:23:14+00:00</lastmod>
+      <lastmod>2022-09-08T20:20:59+00:00</lastmod>
       
     </url>
   
@@ -12090,7 +12230,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/volumes/quota-targets-types-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-05-19T21:11:40+00:00</lastmod>
       
     </url>
   
@@ -12167,7 +12307,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/raid-protection-levels-disks-concept.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -12459,16 +12599,9 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/relocate-aggregate-ownership-ha-pair-concept.html</loc>
-      
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/relocate-aggregate-ownership-task.html</loc>
       
-      <lastmod>2022-05-27T16:17:38+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -12524,7 +12657,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/remove-failed-disk-task.html</loc>
       
-      <lastmod>2021-10-19T18:20:49+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -12552,7 +12685,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/remove-ownership-disk-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -12616,6 +12749,13 @@
       <loc>https://docs.netapp.com/us-en/ontap/networking/removing_a_nic_from_the_node.html</loc>
       
       <lastmod>2021-05-17T23:16:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/rename-local-tier-task.html</loc>
+      
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -12734,7 +12874,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html</loc>
       
-      <lastmod>2022-02-04T20:44:16+00:00</lastmod>
+      <lastmod>2022-05-24T15:09:17+00:00</lastmod>
       
     </url>
   
@@ -13147,7 +13287,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/revert_a_lif_to_its_home_port.html</loc>
       
-      <lastmod>2022-07-29T11:51:17+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -13175,7 +13315,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/root-data-partitioning-management-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-05-25T16:00:46+00:00</lastmod>
       
     </url>
   
@@ -13301,7 +13441,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/volumes/san-volumes-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -13315,28 +13455,28 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/sanitization-not-performed-concept.html</loc>
       
-      <lastmod>2022-01-24T18:33:59+00:00</lastmod>
+      <lastmod>2022-05-25T21:22:41+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/sanitization-overview-concept.html</loc>
       
-      <lastmod>2022-01-31T19:45:18+00:00</lastmod>
+      <lastmod>2022-05-25T21:22:41+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/sanitization-tips-concept.html</loc>
       
-      <lastmod>2022-01-24T18:33:59+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/sanitize-disk-maintenance-mode-task.html</loc>
       
-      <lastmod>2022-08-10T16:13:20+00:00</lastmod>
+      <lastmod>2022-09-08T20:20:59+00:00</lastmod>
       
     </url>
   
@@ -13378,7 +13518,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2022-09-13T13:25:13+00:00</lastmod>
+      <lastmod>2022-09-15T13:04:26+00:00</lastmod>
       
     </url>
   
@@ -13525,7 +13665,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/set-cache-data-retention-policy-flash-pool-task.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -13568,6 +13708,13 @@
       <loc>https://docs.netapp.com/us-en/ontap/volumes/set-fractional-reserve-concept.html</loc>
       
       <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/set-media-cost-local-tier-task.html</loc>
+      
+      <lastmod>2022-08-17T15:32:45+00:00</lastmod>
       
     </url>
   
@@ -13679,14 +13826,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/setup-active-passive-config-root-data-data-task.html</loc>
       
-      <lastmod>2022-05-27T16:17:38+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/setup-active-passive-config-root-data-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -13882,7 +14029,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/sizing-raid-groups-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -14260,7 +14407,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-licensing-concept.html</loc>
       
-      <lastmod>2022-09-01T19:49:45+00:00</lastmod>
+      <lastmod>2022-09-08T20:20:59+00:00</lastmod>
       
     </url>
   
@@ -14624,7 +14771,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/volumes/storage-limits-reference.html</loc>
       
-      <lastmod>2022-03-29T18:34:12+00:00</lastmod>
+      <lastmod>2022-05-24T15:09:17+00:00</lastmod>
       
     </url>
   
@@ -14834,7 +14981,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/flexcache/supported-unsupported-features-concept.html</loc>
       
-      <lastmod>2022-06-06T20:45:32+00:00</lastmod>
+      <lastmod>2022-06-20T13:39:08+00:00</lastmod>
       
     </url>
   
@@ -14904,7 +15051,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/system-health-monitoring-concept.html</loc>
       
-      <lastmod>2021-10-19T18:27:41+00:00</lastmod>
+      <lastmod>2022-05-24T15:09:17+00:00</lastmod>
       
     </url>
   
@@ -15065,21 +15212,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_admin_add_cache_to_local_tier.html</loc>
       
-      <lastmod>2022-04-07T18:52:33+00:00</lastmod>
+      <lastmod>2022-08-31T19:21:48+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_admin_add_disks_to_local_tier.html</loc>
       
-      <lastmod>2022-04-07T18:52:33+00:00</lastmod>
+      <lastmod>2022-08-30T21:20:53+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_admin_add_luns.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-19T21:11:40+00:00</lastmod>
       
     </url>
   
@@ -15611,7 +15758,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_nas_file_system_analytics_take_corrective_action.html</loc>
       
-      <lastmod>2022-01-04T17:18:11+00:00</lastmod>
+      <lastmod>2022-05-20T14:30:34+00:00</lastmod>
       
     </url>
   
@@ -15674,14 +15821,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_nas_provision_linux_nfs.html</loc>
       
-      <lastmod>2022-01-10T20:52:07+00:00</lastmod>
+      <lastmod>2022-05-19T21:11:40+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_nas_provision_nfs_and_smb.html</loc>
       
-      <lastmod>2022-01-11T21:08:18+00:00</lastmod>
+      <lastmod>2022-05-19T21:11:40+00:00</lastmod>
       
     </url>
   
@@ -15702,7 +15849,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_nas_provision_windows_smb.html</loc>
       
-      <lastmod>2022-01-21T13:00:24+00:00</lastmod>
+      <lastmod>2022-05-19T21:11:40+00:00</lastmod>
       
     </url>
   
@@ -15842,7 +15989,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_requesting_notification_of_issues_encountered_in_nondisruptive_upgrades.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
@@ -16087,7 +16234,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/revert/task_verify_health.html</loc>
       
-      <lastmod>2022-06-29T17:47:53+00:00</lastmod>
+      <lastmod>2022-09-08T20:20:59+00:00</lastmod>
       
     </url>
   
@@ -16549,7 +16696,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/unmirrored-aggregates-work-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
       
     </url>
   
@@ -16563,7 +16710,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/update-disk-qualification-package-concept.html</loc>
       
-      <lastmod>2022-01-31T19:45:18+00:00</lastmod>
+      <lastmod>2022-05-25T16:00:46+00:00</lastmod>
       
     </url>
   
@@ -16640,7 +16787,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/anti-ransomware/use-cases-restrictions-concept.html</loc>
       
-      <lastmod>2022-08-25T17:23:09+00:00</lastmod>
+      <lastmod>2022-09-13T18:17:16+00:00</lastmod>
       
     </url>
   
@@ -17361,14 +17508,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/data-protection/workloads-strictsync-sync-policies-concept.html</loc>
       
-      <lastmod>2022-02-04T20:44:16+00:00</lastmod>
+      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nfs-config/worksheet-reference.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-05-19T21:11:40+00:00</lastmod>
       
     </url>
   
