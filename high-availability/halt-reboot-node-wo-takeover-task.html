@@ -9,14 +9,14 @@
   <meta property="og:title" content="Halt or reboot a node without initiating takeover in a two-node cluster" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/high-availability/halt-reboot-node-wo-takeover-task.html" />
-	<meta property="og:description" content="If the -inhibit-takeover parameter is set to `true`, both nodes in an HA cluster will stop serving data unless you change specific configuration settings." />
+	<meta property="og:description" content="You halt or reboot a node in a two-node cluster without initiating takeover when you perform certain hardware maintenance on a node or a shelf and you want t..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="If the -inhibit-takeover parameter is set to `true`, both nodes in an HA cluster will stop serving data unless you change specific configuration settings.">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You halt or reboot a node in a two-node cluster without initiating takeover when you perform certain hardware maintenance on a node or a shelf and you want t...">
   <meta name="keywords" content=" high availability pair, hair, inhibit-takeover, reboot, epsilon, HA"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
@@ -3581,11 +3581,11 @@
           
           <a target="_blank" 
             
-              href="/us-en/ontap/pdfs/sidebar/High_availability_management.pdf" 
+              href="/us-en/ontap/pdfs/sidebar/HA_pair_management.pdf" 
             
           >
             <img src="/us-en/ontap/images/pdf.png" alt="" width="16" height="16"/>
-            High availability management
+            HA pair management
           </a>
           
 
@@ -20579,11 +20579,11 @@
         Manually remove source SVM
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="High availability management"
+      data-pdf-filename="HA pair management"
       data-li-level="2" 
       class="subfolders "
     ><a href="#">
-        <div class="na-navbar-padding"> High availability management</div>
+        <div class="na-navbar-padding"> HA pair management</div>
       </a>
       <ul>
         <li 
@@ -37391,11 +37391,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-29 18:35:15 +0000">04/29/2022</time>
+    <time datetime="2022-09-10 02:39:11 +0000">09/10/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lisa">
+    <img  class="avatar avatar-small"
+          alt="netapp-lisa"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/77256372?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
     <img  class="avatar avatar-small"
           alt="netapp-ahibbard"
@@ -37410,80 +37418,232 @@
 </p>
 
 <div class="paragraph lead">
-<p>In a two-node cluster, cluster high availability (HA) ensures that the failure of one node does not disable the cluster. If you halt or reboot a node in a two-node cluster without takeover by using the <code>-inhibit-takeover</code> parameter set to <code>true</code>, both nodes will stop serving data unless you change specific configuration settings.</p>
+<p>You halt or reboot a node in a two-node cluster without initiating takeover when you perform certain hardware maintenance on a node or a shelf and you want to limit down time by keeping the partner node up, or when there are issues preventing a manual takeover and you want to keep the partner node’s aggregates up and serving data. Additionally, if technical support is assisting you with troubleshooting problems, they might have you perform this procedure as part of those efforts.</p>
 </div>
-<div class="paragraph">
-<p>Before a node in a cluster configured for cluster HA is rebooted or halted using the <code>-inhibit-takeover true</code> parameter, you must first disable cluster HA and then assign epsilon to the node that you want to remain online.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Halt or reboot a node</div>
-<ol class="arabic">
+<div class="ulist">
+<div class="title">About this task</div>
+<ul>
 <li>
-<p>Disable cluster HA:<br>
-<code>cluster ha modify -configured false</code><br>
-Note that this operation does not disable storage failover.</p>
+<p>Before you inhibit takeover (using the <code>-inhibit-takeover true</code> parameter), you disable cluster HA.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>In a two-node cluster, cluster HA ensures that the failure of one node does not disable the cluster. However,  if you do not disable cluster HA before using the  <code>-inhibit-takeover true</code> parameter, both nodes stop serving data.</p>
 </li>
 <li>
-<p>Because disabling cluster HA automatically assigns epsilon to one of the two nodes, you must determine which node holds it, and if necessary, reassign it to the node that you wish to remain online.</p>
+<p>If you attempt to halt or reboot a node before disabling cluster HA, ONTAP issues a warning and instructs you to disable cluster HA.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You migrate LIFs (logical interfaces) to the partner node that you want to remain online.</p>
+</li>
+<li>
+<p>If on the node you are halting or rebooting there are aggregates you want to keep, you move them to the node that you want to remain online.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Verify both nodes are healthy:<br>
+<code>cluster show</code></p>
+<div class="paragraph">
+<p>For both nodes, <code>true</code> appears in the <code>Health</code> column.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster::&gt; cluster show
+Node         Health  Eligibility
+------------ ------- ------------
+node1        true     true
+node2        true     true</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Migrate all LIFs from the node that you will halt or reboot to the partner node:<br>
+<code>network interface migrate-all -node <em>node_name</em></code></p>
+</li>
+<li>
+<p>If on the node you will halt or reboot there are aggregates you want to keep online when the node is down, relocate them to the partner node; otherwise, go to the next step.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Set the privilege level to advanced:<br>
-set -privilege advanced<br>
-Confirm when prompted to continue into advanced mode. The advanced mode prompt appears (*&gt;).</p>
-</li>
-<li>
-<p>Determine which node holds epsilon by using the following command:<br>
-cluster show<br>
-In the following example, Node1 holds epsilon:</p>
+<p>Show the aggregates on the node you will halt or reboot:<br>
+<code>storage aggregates show -node <em>node_name</em></code></p>
+<div class="paragraph">
+<p>For example, node1 is the node that will be halted or rebooted:</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>cluster::*&gt; cluster show
-Node         Health  Eligibility   Epsilon
------------- ------- ------------  ------------
-Node1        true    true          true
-Node2        true    true          false</pre>
+<pre>cluster::&gt; storage aggregates show -node node1
+Aggregate  Size  Available  Used%  State  #Vols   Nodes   RAID  Status
+---------  ----  ---------  -----  -----  -----   -----   ----  ------
+aggr0_node_1_0
+           744.9GB   32.68GB   96% online       2 node1    raid_dp,
+                                                                normal
+aggr1       2.91TB    2.62TB   10% online       8 node1    raid_dp,
+                                                                normal
+aggr2
+            4.36TB    3.74TB   14% online      12 node1    raid_dp,
+                                                                normal
+test2_aggr  2.18TB    2.18TB    0% online       7 node1    raid_dp,
+                                                                normal
+4 entries were displayed.</pre>
 </div>
+</div>
+</li>
+<li>
+<p>Move the aggregates to the partner node:<br>
+<code>storage aggregate relocation start -node <em>node_name</em> -destination <em>node_name</em> -aggregate-list <em>aggregate_name</em></code></p>
+<div class="paragraph">
+<p>For example, aggregates aggr1, aggr2 and test2_aggr are being moved from node1 to node2:</p>
 </div>
 <div class="paragraph">
-<p>If the node you wish to halt or reboot does not hold epsilon, proceed to step 3.</p>
+<p><code>storage aggregate relocation start -node <em>node1</em> -destination <em>node2</em> -aggregate-list <em>aggr1</em>,<em>aggr2</em>,<em>test2_aggr</em></code></p>
 </div>
-</li>
-<li>
-<p>If the node you wish to halt or reboot holds epsilon, you must remove it from the node:<br>
-<code>cluster modify -node Node1 -epsilon false</code><br>
-At this point, neither node holds epsilon.</p>
-</li>
-<li>
-<p>Assign epsilon to the node that you wish to remain online (in this example, Node2):<br>
-<code>cluster modify -node Node2 -epsilon true</code></p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>Halt or reboot and inhibit takeover of the node that does not hold epsilon (in this example, Node2) by using either of the following commands as appropriate:<br>
-<code>system node halt -node Node2 -inhibit-takeover true</code><br>
-<code>system node reboot -node Node2 -inhibit-takeover true</code></p>
-</li>
-<li>
-<p>After the halted or rebooted node is back online, you must enable cluster HA by using the following command:<br>
-<code>cluster ha modify -configured true</code><br>
-Enabling cluster HA automatically removes epsilon from both nodes.</p>
-</li>
-<li>
-<p>Return to the admin privilege level:<br>
-<code>set -privilege admin</code></p>
-</li>
-</ol>
+<p>Disable cluster HA:<br>
+<code>cluster ha modify -configured false</code></p>
+<div class="paragraph">
+<p>The return output confirms HA is disabled: <code>Notice: HA is disabled</code></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+This operation does not disable storage failover.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Halt or reboot and inhibit takeover of the target node, by using the appropriate command:</p>
 <div class="ulist">
-<div class="title">Related information</div>
 <ul>
 <li>
-<p><a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_halt_a_single_node_without_takeover_in_a_two-node__ONTAP_cluster" target="_blank" rel="noopener">How to halt a single node without takeover in a two-node ONTAP cluster</a></p>
+<p><code>system node halt -node <em>node_name</em> -inhibit-takeover true</code></p>
+</li>
+<li>
+<p><code>system node reboot -node <em>node_name</em> -inhibit-takeover true</code></p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+In the command output, you will see a warning asking you if you want to proceed, enter <code>y</code>.
+</td>
+</tr>
+</table>
+</div>
 </li>
 </ul>
+</div>
+</li>
+<li>
+<p>Verify that the node that is still online is in a healthy state (while the partner is down):<br>
+<code>cluster show</code></p>
+<div class="paragraph">
+<p>For the online node, <code>true</code> appears in the <code>Health</code> column.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+In the command output, you will see a warning that cluster HA is not configured. You can ignore the warning at this time.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Perform the actions that required you to halt or reboot the node.</p>
+</li>
+<li>
+<p>Boot the offlined node from the LOADER prompt:<br>
+<code>boot_ontap</code></p>
+</li>
+<li>
+<p>Verify both nodes are healthy:<br>
+<code>cluster show</code></p>
+<div class="paragraph">
+<p>For both nodes, <code>true</code> appears in the <code>Health</code> column.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+In the command output, you will see a warning that cluster HA is not configured. You can ignore the warning at this time.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Reenable cluster HA:<br>
+<code>cluster ha modify -configured true</code></p>
+</li>
+<li>
+<p>If earlier in this procedure you relocated aggregates to the partner node, move them back to their home node; otherwise, go to the next step:<br>
+<code>storage aggregate relocation start -node <em>node_name</em> -destination <em>node_name</em> -aggregate-list <em>aggregate_name</em></code></p>
+<div class="paragraph">
+<p>For example, aggregates aggr1, aggr2 and test2_aggr are being moved from node node2 to node node1:<br>
+<code>storage aggregate relocation start -node <em>node2</em> -destination <em>node1</em> -aggregate-list <em>aggr1</em>,<em>aggr2</em>,<em>test2_aggr</em></code></p>
+</div>
+</li>
+<li>
+<p>Revert LIFs to their home ports:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>View LIFs that are not at home:<br>
+<code>network interface show -is-home false</code></p>
+</li>
+<li>
+<p>If there are non-home LIFs that were not migrated from the down node, verify it is safe to move them before reverting.</p>
+</li>
+<li>
+<p>If it is safe to do so, revert all LIFs home.<br>
+<code>network interface revert *</code></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 
     </article>

@@ -9,15 +9,15 @@
   <meta property="og:title" content="View and submit support cases" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/task_admin_view_submit_support_cases.html" />
-	<meta property="og:description" content="Beginning with ONTAP 9.9.1, you can view support cases from Active IQ associated with the cluster and view information needed to submit a new support case." />
+	<meta property="og:description" content="Beginning with ONTAP 9.9.1, you can view support cases from Active IQ associated with the cluster and view information needed to submit a new support case. B..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Beginning with ONTAP 9.9.1, you can view support cases from Active IQ associated with the cluster and view information needed to submit a new support case.">
-  <meta name="keywords" content=" support, case, view, submit, active iq"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Beginning with ONTAP 9.9.1, you can view support cases from Active IQ associated with the cluster and view information needed to submit a new support case. B...">
+  <meta name="keywords" content=" support, case, view, submit, active iq, telemetry, log, logging"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -3583,11 +3583,11 @@
           
           <a target="_blank" 
             
-              href="/us-en/ontap/pdfs/sidebar/High_availability_management.pdf" 
+              href="/us-en/ontap/pdfs/sidebar/HA_pair_management.pdf" 
             
           >
             <img src="/us-en/ontap/images/pdf.png" alt="" width="16" height="16"/>
-            High availability management
+            HA pair management
           </a>
           
 
@@ -20579,11 +20579,11 @@
         Manually remove source SVM
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="High availability management"
+      data-pdf-filename="HA pair management"
       data-li-level="2" 
       class="subfolders "
     ><a href="#">
-        <div class="na-navbar-padding"> High availability management</div>
+        <div class="na-navbar-padding"> HA pair management</div>
       </a>
       <ul>
         <li 
@@ -37391,7 +37391,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-17 20:19:19 +0000">02/17/2022</time>
+    <time datetime="2022-09-20 19:04:24 +0000">09/20/2022</time>
     
   
 
@@ -37417,8 +37417,11 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
-<p>Beginning with ONTAP 9.9.1, you can view support cases from Active IQ associated with the cluster. You can also copy cluster details that you need to submit a new support case on the NetApp Support Site.</p>
+<p>Beginning with ONTAP 9.9.1, you can view support cases from Active IQ associated with the cluster. You can also copy cluster details that you need to submit a new support case on the NetApp Support Site.<br>
+Beginning with ONTAP 9.10.1, you can enable telemetry logging, which helps support personnel troubleshoot problems.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -37427,7 +37430,7 @@
 <img src="/us-en/ontap/images/note.svg" alt="Note">
 </td>
 <td class="content">
-When working with ONTAP 9.9.1, to receive alerts about firmware updates, you must be registered with Active IQ Unified Manager. Refer to <a href="https://netapp.com/support-and-training/documentation/active-iq-unified-manager" target="_blank" rel="noopener">Active IQ Unified Manager documentation resources</a>.
+To receive alerts about firmware updates, you must be registered with Active IQ Unified Manager. Refer to <a href="https://netapp.com/support-and-training/documentation/active-iq-unified-manager" target="_blank" rel="noopener">Active IQ Unified Manager documentation resources</a>.
 </td>
 </tr>
 </table>
@@ -37461,6 +37464,27 @@ When working with ONTAP 9.9.1, to receive alerts about firmware updates, you mus
 </div>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="enable-telemetry-logging">Enable telemetry logging</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Beginning with ONTAP 9.10.1, you can use System Manager to enable telemetry logging.  When telemetry logging is allowed, messages that are logged by System Manager are given a specific telemetry identifier that indicates the exact process that triggered the message.  All messages that are issued relating to that process have the same identifier, which consists of the name of the operational workflow and a number (for example "add-volume-1941290").  This type of logging allows support personnel to more easily identify the specific process for which a message was issued.  When telemetry identifiers are added to the messages, the log file is only slightly enlarged.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>In System Manager, select <strong>Cluster &gt; Settings</strong>.</p>
+</li>
+<li>
+<p>In <strong>UI Settings</strong> section, click the check box for <strong>Allow telemetry logging</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
 </div>
 
     </article>
