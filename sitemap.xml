@@ -209,6 +209,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap/fabricpool/add-connection-to-cloud-task.html</loc>
+      
+      <lastmod>2022-09-27T14:55:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap/add-create-local-tier-task.html</loc>
       
       <lastmod>2022-08-29T21:22:22+00:00</lastmod>
@@ -288,7 +295,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/add-nodes-cluster-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-26T19:48:09+00:00</lastmod>
       
     </url>
   
@@ -701,7 +708,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/assign-new-tag-volume-creation-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-23T23:06:40+00:00</lastmod>
       
     </url>
   
@@ -757,7 +764,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/attach-cloud-tier-aggregate-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-09-23T23:06:40+00:00</lastmod>
       
     </url>
   
@@ -1506,6 +1513,13 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/cloud-install-fabricpool-task.html</loc>
       
+      <lastmod>2022-09-26T21:32:02+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/cloud-install-fabricpool-task.html</loc>
+      
       <lastmod>2022-09-07T17:51:10+00:00</lastmod>
       
     </url>
@@ -2241,7 +2255,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/concept_cloud_overview.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-09-26T21:32:02+00:00</lastmod>
       
     </url>
   
@@ -2339,7 +2353,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/concept_nvme_provision_overview.html</loc>
       
-      <lastmod>2022-02-18T21:08:30+00:00</lastmod>
+      <lastmod>2022-09-22T19:52:17+00:00</lastmod>
       
     </url>
   
@@ -2402,7 +2416,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/concept_san_provision_overview.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-09-26T15:45:23+00:00</lastmod>
       
     </url>
   
@@ -2822,7 +2836,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/configure-fc-adapters-initiator-mode-task.html</loc>
       
-      <lastmod>2022-02-17T20:19:19+00:00</lastmod>
+      <lastmod>2022-09-22T19:52:17+00:00</lastmod>
       
     </url>
   
@@ -2836,7 +2850,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/configure-fc-adapters-target-mode-task.html</loc>
       
-      <lastmod>2022-01-31T19:45:18+00:00</lastmod>
+      <lastmod>2022-09-22T19:52:17+00:00</lastmod>
       
     </url>
   
@@ -2844,6 +2858,13 @@
       <loc>https://docs.netapp.com/us-en/ontap/san-config/configure-fc-adapters-target-mode-task.html</loc>
       
       <lastmod>2022-02-16T16:30:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/san-admin/configure-fc-adapters-task.html</loc>
+      
+      <lastmod>2022-08-18T18:19:27+00:00</lastmod>
       
     </url>
   
@@ -3088,7 +3109,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/configure-network-best-performance-task.html</loc>
       
-      <lastmod>2021-10-21T22:41:12+00:00</lastmod>
+      <lastmod>2022-08-18T17:52:53+00:00</lastmod>
       
     </url>
   
@@ -3326,21 +3347,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/configure-svm-fc-task.html</loc>
       
-      <lastmod>2022-05-10T20:43:21+00:00</lastmod>
+      <lastmod>2022-09-26T15:45:23+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/configure-svm-iscsi-task.html</loc>
       
-      <lastmod>2022-02-01T18:28:04+00:00</lastmod>
+      <lastmod>2022-09-26T15:45:23+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/configure-svm-nvme-task.html</loc>
       
-      <lastmod>2022-02-17T20:19:19+00:00</lastmod>
+      <lastmod>2022-09-26T15:45:23+00:00</lastmod>
       
     </url>
   
@@ -3361,7 +3382,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/configure-switches-fcoe-task.html</loc>
       
-      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
+      <lastmod>2022-09-27T20:16:43+00:00</lastmod>
       
     </url>
   
@@ -3802,7 +3823,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/copy-luns-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-26T19:47:40+00:00</lastmod>
       
     </url>
   
@@ -4299,7 +4320,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/create-luns-mapping-igroups-task.html</loc>
       
-      <lastmod>2022-01-08T18:42:49+00:00</lastmod>
+      <lastmod>2022-09-22T19:52:17+00:00</lastmod>
       
     </url>
   
@@ -4411,7 +4432,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/create-nvme-namespace-subsystem-task.html</loc>
       
-      <lastmod>2022-03-24T16:09:16+00:00</lastmod>
+      <lastmod>2022-09-26T19:48:09+00:00</lastmod>
       
     </url>
   
@@ -4432,7 +4453,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/create-port-sets-binding-igroups-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-26T16:43:51+00:00</lastmod>
       
     </url>
   
@@ -5090,7 +5111,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/decrease-size-lun-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-22T19:52:17+00:00</lastmod>
       
     </url>
   
@@ -5293,7 +5314,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/delete-lif-san-environment-task.html</loc>
       
-      <lastmod>2021-10-22T19:40:10+00:00</lastmod>
+      <lastmod>2022-09-22T18:24:38+00:00</lastmod>
       
     </url>
   
@@ -5384,7 +5405,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/delete-tag-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-23T23:06:40+00:00</lastmod>
       
     </url>
   
@@ -5531,7 +5552,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/determine-data-inactive-reporting-task.html</loc>
       
-      <lastmod>2022-06-30T15:43:02+00:00</lastmod>
+      <lastmod>2022-08-18T02:38:44+00:00</lastmod>
       
     </url>
   
@@ -5958,7 +5979,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/display-fc-target-adapter-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-22T19:52:17+00:00</lastmod>
       
     </url>
   
@@ -6651,7 +6672,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/enable-block-access-specific-host-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-09-22T19:52:17+00:00</lastmod>
       
     </url>
   
@@ -7785,7 +7806,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-config/fc-target-port-supported-speeds-reference.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-26T16:43:51+00:00</lastmod>
       
     </url>
   
@@ -8744,7 +8765,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/increase-size-lun-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-09-22T19:52:17+00:00</lastmod>
       
     </url>
   
@@ -8933,7 +8954,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/</loc>
       
-      <lastmod>2022-01-06T22:11:48+00:00</lastmod>
+      <lastmod>2022-09-23T23:06:40+00:00</lastmod>
       
     </url>
   
@@ -9234,7 +9255,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/install-license-aws-azure-ibm-task.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2022-09-23T23:06:40+00:00</lastmod>
       
     </url>
   
@@ -9535,7 +9556,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/lif-movement-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-26T19:48:09+00:00</lastmod>
       
     </url>
   
@@ -9570,7 +9591,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/limit-lun-access-portsets-igroups-concept.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-09-26T16:43:51+00:00</lastmod>
       
     </url>
   
@@ -9648,6 +9669,13 @@
       <loc>https://docs.netapp.com/us-en/ontap/nfs-config/load-netgroups-svms-task.html</loc>
       
       <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/fabricpool/local-bucket-tier-data-task.html</loc>
+      
+      <lastmod>2022-09-26T17:27:26+00:00</lastmod>
       
     </url>
   
@@ -9745,14 +9773,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/lun-san-environments-concept.html</loc>
       
-      <lastmod>2021-10-19T18:52:00+00:00</lastmod>
+      <lastmod>2022-08-22T17:06:03+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/lun-setup-workflow-concept.html</loc>
       
-      <lastmod>2022-01-06T22:11:48+00:00</lastmod>
+      <lastmod>2022-09-22T19:52:17+00:00</lastmod>
       
     </url>
   
@@ -10109,7 +10137,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/manage-nvme-concept.html</loc>
       
-      <lastmod>2022-03-24T13:58:53+00:00</lastmod>
+      <lastmod>2022-09-26T15:45:23+00:00</lastmod>
       
     </url>
   
@@ -10123,7 +10151,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/manage-portsets-task.html</loc>
       
-      <lastmod>2022-04-06T15:57:00+00:00</lastmod>
+      <lastmod>2022-09-26T16:43:51+00:00</lastmod>
       
     </url>
   
@@ -10445,7 +10473,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/map-nvme-namespace-subsystem-task.html</loc>
       
-      <lastmod>2021-10-22T20:34:03+00:00</lastmod>
+      <lastmod>2022-09-22T19:52:17+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/san-admin/map-nvme-namespace-subsystem-task.html</loc>
+      
+      <lastmod>2022-09-26T19:48:09+00:00</lastmod>
       
     </url>
   
@@ -10704,7 +10739,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/modify-existing-tag-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-26T17:27:26+00:00</lastmod>
       
     </url>
   
@@ -11026,7 +11061,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/move-luns-task.html</loc>
       
-      <lastmod>2022-01-27T22:35:08+00:00</lastmod>
+      <lastmod>2022-09-22T18:24:38+00:00</lastmod>
       
     </url>
   
@@ -11495,7 +11530,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/nvme-namespaces-considerations-concept.html</loc>
       
-      <lastmod>2022-04-25T19:03:19+00:00</lastmod>
+      <lastmod>2022-09-26T15:44:09+00:00</lastmod>
       
     </url>
   
@@ -11544,7 +11579,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/offline-lun-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-09-26T16:43:51+00:00</lastmod>
       
     </url>
   
@@ -11971,7 +12006,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/prerequisites-setup-luns-concept.html</loc>
       
-      <lastmod>2022-02-17T20:19:19+00:00</lastmod>
+      <lastmod>2022-09-26T15:45:23+00:00</lastmod>
       
     </url>
   
@@ -12105,6 +12140,13 @@
       <loc>https://docs.netapp.com/us-en/ontap/flexgroup/provision-automatically-task.html</loc>
       
       <lastmod>2022-09-08T20:20:59+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/san-admin/provision-storage.html</loc>
+      
+      <lastmod>2022-09-26T19:48:09+00:00</lastmod>
       
     </url>
   
@@ -12874,7 +12916,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html</loc>
       
-      <lastmod>2022-05-24T15:09:17+00:00</lastmod>
+      <lastmod>2022-09-27T14:55:09+00:00</lastmod>
       
     </url>
   
@@ -13005,9 +13047,16 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap/san-admin/resize-lun-task.html</loc>
+      
+      <lastmod>2022-09-26T16:43:51+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap/nvme/resize-namespace-task.html</loc>
       
-      <lastmod>2022-04-25T19:03:19+00:00</lastmod>
+      <lastmod>2022-08-30T18:09:56+00:00</lastmod>
       
     </url>
   
@@ -13392,7 +13441,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/san-config-mcc-concept.html</loc>
       
-      <lastmod>2021-12-02T22:19:58+00:00</lastmod>
+      <lastmod>2022-09-21T15:50:24+00:00</lastmod>
       
     </url>
   
@@ -13476,7 +13525,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/sanitize-disk-maintenance-mode-task.html</loc>
       
-      <lastmod>2022-09-08T20:20:59+00:00</lastmod>
+      <lastmod>2022-09-26T20:03:34+00:00</lastmod>
       
     </url>
   
@@ -13518,7 +13567,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2022-09-26T18:40:19+00:00</lastmod>
+      <lastmod>2022-09-28T07:07:18+00:00</lastmod>
       
     </url>
   
@@ -13840,7 +13889,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/setup-alibaba-object-storage-cloud-tier-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-12T23:18:55+00:00</lastmod>
       
     </url>
   
@@ -13854,14 +13903,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/setup-aws-s3-cloud-tier-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-12T23:18:55+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/setup-azure-blob-storage-cloud-tier-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-12T23:18:55+00:00</lastmod>
       
     </url>
   
@@ -13875,14 +13924,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/setup-google-storage-cloud-tier-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-12T23:18:55+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/setup-ibm-object-storage-cloud-tier-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-12T23:18:55+00:00</lastmod>
       
     </url>
   
@@ -13896,7 +13945,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-store-as-cloud-tier-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-12T23:18:55+00:00</lastmod>
       
     </url>
   
@@ -13910,7 +13959,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/setup-ontap-s3-cloud-tier-task.html</loc>
       
-      <lastmod>2022-01-07T16:29:10+00:00</lastmod>
+      <lastmod>2022-09-26T21:32:02+00:00</lastmod>
       
     </url>
   
@@ -13931,7 +13980,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/setup-storagegrid-cloud-tier-task.html</loc>
       
-      <lastmod>2022-01-07T16:29:10+00:00</lastmod>
+      <lastmod>2022-09-23T23:06:40+00:00</lastmod>
       
     </url>
   
@@ -15198,7 +15247,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_add_connection_to_cloud.html</loc>
       
-      <lastmod>2022-08-25T17:24:07+00:00</lastmod>
+      <lastmod>2022-09-26T21:32:02+00:00</lastmod>
       
     </url>
   
@@ -15352,7 +15401,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_asa_software_configuration.html</loc>
       
-      <lastmod>2022-09-12T18:57:04+00:00</lastmod>
+      <lastmod>2022-09-27T20:16:43+00:00</lastmod>
       
     </url>
   
@@ -15380,21 +15429,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_cloud_create_tiering_object_tags.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-09-26T21:32:02+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_cloud_enable_inactive_data_reporting.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-09-26T21:32:02+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_cloud_local_bucket_tier_data.html</loc>
       
-      <lastmod>2020-10-27T19:25:42+00:00</lastmod>
+      <lastmod>2022-09-26T21:32:02+00:00</lastmod>
       
     </url>
   
@@ -15408,7 +15457,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_cloud_tier_data.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-09-26T21:32:02+00:00</lastmod>
       
     </url>
   
@@ -15863,7 +15912,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_nvme_provision_suse_linux.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-09-26T16:43:51+00:00</lastmod>
       
     </url>
   
@@ -16080,21 +16129,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_san_provision_linux.html</loc>
       
-      <lastmod>2022-08-08T16:53:15+00:00</lastmod>
+      <lastmod>2022-09-27T20:16:43+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_san_provision_vmware.html</loc>
       
-      <lastmod>2022-08-08T16:53:15+00:00</lastmod>
+      <lastmod>2022-09-27T20:16:43+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_san_provision_windows.html</loc>
       
-      <lastmod>2022-08-08T16:53:15+00:00</lastmod>
+      <lastmod>2022-09-22T18:24:38+00:00</lastmod>
       
     </url>
   
@@ -16493,7 +16542,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/transition-config-concept.html</loc>
       
-      <lastmod>2021-12-20T23:34:56+00:00</lastmod>
+      <lastmod>2022-09-26T19:48:09+00:00</lastmod>
       
     </url>
   
@@ -16976,7 +17025,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/verify-license-fc-iscsi-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-09-26T19:48:09+00:00</lastmod>
       
     </url>
   
@@ -17081,7 +17130,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/view-adapter-settings-capabilities-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-08-18T18:21:42+00:00</lastmod>
       
     </url>
   
