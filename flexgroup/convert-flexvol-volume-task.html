@@ -37137,7 +37137,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-16 22:20:30 +0000">06/16/2022</time>
+    <time datetime="2022-09-29 18:05:26 +0000">09/29/2022</time>
     
   
 
@@ -37179,6 +37179,23 @@
 <p>The operations and configurations on the FlexVol volume must be compatible with the conversion process.</p>
 <div class="paragraph">
 <p>An error message is generated if the FlexVol volume has any incompatibility and the volume conversion is aborted. You can take corrective actions and retry the conversion.</p>
+</div>
+</li>
+<li>
+<p>If a FlexVol volume is very large (for example, 80 to 100 TB) and very full (80 to 100 percent), you should copy the data rather than convert it.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Converting a very large FlexGroup volume results in a very full FlexGroup volume member constituent, which can create performance issues. For more information, see the section called "When not to create a FlexGroup volume" in the TR <a href="https://www.netapp.com/media/12385-tr4571.pdf">FlexGroup volumes - Best Practices and Implementation Guide</a>.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </li>
 </ul>
