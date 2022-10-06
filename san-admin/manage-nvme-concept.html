@@ -1137,6 +1137,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -10110,6 +10112,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -10316,8 +10320,6 @@
             Manage NVMe protocol
           </a>
           
-
-
 
 
 
@@ -17151,6 +17153,13 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_considerations_for_session_oriented_protocols.html">
         Session-oriented protocols
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SSH public keys"
+      data-li-level="5#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/considerations-authenticate-ssh-public-key-fips-concept.html">
+        SSH public keys
       </a></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="How do I get and install the upgrade software image?"
@@ -29187,18 +29196,25 @@
         Overview
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="License requirements"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/nvme/license-requirements.html">
+        License requirements
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NVMe support and limitations"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/nvme/support-limitations.html">
+        NVMe support and limitations
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Configure an SVM for NVMe"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/san-admin/configure-svm-nvme-task.html">
         Configure an SVM for NVMe
-      </a></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="NVMe namespaces support"
-      data-li-level="4#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/san-admin/nvme-namespaces-considerations-concept.html">
-        NVMe namespaces support
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="SUSE Linux"
@@ -29215,11 +29231,11 @@
         Other NVMe hosts
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Mapping an NVMe namespace to a subsystem"
+      data-pdf-filename="Map an NVMe namespace to a subsystem"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/san-admin/map-nvme-namespace-subsystem-task.html">
-        Mapping an NVMe namespace to a subsystem
+        Map an NVMe namespace to a subsystem
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Manage LUNs"
@@ -29526,13 +29542,6 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/san-admin/delete-nvme-fc-service-task.html">
         Delete NVMe/FC service from an SVM
-      </a></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Configure an SVM for NVMe"
-      data-li-level="4#" 
-      class=" "
-    ><a class="na-navbar-padding" href="#">
-        Configure an SVM for NVMe
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Resize a NVMe namespace"
@@ -37139,7 +37148,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-26 15:45:23 +0000">09/26/2022</time>
+    <time datetime="2022-10-05 17:35:06 +0000">10/05/2022</time>
     
   
 
@@ -37168,8 +37177,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Beginning with ONTAP 9.4, NVMe/FC is supported on non-MetroCluster AFF configurations.
-Beginning with ONTAP 9.9.1 NVMe/FC is also supported on all non-MetroCluster AFF All SAN Array (ASA) configurations</p>
+<p>Beginning with ONTAP 9.4, NVMe/FC is supported on non-MetroCluster AFF configurations. Beginning with ONTAP 9.9.1 NVMe/FC is also supported on all non-MetroCluster All SAN Array (ASA) configurations.</p>
 </div>
 <div class="paragraph">
 <p>You can use the non-volatile memory express (NVMe) protocol to provide storage in a SAN environment.  The NVMe protocol is optimized for performance with solid state storage.</p>
@@ -37179,47 +37187,6 @@ Beginning with ONTAP 9.9.1 NVMe/FC is also supported on all non-MetroCluster AFF
 </div>
 <div class="paragraph">
 <p>NVMe targets are connected to the network through a standard FC infrastructure using FC switches or a standard TCP infrastructure using Ethernet switches and host-side adapters.</p>
-</div>
-<div class="paragraph">
-<p>The following NVMe protocols are supported:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock">Protocol</p></th>
-<th class="tableblock halign-left valign-top"><p class="tableblock">Beginning with &#8230;&#8203;</p></th>
-<th class="tableblock halign-left valign-top"><p class="tableblock">Allowed by&#8230;&#8203;</p></th>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TCP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 9.10.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">FCP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 9.4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="nvme-license-requirements">NVMe license requirements</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Beginning with ONTAP 9.5 a license is required to support NVMe. If NVMe is enabled in ONTAP 9.4, a 90 day grace period is given to acquire the license after upgrading to ONTAP 9.5.</p>
-</div>
-<div class="paragraph">
-<p>You can enable the license using the following command:</p>
-</div>
-<div class="paragraph">
-<p><code>system license add -license-code <em>NVMe_license_key</em></code></p>
 </div>
 </div>
 </div>
@@ -37259,9 +37226,34 @@ Beginning with ONTAP 9.9.1 NVMe/FC is also supported on all non-MetroCluster AFF
 </div>
 </li>
 <li>
-<p>NVMe supports functionality that prevents bottlenecking at the CPU level and enables massive scalability as systems expand</p>
+<p>NVMe supports functionality that prevents bottlenecking at the CPU level and enables massive scalability as systems expand.</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="about-nvme-namespaces">About NVMe namespaces</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An NVMe namespace is a quantity of non-volatile memory (NVM) that can be formatted into logical blocks. Namespaces are used when a storage virtual machine is configured with the NVMe protocol and are the equivalent of LUNs for FC and iSCSI protocols.</p>
+</div>
+<div class="paragraph">
+<p>One or more namespaces are provisioned and connected to an NVMe host. Each namespace can support various block sizes.</p>
+</div>
+<div class="paragraph">
+<p>The NVMe protocol provides access to namespaces through multiple controllers. Using NVMe drivers, which are supported on most operating systems, solid state drive (SSD) namespaces appear as standard-block devices on which file systems and applications can be deployed without any modification.</p>
+</div>
+<div class="paragraph">
+<p>A namespace ID (NSID) is an identifier used by a controller to provide access to a namespace. When setting the NSID for a host or host group, you also configure the accessibility to a volume by a host. A logical block can only be mapped to a single host group at a time, and a given host group does not have any duplicate NSIDs.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="about-nvme-subsystems">About NVMe subsystems</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An NVMe subsystem includes one or more NVMe controllers, namespaces, NVM subsystem ports, an NVM storage medium, and an interface between the controller and the NVM storage medium. When you create an NVMe namespace, by default it is not mapped to a subsystem. You can also choose to map it a new or existing subsystem.</p>
 </div>
 <div class="ulist">
 <div class="title">Related information</div>
@@ -37270,7 +37262,10 @@ Beginning with ONTAP 9.9.1 NVMe/FC is also supported on all non-MetroCluster AFF
 <p><a href="../task_nvme_provision_suse_linux.html">Provision NVMe storage for SUSE Linux</a></p>
 </li>
 <li>
-<p><a href="san-admin/configure-svm-nvme-task.html">Configure a storage VM for NVMe</a></p>
+<p><a href="../create-nvme-namespace-subsystem-task.html">Provisioin NVMe storage for other hosts</a></p>
+</li>
+<li>
+<p><a href="san-admin/map-nvme-namespace-subsystem-task.html">Map an NVMe namespace to a subsystem</a></p>
 </li>
 </ul>
 </div>

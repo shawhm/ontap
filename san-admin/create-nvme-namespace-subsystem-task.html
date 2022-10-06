@@ -1137,6 +1137,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -10104,6 +10106,8 @@
 
 
 
+
+
     <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
   
 
@@ -10316,8 +10320,6 @@
             Manage NVMe protocol
           </a>
           
-
-
 
 
 
@@ -17151,6 +17153,13 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_considerations_for_session_oriented_protocols.html">
         Session-oriented protocols
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SSH public keys"
+      data-li-level="5#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/considerations-authenticate-ssh-public-key-fips-concept.html">
+        SSH public keys
       </a></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="How do I get and install the upgrade software image?"
@@ -29187,18 +29196,25 @@
         Overview
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="License requirements"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/nvme/license-requirements.html">
+        License requirements
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NVMe support and limitations"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/nvme/support-limitations.html">
+        NVMe support and limitations
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Configure an SVM for NVMe"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/san-admin/configure-svm-nvme-task.html">
         Configure an SVM for NVMe
-      </a></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="NVMe namespaces support"
-      data-li-level="4#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/san-admin/nvme-namespaces-considerations-concept.html">
-        NVMe namespaces support
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="SUSE Linux"
@@ -29215,11 +29231,11 @@
         Other NVMe hosts
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Mapping an NVMe namespace to a subsystem"
+      data-pdf-filename="Map an NVMe namespace to a subsystem"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/san-admin/map-nvme-namespace-subsystem-task.html">
-        Mapping an NVMe namespace to a subsystem
+        Map an NVMe namespace to a subsystem
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Manage LUNs"
@@ -29526,13 +29542,6 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/san-admin/delete-nvme-fc-service-task.html">
         Delete NVMe/FC service from an SVM
-      </a></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Configure an SVM for NVMe"
-      data-li-level="4#" 
-      class=" "
-    ><a class="na-navbar-padding" href="#">
-        Configure an SVM for NVMe
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Resize a NVMe namespace"
@@ -37139,7 +37148,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-26 19:48:09 +0000">09/26/2022</time>
+    <time datetime="2022-10-06 14:10:46 +0000">10/06/2022</time>
     
   
 
@@ -37228,11 +37237,10 @@
 <p>Create namespaces to provide storage using the NVMe protocol with the ONTAP CLI.</p>
 </div>
 <div class="paragraph">
-<p>For systems using the NVMe protocol, you must create one or more NVMe namespaces and subsystems. Each namespace can then be mapped to an NVMe subsystem to allow data access from your host system.</p>
+<p>This procedure creates an NVMe namespace and subsystem on an existing storage VM which has already been configured for the NVMe protocol, then maps the namespace to the subsystem to allow data access from your host system.</p>
 </div>
 <div class="paragraph">
-<div class="title">What you&#8217;ll need</div>
-<p>The SVM must already be configured for NVMe.</p>
+<p>If you need to configure the storage VM for NVMe, see <a href="configure-svm-nvme-task.html">Configure an SVM for NVMe</a>.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
@@ -37256,6 +37264,9 @@
 <p>Create the NVMe subsystem:</p>
 <div class="paragraph">
 <p><code>vserver nvme subsystem create -vserver <em>SVM_name</em> -subsystem <em>name_of_subsystem</em> -ostype <em>OS_type</em></code></p>
+</div>
+<div class="paragraph">
+<p>The NVMe subsystem name is case sensitive. It must contain 1 to 96 characters. Special characters are allowed.</p>
 </div>
 </li>
 <li>
