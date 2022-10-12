@@ -37148,7 +37148,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-27 22:35:08 +0000">01/27/2022</time>
+    <time datetime="2022-10-11 16:40:21 +0000">10/11/2022</time>
     
   
 
@@ -37278,7 +37278,13 @@ The destination LUNs are unmapped, while the LUNs on the primary copy continue t
 </div>
 </li>
 <li>
-<p>Create the new consistency group with the new composition:</p>
+<p><strong>If you are using ONTAP 9.10.1 or later,</strong> delete and recreate and the consistency group on the source with the correct composition. Follow the steps in <a href="../consistency-groups/delete-task.html">Delete a consistency group</a> and then <a href="../consistency-groups/configure-task.html">Configure a single consistency group</a>. In ONTAP 9.10.1 and later, you must perform the delete and create operations in System Manager or with the ONTAP REST API; there is no CLI procedure.</p>
+<div class="paragraph">
+<p><strong>If you are using ONTAP 9.8, 9.0, or 9.9.1, skip to the next step.</strong></p>
+</div>
+</li>
+<li>
+<p>Create the new consistency group on the destination with the new composition:</p>
 <div class="paragraph">
 <p><code>destination::&gt;snapmirror create -source-path vs1_src:/cg/cg_src -destination-path vs1_dst:/cg/cg_dst -cg-item-mappings vol_src1:@vol_dst1, vol_src2:@vol_dst2, vol_src3:@vol_dst3</code></p>
 </div>

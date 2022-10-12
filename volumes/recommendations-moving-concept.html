@@ -37148,11 +37148,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-14 21:50:12 +0000">10/14/2021</time>
+    <time datetime="2022-10-11 22:01:22 +0000">10/11/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lenida">
+    <img  class="avatar avatar-small"
+          alt="netapp-lenida"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54081920?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -37230,7 +37238,10 @@
 <p>FlexClone volumes cannot be offline when they are being moved.</p>
 </li>
 <li>
-<p>You can move FlexClone volumes from one aggregate to another aggregate on the same node or another node in the same SVM without splitting.</p>
+<p>You can move FlexClone volumes from one aggregate to another aggregate on the same node or another node in the same SVM without initiating the <code>vol clone split start</code> command.</p>
+<div class="paragraph">
+<p>By initiating a volume move operation on a FlexClone volume, the clone volume is split during the move process to a different aggregate. After the volume move on the clone volume is complete, the volume that moved no longer appears as a clone, but appears instead as an independent volume without any clone relationship with the previous parent volume.</p>
+</div>
 </li>
 <li>
 <p>FlexClone volume Snapshot copies are not lost after moving a clone.</p>
