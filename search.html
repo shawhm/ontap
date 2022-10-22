@@ -143,6 +143,17 @@
               $("#mysidebar").navgoco('toggle', true);
           });
 
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/us-en/ontap"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
       });
 
   </script>
@@ -16181,7 +16192,7 @@
     ><a href="/us-en/ontap/introduction-concepts/index.html">
         <div class="na-navbar-padding"> Introduction and concepts</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="ONTAP concepts"
@@ -16190,7 +16201,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> ONTAP concepts</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -16234,7 +16245,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Network architecture</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -16278,7 +16289,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Disks and aggregates</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -16315,7 +16326,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Storage virtualization</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -16352,7 +16363,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Path failover</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -16389,7 +16400,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Replication</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Snapshot copies"
@@ -16440,7 +16451,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Storage efficiency</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Thin provisioning"
@@ -16477,7 +16488,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Security</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Client authentication and authorization"
@@ -16528,7 +16539,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> ONTAP and the cloud</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -16544,7 +16555,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Data protection and the cloud</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -16588,7 +16599,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Move entire workloads to the cloud</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Storage protocols"
@@ -16597,7 +16608,7 @@
     ><a href="/us-en/ontap/cloud/storage-protocols-concept.html">
         <div class="na-navbar-padding"> Storage protocols</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="File sharing with NFS and SMB"
@@ -16641,7 +16652,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Performance and efficiency in the cloud</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -16671,7 +16682,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage ONTAP in the cloud</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -16715,7 +16726,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Compliance and the cloud</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="NetApp Cloud Data Sense"
@@ -16745,7 +16756,7 @@
     ><a href="/us-en/ontap/setup-upgrade/index.html">
         <div class="na-navbar-padding"> Set up, upgrade and revert ONTAP</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Setup ONTAP"
@@ -16754,7 +16765,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Setup ONTAP</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Decide which setup method to use"
@@ -16777,7 +16788,7 @@
     ><a href="/us-en/ontap/software_setup/concept_set_up_the_cluster.html">
         <div class="na-navbar-padding"> Set up a cluster with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create the cluster on the first node"
@@ -16835,7 +16846,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Upgrade ONTAP</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -16865,7 +16876,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Upgrade without Upgrade Advisor</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Should I upgrade without Upgrade Advisor?"
@@ -16888,7 +16899,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> What should I verify before I upgrade without Upgrade Advisor?</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -16925,7 +16936,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> What should I verify before I upgrade with or without Upgrade Advisor?</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview of pre-upgrade verifications"
@@ -16990,7 +17001,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Special considerations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Summary of special considerations"
@@ -17020,7 +17031,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> MetroCluster configurations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Upgrade requirements"
@@ -17057,7 +17068,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SnapMirror</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Upgrade requirements"
@@ -17136,7 +17147,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Which upgrade method should I use?</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview of upgrade methods"
@@ -17173,7 +17184,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manual nondisruptive using the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Non-MetroCluster configurations"
@@ -17189,7 +17200,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> MetroCluster configurations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="4 or 8 node"
@@ -17219,7 +17230,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> What should I do after my upgrade?</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview of post-upgrade verifications"
@@ -17249,7 +17260,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Verify special configurations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Summary for verifications for special configurations"
@@ -17349,7 +17360,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Revert ONTAP</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -17379,7 +17390,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> What should I read before I revert?</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Pre-reversion resources"
@@ -17409,7 +17420,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> What else should I check before I revert?</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Summary of pre-revert checks"
@@ -17425,7 +17436,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SnapMirror</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SnapMirror Synchronous relationships"
@@ -17525,7 +17536,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> What should I do after reverting my cluster?</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Verify cluster and storage health"
@@ -17597,7 +17608,7 @@
     ><a href="/us-en/ontap/cluster-admin/index.html">
         <div class="na-navbar-padding"> Cluster administration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Cluster management with System Manager"
@@ -17606,7 +17617,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Cluster management with System Manager</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Administration overview"
@@ -17664,7 +17675,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage nodes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Reboot, shut down, take over, and give back nodes"
@@ -17687,7 +17698,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Cluster management with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -17703,7 +17714,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Cluster and SVM administrators</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Roles"
@@ -17740,7 +17751,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> ONTAP management interface basics</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Access the cluster by using the CLI (cluster administrators only)"
@@ -17749,7 +17760,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Access the cluster by using the CLI (cluster administrators only)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Access the cluster by using the serial port"
@@ -17800,7 +17811,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use the ONTAP command-line interface</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -17816,7 +17827,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> About the different shells for CLI commands (cluster administrators only)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -17930,7 +17941,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage CLI sessions (cluster administrators only)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Manage records of CLI sessions"
@@ -17939,7 +17950,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage records of CLI sessions</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -17976,7 +17987,7 @@
     ><a href="/us-en/ontap/system-admin/command-line-interface-concept.html">
         <div class="na-navbar-padding"> Use the ONTAP command-line interface</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="About the different shells for CLI commands (cluster administrators only)"
@@ -17985,7 +17996,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> About the different shells for CLI commands (cluster administrators only)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -18099,7 +18110,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Cluster management basics (cluster administrators only)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Display information about the nodes in a cluster"
@@ -18150,7 +18161,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage nodes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Display node attributes"
@@ -18208,7 +18219,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Rules governing node root volumes and root aggregates</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -18238,7 +18249,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Start or stop a node</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -18282,7 +18293,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage a node remotely using the SP/BMC</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -18312,7 +18323,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure the SP/BMC network</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Isolate management network traffic"
@@ -18370,7 +18381,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Access the SP/BMC</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Accounts that can access the SP"
@@ -18463,7 +18474,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage audit logging for management activities</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How ONTAP implements audit logging"
@@ -18521,7 +18532,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage the banner and MOTD</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -18565,7 +18576,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage licenses (cluster administrators only)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -18595,7 +18606,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage jobs and schedules</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Job categories"
@@ -18625,7 +18636,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Back up and restore cluster configurations (cluster administrators only)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="What configuration backup files are"
@@ -18641,7 +18652,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage configuration backups</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How the node and cluster configurations are backed up automatically"
@@ -18671,7 +18682,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Recovering a node configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Find a configuration backup file to use for recovering a node"
@@ -18694,7 +18705,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Recover a cluster configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Find a configuration to use for recovering a cluster"
@@ -18738,7 +18749,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Monitor a storage system</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Use AutoSupport and Active IQ Digital Advisor"
@@ -18761,7 +18772,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage AutoSupport with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -18910,7 +18921,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Troubleshoot AutoSupport</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Troubleshoot AutoSupport when messages are not received"
@@ -18947,7 +18958,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Monitor the health of your system</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19047,7 +19058,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage access to web services</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19077,7 +19088,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure SAML authentication for web services</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure SAML authentication"
@@ -19107,7 +19118,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage web services</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19165,7 +19176,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Verify the identity of remote servers using certificates</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19195,7 +19206,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Mutually authenticating the cluster and a KMIP server</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19232,7 +19243,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Disk and tier (aggregate) management</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19248,7 +19259,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage local tiers (aggregates)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19264,7 +19275,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Prepare to add a local tier (aggregate)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19308,7 +19319,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Add (create) a local tier (aggregate)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19359,7 +19370,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage the use of local tiers (aggregates)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19452,7 +19463,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Add capacity (disks) to a local tier (aggregate)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19503,7 +19514,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage disks</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19547,7 +19558,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Disk and partition ownership</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19619,7 +19630,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Disk sanitization</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19684,7 +19695,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage RAID configurations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19749,7 +19760,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage Flash Pool local tiers (aggregates)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19772,7 +19783,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage Flash Pool caching policies</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19830,7 +19841,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Create a Flash Pool local tier (aggregate) using SSD storage pools</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19888,7 +19899,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> FabricPool tier management</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19932,7 +19943,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure FabricPool</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Prepare for FabricPool configuration"
@@ -19941,7 +19952,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Prepare for FabricPool configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -19985,7 +19996,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Set up an object store as the cloud tier for FabricPool</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -20078,7 +20089,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage FabricPool</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -20101,7 +20112,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Add or move volumes to FabricPool as needed</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create a volume for FabricPool"
@@ -20124,7 +20135,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Object tagging using user-created custom tags</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -20203,7 +20214,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Promote data to the performance tier</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -20247,7 +20258,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage FabricPool mirrors</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -20319,7 +20330,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SVM data mobility</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -20377,7 +20388,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> HA pair management</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -20463,7 +20474,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Rest API management with System Manager</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Rest log overview"
@@ -20486,7 +20497,7 @@
     ><a href="/us-en/ontap/volume-admin/index.html">
         <div class="na-navbar-padding"> Volume administration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Volume and LUN management with System Manager"
@@ -20495,7 +20506,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Volume and LUN management with System Manager</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -20616,7 +20627,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Logical storage management with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -20632,7 +20643,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Create and manage volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create a volume"
@@ -20648,7 +20659,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SAN volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="About"
@@ -20762,7 +20773,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Delete directories</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -20792,7 +20803,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Move and copy volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How moving a FlexVol volume works"
@@ -20843,7 +20854,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use FlexClone volumes to create efficient copies of your FlexVol volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -20887,7 +20898,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use FlexClone files and FlexClone LUNs to create efficient copies of files and LUNs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -20931,7 +20942,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How a FlexVol volume can reclaim free space with autodelete setting</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -20968,7 +20979,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use qtrees to partition your FlexVol volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -20998,7 +21009,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Convert a directory to a qtree</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -21035,7 +21046,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Logical space reporting and enforcement for volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -21072,7 +21083,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use quotas to restrict or track resource usage</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview of the quota process"
@@ -21081,7 +21092,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Overview of the quota process</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Quota process"
@@ -21132,7 +21143,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Special kinds of quotas</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How default quotas work"
@@ -21183,7 +21194,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How quotas work with users and groups</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -21269,7 +21280,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How tree quotas work</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -21306,7 +21317,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How qtree changes affect quotas</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -21343,7 +21354,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How quotas are activated</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -21373,7 +21384,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How you can view quota information</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -21424,7 +21435,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Difference in space usage displayed by a quota report and a UNIX client</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -21510,7 +21521,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use deduplication, data compression, and data compaction to increase storage efficiency</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -21645,7 +21656,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Create a volume efficiency policy to run efficiency operations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -21696,7 +21707,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage volume efficiency operations manually</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -21740,7 +21751,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage volume efficiency operations using schedules</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Run efficiency operations depending on the amount of new data written"
@@ -21763,7 +21774,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Monitor volume efficiency operations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="View the status of efficiency operations"
@@ -21807,7 +21818,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Rehost a volume from one SVM to another SVM</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -21865,7 +21876,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Recommended volume and file or LUN configuration combinations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -21909,7 +21920,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Cautions and considerations for changing file or directory capacity</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Considerations for changing the maximum number of files allowed on a FlexVol volume"
@@ -21946,7 +21957,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Features supported with FlexClone files and FlexClone LUNs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -22039,7 +22050,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> FlexGroup volumes management with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -22069,7 +22080,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> FlexGroup volume setup</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Workflow"
@@ -22106,7 +22117,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage FlexGroup volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Monitor the space usage of a FlexGroup volume"
@@ -22199,7 +22210,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Data protection for FlexGroup volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Workflow"
@@ -22278,7 +22289,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage data protection operations for FlexGroup volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Disaster recovery for FlexGroup volumes"
@@ -22287,7 +22298,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Disaster recovery for FlexGroup volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Workflow"
@@ -22324,7 +22335,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Expand FlexGroup volumes in a SnapMirror relationship</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -22382,7 +22393,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Convert FlexVol volumes to FlexGroup volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -22419,7 +22430,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> FlexCache volumes management with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -22456,7 +22467,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> FlexCache volume creation</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Workflow"
@@ -22479,7 +22490,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Process to create a FlexCache volume</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create a FlexCache volume"
@@ -22509,7 +22520,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage a FlexCache relationship</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="View the connection status of a FlexCache relationship"
@@ -22567,7 +22578,7 @@
     ><a href="/us-en/ontap/network-management/index.html">
         <div class="na-navbar-padding"> Network management</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Manage your network with System Manager"
@@ -22576,7 +22587,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage your network with System Manager</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -22613,7 +22624,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Set up NAS path failover with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="ONTAP 9.8 and later"
@@ -22622,7 +22633,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> ONTAP 9.8 and later</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="About NAS path failover for ONTAP 9.8 and later"
@@ -22638,7 +22649,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Workflow NAS path failover</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -22703,7 +22714,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> ONTAP 9.7 and earlier</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Set up NAS path failover (ONTAP 9.0-9.7 CLI)"
@@ -22719,7 +22730,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Workflow NAS path failover</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -22805,7 +22816,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage your network with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Network management overview"
@@ -22821,7 +22832,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Upgrade considerations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Network features by release"
@@ -22844,7 +22855,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Networking components of a cluster</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -22874,7 +22885,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure network ports (cluster administrators only)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -22953,7 +22964,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure IPspaces (cluster administrators only)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -23004,7 +23015,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure broadcast domains (cluster administrators only)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="ONTAP 9.8 and later"
@@ -23013,7 +23024,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> ONTAP 9.8 and later</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="About broadcast domains for ONTAP 9.8 and later"
@@ -23085,7 +23096,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> ONTAP 9.7 and earlier</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="About broadcast domains for ONTAP 9.7 and earlier"
@@ -23157,7 +23168,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure failover groups and policies for LIFs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -23194,7 +23205,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure subnets (cluster administrators only)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -23245,7 +23256,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure LIFs (cluster administrators only)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -23338,7 +23349,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure host-name resolution</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -23368,7 +23379,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Balance network loads to optimize user traffic (cluster administrators only)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -23405,7 +23416,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Secure your network</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure network security using Federal Information Processing Standards (FIPS)"
@@ -23442,7 +23453,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure QoS marking (cluster administrators only)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -23479,7 +23490,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage SNMP on the cluster (cluster administrators only)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -23537,7 +23548,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage routing in an SVM</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -23588,7 +23599,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> ONTAP port usage on a storage system</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -23611,7 +23622,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> View network information</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -23718,7 +23729,7 @@
     ><a href="/us-en/ontap/nas-management/index.html">
         <div class="na-navbar-padding"> NAS storage management</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Manage NAS protocols with System Manager"
@@ -23727,7 +23738,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage NAS protocols with System Manager</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="NAS storage overview"
@@ -23820,7 +23831,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Enable NAS storage</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Enable Linux servers"
@@ -23850,7 +23861,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure NFS with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -23873,7 +23884,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Preparation</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Assess physical storage requirements"
@@ -23910,7 +23921,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure NFS access to an SVM</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create an SVM"
@@ -23961,7 +23972,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure name services</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -23984,7 +23995,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure local UNIX users and groups</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -24035,7 +24046,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Work with netgroups</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -24072,7 +24083,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use LDAP</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -24123,7 +24134,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use Kerberos with NFS for strong security</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -24167,7 +24178,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Add storage capacity to an NFS-enabled SVM</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -24197,7 +24208,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Create a volume or qtree storage container</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create a volume"
@@ -24220,7 +24231,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Secure NFS access using export policies</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -24278,7 +24289,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How ONTAP exports differ from 7-Mode exports</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -24308,7 +24319,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage NFS with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -24324,7 +24335,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Understand NAS file access</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Namespaces and junction points"
@@ -24333,7 +24344,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Namespaces and junction points</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -24356,7 +24367,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How ONTAP controls access to files</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -24386,7 +24397,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How ONTAP handles NFS client authentication</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -24423,7 +24434,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Create and manage data volumes in NAS namespaces</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create data volumes with specified junction points"
@@ -24460,7 +24471,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure security styles</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How security styles affect data access"
@@ -24469,7 +24480,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How security styles affect data access</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="What the security styles and their effects are"
@@ -24541,7 +24552,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Set up file access using NFS</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -24557,7 +24568,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Secure NFS access using export policies</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How export policies control client access to volumes or qtrees"
@@ -24650,7 +24661,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Using Kerberos with NFS for strong security</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="ONTAP support for Kerberos"
@@ -24680,7 +24691,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure name services</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How ONTAP name service switch configuration works"
@@ -24696,7 +24707,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use LDAP</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -24761,7 +24772,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure name mappings</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -24833,7 +24844,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage file access using NFS</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Enable or disable NFSv3"
@@ -25045,7 +25056,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure the NFS credential cache</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Reasons for modifying the NFS credential cache time-to-live"
@@ -25068,7 +25079,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage export policy caches</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Flush export policy caches"
@@ -25105,7 +25116,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage file locks</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="About file locking between protocols"
@@ -25163,7 +25174,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage NFSv4 ACLs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Benefits of enabling NFSv4 ACLs"
@@ -25214,7 +25225,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage NFSv4 file delegations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Enable or disable NFSv4 read file delegations"
@@ -25237,7 +25248,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure NFSv4 file and record locking</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="About NFSv4 file and record locking"
@@ -25351,7 +25362,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Appendix: Supported NFS versions and clients</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -25409,7 +25420,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Appendix: NFS and SMB file and directory naming dependencies</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -25467,7 +25478,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage NFS over RDMA</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -25504,7 +25515,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure SMB with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -25527,7 +25538,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Preparation</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Assess physical storage requirements"
@@ -25564,7 +25575,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure SMB access to an SVM</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -25615,7 +25626,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Set up an SMB server in an Active Directory domain</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure time services"
@@ -25652,7 +25663,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Set up an SMB server in a workgroup</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -25710,7 +25721,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure SMB client access to shared storage</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -25726,7 +25737,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Create a volume or qtree storage container</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create a volume"
@@ -25791,7 +25802,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage SMB with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -25807,7 +25818,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SMB server support</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -25851,7 +25862,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage SMB servers</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Modify SMB servers"
@@ -25867,7 +25878,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use options to customize SMB servers</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Available SMB server options"
@@ -25904,7 +25915,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage how file security is presented to SMB clients for UNIX security-style data</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -25941,7 +25952,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage SMB server security settings</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How ONTAP handles SMB client authentication"
@@ -26006,7 +26017,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use SMB signing to enhance network security</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -26071,7 +26082,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure required SMB encryption on SMB servers for data transfers over SMB</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -26115,7 +26126,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Secure LDAP session communication</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="LDAP signing and sealing concepts"
@@ -26138,7 +26149,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure LDAP over TLS</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Export a copy of the self-signed root CA certificate"
@@ -26175,7 +26186,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure default Windows user to UNIX user mappings on the SMB server</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure the default UNIX user"
@@ -26219,7 +26230,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Improve client performance with traditional and lease oplocks</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -26270,7 +26281,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Apply Group Policy Objects to SMB servers</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -26307,7 +26318,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How GPOs are updated on the SMB server</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -26372,7 +26383,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage domain controller connections</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Display information about discovered servers"
@@ -26430,7 +26441,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use null sessions to access storage in non-Kerberos environments</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -26460,7 +26471,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage NetBIOS aliases for SMB servers</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -26504,7 +26515,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage miscellaneous SMB server tasks</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Stop or start the CIFS server"
@@ -26562,7 +26573,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use IPv6 for SMB access and SMB services</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Requirements for using IPv6"
@@ -26613,7 +26624,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Set up file access using SMB</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure security styles"
@@ -26622,7 +26633,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure security styles</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How security styles affect data access"
@@ -26631,7 +26642,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How security styles affect data access</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="What the security styles and their effects are"
@@ -26703,7 +26714,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Create and manage data volumes in NAS namespaces</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -26747,7 +26758,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure name mappings</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -26805,7 +26816,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure multidomain name-mapping searches</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Enable or disable multidomain name mapping searches"
@@ -26849,7 +26860,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Create and configure SMB shares</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -26886,7 +26897,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use SMB share properties</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -26937,7 +26948,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Secure file access by using SMB share ACLs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Guidelines for managing SMB share-level ACLs"
@@ -26967,7 +26978,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Secure file access by using file permissions</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure advanced NTFS file permissions using the Windows Security tab"
@@ -26997,7 +27008,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Secure file access by using Dynamic Access Control (DAC)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -27069,7 +27080,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Secure SMB access using export policies</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How export policies are used with SMB access"
@@ -27106,7 +27117,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Secure file access by using Storage-Level Access Guard</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -27164,7 +27175,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage file access using SMB</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Use local users and groups for authentication and authorization"
@@ -27173,7 +27184,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use local users and groups for authentication and authorization</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How ONTAP uses local users and groups"
@@ -27182,7 +27193,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How ONTAP uses local users and groups</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Local users and groups concepts"
@@ -27247,7 +27258,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> What local privileges are</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="List of supported privileges"
@@ -27291,7 +27302,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Enable or disable local users and groups functionality</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -27321,7 +27332,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage local user accounts</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Modify local user accounts"
@@ -27372,7 +27383,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage local groups</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Modify local groups"
@@ -27423,7 +27434,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage local privileges</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Add privileges to local or domain users or groups"
@@ -27460,7 +27471,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure bypass traverse checking</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -27490,7 +27501,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Display information about file security and audit policies</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -27548,7 +27559,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage NTFS file security, NTFS audit policies, and Storage-Level Access Guard on SVMs using the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -27592,7 +27603,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure and apply file security on NTFS files and folders using the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create an NTFS security descriptor"
@@ -27650,7 +27661,7 @@
     ><a href="/us-en/ontap/smb-admin/configure-apply-audit-policies-ntfs-files-folders-task.html">
         <div class="na-navbar-padding"> Configure and apply audit policies to NTFS files and folders using the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create an NTFS security descriptor"
@@ -27757,7 +27768,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure the metadata cache for SMB shares</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How SMB metadata caching works"
@@ -27787,7 +27798,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage file locks</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="About file locking between protocols"
@@ -27831,7 +27842,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Monitor SMB activity</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Display SMB session information"
@@ -27868,7 +27879,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Deploy SMB client-based services</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Use offline files to allow caching of files for offline use"
@@ -27877,7 +27888,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use offline files to allow caching of files for offline use</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -27921,7 +27932,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use roaming profiles to store user profiles centrally on a SMB server associated with the SVM</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -27951,7 +27962,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use folder redirection to store data on a SMB server</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -27988,7 +27999,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Recover files and folders using Previous Versions</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -28039,7 +28050,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Deploy SMB server-based services</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Manage home directories"
@@ -28048,7 +28059,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage home directories</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How ONTAP enables dynamic home directories"
@@ -28064,7 +28075,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Home directory shares</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Add a home director share"
@@ -28143,7 +28154,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure SMB client access to UNIX symbolic links</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How ONTAP enables you to provide SMB client access to UNIX symbolic links"
@@ -28194,7 +28205,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use BranchCache to cache SMB share content at a branch office</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename=""
@@ -28210,7 +28221,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Requirements and guidelines</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="BranchCache version support"
@@ -28261,7 +28272,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure BranchCache</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -28298,7 +28309,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure BranchCache-enabled SMB shares</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -28328,7 +28339,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage and monitor the BranchCache configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Modify BranchCache configurations"
@@ -28393,7 +28404,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Disable BranchCache on SMB shares</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -28423,7 +28434,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Disable or enable BranchCache on the SVM</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="What happens when you disable or reenable BranchCache on the CIFS server"
@@ -28446,7 +28457,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Delete the BranchCache configuration on SVMs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="What happens when you delete the BranchCache configuration"
@@ -28476,7 +28487,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Improve Microsoft remote copy performance</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -28527,7 +28538,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Improve client response time by providing SMB automatic node referrals with Auto Location</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -28578,7 +28589,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Provide folder security on shares with access-based enumeration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -28608,7 +28619,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> NFS and SMB file and directory naming dependencies</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -28666,7 +28677,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SMB configuration for Microsoft Hyper-V and SQL Server</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -28689,7 +28700,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Nondisruptive operations for Hyper-V and SQL Server over SMB</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="What are nondisruptive operations?"
@@ -28740,7 +28751,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Share-based backups with Remote VSS</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -28784,7 +28795,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configuration requirements and considerations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="ONTAP and licensing requirements"
@@ -28856,7 +28867,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Plan the Hyper-V or SQL Server over SMB configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Complete the volume configuration worksheet"
@@ -28879,7 +28890,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Create ONTAP configurations for nondisruptive operations with Hyper-V and SQL Server over SMB</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -28958,7 +28969,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage Hyper-V and SQL Server over SMB configurations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure existing shares for continuous availability"
@@ -28981,7 +28992,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use statistics to monitor Hyper-V and SQL Server over SMB activity</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Determine which statistics objects and counters are available"
@@ -29004,7 +29015,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Verify that the configuration is capable of nondisruptive operations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Use health monitoring to determine whether nondisruptive operation status is healthy"
@@ -29041,7 +29052,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Determine whether SMB sessions are continuously available</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Display SMB session information"
@@ -29064,7 +29075,7 @@
     ><a href="/us-en/ontap/san-management/index.html">
         <div class="na-navbar-padding"> SAN storage management</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SAN administration"
@@ -29073,7 +29084,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SAN administration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SAN provisioning"
@@ -29082,7 +29093,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SAN provisioning</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -29154,7 +29165,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> NVMe provisioning</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -29212,7 +29223,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage LUNs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Edit LUN QoS Policy"
@@ -29319,7 +29330,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage igroups and portsets</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Ways to limit LUN access with portsets and igroups"
@@ -29370,7 +29381,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Selective LUN Map</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -29400,7 +29411,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage iSCSI protocol</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure your network for best performance"
@@ -29465,7 +29476,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage FC protocol</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure an SVM for FC"
@@ -29495,7 +29506,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage NVMe protocol</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Start the NVMe/FC service for an SVM"
@@ -29532,7 +29543,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage systems with FC adapters</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -29604,7 +29615,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage LIFs for all SAN protocols</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -29669,7 +29680,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Recommended volume and file or LUN configuration combinations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -29720,7 +29731,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Data protection methods in SAN environments</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -29736,7 +29747,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Effect of moving or copying a LUN on Snapshot copies</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -29773,7 +29784,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use FlexClone LUNs to protect your data</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -29831,7 +29842,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure and use SnapVault backups in a SAN environment</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -29889,7 +29900,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SAN concepts</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="About SAN host provisioning"
@@ -29898,7 +29909,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> About SAN host provisioning</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SAN provisioning with iSCSI"
@@ -29914,7 +29925,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> iSCSI service management</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -29965,7 +29976,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> iSNS server registration requirement</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="What iSNS is"
@@ -30009,7 +30020,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> About SAN volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -30053,7 +30064,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> About host-side space management</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -30118,7 +30129,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Storage virtualization with VMware and Microsoft copy offload</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -30155,7 +30166,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Microsoft Offloaded Data Transfer (ODX)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -30185,7 +30196,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SAN configuration reference</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -30201,7 +30212,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Considerations for iSCSI configurations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -30245,7 +30256,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Considerations for FC configurations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -30303,7 +30314,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage systems with FC adapters</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -30368,7 +30379,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage X1143A-R6 adapters</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -30412,7 +30423,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Ways to Configure FCoE</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -30442,7 +30453,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Fibre Channel and FCoE zoning</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -30500,7 +30511,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Host support for multipathing</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -30530,7 +30541,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configuration limits</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Determine the number of supported nodes for SAN configurations"
@@ -30588,7 +30599,7 @@
     ><a href="/us-en/ontap/object-storage-management/index.html">
         <div class="na-navbar-padding"> S3 object storage management</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="S3 configuration"
@@ -30597,7 +30608,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> S3 configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -30613,7 +30624,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> S3 support in ONTAP 9</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="ONTAP S3 architecture and use cases"
@@ -30650,7 +30661,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> About the S3 configuration process</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Workflow"
@@ -30687,7 +30698,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure S3 access to an SVM</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create an SVM for S3"
@@ -30738,7 +30749,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Add storage capacity to an S3-enabled SVM</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create a bucket"
@@ -30768,7 +30779,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Create or modify access policy statements</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="About bucket and object store server policies"
@@ -30798,7 +30809,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Enable client access to S3 object storage</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Enable ONTAP S3 access for remote FabricPool tiering"
@@ -30835,7 +30846,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Protect buckets with S3 SnapMirror</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -30851,7 +30862,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Mirror and backup protection on a remote cluster</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create mirror for new bucket"
@@ -30888,7 +30899,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Mirror and backup protection on the local cluster</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create mirror for new bucket"
@@ -30925,7 +30936,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Backup protection with cloud targets</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Requirements for cloud targets"
@@ -30969,7 +30980,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Audit S3 events</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31020,7 +31031,7 @@
     ><a href="/us-en/ontap/security-encryption/index.html">
         <div class="na-navbar-padding"> Security and data encryption</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Manage security with System Manager"
@@ -31029,7 +31040,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage security with System Manager</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Security overview"
@@ -31073,7 +31084,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage administrator authentication and RBAC with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31103,7 +31114,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Create login accounts</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31119,7 +31130,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Enable local account access</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31184,7 +31195,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage access-control roles</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31228,7 +31239,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage administrator accounts</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31251,7 +31262,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Generate and install a CA-signed server certificate</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31281,7 +31292,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure Active Directory domain controller access</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31311,7 +31322,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure LDAP or NIS server access</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31376,7 +31387,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage multi-admin verification</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31427,7 +31438,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Ransomware protection</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31492,7 +31503,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Antivirus configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31508,7 +31519,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> About NetApp antivirus protection</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Understanding NetApp virus scanning"
@@ -31545,7 +31556,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure scanner pools</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31596,7 +31607,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure on-access scanning</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create an on-access policy"
@@ -31633,7 +31644,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure on-demand scanning</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31698,7 +31709,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Troubleshoot connectivity issues</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Potential connectivity issues involving the scan-mandatory option"
@@ -31721,7 +31732,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> NAS auditing and security tracing</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31737,7 +31748,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Audit NAS events on SVMs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31753,7 +31764,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How auditing works</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Basic auditing concepts"
@@ -31804,7 +31815,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SMB events that can be audited</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31855,7 +31866,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Create a file and directory auditing configuration on SVMs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create the auditing configuration"
@@ -31885,7 +31896,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure file and folder audit policies</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31915,7 +31926,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Display information about audit policies applied to files and directories</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Display information about audit policies using the Windows Security tab"
@@ -31945,7 +31956,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> CLI change events that can be audited</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -31996,7 +32007,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage auditing configurations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Manually rotate the audit event logs"
@@ -32054,7 +32065,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use FPolicy for file monitoring and management on SVMs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How FPolicy works"
@@ -32063,7 +32074,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How FPolicy works</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="What the two parts of the FPolicy solution are"
@@ -32093,7 +32104,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How FPolicy works with external FPolicy servers</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -32186,7 +32197,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Plan the FPolicy configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Plan the FPolicy external engine configuration"
@@ -32195,7 +32206,7 @@
     ><a href="/us-en/ontap/nas-audit/plan-fpolicy-external-engine-config-concept.html">
         <div class="na-navbar-padding"> Plan the FPolicy external engine configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Additional information about configuring FPolicy external engines to use SSL authenticated connections"
@@ -32232,7 +32243,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Plan the FPolicy event configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -32276,7 +32287,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Plan the FPolicy policy configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -32306,7 +32317,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Plan the FPolicy scope configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -32329,7 +32340,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Create the FPolicy configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create the FPolicy external engine"
@@ -32373,7 +32384,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Modify FPolicy configurations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Commands for modifying FPolicy configurations"
@@ -32396,7 +32407,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Display information about FPolicy configurations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How the show commands work"
@@ -32433,7 +32444,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage FPolicy server connections</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Connect to external FPolicy servers"
@@ -32470,7 +32481,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use security tracing to verify or troubleshoot file and directory access</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How security traces work"
@@ -32500,7 +32511,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Perform security traces</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -32579,7 +32590,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage encryption with System Manager</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Encrypt stored data (software)"
@@ -32602,7 +32613,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage encryption with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -32618,7 +32629,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure NetApp Volume Encryption</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -32641,7 +32652,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure NVE</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Determine whether your cluster version supports NVE"
@@ -32664,7 +32675,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure external key management</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -32729,7 +32740,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Encrypt volume data with NVE</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -32780,7 +32791,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure NetApp hardware-based encryption</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -32803,7 +32814,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure external key management</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -32875,7 +32886,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure onboard key management</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Enable onboard key management in ONTAP 9.6 and later"
@@ -32919,7 +32930,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage NetApp encryption</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Unencrypting volume data"
@@ -32977,7 +32988,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Securely purge data on an encrypted volume</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -33056,7 +33067,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Make data on a FIPS drive or SED inaccessible</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -33149,7 +33160,7 @@
     ><a href="/us-en/ontap/data-protection-disaster-recovery/index.html">
         <div class="na-navbar-padding"> Data protection and disaster recovery</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Data protection with System Manager"
@@ -33158,7 +33169,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Data protection with System Manager</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Data protection overview"
@@ -33300,7 +33311,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Cluster and SVM peering with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -33316,7 +33327,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Prepare for cluster and SVM peering</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Peer basics"
@@ -33353,7 +33364,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure intercluster LIFs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure intercluster LIFs on shared data ports"
@@ -33383,7 +33394,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure peer relationships</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create a cluster peer relationship"
@@ -33434,7 +33445,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Data protection with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -33450,7 +33461,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage local Snapshot copies</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -33466,7 +33477,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure custom Snapshot policies</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -33503,7 +33514,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage the Snapshot copy reserve</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -33561,7 +33572,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Restore files from Snapshot copies</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Restore a file from a Snapshot copy on an NFS or SMB client"
@@ -33605,7 +33616,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SnapMirror volume replication</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="About"
@@ -33677,7 +33688,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SnapMirror licensing</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -33707,7 +33718,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage SnapMirror volume replication</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SnapMirror replication workflow"
@@ -33730,7 +33741,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure a replication relationship one step at a time</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create a destination volume"
@@ -33753,7 +33764,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Customize a replication policy</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create a custom replication policy"
@@ -33825,7 +33836,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Serve data from a SnapMirror DR destination volume</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Make the destination volume writeable"
@@ -33855,7 +33866,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Restore files from a SnapMirror destination volume</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Restore a single file, LUN, or NVMe namespace from a SnapMirror destination"
@@ -33920,7 +33931,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage SnapMirror SVM replication</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Replicate SVM configurations"
@@ -33929,7 +33940,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Replicate SVM configurations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SnapMirror SVM replication workflow"
@@ -33994,7 +34005,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Serve data from an SVM DR destination</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SVM disaster recovery workflow"
@@ -34017,7 +34028,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Reactivate the source SVM</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Source SVM reactivation workflow"
@@ -34061,7 +34072,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage SnapMirror root volume replication</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -34098,7 +34109,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SnapMirror technical details</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Use path name pattern matching"
@@ -34142,7 +34153,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Archive and compliance using SnapLock technology</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -34172,7 +34183,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure SnapLock</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Install the license"
@@ -34216,7 +34227,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Set the retention time</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -34260,7 +34271,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Commit files to WORM</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Commit files to WORM manually"
@@ -34318,7 +34329,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use the privileged delete feature</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create a SnapLock administrator account"
@@ -34362,7 +34373,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Move a SnapLock volume</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create a SnapLock security administrator account"
@@ -34392,7 +34403,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Consistency Groups management</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -34436,7 +34447,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SnapMirror Business Continuity</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -34459,7 +34470,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Planning</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Prerequisites"
@@ -34510,7 +34521,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage SnapMirror for Business Continuity using System Manager</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure Mediator"
@@ -34540,7 +34551,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Installation and setup using the ONTAP CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="High level deployment workflow"
@@ -34591,7 +34602,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Administration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create a common snapshot copy"
@@ -34670,7 +34681,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Troubleshooting</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="SnapMirror delete operation fails in takover state"
@@ -34756,7 +34767,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Mediator service for MetroCluster and SnapMirror Business Continuity</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Install or upgrade"
@@ -34779,7 +34790,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage MetroCluster sites with System Manager</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="MetroCluster overview"
@@ -34837,7 +34848,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Data protection using tape backup</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Tape backup overview"
@@ -34867,7 +34878,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage tape drives</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -34925,7 +34936,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> About tape drives</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Qualified tape drives overview"
@@ -34955,7 +34966,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Tape devices overview</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -34985,7 +34996,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Tape aliasing</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -35036,7 +35047,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Transfer data using ndmpcopy</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -35059,7 +35070,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> NDMP for FlexVol volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="About NDMP for FlexVol volumes"
@@ -35075,7 +35086,7 @@
     ><a href="/us-en/ontap/tape-backup/ndmp-modes-concept.html">
         <div class="na-navbar-padding"> About NDMP modes of operation</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="What node-scoped NDMP mode is"
@@ -35105,7 +35116,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Environment variable</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -35184,7 +35195,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage node-scoped NDMP mode for FlexVol volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -35214,7 +35225,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage SVM-scoped NDMP mode for FlexVol volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -35293,7 +35304,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> About dump engine for FlexVol volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="About"
@@ -35435,7 +35446,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> About SMTape engine for FlexVol volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="About"
@@ -35521,7 +35532,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Monitor tape backup and restore operations for FlexVol volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -35544,7 +35555,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> What the dump and restore event log message format is</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -35588,7 +35599,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Error messages for tape backup and restore of FlexVol volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Backup and restore error messages"
@@ -35597,7 +35608,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Backup and restore error messages</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Resource limitation: no available thread"
@@ -35718,7 +35729,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> NDMP error messages</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Network communication error"
@@ -35804,7 +35815,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Dump error messages</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Destination volume is read-only"
@@ -35883,7 +35894,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SMTape error messages</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Chunks out of order"
@@ -36123,7 +36134,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> NDMP configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -36167,7 +36178,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure NDMP at the SVM level or the node level</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -36183,7 +36194,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure SVM-scoped NDMP</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -36220,7 +36231,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure node-scoped NDMP</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Enable node-scoped NDMP on the cluster"
@@ -36250,7 +36261,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Replication between NetApp Element software and ONTAP</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -36273,7 +36284,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Enable SnapMirror in Element software</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Enable SnapMirror on the Element cluster"
@@ -36303,7 +36314,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure a replication relationship</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create a replication job schedule"
@@ -36319,7 +36330,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Customize a replication policy</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create a custom replication policy"
@@ -36342,7 +36353,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Create a replication relationship</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Create a relationship from an Element source to an ONTAP destination"
@@ -36372,7 +36383,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Serve data from a SnapMirror DR destination volume</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Make the destination volume writeable"
@@ -36416,7 +36427,7 @@
     ><a href="/us-en/ontap/event-performance-monitoring/index.html">
         <div class="na-navbar-padding"> Event and performance monitoring</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="View cluster performance with System Manager"
@@ -36425,7 +36436,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> View cluster performance with System Manager</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Cluster performance overview"
@@ -36469,7 +36480,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Performance monitoring setup with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -36485,7 +36496,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Performance monitoring</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Workflow"
@@ -36515,7 +36526,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install Active IQ Unified Manager</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Download and deploy Active IQ Unified Manager"
@@ -36545,7 +36556,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Set up basic monitoring tasks</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Perform daily monitoring"
@@ -36568,7 +36579,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use performance thresholds to generate event notifications</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Set performance thresholds"
@@ -36605,7 +36616,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Performance management with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -36621,7 +36632,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Monitor performance</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Workflow"
@@ -36651,7 +36662,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install Active IQ Unified Manager</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Download and deploy Active IQ Unified Manager"
@@ -36681,7 +36692,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Set up basic monitoring tasks</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Perform daily monitoring"
@@ -36739,7 +36750,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage performance issues</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Workflow"
@@ -36755,7 +36766,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Perform basic infrastructure checks</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Check protocol settings on the storage system"
@@ -36764,7 +36775,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Check protocol settings on the storage system</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Check the NFS TCP maximum transfer size"
@@ -36829,7 +36840,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage workloads</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Identify remaining performance capacity"
@@ -36852,7 +36863,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Guarantee throughput with QoS</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -36917,7 +36928,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> File System Analytics</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -36968,7 +36979,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> EMS configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -36991,7 +37002,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure EMS event notifications with the CLI</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Workflow"
@@ -37035,7 +37046,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Update deprecated EMS event mapping</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="EMS event mapping models"
@@ -37075,6 +37086,7 @@
 </script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
 
 
   </div>
