@@ -37169,7 +37169,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-17 20:19:19 +0000">02/17/2022</time>
+    <time datetime="2022-11-02 16:08:22 +0000">11/02/2022</time>
     
   
 
@@ -37222,15 +37222,15 @@ Cloud Backup supports FlexVol read-write volumes and data-protection (DP) volume
 </div>
 <div class="paragraph">
 <div class="title">Before you begin</div>
-<p>You should perform the following procedures to establish an account in Cloud Manager. For the service account, you need to create the role as "Account Admin". (Other service account roles do not have the required privileges needed to establish a connection from System Manager.)</p>
+<p>You should perform the following procedures to establish an account in BlueXP. For the service account, you need to create the role as "Account Admin". (Other service account roles do not have the required privileges needed to establish a connection from System Manager.)</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><a href="https://docs.netapp.com/us-en/occm/task_logging_in.html" target="_blank" rel="noopener">Create an account in Cloud Manager</a>.</p>
+<p><a href="https://docs.netapp.com/us-en/occm/task_logging_in.html" target="_blank" rel="noopener">Create an account in BlueXP</a>.</p>
 </li>
 <li>
-<p><a href="https://docs.netapp.com/us-en/occm/concept_connectors.html" target="_blank" rel="noopener">Create a connector in Cloud Manager</a> with one of the following cloud providers:</p>
+<p><a href="https://docs.netapp.com/us-en/occm/concept_connectors.html" target="_blank" rel="noopener">Create a connector in BlueXP</a> with one of the following cloud providers:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -37251,7 +37251,7 @@ Cloud Backup supports FlexVol read-write volumes and data-protection (DP) volume
 <img src="/us-en/ontap/images/note.svg" alt="Note">
 </td>
 <td class="content">
-Beginning with ONTAP 9.10.1, you can select StorageGrid as a cloud backup provider, but only if Cloud Manager is deployed on premises.  The Cloud Manager connector must be installed on premises and available through the Cloud Manager software-as-a-service (SaaS) application.
+Beginning with ONTAP 9.10.1, you can select StorageGrid as a cloud backup provider, but only if BlueXP is deployed on premises.  The BlueXP connector must be installed on premises and available through the BlueXP software-as-a-service (SaaS) application.
 </td>
 </tr>
 </table>
@@ -37261,20 +37261,20 @@ Beginning with ONTAP 9.10.1, you can select StorageGrid as a cloud backup provid
 </div>
 </li>
 <li>
-<p><a href="https://docs.netapp.com/us-en/occm/concept_backup_to_cloud.html" target="_blank" rel="noopener">Subscribe to Cloud Backup Service in Cloud Manager</a> (requires the appropriate license).</p>
+<p><a href="https://docs.netapp.com/us-en/occm/concept_backup_to_cloud.html" target="_blank" rel="noopener">Subscribe to Cloud Backup Service in BlueXP</a> (requires the appropriate license).</p>
 </li>
 <li>
-<p><a href="https://docs.netapp.com/us-en/occm/task_managing_cloud_central_accounts.html#creating-and-managing-service-accounts" target="_blank" rel="noopener">Generate an access key and a secret key using Cloud Manager</a>.</p>
+<p><a href="https://docs.netapp.com/us-en/occm/task_managing_cloud_central_accounts.html#creating-and-managing-service-accounts" target="_blank" rel="noopener">Generate an access key and a secret key using BlueXP</a>.</p>
 </li>
 </ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="register-the-cluster-with-cloud-manager">Register the cluster with Cloud Manager</h2>
+<h2 id="register-the-cluster-with-bluexp">Register the cluster with BlueXP</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can register the cluster with Cloud Manager by using either Cloud Manager or System Manager.</p>
+<p>You can register the cluster with BlueXP by using either BlueXP or System Manager.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
@@ -37306,7 +37306,7 @@ Beginning with ONTAP 9.10.1, you can select StorageGrid as a cloud backup provid
 <h2 id="enable-cloud-backup">Enable Cloud Backup</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>After the cluster is registered with Cloud Manager, you need to enable the Cloud Backup and initiate the first backup to the cloud.</p>
+<p>After the cluster is registered with BlueXP, you need to enable the Cloud Backup and initiate the first backup to the cloud.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
@@ -37407,7 +37407,7 @@ Beginning with ONTAP 9.10.1, you can learn about the cost of using the cloud by 
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>StorageGrid<br>
-(ONTAP 9.10.1 and later, and only for on-premises deployment of Cloud Manager)</p>
+(ONTAP 9.10.1 and later, and only for on-premises deployment of BlueXP)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
@@ -37652,7 +37652,7 @@ If you enable archiving for a volume with Azure or AWS, you cannot disable the a
 <h2 id="restore-data-from-backup-files">Restore data from backup files</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can perform backup management operations, such as restoring data, updating relationships, and deleting relationships, only when using the Cloud Manager interface. Refer to <a href="https://docs.netapp.com/us-en/occm/task_restore_backups.html">Restoring data from backup files</a> for more information.</p>
+<p>You can perform backup management operations, such as restoring data, updating relationships, and deleting relationships, only when using the BlueXP interface. Refer to <a href="https://docs.netapp.com/us-en/occm/task_restore_backups.html">Restoring data from backup files</a> for more information.</p>
 </div>
 </div>
 </div>

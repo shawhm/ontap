@@ -37169,11 +37169,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-14 21:50:12 +0000">10/14/2021</time>
+    <time datetime="2022-11-08 21:28:27 +0000">11/08/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lenida">
+    <img  class="avatar avatar-small"
+          alt="netapp-lenida"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54081920?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -37198,53 +37206,6 @@
 </div>
 <div class="paragraph">
 <p>The FlexCache relationship details are removed from the origin volume and the FlexCache volume.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If the <code>volume flexcache delete</code> command fails to clean up the origin side configuration, you are prompted to run the <code>volume flexcache origin cleanup-cache-relationship</code> command. In this scenario, go to Step 3.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>From the origin cluster, clean up the FlexCache relationship details from the origin volume:</p>
-<div class="paragraph">
-<p><code>volume flexcache origin cleanup-cache-relationship -origin-volume origin_volume -origin-vserver origin_svm -cache-vserver flexcache_svm -cache-volume flexcache_vol</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you run the <code>volume flexcache origin cleanup-cache-relationship</code> command, the FlexCache relationship is deleted and cannot be reestablished.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>cluster1::&gt; volume flexcache origin cleanup-cache-relationship -origin-volume origin1 -origin-vserver vs34 -cache-vserver vs56 -cache-volume fc1
-
-Warning: This command only needs to be run if "volume flexcache delete" fails on
-         the FlexCache cluster and prompts you to run this command. The cache
-         configuration will be deleted and cannot be reestablished for the
-         cache relationship between origin of a FlexCache volume
-         "origin1" in Vserver "vs34" and FlexCache volume
-         "fc1" in Vserver "vs56".
-Do you want to continue? {y|n}: y</pre>
-</div>
 </div>
 </li>
 </ol>

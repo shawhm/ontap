@@ -37169,11 +37169,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-14 21:50:12 +0000">10/14/2021</time>
+    <time datetime="2022-11-03 17:39:24 +0000">11/03/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lenida">
+    <img  class="avatar avatar-small"
+          alt="netapp-lenida"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54081920?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -37189,7 +37197,7 @@
 <p>You must be a cluster administrator at the advanced privilege level</p>
 </li>
 <li>
-<p>The paths you pass for prepopulation must be valid or the prepopulate operation fails.</p>
+<p>The paths you pass for prepopulation must exist or the prepopulate operation fails.</p>
 </li>
 </ul>
 </div>
@@ -37230,6 +37238,18 @@
 <pre>cluster1::*&gt; flexcache prepopulate start -cache-vserver vs2 -cache-volume fg_cachevol_1 -path-list /dir1,/dir2,/dir3,/dir4
   (volume flexcache prepopulate start)
 [JobId 208]: FlexCache prepopulate job queued.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This example includes an invalid path for prepopulation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster1::*&gt; flexcache prepopulate start -cache-volume vol_cache2_vs3_c2_vol_origin1_vs1_c1 -cache-vserver vs3_c2 -path-list /dir1, dir5, dir6
+  (volume flexcache prepopulate start)
+
+Error: command failed: Path(s) "dir5, dir6" does not exist in origin volume
+       "vol_origin1_vs1_c1" in Vserver "vs1_c1".</pre>
 </div>
 </div>
 </li>
