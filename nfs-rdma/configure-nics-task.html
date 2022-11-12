@@ -37394,7 +37394,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-11 01:50:17 +0000">11/11/2022</time>
+    <time datetime="2022-11-11 17:43:03 +0000">11/11/2022</time>
     
   
 
@@ -37465,15 +37465,24 @@
 <div class="title">System Manager</div>
 <div class="content">
 <div class="paragraph">
-<p>You must be using ONTAP 9.12.1 or later to configure network interfaces with NFS over RDMA using System Manager.
-.Steps
-. Check if RDMA is supported. Navigate to <strong>Network &gt; Ethernet Ports</strong> and select the appropriate node in the group view. When you expand the node, look at the <strong>RDMA protocols</strong> field for a given port: the value <strong>RoCE</strong> denotes RDMA is supported; a dash (<strong>-</strong>) indicates it is not supported.
-. To add a VLAN, select <strong>+ VLAN</strong>. Select the appropriate node. In the <strong>Port</strong> dropdown menu, the available ports will display the text <strong>RoCE Enabled</strong> if they support RDMA; no text will be displayed if they do not support RDMA.
-. Follow the workflow in <a href="../task_nas_enable_linux_nfs.html">Enable NAS storage for Linux servers using NFS</a> to configure a new NFS server.</p>
+<p>You must be using ONTAP 9.12.1 or later to configure network interfaces with NFS over RDMA using System Manager.</p>
 </div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Check if RDMA is supported. Navigate to <strong>Network &gt; Ethernet Ports</strong> and select the appropriate node in the group view. When you expand the node, look at the <strong>RDMA protocols</strong> field for a given port: the value <strong>RoCE</strong> denotes RDMA is supported; a dash (<strong>-</strong>) indicates it is not supported.</p>
+</li>
+<li>
+<p>To add a VLAN, select <strong>+ VLAN</strong>. Select the appropriate node. In the <strong>Port</strong> dropdown menu, the available ports will display the text <strong>RoCE Enabled</strong> if they support RDMA; no text will be displayed if they do not support RDMA.</p>
+</li>
+<li>
+<p>Follow the workflow in <a href="../task_nas_enable_linux_nfs.html">Enable NAS storage for Linux servers using NFS</a> to configure a new NFS server.</p>
 <div class="paragraph">
-<p>+
-When adding network interfaces, you will have the option to select <strong>Use RoCE ports</strong>. Select this option for any network interfaces that you want to use NFS over RDMA.</p>
+<p>When adding network interfaces, you will have the option to select <strong>Use RoCE ports</strong>. Select this option for any network interfaces that you want to use NFS over RDMA.</p>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>

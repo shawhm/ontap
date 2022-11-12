@@ -85,7 +85,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/access-man-pages-concept.html</loc>
       
-      <lastmod>2022-01-14T17:57:42+00:00</lastmod>
+      <lastmod>2022-11-11T16:48:37+00:00</lastmod>
       
     </url>
   
@@ -610,7 +610,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/asa-iscsi-lif-fo-task.html</loc>
       
-      <lastmod>2022-09-08T20:20:59+00:00</lastmod>
+      <lastmod>2022-11-11T16:48:37+00:00</lastmod>
       
     </url>
   
@@ -2332,7 +2332,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/concept_nas_file_system_analytics_overview.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-11-12T00:37:45+00:00</lastmod>
       
     </url>
   
@@ -2724,7 +2724,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-cluster-key-server-task.html</loc>
       
-      <lastmod>2022-07-19T17:30:44+00:00</lastmod>
+      <lastmod>2022-11-11T16:48:37+00:00</lastmod>
       
     </url>
   
@@ -3046,7 +3046,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nfs-rdma/configure-lifs-task.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-11-12T00:37:45+00:00</lastmod>
       
     </url>
   
@@ -3116,7 +3116,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nfs-rdma/configure-nics-task.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-11-11T17:43:03+00:00</lastmod>
       
     </url>
   
@@ -3795,7 +3795,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/data-protection/convert-snapmirror-version-flexible-task.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-11-12T00:37:45+00:00</lastmod>
       
     </url>
   
@@ -4369,7 +4369,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/s3-config/create-modifyi-object-store-server-policy-task.html</loc>
       
-      <lastmod>2022-08-17T18:36:14+00:00</lastmod>
+      <lastmod>2022-11-11T16:48:37+00:00</lastmod>
       
     </url>
   
@@ -5818,7 +5818,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nvme/disable-secure-authentication-nvme-tcp-task.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-11-12T00:37:45+00:00</lastmod>
       
     </url>
   
@@ -7372,7 +7372,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html</loc>
       
-      <lastmod>2022-08-25T21:56:03+00:00</lastmod>
+      <lastmod>2022-11-11T20:48:49+00:00</lastmod>
       
     </url>
   
@@ -9199,7 +9199,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/consistency-groups/</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-11-11T20:48:49+00:00</lastmod>
       
     </url>
   
@@ -10494,7 +10494,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/concepts/manual-pages.html</loc>
       
-      <lastmod>2022-07-26T21:25:41+00:00</lastmod>
+      <lastmod>2022-11-11T23:00:41+00:00</lastmod>
       
     </url>
   
@@ -13273,7 +13273,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/restore-node-config-backup-file-task.html</loc>
       
-      <lastmod>2022-11-04T18:38:33+00:00</lastmod>
+      <lastmod>2022-11-11T20:48:49+00:00</lastmod>
       
     </url>
   
@@ -13651,7 +13651,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2022-11-11T15:37:50+00:00</lastmod>
+      <lastmod>2022-11-12T13:00:23+00:00</lastmod>
       
     </url>
   
@@ -13959,7 +13959,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nvme/setting-up-secure-authentication-nvme-tcp-task.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-11-12T00:37:45+00:00</lastmod>
       
     </url>
   

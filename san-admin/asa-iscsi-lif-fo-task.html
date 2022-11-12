@@ -37394,7 +37394,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-08 20:20:59 +0000">09/08/2022</time>
+    <time datetime="2022-11-11 16:48:37 +0000">11/11/2022</time>
     
   
 
@@ -37404,6 +37404,14 @@
           alt="netapp-thomi"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/54111336?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
+    <img  class="avatar avatar-small"
+          alt="netapp-ahibbard"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/85892662?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -37617,7 +37625,7 @@ You have the option of permanently migrating the iSCSI LIF by checking the check
 </div>
 <div class="paragraph">
 <div class="title">About this task</div>
-<p>See the <a href="https://docs.netapp.com/us-en/ontap-cli-9111/index.html" target="_blank" rel="noopener">ONTAP 9.11.1 Command Reference</a> for a full list of <code>network interface</code> commands.</p>
+<p>See the <a href="https://docs.netapp.com/us-en/ontap-cli-9121/index.html" target="_blank" rel="noopener">ONTAP Command Reference</a> for a full list of <code>network interface</code> commands.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -37631,16 +37639,16 @@ You have the option of permanently migrating the iSCSI LIF by checking the check
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Create an iSCSI LIF</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>network interface create -vserver <em>vserver_name</em> -lif <em>iscsi_lif</em> -service-policy default-data-blocks -data-protocol iscsi -home-node <em>node_name</em> -home-port <em>port_name</em> -address <em>IP_address</em> -netmask <em>netmask_value</em></code></p>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>network interface create -vserver <em>SVM_name</em> -lif <em>iscsi_lif</em> -service-policy default-data-blocks -data-protocol iscsi -home-node <em>node_name</em> -home-port <em>port_name</em> -address <em>IP_address</em> -netmask <em>netmask_value</em></code></p>
 <p class="tableblock">If needed, see <a href="../networking/create_a_lif.html">Create a LIF</a> for more information.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Verify that the LIF was created successfully</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>network interface show -vserver <em>vserver_name</em> -fields failover-policy,failover-group,auto-revert,is-home</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>network interface show -vserver <em>SVM_name</em> -fields failover-policy,failover-group,auto-revert,is-home</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Verify if you can override the auto-revert default on iSCSI LIFs</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>network interface modify -vserver <em>vserver_name</em> -lif <em>iscsi_lif</em> -auto-revert false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>network interface modify -vserver <em>SVM_name</em> -lif <em>iscsi_lif</em> -auto-revert false</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Perform a storage failover on an iSCSI LIF</p></td>
@@ -37651,13 +37659,13 @@ You have the option of permanently migrating the iSCSI LIF by checking the check
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Enable iSCSI LIF failover feature for pre-existing LIFs</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For iSCSI LIFs created before you upgraded your cluster to ONTAP 9.11.1 or later, you can enable the iSCSI LIF failover feature (by modifying the failover policy to <code>sfo-partner-only</code> and by modifying the auto-revert capability to <code>true</code>):</p>
-<p class="tableblock"><code>network interface modify -vserver <em>vserver_name</em> -lif <em>iscsi_lif</em> –failover-policy sfo-partner-only -auto-revert true</code></p>
+<p class="tableblock"><code>network interface modify -vserver <em>SVM_name</em> -lif <em>iscsi_lif</em> –failover-policy sfo-partner-only -auto-revert true</code></p>
 <p class="tableblock">This command can be run on all the iSCSI LIFs in a Storage VM by specifying “-lif*” and keeping all other parameters the same.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Disable iSCSI LIF failover feature for pre-existing LIFs</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For iSCSI LIFs created before you upgraded your cluster to ONTAP 9.11.1 or later, you can disable the iSCSI LIF failover feature and the auto-revert capability:</p>
-<p class="tableblock"><code>network interface modify -vserver <em>vserver_name</em> -lif <em>iscsi_lif</em> –failover-policy disabled -auto-revert false</code></p>
+<p class="tableblock"><code>network interface modify -vserver <em>SVM_name</em> -lif <em>iscsi_lif</em> –failover-policy disabled -auto-revert false</code></p>
 <p class="tableblock">This command can be run on all the iSCSI LIFs in a storage VM by specifying “-lif*” and keeping all other parameters the same.</p></td>
 </tr>
 </tbody>

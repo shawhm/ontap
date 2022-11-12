@@ -37394,7 +37394,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-11 01:50:17 +0000">11/11/2022</time>
+    <time datetime="2022-11-12 00:37:45 +0000">11/12/2022</time>
     
   
 
@@ -37482,15 +37482,15 @@
 <div class="paragraph">
 <p><code>network interface create -vserver <em>SVM_name</em> -lif <em>lif_name</em> -service-policy <em>service_policy_name</em> -home-node <em>node_name</em> -home-port <em>port_name</em> {-address <em>IP_address</em> -netmask <em>netmask_value</em> | -subnet-name <em>subnet_name</em>} -firewall-policy <em>policy_name</em> -auto-revert {true|false} -rdma-protocols roce</code></p>
 </div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+<div class="ulist">
+<ul>
 <li>
 <p>The service policy must be either default-data-files or a custom policy that includes the data-nfs network interface service.</p>
 </li>
 <li>
 <p>The <code>-rdma-protocols</code> parameter accepts a list, which is by default empty. When <code>roce</code> is added as a value, the LIF can only be configured on ports supporting RoCE offload, affecting bot LIF migration and failover.</p>
 </li>
-</ol>
+</ul>
 </div>
 </li>
 </ol>
@@ -37510,13 +37510,27 @@
 <div class="title">System Manager</div>
 <div class="content">
 <div class="paragraph">
-<p>You must be using ONTAP 9.12.1 or later to create a network interface for NFS over RDMA with System Manager.
-.Steps
-. Select <strong>Network &gt; Overview &gt; Network Interfaces</strong>.
-. Select <span class="image"><img src="../media/icon_kabob.gif" alt="kabob icon"></span> <strong>&gt; Edit</strong> beside the network interface you want to change.
-. Check <strong>Use RoCE Ports</strong> to enable NFS over RDMA or uncheck the box to disable it. If the network interface is on a RoCE capable port, you will see a checkbox next to <strong>Use RoCE ports</strong>.
-. Modify the other settings as needed.
-. Select <strong>Save</strong> to confirm your changes.</p>
+<p>You must be using ONTAP 9.12.1 or later to create a network interface for NFS over RDMA with System Manager.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>Network &gt; Overview &gt; Network Interfaces</strong>.</p>
+</li>
+<li>
+<p>Select <span class="image"><img src="../media/icon_kabob.gif" alt="kabob icon"></span> <strong>&gt; Edit</strong> beside the network interface you want to change.</p>
+</li>
+<li>
+<p>Check <strong>Use RoCE Ports</strong> to enable NFS over RDMA or uncheck the box to disable it. If the network interface is on a RoCE capable port, you will see a checkbox next to <strong>Use RoCE ports</strong>.</p>
+</li>
+<li>
+<p>Modify the other settings as needed.</p>
+</li>
+<li>
+<p>Select <strong>Save</strong> to confirm your changes.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
