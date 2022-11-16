@@ -2360,7 +2360,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/revert/concept_pre_revert_checks.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-11-15T18:06:48+00:00</lastmod>
       
     </url>
   
@@ -12802,6 +12802,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/remove-nas-bucket-task.html</loc>
+      
+      <lastmod>2022-11-15T18:06:48+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap/smb-admin/remove-netbios-aliases-from-list-task.html</loc>
       
       <lastmod>2021-10-19T17:21:53+00:00</lastmod>
@@ -13651,7 +13658,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2022-11-14T12:48:41+00:00</lastmod>
+      <lastmod>2022-11-15T22:29:14+00:00</lastmod>
       
     </url>
   
