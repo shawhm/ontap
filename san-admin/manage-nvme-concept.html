@@ -9,14 +9,14 @@
   <meta property="og:title" content="NVMe Overview" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/san-admin/manage-nvme-concept.html" />
-	<meta property="og:description" content="Beginning with ONTAP 9.4, NVMe/FC is supported. Beginning with ONTAP 9.5 a license is required to support NVMe. If NVMe is enabled in ONTAP 9.4, a 90 day gra..." />
+	<meta property="og:description" content="You can use the non-volatile memory express (NVMe) protocol to provide storage in a SAN environment.  The NVMe protocol is optimized for performance with sol..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Beginning with ONTAP 9.4, NVMe/FC is supported. Beginning with ONTAP 9.5 a license is required to support NVMe. If NVMe is enabled in ONTAP 9.4, a 90 day gra...">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can use the non-volatile memory express (NVMe) protocol to provide storage in a SAN environment.  The NVMe protocol is optimized for performance with sol...">
   <meta name="keywords" content=" manage, nvme, overview, license"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
@@ -21643,11 +21643,11 @@
         Examples of quota configuration
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Set up quotas on anSVM"
+      data-pdf-filename="Set up quotas on an SVM"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/volumes/setup-quotas-svm-task.html">
-        Set up quotas on anSVM
+        Set up quotas on an SVM
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Modify (or Resizing) quota limits"
@@ -37407,7 +37407,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-10-05 17:35:06 +0000">10/05/2022</time>
+    <time datetime="2022-11-18 16:41:56 +0000">11/18/2022</time>
     
   
 
@@ -37436,9 +37436,6 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Beginning with ONTAP 9.4, NVMe/FC is supported on non-MetroCluster AFF configurations. Beginning with ONTAP 9.9.1 NVMe/FC is also supported on all non-MetroCluster All SAN Array (ASA) configurations.</p>
-</div>
-<div class="paragraph">
 <p>You can use the non-volatile memory express (NVMe) protocol to provide storage in a SAN environment.  The NVMe protocol is optimized for performance with solid state storage.</p>
 </div>
 <div class="paragraph">
@@ -37446,6 +37443,9 @@
 </div>
 <div class="paragraph">
 <p>NVMe targets are connected to the network through a standard FC infrastructure using FC switches or a standard TCP infrastructure using Ethernet switches and host-side adapters.</p>
+</div>
+<div class="paragraph">
+<p>Support for NVMe varies based on your version of ONTAP.  See <a href="../nvme/support-limitations.html">NVMe support and limitations</a> for details.</p>
 </div>
 </div>
 </div>

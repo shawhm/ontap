@@ -21643,11 +21643,11 @@
         Examples of quota configuration
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Set up quotas on anSVM"
+      data-pdf-filename="Set up quotas on an SVM"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/volumes/setup-quotas-svm-task.html">
-        Set up quotas on anSVM
+        Set up quotas on an SVM
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Modify (or Resizing) quota limits"
@@ -37407,7 +37407,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-11 01:50:17 +0000">11/11/2022</time>
+    <time datetime="2022-11-18 16:44:53 +0000">11/18/2022</time>
     
   
 
@@ -37429,52 +37429,6 @@
 <div class="sectionbody">
 <div class="paragraph lead">
 <p>NVMe support and limitations varies based on your version of ONTAP, your platform and your configuration.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="namespace-support-and-limitations">Namespace support and limitations</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To set up the NVMe protocol in your SAN environment, you must configure an SVM for NVMe, create namespaces and subsystems, configure an NVMe/FC LIF, and then map the namespaces to the subsystems. When working with NVMe namespaces you should be aware of the following:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Beginning with ONTAP 9.10.1, you can <a href="../nvme/resize-namespace-task.html">resize a namespace</a>. Resizing a namespace is not supported in releases prior to ONTAP 9.10.1.</p>
-</li>
-<li>
-<p>Beginning with ONTAP 9.6, namespaces support 512 byte blocks and 4096 byte blocks.</p>
-<div class="paragraph">
-<p>4096 is the default value. 512 should only be used if the host operating system does not support 4096 byte blocks.</p>
-</div>
-</li>
-<li>
-<p>If you lose data in a LUN, it cannot be restored from a namespace, or vice versa.</p>
-</li>
-<li>
-<p>The space guarantee for namespaces is the same as the space guarantee of the containing volume.</p>
-</li>
-<li>
-<p>Namespaces do not support the following:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Renaming</p>
-<div class="paragraph">
-<p>You cannot rename a namespace.</p>
-</div>
-</li>
-<li>
-<p>Inter-volume move</p>
-</li>
-<li>
-<p>Inter-volume copy</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
 </div>
 </div>
 </div>
@@ -37532,7 +37486,7 @@ Beginning with ONTAP 9.12.1, 4-node MetroCluster IP configurations are supported
 </colgroup>
 <tbody>
 <tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock">Beginning with ONATP&#8230;&#8203;</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Beginning with ONTAP&#8230;&#8203;</p></th>
 <th class="tableblock halign-left valign-top"><p class="tableblock">Platforms</p></th>
 </tr>
 <tr>
@@ -37570,6 +37524,52 @@ Beginning with ONTAP 9.12.1, 4-node MetroCluster IP configurations are supported
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="namespace-support-and-limitations">Namespace support and limitations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To set up the NVMe protocol in your SAN environment, you must configure an SVM for NVMe, create namespaces and subsystems, configure an NVMe/FC LIF, and then map the namespaces to the subsystems. When working with NVMe namespaces you should be aware of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Beginning with ONTAP 9.10.1, you can <a href="../nvme/resize-namespace-task.html">resize a namespace</a>. Resizing a namespace is not supported in releases prior to ONTAP 9.10.1.</p>
+</li>
+<li>
+<p>Beginning with ONTAP 9.6, namespaces support 512 byte blocks and 4096 byte blocks.</p>
+<div class="paragraph">
+<p>4096 is the default value. 512 should only be used if the host operating system does not support 4096 byte blocks.</p>
+</div>
+</li>
+<li>
+<p>If you lose data in a LUN, it cannot be restored from a namespace, or vice versa.</p>
+</li>
+<li>
+<p>The space guarantee for namespaces is the same as the space guarantee of the containing volume.</p>
+</li>
+<li>
+<p>Namespaces do not support the following:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Renaming</p>
+<div class="paragraph">
+<p>You cannot rename a namespace.</p>
+</div>
+</li>
+<li>
+<p>Inter-volume move</p>
+</li>
+<li>
+<p>Inter-volume copy</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 

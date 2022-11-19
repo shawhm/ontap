@@ -21643,11 +21643,11 @@
         Examples of quota configuration
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Set up quotas on anSVM"
+      data-pdf-filename="Set up quotas on an SVM"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/volumes/setup-quotas-svm-task.html">
-        Set up quotas on anSVM
+        Set up quotas on an SVM
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Modify (or Resizing) quota limits"
@@ -37407,7 +37407,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-26 15:45:23 +0000">09/26/2022</time>
+    <time datetime="2022-11-19 01:02:25 +0000">11/19/2022</time>
     
   
 
@@ -37524,11 +37524,21 @@
 </li>
 <li>
 <p>Create two LIFs for the SVMs on each node serving FC:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For ONTAP 9.6 and later:</p>
+<div class="paragraph">
+<p><code>network interface create -vserver <em>vserver_name</em> -lif <em>lif_name</em> -data-protocol fcp -service-policy default-data-fcp -home-node <em>node_name</em> -home-port <em>port_name</em> -address <em>ip_address</em> -netmask <em>netmask</em></code></p>
+</div>
+</li>
+<li>
+<p>For ONTAP 9.5 and earlier:</p>
 <div class="paragraph">
 <p><code>network interface create -vserver <em>vserver_name</em> -lif <em>lif_name</em> -role data -data-protocol fcp -home-node <em>node_name</em> -home-port <em>port</em></code></p>
 </div>
-<div class="paragraph">
-<p>The <code>-role</code> parameter should be <code>data</code> and the <code>data-protocol</code> parameter should be <code>fcp</code>.</p>
+</li>
+</ul>
 </div>
 </li>
 <li>

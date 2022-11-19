@@ -2472,7 +2472,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_paths.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-11-18T16:46:42+00:00</lastmod>
       
     </url>
   
@@ -3340,14 +3340,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/configure-svm-fc-task.html</loc>
       
-      <lastmod>2022-09-26T15:45:23+00:00</lastmod>
+      <lastmod>2022-11-19T01:02:25+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/configure-svm-iscsi-task.html</loc>
       
-      <lastmod>2022-09-26T15:45:23+00:00</lastmod>
+      <lastmod>2022-11-19T01:02:25+00:00</lastmod>
       
     </url>
   
@@ -4446,7 +4446,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/create-nvme-namespace-subsystem-task.html</loc>
       
-      <lastmod>2022-10-06T14:10:46+00:00</lastmod>
+      <lastmod>2022-11-18T16:34:31+00:00</lastmod>
       
     </url>
   
@@ -9829,7 +9829,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/lun-san-environments-concept.html</loc>
       
-      <lastmod>2022-08-22T17:06:03+00:00</lastmod>
+      <lastmod>2022-11-18T16:50:16+00:00</lastmod>
       
     </url>
   
@@ -10200,7 +10200,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/manage-nvme-concept.html</loc>
       
-      <lastmod>2022-10-05T17:35:06+00:00</lastmod>
+      <lastmod>2022-11-18T16:41:56+00:00</lastmod>
       
     </url>
   
@@ -13658,7 +13658,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2022-11-16T13:57:51+00:00</lastmod>
+      <lastmod>2022-11-19T18:05:17+00:00</lastmod>
       
     </url>
   
@@ -13896,7 +13896,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/set-retention-period-task.html</loc>
       
-      <lastmod>2022-06-16T21:32:15+00:00</lastmod>
+      <lastmod>2022-11-18T16:16:24+00:00</lastmod>
       
     </url>
   
@@ -15016,7 +15016,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nvme/support-limitations.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-11-18T16:44:53+00:00</lastmod>
       
     </url>
   
