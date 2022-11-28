@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Configure automatic assignment of disk ownership</title>
+  <title>Change settings for automatic assignment of disk ownership</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Configure automatic assignment of disk ownership" />
+  <meta property="og:title" content="Change settings for automatic assignment of disk ownership" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/disks-aggregates/configure-auto-assignment-disk-ownership-task.html" />
-	<meta property="og:description" content="You can configure ONTAP to automatically assign disk ownership according to a disk’s stack, shelf, or bay. If configured, automatic disk ownership assignment..." />
+	<meta property="og:description" content="You can use the storage disk option modify command to select a non-default policy for automatically assigning disk ownership or to disable automatic assignme..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can configure ONTAP to automatically assign disk ownership according to a disk’s stack, shelf, or bay. If configured, automatic disk ownership assignment...">
-  <meta name="keywords" content=" configure, automatic, assignment, disk ownership"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can use the storage disk option modify command to select a non-default policy for automatically assigning disk ownership or to disable automatic assignme...">
+  <meta name="keywords" content=" change, modify, automatic, assignment, disk ownership"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -160,7 +160,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Configure automatic assignment of disk ownership](https://docs.netapp.com/us-en/ontap/disks-aggregates/configure-auto-assignment-disk-ownership-task.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/disks-aggregates/configure-auto-assignment-disk-ownership-task.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Change settings for automatic assignment of disk ownership](https://docs.netapp.com/us-en/ontap/disks-aggregates/configure-auto-assignment-disk-ownership-task.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/disks-aggregates/configure-auto-assignment-disk-ownership-task.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -2984,10 +2984,12 @@
 
 
 
-
-
     <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
   
+
+
+
+
 
 
 
@@ -15400,24 +15402,6 @@
           
           <a target="_blank" 
             
-              href="/us-en/ontap/pdfs/sidebar/Configure_NDMP_at_the_SVM_level_or_the_node_level.pdf" 
-            
-          >
-            <img src="/us-en/ontap/images/pdf.png" alt="" width="16" height="16"/>
-            Configure NDMP at the SVM level or the node level
-          </a>
-          
-
-
-
-    
-      <ul class="subfolders" style="display:none;">
-        <li class="pdf-ux-container">
-          
-          
-          
-          <a target="_blank" 
-            
               href="/us-en/ontap/pdfs/sidebar/Configure_SVM_scoped_NDMP.pdf" 
             
           >
@@ -15425,8 +15409,6 @@
             Configure SVM-scoped NDMP
           </a>
           
-
-
 
 
 
@@ -15458,13 +15440,6 @@
           
 
 
-
-
-        </li>
-      </ul>
-    
-
-  
 
 
         </li>
@@ -19731,11 +19706,25 @@
         Overview
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="About auto-assignment of disk ownership"
+      data-li-level="5#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/disks-aggregates/disk-autoassignment-policy-concept.html">
+        About auto-assignment of disk ownership
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Display disk and partition ownership"
       data-li-level="5#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/disks-aggregates/display-partition-ownership-task.html">
         Display disk and partition ownership
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Change auto-assignment settings for disk ownership"
+      data-li-level="5#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/us-en/ontap/disks-aggregates/configure-auto-assignment-disk-ownership-task.html">
+        Change auto-assignment settings for disk ownership
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Manually assign ownership of disks"
@@ -19750,13 +19739,6 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/disks-aggregates/manual-assign-ownership-partitioned-disks-task.html">
         Manually assign ownership of partitioned disks
-      </a></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Configure automatic assignment of disk ownership"
-      data-li-level="5#" 
-      class="  active "
-    ><a class="na-navbar-padding" href="/us-en/ontap/disks-aggregates/configure-auto-assignment-disk-ownership-task.html">
-        Configure automatic assignment of disk ownership
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Set up an active-passive configuration on nodes using root-data partitioning"
@@ -36444,24 +36426,8 @@
         Enable tape reservations
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure NDMP at the SVM level or the node level"
-      data-li-level="3" 
-      class="subfolders "
-    ><a href="#">
-        <div class="na-navbar-padding"> Configure NDMP at the SVM level or the node level</div>
-      </a>
-      <ul style="display: none;">
-        <li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Overview"
-      data-li-level="4#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/configure-ndmp-at-svm-node-level-concept.html">
-        Overview
-      </a></li><li 
-      data-pdf-exists="true" 
       data-pdf-filename="Configure SVM-scoped NDMP"
-      data-li-level="4" 
+      data-li-level="3" 
       class="subfolders "
     ><a href="#">
         <div class="na-navbar-padding"> Configure SVM-scoped NDMP</div>
@@ -36469,36 +36435,29 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Overview"
-      data-li-level="5#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/configure-svm-scoped-ndmp-task.html">
-        Overview
-      </a></li><li 
-      data-pdf-exists="true" 
       data-pdf-filename="Enable SVM-scoped NDMP on the cluster"
-      data-li-level="5#" 
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/enable-svm-scoped-ndmp-cluster-task.html">
         Enable SVM-scoped NDMP on the cluster
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure a backup user for the cluster"
-      data-li-level="5#" 
+      data-pdf-filename="Enable a backup user for NDMP authentication"
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/configure-backup-user-cluster-task.html">
-        Configure a backup user for the cluster
+        Enable a backup user for NDMP authentication
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure LIFs"
-      data-li-level="5#" 
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/configure-lifs-svm-scoped-task.html">
         Configure LIFs
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure node-scoped NDMP"
-      data-li-level="4" 
+      data-li-level="3" 
       class="subfolders "
     ><a href="#">
         <div class="na-navbar-padding"> Configure node-scoped NDMP</div>
@@ -36507,18 +36466,18 @@
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Enable node-scoped NDMP on the cluster"
-      data-li-level="5#" 
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/enable-node-scoped-ndmp-cluster-task.html">
         Enable node-scoped NDMP on the cluster
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a LIF"
-      data-li-level="5#" 
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/configure-lifs-node-scoped-task.html">
         Configure a LIF
-      </a></li></ul></li></ul></li><li 
+      </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure the backup application"
       data-li-level="3#" 
@@ -37400,14 +37359,14 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Configure automatic assignment of disk ownership</h1>
+  <h1 class="n-doc__component-detail-heading">Change settings for automatic assignment of disk ownership</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-08-29 21:22:22 +0000">08/29/2022</time>
+    <time datetime="2022-11-23 21:21:53 +0000">11/23/2022</time>
     
   
 
@@ -37420,109 +37379,34 @@
           style="border-radius: 50%;"/>
   </a>
   
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-forry">
+    <img  class="avatar avatar-small"
+          alt="netapp-forry"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/51911827?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
 </p>
 
 <div class="paragraph lead">
-<p>You can use the CLI to configure ONTAP to automatically assign disk ownership according to a disk&#8217;s stack, shelf, or bay. If configured, automatic disk ownership assignments occur 10 minutes after system initialization and every five minutes during normal system operation.</p>
-</div>
-<div class="ulist">
-<div class="title">What you&#8217;ll need</div>
-<ul>
-<li>
-<p>Your system must adhere to the requirements for automatic disk ownership.</p>
-</li>
-<li>
-<p>If you have multiple stacks or shelves that must have different ownership, one disk must have been manually assigned on each stack or shelf so that automatic ownership assignment works on each stack or shelf.</p>
-</li>
-</ul>
-</div>
-<div class="openblock">
-<div class="title">Which disk auto-assignment policy to use</div>
-<div class="content">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
-Use the &#8220;bay autoassign-policy&#8221; only for entry level platforms. If you try to use the &#8220;bay autoassign-policy&#8221; for a non-entry level platform, it will fail.
-</td>
-</tr>
-</table>
-</div>
-</div>
+<p>You can use the <code>storage disk option modify</code> command to select a non-default policy for automatically assigning disk ownership or to disable automatic assignment of disk ownership.</p>
 </div>
 <div class="paragraph">
-<p>You can typically use the default auto-assignment policy, which is equivalent to the &#8220;stack&#8221; policy for most systems, and to the &#8220;bay&#8221; policy for entry-level systems (AFF A2xx, FAS2xxx). However, for some configurations, you might need to change the auto-assignment policy.</p>
-</div>
-<div class="paragraph">
-<p>You must select the appropriate auto-assignment based on your configuration:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 70%;">
-<col style="width: 30%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock">If you are using&#8230;&#8203;</p></th>
-<th class="tableblock halign-left valign-top"><p class="tableblock">Then use this auto-assignment policy&#8230;&#8203;</p></th>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Stand-alone entry-level system</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>stack</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Entry-level systems in an HA configuration with a single, shared shelf</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>bay</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Entry-level systems in an HA configuration with one stack of two or more shelves</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>shelf</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>MetroCluster configurations with one stack per node, two or more shelves</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>shelf</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>All other configurations</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>stack</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<div class="title">About this task</div>
-<p>The behavior of the &#8220;default&#8221; automatic assignment policy depends on the system model. For entry level models, the &#8220;default&#8221; policy is equivalent to the &#8220;bay&#8221; policy. For all other systems, it is equivalent to the &#8220;stack&#8221; policy.</p>
+<p>Learn about <a href="disk-autoassignment-policy-concept.html">automatic assignment of disk ownership</a>.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p>Configure automatic disk assignment:</p>
+<p>Modify automatic disk assignment:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If you want to select a non-default policy, enter:</p>
 <div class="paragraph">
 <p><code>storage disk option modify -autoassign-policy <em>autoassign_policy</em> -node <em>node_name</em></code></p>
 </div>
@@ -37538,6 +37422,15 @@ Use the &#8220;bay autoassign-policy&#8221; only for entry level platforms. If y
 <p>Use <code>bay</code> as the <code><em>autoassign_policy</em></code> to configure automatic ownership at the bay level.</p>
 </li>
 </ul>
+</div>
+</li>
+<li>
+<p>If you want to disable automatic disk ownership assignment, enter:</p>
+<div class="paragraph">
+<p><code>storage disk option modify -autoassign off -node <em>node_name</em></code></p>
+</div>
+</li>
+</ol>
 </div>
 </li>
 <li>

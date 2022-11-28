@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Configure a backup user for the cluster</title>
+  <title>Enable a backup user for NDMP authentication</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Configure a backup user for the cluster" />
+  <meta property="og:title" content="Enable a backup user for NDMP authentication" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/ndmp/configure-backup-user-cluster-task.html" />
-	<meta property="og:description" content="To authenticate NDMP from the backup application, you must create a local backup user, or an NIS or LDAP user for the cluster with the admin or backup role, ..." />
+	<meta property="og:description" content="To authenticate SVM-scoped NDMP from the backup application, there must be an administrative user with sufficient privileges and an NDMP password." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="To authenticate NDMP from the backup application, you must create a local backup user, or an NIS or LDAP user for the cluster with the admin or backup role, ...">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="To authenticate SVM-scoped NDMP from the backup application, there must be an administrative user with sufficient privileges and an NDMP password.">
   <meta name="keywords" content=" configure, backup, user, cluster"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
@@ -160,7 +160,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Configure a backup user for the cluster](https://docs.netapp.com/us-en/ontap/ndmp/configure-backup-user-cluster-task.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/ndmp/configure-backup-user-cluster-task.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Enable a backup user for NDMP authentication](https://docs.netapp.com/us-en/ontap/ndmp/configure-backup-user-cluster-task.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/ndmp/configure-backup-user-cluster-task.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -2978,6 +2978,8 @@
             Disk and partition ownership
           </a>
           
+
+
 
 
 
@@ -15398,24 +15400,6 @@
           
           <a target="_blank" 
             
-              href="/us-en/ontap/pdfs/sidebar/Configure_NDMP_at_the_SVM_level_or_the_node_level.pdf" 
-            
-          >
-            <img src="/us-en/ontap/images/pdf.png" alt="" width="16" height="16"/>
-            Configure NDMP at the SVM level or the node level
-          </a>
-          
-
-
-
-    
-      <ul class="subfolders" style="display:none;">
-        <li class="pdf-ux-container">
-          
-          
-          
-          <a target="_blank" 
-            
               href="/us-en/ontap/pdfs/sidebar/Configure_SVM_scoped_NDMP.pdf" 
             
           >
@@ -15423,8 +15407,6 @@
             Configure SVM-scoped NDMP
           </a>
           
-
-
 
 
     <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
@@ -15458,13 +15440,6 @@
           
 
 
-
-
-        </li>
-      </ul>
-    
-
-  
 
 
         </li>
@@ -19731,11 +19706,25 @@
         Overview
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="About auto-assignment of disk ownership"
+      data-li-level="5#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/disks-aggregates/disk-autoassignment-policy-concept.html">
+        About auto-assignment of disk ownership
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Display disk and partition ownership"
       data-li-level="5#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/disks-aggregates/display-partition-ownership-task.html">
         Display disk and partition ownership
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Change auto-assignment settings for disk ownership"
+      data-li-level="5#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/disks-aggregates/configure-auto-assignment-disk-ownership-task.html">
+        Change auto-assignment settings for disk ownership
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Manually assign ownership of disks"
@@ -19750,13 +19739,6 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/disks-aggregates/manual-assign-ownership-partitioned-disks-task.html">
         Manually assign ownership of partitioned disks
-      </a></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Configure automatic assignment of disk ownership"
-      data-li-level="5#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/disks-aggregates/configure-auto-assignment-disk-ownership-task.html">
-        Configure automatic assignment of disk ownership
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Set up an active-passive configuration on nodes using root-data partitioning"
@@ -36444,24 +36426,8 @@
         Enable tape reservations
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure NDMP at the SVM level or the node level"
-      data-li-level="3" 
-      class="subfolders "
-    ><a href="#">
-        <div class="na-navbar-padding"> Configure NDMP at the SVM level or the node level</div>
-      </a>
-      <ul style="display: none;">
-        <li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Overview"
-      data-li-level="4#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/configure-ndmp-at-svm-node-level-concept.html">
-        Overview
-      </a></li><li 
-      data-pdf-exists="true" 
       data-pdf-filename="Configure SVM-scoped NDMP"
-      data-li-level="4" 
+      data-li-level="3" 
       class="subfolders "
     ><a href="#">
         <div class="na-navbar-padding"> Configure SVM-scoped NDMP</div>
@@ -36469,36 +36435,29 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Overview"
-      data-li-level="5#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/configure-svm-scoped-ndmp-task.html">
-        Overview
-      </a></li><li 
-      data-pdf-exists="true" 
       data-pdf-filename="Enable SVM-scoped NDMP on the cluster"
-      data-li-level="5#" 
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/enable-svm-scoped-ndmp-cluster-task.html">
         Enable SVM-scoped NDMP on the cluster
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure a backup user for the cluster"
-      data-li-level="5#" 
+      data-pdf-filename="Enable a backup user for NDMP authentication"
+      data-li-level="4#" 
       class="  active "
     ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/configure-backup-user-cluster-task.html">
-        Configure a backup user for the cluster
+        Enable a backup user for NDMP authentication
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure LIFs"
-      data-li-level="5#" 
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/configure-lifs-svm-scoped-task.html">
         Configure LIFs
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure node-scoped NDMP"
-      data-li-level="4" 
+      data-li-level="3" 
       class="subfolders "
     ><a href="#">
         <div class="na-navbar-padding"> Configure node-scoped NDMP</div>
@@ -36507,18 +36466,18 @@
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Enable node-scoped NDMP on the cluster"
-      data-li-level="5#" 
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/enable-node-scoped-ndmp-cluster-task.html">
         Enable node-scoped NDMP on the cluster
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a LIF"
-      data-li-level="5#" 
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/configure-lifs-node-scoped-task.html">
         Configure a LIF
-      </a></li></ul></li></ul></li><li 
+      </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure the backup application"
       data-li-level="3#" 
@@ -37400,49 +37359,79 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Configure a backup user for the cluster</h1>
+  <h1 class="n-doc__component-detail-heading">Enable a backup user for NDMP authentication</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2021-10-14 21:50:12 +0000">10/14/2021</time>
+    <time datetime="2022-10-05 14:22:11 +0000">10/05/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
 </p>
 
 <div class="paragraph lead">
-<p>To authenticate NDMP from the backup application, you must create a local backup user, or an NIS or LDAP user for the cluster with the admin or backup role, and generate an NDMP password for the backup user.</p>
+<p>To authenticate SVM-scoped NDMP from the backup application, there must be an administrative user with sufficient privileges and an NDMP password.</p>
 </div>
 <div class="paragraph">
-<div class="title">What you&#8217;ll need</div>
-<p>If you are using an NIS or LDAP user, the user must be created on the respective server. You cannot use an Active Directory user.</p>
+<div class="title">About this task</div>
+<p>You must generate an NDMP password for backup admin users. You can enable backup admin users at the cluster or SVM level, and if necessary, you can create a new user. By default, the users with the following roles can authenticate for NDMP backup:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cluster-wide: <code>admin</code> or <code>backup</code></p>
+</li>
+<li>
+<p>Individual SVMs: <code>vsadmin</code> or <code>vsadmin-backup</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you are using an NIS or LDAP user, the user must exist on the respective server. You cannot use an Active Directory user.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p>Create a backup user with the <code>admin</code> or <code>backup</code> role by using the <code>security login create</code> command.</p>
+<p>Display the current admin users and permissions:</p>
+<div class="paragraph">
+<p><code>security login show</code></p>
+</div>
+</li>
+<li>
+<p>If needed, create a new NDMP backup user with the <code>security login create</code> command and the appropriate role for cluster-wide or individual SVM privileges.</p>
 <div class="paragraph">
 <p>You can specify a local backup user name or an NIS or LDAP user name for the <code>-user-or-group-name</code> parameter.</p>
 </div>
 <div class="paragraph">
-<p>The following command creates the backup user backup_admin1 with the <code>backup</code> role:</p>
+<p>The following command creates the backup user <code>backup_admin1</code> with the <code>backup</code> role for the entire cluster:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>cluster1::&gt; security login create -user-or-group-name backup_admin1 -application ssh
--authmethod password -role backup
-
-Please enter a password for user 'backup_admin1':
-Please enter it again:</pre>
+<div class="paragraph">
+<p><code>cluster1::&gt; security login create -user-or-group-name backup_admin1 -application ssh -authmethod password -role backup</code></p>
 </div>
+<div class="paragraph">
+<p>The following command creates the backup user <code>vsbackup_admin1</code> with the <code>vsadmin-backup</code> role for an individual SVM:</p>
+</div>
+<div class="paragraph">
+<p><code>cluster1::&gt; security login create -user-or-group-name vsbackup_admin1 -application ssh -authmethod password -role vsadmin-backup</code></p>
+</div>
+<div class="paragraph">
+<p>Enter a password for the new user and confirm.</p>
 </div>
 </li>
 <li>

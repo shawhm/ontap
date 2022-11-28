@@ -9,14 +9,14 @@
   <meta property="og:title" content="Enable SVM-scoped NDMP on the cluster" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/ndmp/enable-svm-scoped-ndmp-cluster-task.html" />
-	<meta property="og:description" content="You can configure SVM-scoped NDMP on the cluster by enabling SVM-scoped NDMP mode and NDMP service on the cluster (admin SVM)." />
+	<meta property="og:description" content="If the DMA supports the Cluster Aware Backup (CAB) extension, you can back up all the volumes hosted across different nodes in a cluster by enabling SVM-scop..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can configure SVM-scoped NDMP on the cluster by enabling SVM-scoped NDMP mode and NDMP service on the cluster (admin SVM).">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="If the DMA supports the Cluster Aware Backup (CAB) extension, you can back up all the volumes hosted across different nodes in a cluster by enabling SVM-scop...">
   <meta name="keywords" content=" enable, svm, scope, ndmp, cluster"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
@@ -2978,6 +2978,8 @@
             Disk and partition ownership
           </a>
           
+
+
 
 
 
@@ -15398,24 +15400,6 @@
           
           <a target="_blank" 
             
-              href="/us-en/ontap/pdfs/sidebar/Configure_NDMP_at_the_SVM_level_or_the_node_level.pdf" 
-            
-          >
-            <img src="/us-en/ontap/images/pdf.png" alt="" width="16" height="16"/>
-            Configure NDMP at the SVM level or the node level
-          </a>
-          
-
-
-
-    
-      <ul class="subfolders" style="display:none;">
-        <li class="pdf-ux-container">
-          
-          
-          
-          <a target="_blank" 
-            
               href="/us-en/ontap/pdfs/sidebar/Configure_SVM_scoped_NDMP.pdf" 
             
           >
@@ -15423,8 +15407,6 @@
             Configure SVM-scoped NDMP
           </a>
           
-
-
     <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
   
 
@@ -15458,13 +15440,6 @@
           
 
 
-
-
-        </li>
-      </ul>
-    
-
-  
 
 
         </li>
@@ -19731,11 +19706,25 @@
         Overview
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="About auto-assignment of disk ownership"
+      data-li-level="5#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/disks-aggregates/disk-autoassignment-policy-concept.html">
+        About auto-assignment of disk ownership
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Display disk and partition ownership"
       data-li-level="5#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/disks-aggregates/display-partition-ownership-task.html">
         Display disk and partition ownership
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Change auto-assignment settings for disk ownership"
+      data-li-level="5#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/disks-aggregates/configure-auto-assignment-disk-ownership-task.html">
+        Change auto-assignment settings for disk ownership
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Manually assign ownership of disks"
@@ -19750,13 +19739,6 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/disks-aggregates/manual-assign-ownership-partitioned-disks-task.html">
         Manually assign ownership of partitioned disks
-      </a></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Configure automatic assignment of disk ownership"
-      data-li-level="5#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/disks-aggregates/configure-auto-assignment-disk-ownership-task.html">
-        Configure automatic assignment of disk ownership
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Set up an active-passive configuration on nodes using root-data partitioning"
@@ -36444,24 +36426,8 @@
         Enable tape reservations
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure NDMP at the SVM level or the node level"
-      data-li-level="3" 
-      class="subfolders "
-    ><a href="#">
-        <div class="na-navbar-padding"> Configure NDMP at the SVM level or the node level</div>
-      </a>
-      <ul style="display: none;">
-        <li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Overview"
-      data-li-level="4#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/configure-ndmp-at-svm-node-level-concept.html">
-        Overview
-      </a></li><li 
-      data-pdf-exists="true" 
       data-pdf-filename="Configure SVM-scoped NDMP"
-      data-li-level="4" 
+      data-li-level="3" 
       class="subfolders "
     ><a href="#">
         <div class="na-navbar-padding"> Configure SVM-scoped NDMP</div>
@@ -36469,36 +36435,29 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Overview"
-      data-li-level="5#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/configure-svm-scoped-ndmp-task.html">
-        Overview
-      </a></li><li 
-      data-pdf-exists="true" 
       data-pdf-filename="Enable SVM-scoped NDMP on the cluster"
-      data-li-level="5#" 
+      data-li-level="4#" 
       class="  active "
     ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/enable-svm-scoped-ndmp-cluster-task.html">
         Enable SVM-scoped NDMP on the cluster
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure a backup user for the cluster"
-      data-li-level="5#" 
+      data-pdf-filename="Enable a backup user for NDMP authentication"
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/configure-backup-user-cluster-task.html">
-        Configure a backup user for the cluster
+        Enable a backup user for NDMP authentication
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure LIFs"
-      data-li-level="5#" 
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/configure-lifs-svm-scoped-task.html">
         Configure LIFs
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure node-scoped NDMP"
-      data-li-level="4" 
+      data-li-level="3" 
       class="subfolders "
     ><a href="#">
         <div class="na-navbar-padding"> Configure node-scoped NDMP</div>
@@ -36507,18 +36466,18 @@
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Enable node-scoped NDMP on the cluster"
-      data-li-level="5#" 
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/enable-node-scoped-ndmp-cluster-task.html">
         Enable node-scoped NDMP on the cluster
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a LIF"
-      data-li-level="5#" 
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/ndmp/configure-lifs-node-scoped-task.html">
         Configure a LIF
-      </a></li></ul></li></ul></li><li 
+      </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure the backup application"
       data-li-level="3#" 
@@ -37407,18 +37366,30 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-14 21:50:12 +0000">10/14/2021</time>
+    <time datetime="2022-10-05 12:18:55 +0000">10/05/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
 </p>
 
 <div class="paragraph lead">
-<p>You can configure SVM-scoped NDMP on the cluster by enabling SVM-scoped NDMP mode and NDMP service on the cluster (admin SVM).</p>
+<p>If the DMA supports the Cluster Aware Backup (CAB) extension, you can back up all the volumes hosted across different nodes in a cluster by enabling SVM-scoped NDMP, enabling NDMP service on the cluster (admin SVM), and configuring LIFs for data and control connection.</p>
+</div>
+<div class="paragraph">
+<div class="title">What you&#8217;ll need</div>
+<p>The CAB extension must be supported by the DMA.</p>
 </div>
 <div class="paragraph">
 <div class="title">About this task</div>
