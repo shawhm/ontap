@@ -17209,11 +17209,11 @@
         SnapLock
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Load-sharing mirrors"
+      data-pdf-filename="Load-sharing mirrors in ONTAP 8.3"
       data-li-level="5#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_preparing_all_load_sharing_mirrors_for_a_major_upgrade.html">
-        Load-sharing mirrors
+        Load-sharing mirrors in ONTAP 8.3
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="NetApp Storage Encryption"
@@ -37366,11 +37366,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-11-11 19:48:01 +0000">11/11/2021</time>
+    <time datetime="2022-11-29 14:47:47 +0000">11/29/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
+    <img  class="avatar avatar-small"
+          alt="netapp-ahibbard"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/85892662?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -37385,7 +37393,7 @@
 </p>
 
 <div class="paragraph lead">
-<p>Beginning with ONTAP 9.7, newly created aggregates and volumes are encrypted by default when you have the VE license and onboard or external key management. Beginning with ONTAP 9.6, you can use aggregate-level encryption to assign keys to the containing aggregate for the volumes to be encrypted. Volumes you create in the aggregate are encrypted by default. You can override the default when you encrypt the volume.</p>
+<p>Beginning with ONTAP 9.7, newly created aggregates and volumes are encrypted by default when you have the VE license and onboard or external key management. Beginning with ONTAP 9.6, you can use aggregate-level encryption to assign keys to the containing aggregate for the volumes to be encrypted.</p>
 </div>
 <div class="paragraph">
 <div class="title">What you&#8217;ll need</div>
@@ -37396,7 +37404,10 @@
 <p>You must use aggregate-level encryption if you plan to perform inline or background aggregate-level deduplication. Aggregate-level deduplication is otherwise not supported by NVE.</p>
 </div>
 <div class="paragraph">
-<p>An aggregate enabled for aggregate-level encryption is called an <em>NAE aggregate</em> (for NetApp Aggregate Encryption). Plain text volumes are not supported in NAE aggregates.</p>
+<p>An aggregate enabled for aggregate-level encryption is called an <em>NAE aggregate</em> (for NetApp Aggregate Encryption). All volumes in an NAE aggregate must be encrypted with NAE or NVE encryption. With aggregate-level encryption, volumes you create in the aggregate are encrypted with NAE encryption by default. You can override the default to use NVE encryption instead.</p>
+</div>
+<div class="paragraph">
+<p>Plain text volumes are not supported in NAE aggregates.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
@@ -37418,7 +37429,7 @@
 <p>Create an NAE aggregate with ONTAP 9.7 or later</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>storage aggregate create -aggregate aggregate_name -node node_name</code></p>
+<p><code>storage aggregate create -aggregate <em>aggregate_name</em> -node <em>node_name</em></code></p>
 </div></div></td>
 </tr>
 <tr>
@@ -37426,7 +37437,7 @@
 <p>Create an NAE aggregate with ONTAP 9.6</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>storage aggregate create -aggregate aggregate_name -node node_name -encrypt-with-aggr-key true</code></p>
+<p><code>storage aggregate create -aggregate <em>aggregate_name</em> -node <em>node_name</em> -encrypt-with-aggr-key true</code></p>
 </div></div></td>
 </tr>
 <tr>
@@ -37434,7 +37445,7 @@
 <p>Convert a non-NAE aggregate to an NAE aggregate</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>storage aggregate modify -aggregate aggregate_name -node node_name -encrypt-with-aggr-key true</code></p>
+<p><code>storage aggregate modify -aggregate <em>aggregate_name</em> -node <em>node_name</em> -encrypt-with-aggr-key true</code></p>
 </div></div></td>
 </tr>
 <tr>
@@ -37442,7 +37453,7 @@
 <p>Convert an NAE aggregate to a non-NAE aggregate</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>storage aggregate modify -aggregate aggregate_name -node node_name -encrypt-with-aggr-key false</code></p>
+<p><code>storage aggregate modify -aggregate <em>aggregate_name</em> -node <em>node_name</em> -encrypt-with-aggr-key false</code></p>
 </div></div></td>
 </tr>
 </tbody>

@@ -17209,11 +17209,11 @@
         SnapLock
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Load-sharing mirrors"
+      data-pdf-filename="Load-sharing mirrors in ONTAP 8.3"
       data-li-level="5#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_preparing_all_load_sharing_mirrors_for_a_major_upgrade.html">
-        Load-sharing mirrors
+        Load-sharing mirrors in ONTAP 8.3
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="NetApp Storage Encryption"
@@ -37366,7 +37366,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-11 01:50:17 +0000">11/11/2022</time>
+    <time datetime="2022-11-29 18:09:57 +0000">11/29/2022</time>
     
   
 
@@ -37744,13 +37744,13 @@ Job ID Name                 Vserver    Node           State
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Identify any established SMB sessions that are not continuously available: <code>vserver cifs session show -continuously-available Yes -instance</code></p>
+<p>Identify any established SMB sessions that are not continuously available: <code>vserver cifs session show -continuously-available No -instance</code></p>
 <div class="paragraph">
 <p>This command displays detailed information about any SMB sessions that have no continuous availability. You should terminate them before proceeding with the ONTAP downgrade.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cluster1::&gt; vserver cifs session show -continuously-available Yes -instance
+<pre>cluster1::&gt; vserver cifs session show -continuously-available No -instance
 
                         Node: node1
                      Vserver: vs1

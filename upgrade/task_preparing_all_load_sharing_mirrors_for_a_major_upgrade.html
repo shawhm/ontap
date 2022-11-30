@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Prepare all load-sharing mirrors for a major upgrade</title>
+  <title>Prepare all load-sharing mirrors before upgrading from ONTAP 8.3</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Prepare all load-sharing mirrors for a major upgrade" />
+  <meta property="og:title" content="Prepare all load-sharing mirrors before upgrading from ONTAP 8.3" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/upgrade/task_preparing_all_load_sharing_mirrors_for_a_major_upgrade.html" />
 	<meta property="og:description" content="Before performing a major upgrade from ONTAP 8.3, you should move all of the load-sharing mirror source volumes to an aggregate on the node that you will upg..." />
@@ -160,7 +160,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Prepare all load-sharing mirrors for a major upgrade](https://docs.netapp.com/us-en/ontap/upgrade/task_preparing_all_load_sharing_mirrors_for_a_major_upgrade.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/upgrade/task_preparing_all_load_sharing_mirrors_for_a_major_upgrade.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Prepare all load-sharing mirrors before upgrading from ONTAP 8.3](https://docs.netapp.com/us-en/ontap/upgrade/task_preparing_all_load_sharing_mirrors_for_a_major_upgrade.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/upgrade/task_preparing_all_load_sharing_mirrors_for_a_major_upgrade.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -17209,11 +17209,11 @@
         SnapLock
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Load-sharing mirrors"
+      data-pdf-filename="Load-sharing mirrors in ONTAP 8.3"
       data-li-level="5#" 
       class="  active "
     ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_preparing_all_load_sharing_mirrors_for_a_major_upgrade.html">
-        Load-sharing mirrors
+        Load-sharing mirrors in ONTAP 8.3
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="NetApp Storage Encryption"
@@ -37359,14 +37359,14 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Prepare all load-sharing mirrors for a major upgrade</h1>
+  <h1 class="n-doc__component-detail-heading">Prepare all load-sharing mirrors before upgrading from ONTAP 8.3</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2021-04-27 21:13:06 +0000">04/27/2021</time>
+    <time datetime="2022-11-29 20:44:38 +0000">11/29/2022</time>
     
   
 
@@ -37377,7 +37377,19 @@
 </p>
 
 <div class="paragraph lead">
-<p>Before performing a major upgrade from ONTAP 8.3, you should move all of the load-sharing mirror source volumes to an aggregate on the node that you will upgrade last. This ensures that load-sharing mirror destination volumes are the same or later versions of ONTAP.</p>
+<p>Before upgrading from ONTAP 8.3, you should move all of the load-sharing mirror source volumes to an aggregate on the node that you will upgrade last. This ensures that load-sharing mirror destination volumes are the same or later versions of ONTAP.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+You only need to perform this procedure when upgrading from ONTAP 8.3.
+</td>
+</tr>
+</table>
 </div>
 <div class="olist arabic">
 <ol class="arabic">

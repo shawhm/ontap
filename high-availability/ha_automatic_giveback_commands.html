@@ -17209,11 +17209,11 @@
         SnapLock
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Load-sharing mirrors"
+      data-pdf-filename="Load-sharing mirrors in ONTAP 8.3"
       data-li-level="5#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_preparing_all_load_sharing_mirrors_for_a_major_upgrade.html">
-        Load-sharing mirrors
+        Load-sharing mirrors in ONTAP 8.3
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="NetApp Storage Encryption"
@@ -37366,7 +37366,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-15 16:04:52 +0000">09/15/2022</time>
+    <time datetime="2022-11-29 20:24:51 +0000">11/29/2022</time>
     
   
 
@@ -37632,18 +37632,6 @@ In this case, takeover does not occur</p></td>
 <div class="paragraph">
 <p>The following table describes how parameter combinations of the <code>storage failover modify</code> command affect automatic giveback in panic situations.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
-Be aware that takeover can occur for other reasons in the event of a node panic. For example, if a node panics but the panic packet is not received by its partner, the partner might perform a heartbeat loss takeover. In this case, giveback would not be controlled by the <code>-auto-giveback-after-panic</code> parameter but would instead be controlled by the <code>-onfailure</code> parameter.
-</td>
-</tr>
-</table>
-</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 60%;">
@@ -37692,19 +37680,7 @@ If <code>-onpanic</code> is set to <code>false</code>, takeover/giveback does no
 <img src="/us-en/ontap/images/note.svg" alt="Note">
 </td>
 <td class="content">
-<div class="paragraph">
-<p>If you modify the default settings, the <code>-onpanic</code> parameter can override automatic giveback, as shown in the table above.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>If the <code>-onpanic</code> parameter is set to <code>true</code>, automatic giveback is always performed if a panic occurs unless you have changed the default settings for the <code>-auto-giveback</code> and <code>-auto-giveback-after-panic</code> parameters. If both of these parameters are changed from their default (<code>true</code>) to <code>false</code>, then an automatic giveback will not occur after a panic, even if the <code>-onpanic</code> parameter is set to <code>true</code>.</p>
-</li>
-<li>
-<p>If the <code>-onpanic</code> parameter is set to <code>false</code>, a takeover does not occur and clients experience a disruption in ONTAP data services. Therefore, automatic giveback cannot occur, even if the <code>-auto-giveback-after-panic</code> parameter is set to <code>true</code>.</p>
-</li>
-</ul>
-</div>
+A takeover can result from a failure not associated with a panic.  A <em>failure</em> is experienced when communication is lost between a node and its partner, also called a <em>heartbeat loss</em>. If a takeover occurs because of a failure, giveback is controlled by the <code>-onfailure</code> parameter instead of the <code>-auto-giveback-after-panic parameter</code>.
 </td>
 </tr>
 </table>
@@ -37716,22 +37692,13 @@ If <code>-onpanic</code> is set to <code>false</code>, takeover/giveback does no
 <img src="/us-en/ontap/images/note.svg" alt="Note">
 </td>
 <td class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Takeover might occur for other reasons during node panic.  In such cases, giveback is not controlled by the <code>auto-giveback-after-panic</code> setting.</p>
-</li>
-<li>
-<p>If the <code>-onpanic</code> parameter is set to <code>true</code>, automatic giveback is always performed if a panic occurs unless you have changed the default settings for the <code>-auto-giveback</code> and <code>-auto-giveback-after-panic</code> parameters. If both of these parameters are changed from their default (<code>true</code>) to <code>false</code>, then an automatic giveback will not occur after a panic, even if the <code>-onpanic</code> parameter is set to <code>true</code>.</p>
-</li>
-<li>
-<p>If the <code>-onpanic</code> parameter is set to <code>false</code>, takeover does not occur. Therefore, automatic giveback cannot occur, even if the <code>-auto-giveback-after-panic</code> parameter is set to <code>true</code>. A client disruption occurs.</p>
-</li>
-</ul>
-</div>
+When a node panics, it sends a panic package to its partner node.  If for any reason the panic package is not received by the partner node, the panic can be misinterpreted as a failure.  Without receipt of the panic package, the partner node knows only that communication has been lost, and does not know that a panic has occurred.  In this case, the partner node processes the loss of communication as a failure instead of a panic, and giveback is controlled by the <code>-onfailure</code> parameter (and not by the <code>-auto-giveback-after-panic parameter</code>).
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p>For details on all <code>storage failover modify</code> parameters, see the <a href="https://docs.netapp.com/us-en/ontap-cli-9121/storage-failover-modify.html">ONTAP manual pages</a>.</p>
 </div>
 </div>
 </div>

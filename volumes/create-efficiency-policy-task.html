@@ -17209,11 +17209,11 @@
         SnapLock
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Load-sharing mirrors"
+      data-pdf-filename="Load-sharing mirrors in ONTAP 8.3"
       data-li-level="5#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_preparing_all_load_sharing_mirrors_for_a_major_upgrade.html">
-        Load-sharing mirrors
+        Load-sharing mirrors in ONTAP 8.3
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="NetApp Storage Encryption"
@@ -37366,7 +37366,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-09 14:26:04 +0000">03/09/2022</time>
+    <time datetime="2022-11-17 13:40:11 +0000">11/17/2022</time>
     
   
 
@@ -37411,7 +37411,7 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You can run deduplication or data compression operations at a scheduled time, or by creating a schedule with a specific duration, or by specifying a threshold percentage, which waits for the new data to exceed the specified percentage and then triggers the deduplication or data compression operation. This threshold value is the percentage of the total number of blocks used in the volume. You can obtain the total number of blocks used from the <code>df</code> command output.</p>
+<p>You can run deduplication or data compression operations at a scheduled time, or by creating a schedule with a specific duration, or by specifying a threshold percentage, which waits for the new data to exceed the threshold and then triggers the deduplication or data compression operation. This threshold value is the percentage of the total number of blocks used in the volume. For example, if you set the threshold value on a volume to 20% when the total number of blocks used on the volume is 50%, data deduplication or data compression triggers automatically when new data written on the volume reaches 10% (20% of 50% blocks used). If required, you can obtain the total number of blocks used from the <code>df</code> command output.</p>
 </div>
 </td>
 </tr>

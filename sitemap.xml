@@ -2192,7 +2192,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-11-29T22:16:43+00:00</lastmod>
       
     </url>
   
@@ -3095,7 +3095,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html</loc>
       
-      <lastmod>2022-08-25T13:17:41+00:00</lastmod>
+      <lastmod>2022-11-29T15:11:08+00:00</lastmod>
       
     </url>
   
@@ -4089,7 +4089,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/volumes/create-efficiency-policy-task.html</loc>
       
-      <lastmod>2022-03-09T14:26:04+00:00</lastmod>
+      <lastmod>2022-11-17T13:40:11+00:00</lastmod>
       
     </url>
   
@@ -6686,7 +6686,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-aggregate-level-encryption-nve-license-task.html</loc>
       
-      <lastmod>2021-11-11T19:48:01+00:00</lastmod>
+      <lastmod>2022-11-29T14:47:47+00:00</lastmod>
       
     </url>
   
@@ -7050,7 +7050,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-encryption-new-volume-task.html</loc>
       
-      <lastmod>2021-11-11T19:48:01+00:00</lastmod>
+      <lastmod>2022-11-29T20:11:37+00:00</lastmod>
       
     </url>
   
@@ -7421,7 +7421,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/concepts/encryption-concept.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-11-29T15:11:08+00:00</lastmod>
       
     </url>
   
@@ -8478,7 +8478,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/high-availability/ha_automatic_giveback_commands.html</loc>
       
-      <lastmod>2022-09-15T16:04:52+00:00</lastmod>
+      <lastmod>2022-11-29T20:24:51+00:00</lastmod>
       
     </url>
   
@@ -9192,7 +9192,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/error-messages/</loc>
       
-      <lastmod>2022-08-11T13:49:15+00:00</lastmod>
+      <lastmod>2022-11-28T23:31:58+00:00</lastmod>
       
     </url>
   
@@ -9843,7 +9843,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/luster-version-support-nve-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-11-28T22:44:32+00:00</lastmod>
       
     </url>
   
@@ -13658,7 +13658,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2022-11-28T16:51:02+00:00</lastmod>
+      <lastmod>2022-11-30T06:57:47+00:00</lastmod>
       
     </url>
   
@@ -15037,7 +15037,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/support-storage-encryption-concept.html</loc>
       
-      <lastmod>2022-10-25T18:59:05+00:00</lastmod>
+      <lastmod>2022-11-28T22:44:32+00:00</lastmod>
       
     </url>
   
@@ -16101,7 +16101,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_preparing_all_load_sharing_mirrors_for_a_major_upgrade.html</loc>
       
-      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      <lastmod>2022-11-29T20:44:38+00:00</lastmod>
       
     </url>
   
@@ -16346,7 +16346,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/revert/task_things_to_verify_before_revert.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-11-29T18:09:57+00:00</lastmod>
       
     </url>
   
@@ -16381,7 +16381,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_upgrade_andu_sm.html</loc>
       
-      <lastmod>2022-01-25T22:17:57+00:00</lastmod>
+      <lastmod>2022-11-28T23:27:11+00:00</lastmod>
       
     </url>
   
@@ -16402,7 +16402,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verify_cluster_after_upgrade.html</loc>
       
-      <lastmod>2022-06-29T17:47:53+00:00</lastmod>
+      <lastmod>2022-11-28T23:27:11+00:00</lastmod>
       
     </url>
   
@@ -16934,7 +16934,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/file-system-analytics/usage-size-task.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-11-28T23:27:11+00:00</lastmod>
       
     </url>
   

@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can use the volume create command to enable encryption on a new volume.">
-  <meta name="keywords" content=" enabling, encryption, new, volume"><!-- Icons -->
+  <meta name="keywords" content=" encryption, new volume, NAE, NVE, volume create"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -17209,11 +17209,11 @@
         SnapLock
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Load-sharing mirrors"
+      data-pdf-filename="Load-sharing mirrors in ONTAP 8.3"
       data-li-level="5#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_preparing_all_load_sharing_mirrors_for_a_major_upgrade.html">
-        Load-sharing mirrors
+        Load-sharing mirrors in ONTAP 8.3
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="NetApp Storage Encryption"
@@ -37366,11 +37366,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-11-11 19:48:01 +0000">11/11/2021</time>
+    <time datetime="2022-11-29 20:11:37 +0000">11/29/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
+    <img  class="avatar avatar-small"
+          alt="netapp-ahibbard"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/85892662?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -37389,19 +37397,45 @@
 </div>
 <div class="paragraph">
 <div class="title">About this task</div>
-<p>Beginning with ONTAP 9.2, you can enable encryption on a SnapLock volume.</p>
+<p>You can encrypt volumes using NetApp Volume Encryption (NVE) and, beginning with ONTAP 9.6, NetApp Aggregate Encryption (NAE). To learn more about NAE and NVE, refer to the <a href="#configure-netapp-volume-encryption-concept">volume encryption overview</a>.</p>
 </div>
 <div class="paragraph">
-<p>Beginning with ONTAP 9.4, if you enable &#8220;cc-mode&#8221; when you set up the Onboard Key Manager, volumes you create with the <code>volume create</code> command are automatically encrypted, whether or not you specify <code>-encrypt true</code>.</p>
+<p>The procedure to enable encryption in ONTAP varies based on the version of ONTAP you are using and your specific configuration:</p>
 </div>
-<div class="paragraph">
-<p>Beginning with ONTAP 9.6, you can use aggregate-level encryption to assign keys to the containing aggregate for the volumes to be encrypted. Volumes you create in the aggregate are encrypted by default. You can use the <code>-encrypt</code> option to override the default when you create the volume.</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
+<p>Beginning with ONTAP 9.4, if you enable <code>cc-mode</code> when you set up the Onboard Key Manager, volumes you create with the <code>volume create</code> command are automatically encrypted, whether or not you specify <code>-encrypt true</code>.</p>
+</li>
+<li>
+<p>In ONTAP 9.6 and earlier releases, you must use <code>-encrypt true</code> with <code>volume create</code> commands to enable encryption (provided you did not enable <code>cc-mode</code>).</p>
+</li>
+<li>
+<p>If you are using NAE in ONTAP 9.6, you must enable NAE at the aggregate level. Refer to <a href="enable-aggregate-level-encryption-nve-license-task.html">Enable aggregate-level encryption with the VE license</a> for more details on this task.</p>
+</li>
+<li>
 <p>Beginning with ONTAP 9.7, newly created volumes are encrypted by default when you have the VE license and onboard or external key management.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In ONTAP 9.7 and later releases, if you use <code>-encrypt true</code> to create a volume in an NAE aggregate, the volume will have NVE encryption instead of NAE. All volumes in an NAE aggregate must be encrypted with either NVE or NAE.</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>A volume encrypted with a unique key is called an <em>NVE volume</em>. A volume encrypted with an aggregate-level key is called an <em>NAE aggregate</em> (for NetApp Aggregate Encryption). Plaintext volumes are not supported in NAE aggregates.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Plaintext volumes are not supported in NAE aggregates.
+</td>
+</tr>
+</table>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
@@ -37420,34 +37454,42 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>An ONTAP 9.7 or later NAE volume</p>
+<p>An NAE volume</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>volume create -vserver SVM_name -volume volume_name -aggregate aggregate_name</code></p>
+<p><code>volume create -vserver <em>SVM_name</em> -volume <em>volume_name</em> -aggregate <em>aggregate_name</em></code><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+In ONTAP 9.6, you must enable NAE at the aggregate-level to create an NAE volume.
+</td>
+</tr>
+</table>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>An ONTAP 9.6 NAE volume (assuming aggregate-level encryption is enabled)</p>
+<p>An NVE volume</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>volume create -vserver SVM_name -volume volume_name -aggregate aggregate_name</code></p>
-</div></div></td>
-</tr>
+<p><code>volume create -vserver <em>SVM_name</em> -volume <em>volume_name</em> -aggregate <em>aggregate_name</em></code><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>An ONTAP 9.7 or later NVE volume</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>volume create -vserver SVM_name -volume volume_name -aggregate aggregate_name</code></p>
-</div></div></td>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+If you are using ONTAP 9.6 and earlier versions, add <code>-encrypt true</code> to the command. Using this parameter in ONTAP 9.7 or later with NAE encryption on the aggregate, the volume will use NVE.
+</td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>An ONTAP 9.6 or earlier NVE volume</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>volume create -vserver SVM_name -volume volume_name -aggregate aggregate_name -encrypt true</code></p>
+</table>
 </div></div></td>
 </tr>
 <tr>
@@ -37455,53 +37497,13 @@
 <p>A plain text volume</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>volume create -vserver SVM_name -volume volume_name -aggregate aggregate_name -encrypt false</code></p>
+<p><code>volume create -vserver <em>SVM_name</em> -volume <em>volume_name</em> -aggregate <em>aggregate_name</em> -encrypt false</code></p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>For complete command syntax, see the man page for the command.</p>
-</div>
-<div class="paragraph">
-<p>Beginning with ONTAP 9.7 or later, the following command creates an NAE volume named <code>vol1</code> on <code>aggr1</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>cluster1::&gt; volume create -vserver vs1 -volume vol1 -aggregate aggr1</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Using ONTAP 9.6, assuming aggregate-level encryption is enabled, the following command creates an NAE volume named <code>vol1</code> on <code>aggr1</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>cluster1::&gt; volume create -vserver vs1 -volume vol1 -aggregate aggr1</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Beginning with ONTAP 9.7 or later, the following command creates an NVE volume named <code>vol2</code> on <code>aggr1</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>cluster1::&gt; volume create -vserver vs1 -volume vol2 -aggregate aggr1</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Using ONTAP 9.6 or earlier, the following command creates an NVE volume named <code>vol2</code> on <code>aggr1</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>cluster1::&gt; volume create -vserver vs1 -volume vol2 -aggregate aggr1 -encrypt true</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The following command creates a plaintext volume named <code>vol3</code> on <code>aggr1</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>cluster1::&gt; volume create -vserver vs1 -volume vol3 -aggregate aggr1 -encrypt false</pre>
-</div>
+<p>For complete command syntax, refer to the command reference page for <a href="https://docs.netapp.com/us-en/ontap-cli-9121/volume-create.html" target="_blank" rel="noopener"><code>volume create</code></a>.</p>
 </div>
 </li>
 <li>
@@ -37510,26 +37512,14 @@
 <p><code>volume show -is-encrypted true</code></p>
 </div>
 <div class="paragraph">
-<p>For complete command syntax, see the man page for the command.</p>
-</div>
-<div class="paragraph">
-<p>The following command displays the encrypted volumes on <code>cluster2</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>cluster2::&gt; volume show -is-encrypted true
-
-Vserver  Volume  Aggregate  State  Type  Size  Available  Used
--------  ------  ---------  -----  ----  -----  --------- ----
-vs1      vol1    aggr2     online    RW  200GB    160.0GB  20%</pre>
-</div>
+<p>For complete command syntax, see the <a href="https://docs.netapp.com/us-en/ontap-cli-9121/volume-show.html" target="_blank" rel="noopener">command reference</a>.</p>
 </div>
 </li>
 </ol>
 </div>
 <div class="paragraph">
 <div class="title">Result</div>
-<p>If you are using a KMIP server to store the encryption keys for a node, ONTAP automatically &#8220;pushes&#8221; an encryption key to the server when you encrypt a volume.</p>
+<p>If you are using a KMIP server to store the encryption keys for a node, ONTAP automatically "pushes" an encryption key to the server when you encrypt a volume.</p>
 </div>
 
     </article>
