@@ -454,13 +454,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap/san-admin/additional-information-reference.html</loc>
-      
-      <lastmod>2022-05-23T21:29:19+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/address-issues-when-luns-go-offline-concept.html</loc>
       
       <lastmod>2021-12-09T22:31:46+00:00</lastmod>
@@ -2549,7 +2542,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/authentication/config-worksheets-reference.html</loc>
       
-      <lastmod>2022-04-22T16:20:42+00:00</lastmod>
+      <lastmod>2022-12-05T13:48:30+00:00</lastmod>
       
     </url>
   
@@ -7127,7 +7120,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/smb-admin/enable-ldap-over-ssl-tls-task.html</loc>
       
-      <lastmod>2022-08-19T19:15:07+00:00</lastmod>
+      <lastmod>2022-12-01T21:25:30+00:00</lastmod>
       
     </url>
   
@@ -7281,7 +7274,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/smb-admin/enable-smb2-connections-domain-controllers-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-12-01T21:25:30+00:00</lastmod>
       
     </url>
   
@@ -8184,7 +8177,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/generate-certificate-signing-request-cluster-task.html</loc>
       
-      <lastmod>2021-10-19T18:27:41+00:00</lastmod>
+      <lastmod>2022-12-05T20:19:27+00:00</lastmod>
       
     </url>
   
@@ -13000,7 +12993,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nas-audit/requirements-best-practices-fpolicy-concept.html</loc>
       
-      <lastmod>2022-11-22T12:12:50+00:00</lastmod>
+      <lastmod>2022-12-05T13:48:30+00:00</lastmod>
       
     </url>
   
@@ -13665,7 +13658,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2022-12-03T10:48:00+00:00</lastmod>
+      <lastmod>2022-12-06T12:05:04+00:00</lastmod>
       
     </url>
   
@@ -16717,7 +16710,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nas-audit/troubleshoot-auditing-staging-volume-concept.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-12-01T21:25:30+00:00</lastmod>
       
     </url>
   
@@ -17746,7 +17739,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/worksheet_for_nas_path_failover_configuration_manual.html</loc>
       
-      <lastmod>2022-06-06T19:06:35+00:00</lastmod>
+      <lastmod>2022-12-05T20:19:27+00:00</lastmod>
       
     </url>
   
