@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Update ONTAP</title>
+  <title></title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Update ONTAP" />
+  <meta property="og:title" content="" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/task_admin_upgrade_ontap.html" />
-	<meta property="og:description" content="You can nondisruptively update the version of ONTAP on your cluster." />
+	<meta property="og:description" content="" />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can nondisruptively update the version of ONTAP on your cluster.">
-  <meta name="keywords" content=" netapp, ontap, upgrade, nondisruptive, nondisruptively, non-disruptive update, nondisruptive upgrade, upgrade a cluster, shift workload, between clusters, hardware platform, configuration, software image, update, update ONTAP, update software, ndu"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
+  <meta name="keywords" content=" "><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -33,6 +33,9 @@
   <link rel="stylesheet" href="/us-en/ontap/css/tabbed-blocks.css" type="text/css">
   <!-- Canonical url -->
   <link rel='stylesheet' href='/us-en/ontap/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    pageRedirect("https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_methods.html");
+    function pageRedirect(url) { location.href = url; }
+  </script><script>
     function addAdobeLaunch(adobeId) {
       var head = document.getElementsByTagName('head')[0];
       var adobe = document.createElement("script");
@@ -160,7 +163,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Update ONTAP](https://docs.netapp.com/us-en/ontap/task_admin_upgrade_ontap.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/redirect/ghost_task_admin_upgrade_ontap.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[](https://docs.netapp.com/us-en/ontap/task_admin_upgrade_ontap.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/redirect/ghost_task_admin_upgrade_ontap.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -37089,14 +37092,14 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Update ONTAP</h1>
+  <h1 class="n-doc__component-detail-heading"></h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-04-06 20:00:43 +0000">04/06/2022</time>
+    <time datetime="2022-12-06 17:58:00 +0000">12/06/2022</time>
     
   
 
@@ -37114,61 +37117,7 @@
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph lead">
-<p>This topic provides a high-level overview of the process for upgrading an ONTAP cluster from ONTAP 9.7 or higher to a later version of ONTAP 9 using the System Manager interface.</p>
-</div>
-<div class="paragraph">
-<p>If you need information about any other ONTAP cluster upgrade scenario, go <a href="../upgrade/index.html">here</a>.</p>
-</div>
-<div class="paragraph">
-<p>You can nondisruptively update the version of ONTAP on your cluster.</p>
-</div>
-<div class="paragraph">
-<p>The update process checks your hardware platform and configuration to verify that your system is supported by the ONTAP version to which you are upgrading. ONTAP automatically shifts workloads during an upgrade between clusters so you can continue serving data.</p>
-</div>
-<div class="paragraph">
-<p>This procedure updates your system to the specified version of ONTAP. It is assumed that your hardware platform and configuration is supported for the target release.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./media/workflow_admin_upgrade_ontap.gif" alt="workflow diagram of upgrade task"></span></p>
-</div>
-<div class="olist arabic">
-<div class="title">Steps</div>
-<ol class="arabic">
-<li>
-<p>If you want to download the software image to an HTTP or FTP server on your network, copy the software image from the <a href="https://mysupport.netapp.com/site/downloads" target="_blank" rel="noopener">NetApp support site</a> to the directory on the HTTP or FTP server from which the image will be served.</p>
-<div class="paragraph">
-<p>If you want to download the software image to a local folder, then click the software image on the NetApp support site, select <strong>Save As</strong>, and then choose the local folder to place the image.</p>
-</div>
-</li>
-<li>
-<p>In System Manager, click <strong>Cluster &gt; Overview</strong>.</p>
-</li>
-<li>
-<p>In the right corner of the Overview pane, click <span class="image"><img src="./media/icon_kabob.gif" alt="menu icon"></span>.</p>
-</li>
-<li>
-<p>Click <strong>ONTAP Update</strong>.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="ontap-upgrades-made-easy-video">ONTAP upgrades made easy video</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Take a look at the simplified ONTAP upgrade capabilities available in ONTAP 9.8 System Manager.</p>
-</div>
-<div class="videoblock">
-<div class="content">
-<iframe width="848" height="480" src="https://www.youtube.com/embed/xwwX8vrrmIk?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-</div>
-</div>
-</div>
+
 
     </article>
     <!-- Page Container -->

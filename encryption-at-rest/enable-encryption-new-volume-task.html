@@ -37098,7 +37098,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-29 20:11:37 +0000">11/29/2022</time>
+    <time datetime="2022-11-30 21:05:55 +0000">11/30/2022</time>
     
   
 
@@ -37132,7 +37132,7 @@
 <p>You can encrypt volumes using NetApp Volume Encryption (NVE) and, beginning with ONTAP 9.6, NetApp Aggregate Encryption (NAE). To learn more about NAE and NVE, refer to the <a href="#configure-netapp-volume-encryption-concept">volume encryption overview</a>.</p>
 </div>
 <div class="paragraph">
-<p>The procedure to enable encryption in ONTAP varies based on the version of ONTAP you are using and your specific configuration:</p>
+<p>The procedure to enable encryption on a new volume in ONTAP varies based on the version of ONTAP you are using and your specific configuration:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -37143,14 +37143,14 @@
 <p>In ONTAP 9.6 and earlier releases, you must use <code>-encrypt true</code> with <code>volume create</code> commands to enable encryption (provided you did not enable <code>cc-mode</code>).</p>
 </li>
 <li>
-<p>If you are using NAE in ONTAP 9.6, you must enable NAE at the aggregate level. Refer to <a href="enable-aggregate-level-encryption-nve-license-task.html">Enable aggregate-level encryption with the VE license</a> for more details on this task.</p>
+<p>If you want to create an NAE volume in ONTAP 9.6, you must enable NAE at the aggregate level. Refer to <a href="enable-aggregate-level-encryption-nve-license-task.html">Enable aggregate-level encryption with the VE license</a> for more details on this task.</p>
 </li>
 <li>
-<p>Beginning with ONTAP 9.7, newly created volumes are encrypted by default when you have the VE license and onboard or external key management.</p>
+<p>Beginning with ONTAP 9.7, newly created volumes are encrypted by default when you have the VE license and onboard or external key management. By default, new volumes created in an NAE aggregate will be of type NAE rather than NVE.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>In ONTAP 9.7 and later releases, if you use <code>-encrypt true</code> to create a volume in an NAE aggregate, the volume will have NVE encryption instead of NAE. All volumes in an NAE aggregate must be encrypted with either NVE or NAE.</p>
+<p>In ONTAP 9.7 and later releases, if you add <code>-encrypt true</code> to the <code>volume create</code> command to create a volume in an NAE aggregate, the volume will have NVE encryption instead of NAE. All volumes in an NAE aggregate must be encrypted with either NVE or NAE.</p>
 </li>
 </ul>
 </div>
@@ -37173,7 +37173,7 @@ Plaintext volumes are not supported in NAE aggregates.
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p>Create a new volume and specify whether encryption is enabled on the volume:</p>
+<p>Create a new volume and specify whether encryption is enabled on the volume. If the new volume is in an NAE aggregate, by default the volume will be an NAE volume:</p>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -37189,19 +37189,7 @@ Plaintext volumes are not supported in NAE aggregates.
 <p>An NAE volume</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>volume create -vserver <em>SVM_name</em> -volume <em>volume_name</em> -aggregate <em>aggregate_name</em></code><br></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
-In ONTAP 9.6, you must enable NAE at the aggregate-level to create an NAE volume.
-</td>
-</tr>
-</table>
+<p><code>volume create -vserver <em>SVM_name</em> -volume <em>volume_name</em> -aggregate <em>aggregate_name</em></code></p>
 </div></div></td>
 </tr>
 <tr>
@@ -37209,7 +37197,7 @@ In ONTAP 9.6, you must enable NAE at the aggregate-level to create an NAE volume
 <p>An NVE volume</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>volume create -vserver <em>SVM_name</em> -volume <em>volume_name</em> -aggregate <em>aggregate_name</em></code><br></p>
+<p><code>volume create -vserver <em>SVM_name</em> -volume <em>volume_name</em> -aggregate <em>aggregate_name</em> -encrypt true</code><br></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -37218,7 +37206,7 @@ In ONTAP 9.6, you must enable NAE at the aggregate-level to create an NAE volume
 <img src="/us-en/ontap/images/note.svg" alt="Note">
 </td>
 <td class="content">
-If you are using ONTAP 9.6 and earlier versions, add <code>-encrypt true</code> to the command. Using this parameter in ONTAP 9.7 or later with NAE encryption on the aggregate, the volume will use NVE.
+In ONTAP 9.6 and earlier where NAE is not supported, <code>-encrypt true</code> specifies that the volume should be encrypted with NVE. In ONTAP 9.7 and later where volumes are created in NAE aggregates, <code>-encrypt true</code> overrides the default encryption type of NAE to create an NVE volume instead.
 </td>
 </tr>
 </table>

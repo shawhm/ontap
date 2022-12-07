@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Update ONTAP on MetroCluster clusters</title>
+  <title></title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Update ONTAP on MetroCluster clusters" />
+  <meta property="og:title" content="" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/task_metrocluster_ANDU_upgrade.html" />
-	<meta property="og:description" content="Upgrade the clusters in a MetroCluster configuration to a new version of ONTAP while keeping storage service online." />
+	<meta property="og:description" content="" />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Upgrade the clusters in a MetroCluster configuration to a new version of ONTAP while keeping storage service online.">
-  <meta name="keywords" content=" metrocluster, upgrade, update, ONTAP, cluster, nodes, mcc, ANDU, automated, automatic, non-disruptive"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
+  <meta name="keywords" content=" "><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -33,6 +33,9 @@
   <link rel="stylesheet" href="/us-en/ontap/css/tabbed-blocks.css" type="text/css">
   <!-- Canonical url -->
   <link rel='stylesheet' href='/us-en/ontap/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    pageRedirect("https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_requirements_for_metrocluster_configurations.html");
+    function pageRedirect(url) { location.href = url; }
+  </script><script>
     function addAdobeLaunch(adobeId) {
       var head = document.getElementsByTagName('head')[0];
       var adobe = document.createElement("script");
@@ -160,7 +163,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Update ONTAP on MetroCluster clusters](https://docs.netapp.com/us-en/ontap/task_metrocluster_ANDU_upgrade.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/redirect/ghost_task_metrocluster_ANDU_upgrade.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[](https://docs.netapp.com/us-en/ontap/task_metrocluster_ANDU_upgrade.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/redirect/ghost_task_metrocluster_ANDU_upgrade.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -37089,14 +37092,14 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Update ONTAP on MetroCluster clusters</h1>
+  <h1 class="n-doc__component-detail-heading"></h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-04-06 20:00:43 +0000">04/06/2022</time>
+    <time datetime="2022-12-06 17:58:00 +0000">12/06/2022</time>
     
   
 
@@ -37114,55 +37117,7 @@
 
 </p>
 
-<div class="paragraph lead">
-<p>This topic provides a high-level overview of the process for upgrading an ONTAP cluster from ONTAP 9.7 or higher to a later version of ONTAP 9 using the System Manager interface.</p>
-</div>
-<div class="paragraph">
-<p>If you need information about any other ONTAP cluster upgrade scenario, go <a href="./upgrade/index.html">here</a>.</p>
-</div>
-<div class="paragraph">
-<p>You can use System Manager to upgrade both clusters in a MetroCluster configuration to a newer version of ONTAP.  During the upgrade, the storage service remains online.</p>
-</div>
-<div class="ulist">
-<div class="title">Before you start</div>
-<ul>
-<li>
-<p>Upload the ONTAP image using a local drive or from an HTTP server on both clusters of the MetroCluster configuration.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Steps</div>
-<ol class="arabic">
-<li>
-<p>Log in to System Manager.</p>
-</li>
-<li>
-<p>Select <strong>Cluster &gt; Update</strong>.</p>
-<div class="paragraph">
-<p>The <strong>ONTAP Update</strong> window displays a list of images that are available to upload.</p>
-</div>
-</li>
-<li>
-<p>Hover over any image name that you do <em>NOT</em> want to upload, and click the trash can icon.</p>
-</li>
-<li>
-<p>Select the radio button next to the image name that you want to update, and click <strong>Update</strong>.</p>
-</li>
-<li>
-<p>Wait for the system to validate the images.</p>
-<div class="paragraph">
-<p>When the images are successfully validated, the update process begins to install a new version of ONTAP on both clusters.</p>
-</div>
-<div class="paragraph">
-<p>You can click <strong>Pause</strong> at any time to pause the updating process.</p>
-</div>
-</li>
-<li>
-<p>When the update process is completed, click <strong>Relaunch System Manager</strong>.</p>
-</li>
-</ol>
-</div>
+
 
     </article>
     <!-- Page Container -->

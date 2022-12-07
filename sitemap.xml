@@ -141,7 +141,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/accessg-node-log-core-dump-mib-files-task.html</loc>
       
-      <lastmod>2021-10-19T18:27:41+00:00</lastmod>
+      <lastmod>2022-12-06T20:46:04+00:00</lastmod>
       
     </url>
   
@@ -603,7 +603,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/asa-iscsi-lif-fo-task.html</loc>
       
-      <lastmod>2022-11-11T16:48:37+00:00</lastmod>
+      <lastmod>2022-12-06T17:58:00+00:00</lastmod>
       
     </url>
   
@@ -2367,7 +2367,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/concept_quotas_overview.html</loc>
       
-      <lastmod>2022-04-05T21:50:34+00:00</lastmod>
+      <lastmod>2022-12-06T16:20:54+00:00</lastmod>
       
     </url>
   
@@ -4010,16 +4010,9 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap/</loc>
-      
-      <lastmod>2022-04-15T18:22:42+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-92-earlier-task.html</loc>
       
-      <lastmod>2022-04-15T18:22:42+00:00</lastmod>
+      <lastmod>2022-12-06T19:15:36+00:00</lastmod>
       
     </url>
   
@@ -7050,7 +7043,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-encryption-new-volume-task.html</loc>
       
-      <lastmod>2022-11-29T20:11:37+00:00</lastmod>
+      <lastmod>2022-11-30T21:05:55+00:00</lastmod>
       
     </url>
   
@@ -8352,7 +8345,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_admin_upgrade_ontap.html</loc>
       
-      <lastmod>2022-04-06T20:00:43+00:00</lastmod>
+      <lastmod>2022-12-06T17:58:00+00:00</lastmod>
       
     </url>
   
@@ -8380,7 +8373,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/task_metrocluster_ANDU_upgrade.html</loc>
       
-      <lastmod>2022-04-06T20:00:43+00:00</lastmod>
+      <lastmod>2022-12-06T17:58:00+00:00</lastmod>
       
     </url>
   
@@ -9157,7 +9150,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/svm-migrate/</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-12-06T18:41:28+00:00</lastmod>
       
     </url>
   
@@ -9206,7 +9199,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/software_setup/</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-12-06T16:20:54+00:00</lastmod>
       
     </url>
   
@@ -13658,7 +13651,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2022-12-06T12:05:04+00:00</lastmod>
+      <lastmod>2022-12-07T00:58:13+00:00</lastmod>
       
     </url>
   
