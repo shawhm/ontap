@@ -57,7 +57,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/access-cluster-system-manager-browser-task.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-11-30T22:02:45+00:00</lastmod>
       
     </url>
   
@@ -6449,6 +6449,13 @@
       <loc>https://docs.netapp.com/us-en/ontap/networking/display_subnets.html</loc>
       
       <lastmod>2022-09-13T18:17:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/download-cluster-config-details-task.html</loc>
+      
+      <lastmod>2022-12-06T19:51:17+00:00</lastmod>
       
     </url>
   
@@ -13651,7 +13658,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2022-12-07T00:58:13+00:00</lastmod>
+      <lastmod>2022-12-12T21:30:55+00:00</lastmod>
       
     </url>
   
@@ -15206,6 +15213,13 @@
       <loc>https://docs.netapp.com/us-en/ontap/nas-audit/synchronous-asynchronous-notifications-concept.html</loc>
       
       <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/sysmgr-integration-bluexp-concept.html</loc>
+      
+      <lastmod>2022-12-06T19:51:17+00:00</lastmod>
       
     </url>
   
