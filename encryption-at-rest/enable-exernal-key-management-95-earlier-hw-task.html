@@ -37148,6 +37148,9 @@
 <li>
 <p>You must configure the MetroCluster environment before you configure an external key manager.</p>
 </li>
+<li>
+<p>In a MetroCluster environment, you must install the KMIP SSL certificate on both clusters.</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
@@ -37165,6 +37168,18 @@
 <div class="paragraph">
 <p>The key manager setup starts.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+In a MetroCluster environment, you must run this command on both clusters.
+</td>
+</tr>
+</table>
+</div>
 </li>
 <li>
 <p>Enter the appropriate response at each prompt.</p>
@@ -37179,6 +37194,18 @@
 <pre>clusterl::&gt; security key-manager add -address 20.1.1.1</pre>
 </div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+In a MetroCluster environment, you must run this command on both clusters.
+</td>
+</tr>
+</table>
+</div>
 </li>
 <li>
 <p>Add an additional KMIP server for redundancy:</p>
@@ -37189,6 +37216,18 @@
 <div class="content">
 <pre>clusterl::&gt; security key-manager add -address 20.1.1.2</pre>
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+In a MetroCluster environment, you must run this command on both clusters.
+</td>
+</tr>
+</table>
 </div>
 </li>
 <li>

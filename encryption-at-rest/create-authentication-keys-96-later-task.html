@@ -37107,11 +37107,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-11-11 19:48:01 +0000">11/11/2021</time>
+    <time datetime="2022-12-14 12:09:50 +0000">12/14/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -37149,8 +37157,32 @@
 </li>
 <li>
 <p>You receive a warning if the configured key management servers are already storing more than 128 authentication keys.</p>
-<div class="paragraph">
+</li>
+<li>
 <p>You can use the <code>security key-manager key delete</code> command to delete any unused keys. The <code>security key-manager key delete</code> command fails if the given key is currently in use by ONTAP. (You must have privileges greater than &#8220;admin&#8221; to use this command.)</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In a MetroCluster environment, before you delete a key, you must make sure that the key is not in use on the partner cluster. You can use the following commands on the partner cluster to check that the key is not in use:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>storage encryption disk show -data-key-id <em>key-id</em></code></p>
+</li>
+<li>
+<p><code>storage encryption disk show -fips-key-id <em>key-id</em></code></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </li>
 </ul>

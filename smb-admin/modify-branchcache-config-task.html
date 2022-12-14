@@ -37107,11 +37107,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-09 22:31:46 +0000">12/09/2021</time>
+    <time datetime="2022-12-07 13:51:23 +0000">12/07/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-forry">
+    <img  class="avatar avatar-small"
+          alt="netapp-forry"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/51911827?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -37161,7 +37169,7 @@
 <p><code>volume size -vserver vserver_name -volume volume_name -new-size new_size[k|m|g|t]</code>     If the volume containing the hash store fills up, you might be able to increase the size of the volume. You can specify the new volume size as a number followed by a unit designation.</p>
 </div>
 <div class="paragraph">
-<p>See <a href="../volumes/index.html">Logical storage management</a> for more information about increasing volume size.</p>
+<p>Learn more about <a href="../volumes/commands-manage-flexvol-volumes-reference.html">managing FlexVol volumes</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -37198,21 +37206,18 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><code>vserver cifs branchcache modify -vserver vserver_name -operating-mode {per-share|all-shares|disable}</code></p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
 <div class="paragraph">
-<p>You should be aware of the following when modifying the operating mode:
-    -   ONTAP advertises BranchCache support for a share when the SMB session is set up.
-    -   Clients that already have established sessions when BranchCache is enabled need to disconnect and reconnect to use cached content for this share.</p>
+<p>You should be aware of the following when modifying the operating mode:</p>
 </div>
-</td>
-</tr>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p>ONTAP advertises BranchCache support for a share when the SMB session is set up.</p>
+</li>
+<li>
+<p>Clients that already have established sessions when BranchCache is enabled need to disconnect and reconnect to use cached content for this share.</p>
+</li>
+</ul>
 </div></div></td>
 </tr>
 <tr>
@@ -37230,10 +37235,6 @@
 <p>Verify the configuration changes by using the <code>vserver cifs branchcache show</code> command.</p>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<div class="title">Related information</div>
-<p><a href="../volumes/index.html">Logical Storage Management Guide</a></p>
 </div>
 
     </article>

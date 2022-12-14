@@ -37107,7 +37107,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-29 21:22:22 +0000">08/29/2022</time>
+    <time datetime="2022-12-13 22:46:02 +0000">12/13/2022</time>
     
   
 
@@ -37228,12 +37228,12 @@ The correct slots for adding drives vary depending on the platform model and ONT
 </div>
 </li>
 <li>
-<p>Zero the newly added drives:</p>
+<p>Optional (ONTAP 9.3 and earlier only): Zero the newly added drives:</p>
 <div class="paragraph">
 <p><code>storage disk zerospares</code></p>
 </div>
 <div class="paragraph">
-<p>Drives that have been used previously in an ONTAP local tier (aggregate) must be zeroed before they can be added to another aggregate. Zeroing the drives now can prevent delays in case you need to quickly increase the size of an local tier. The drive zeroing command runs in the background and can take hours to complete, depending on the size of the non-zeroed drives in the node.</p>
+<p>Drives that have been used previously in an ONTAP local tier (aggregate) must be zeroed before they can be added to another aggregate. In ONTAP 9.3 and earlier, zeroing can take hours to complete, depending on the size of the non-zeroed drives in the node. Zeroing the drives now can prevent delays in case you need to quickly increase the size of an local tier. This is not an issue in ONTAP 9.4 or later where drives are zeroed using <em>fast zeroing</em> which takes only seconds.</p>
 </div>
 </li>
 </ol>

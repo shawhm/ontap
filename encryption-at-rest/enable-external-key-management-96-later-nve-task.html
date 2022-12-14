@@ -37107,11 +37107,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-13 04:11:51 +0000">04/13/2022</time>
+    <time datetime="2022-12-14 12:09:50 +0000">12/14/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
     <img  class="avatar avatar-small"
           alt="netapp-ahibbard"
@@ -37142,7 +37150,7 @@
 </p>
 
 <div class="paragraph lead">
-<p>You can use one or more KMIP servers to secure the keys the cluster uses to access encrypted data. Beginning with ONTAP 9.6, you can use one or more KMIP servers to secure the keys a given SVM uses to access encrypted data.</p>
+<p>You can use one or more KMIP servers to secure the keys the cluster uses to access encrypted data. Beginning with ONTAP 9.6, you have the option to configure a separate external key manager to secure the keys that a data SVM uses to access encrypted data.</p>
 </div>
 <div class="paragraph">
 <p>Beginning in ONTAP 9.11.1, you can add up to 3 secondary key servers per primary key server to create a clustered key server. For more information, see <a href="configure-cluster-key-server-task.html">Configure clustered external key servers</a>.</p>
@@ -37158,6 +37166,9 @@
 </li>
 <li>
 <p>If you want to enable external key management for a MetroCluster environment, MetroCluster must be fully configured before enabling external key management.</p>
+</li>
+<li>
+<p>In a MetroCluster environment, you must install the KMIP SSL certificate on both clusters.</p>
 </li>
 </ul>
 </div>
@@ -37208,8 +37219,15 @@
 <img src="/us-en/ontap/images/note.svg" alt="Note">
 </td>
 <td class="content">
-<div class="paragraph">
-<p>The <code>security key-manager external enable</code> command replaces the <code>security key-manager setup</code> command. If you run the command at the cluster login prompt, <code><em>admin_SVM</em></code> defaults to the admin SVM of the current cluster.     You must be the cluster administrator to configure cluster scope. You can run the <code>security key-manager external modify</code> command to change the external key management configuration.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>security key-manager external enable</code> command replaces the <code>security key-manager setup</code> command. If you run the command at the cluster login prompt, <code><em>admin_SVM</em></code> defaults to the admin SVM of the current cluster.  You must be the cluster administrator to configure cluster scope. You can run the <code>security key-manager external modify</code> command to change the external key management configuration.</p>
+</li>
+<li>
+<p>In a MetroCluster environment, if you are configuring external key management for the admin SVM, you must repeat the <code>security key-manager external enable</code> command on the partner cluster.</p>
+</li>
+</ul>
 </div>
 </td>
 </tr>
@@ -37236,8 +37254,15 @@
 <img src="/us-en/ontap/images/note.svg" alt="Note">
 </td>
 <td class="content">
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>If you run the command at the SVM login prompt, <code>SVM</code> defaults to the current SVM.  You must be a cluster or SVM administrator to configure SVM scope. You can run the <code>security key-manager external modify</code> command to change the external key management configuration.</p>
+</li>
+<li>
+<p>In a MetroCluster environment, if you are configuring external key management for a data SVM, you do not have to repeat the <code>security key-manager external enable</code> command on the partner cluster.</p>
+</li>
+</ul>
 </div>
 </td>
 </tr>

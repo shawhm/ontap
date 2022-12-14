@@ -37107,7 +37107,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-11 01:50:17 +0000">11/11/2022</time>
+    <time datetime="2022-12-07 13:51:23 +0000">12/07/2022</time>
     
   
 
@@ -37133,6 +37133,14 @@
           alt="netapp-barbe"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/55463742?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-forry">
+    <img  class="avatar avatar-small"
+          alt="netapp-forry"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/51911827?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -37205,14 +37213,24 @@
 <li>
 <p>If your platform is not an All SAN Array (ASA) platform running ONTAP version 9.11.1 or later, you cannot migrate iSCSI LIFs from one node to another node.</p>
 <div class="paragraph">
-<p>To work around this restriction, you must create an iSCSI LIF on the destination node. For information about guidelines for creating an iSCSI LIF, see <a href="../san-admin/index.html" target="_blank" rel="noopener">SAN administration</a>.</p>
+<p>To work around this restriction, you must create an iSCSI LIF on the destination node. Learn about <a href="../san-admin/asa-iscsi-lif-fo-task.html#manage-iscsi-lifs-using-the-ontap-cli">creating iSCSI LIFs</a>.</p>
 </div>
 </li>
 <li>
-<p>If you want to migrate a LIF (network interface) for NFS over RDMA, you must ensure the destination port is RoCE capable. You must be running ONTAP 9.10.1 or later to migrate a LIF with the CLI, or ONTAP 9.12.1 to migrate using System Manager. In System Manager, once you have selected your RoCE capable destination-port, you must check the box next to <strong>Use RoCE ports</strong> to complete the migration successfully. For more information, refer to <a href="../nfs-rdma/configure-lifs-task.html">Configure LIFs for NFS over RDMA</a>.</p>
+<p>If you want to migrate a LIF (network interface) for NFS over RDMA, you must ensure the destination port is RoCE capable. You must be running ONTAP 9.10.1 or later to migrate a LIF with the CLI, or ONTAP 9.12.1 to migrate using System Manager. In System Manager, once you have selected your RoCE capable destination-port, you must check the box next to <strong>Use RoCE ports</strong> to complete the migration successfully. Learn more about <a href="../nfs-rdma/configure-lifs-task.html">configuring LIFs for NFS over RDMA</a>.</p>
 </li>
 <li>
-<p>VMware VAAI copy offload operations fail when you migrate the source or the destination LIF. For more information about VMware VAAI, see <a href="http://docs.netapp.com/ontap-9/topic/com.netapp.doc.cdot-famg-nfs/GUID-39C8E616-EAE8-46A4-881A-87C4B8421281.html" target="_blank" rel="noopener">NFS reference</a> or <a href="http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/GUID-D97EE182-9068-4BD8-A3BF-F5C458303740.html" target="_blank" rel="noopener">SAN administration</a>.</p>
+<p>VMware VAAI copy offload operations fail when you migrate the source or the destination LIF. Learn about copy off-load:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../nfs-admin/support-vmware-vstorage-over-nfs-concept.html">NFS environments</a></p>
+</li>
+<li>
+<p><a href="../san-admin/storage-virtualization-vmware-copy-offload-concept.html">SAN environments</a></p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>

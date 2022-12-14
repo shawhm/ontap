@@ -37107,11 +37107,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-09 22:31:46 +0000">12/09/2021</time>
+    <time datetime="2022-12-08 11:09:17 +0000">12/08/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-forry">
+    <img  class="avatar avatar-small"
+          alt="netapp-forry"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/51911827?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -37158,19 +37166,8 @@
 </li>
 <li>
 <p><code>smb2</code> enables you to monitor SMB signing for SMB 2.x and SMB 3.0 sessions.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
 <div class="paragraph">
 <p>SMB 3.0 statistics are included in the output for the <code>smb2</code> object.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 </li>
 </ul>
@@ -37185,10 +37182,12 @@
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p>Set the privilege level to advanced: <code>set -privilege advanced</code></p>
+<p>Set the privilege level to advanced:<br>
+<code>set -privilege advanced</code></p>
 </li>
 <li>
-<p>Start a data collection: <code>statistics start -object {cifs|smb1|smb2} -instance instance -sample-id <em>sample_ID</em> [-node <em>node_name</em>]</code></p>
+<p>Start a data collection:<br>
+<code>statistics start -object {cifs|smb1|smb2} -instance instance -sample-id <em>sample_ID</em> [-node <em>node_name</em>]</code></p>
 <div class="paragraph">
 <p>If you do not specify the <code>-sample-id</code> parameter, the command generates a sample identifier for you and defines this sample as the default sample for the CLI session. The value for <code>-sample-id</code> is a text string. If you run this command during the same CLI session and do not specify the <code>-sample-id</code> parameter, the command overwrites the previous default sample.</p>
 </div>
@@ -37236,12 +37235,15 @@
 </div>
 </li>
 <li>
-<p>Return to the admin privilege level: <code>set -privilege admin</code></p>
+<p>Return to the admin privilege level:<br>
+<code>set -privilege admin</code></p>
 </li>
 </ol>
 </div>
+<details>
+<summary class="title">Examples</summary>
+<div class="content">
 <div class="paragraph">
-<div class="title">Examples</div>
 <p>The following example shows how you can monitor SMB 2.x and SMB 3.0 signing statistics on storage virtual machine (SVM) vs1.</p>
 </div>
 <div class="paragraph">
@@ -37329,12 +37331,14 @@ Cluster: cluster1
 <pre>cluster1::*&gt; set -privilege admin</pre>
 </div>
 </div>
+</div>
+</details>
 <div class="paragraph">
 <div class="title">Related information</div>
 <p><a href="determine-sessions-signed-task.html">Determining whether SMB sessions are signed</a></p>
 </div>
 <div class="paragraph">
-<p><a href="../performance-config/index.html">Performance monitoring express setup</a></p>
+<p><a href="../performance-admin/index.html">Performance monitoring and management overview</a></p>
 </div>
 
     </article>

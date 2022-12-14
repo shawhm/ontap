@@ -225,7 +225,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/add-disks-node-task.html</loc>
       
-      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
+      <lastmod>2022-12-13T22:46:02+00:00</lastmod>
       
     </url>
   
@@ -2353,7 +2353,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/revert/concept_pre_revert_checks.html</loc>
       
-      <lastmod>2022-11-15T18:06:48+00:00</lastmod>
+      <lastmod>2022-12-09T13:01:37+00:00</lastmod>
       
     </url>
   
@@ -3508,7 +3508,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/configure_ip_security_@ipsec@_over_wire_encryption.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-12-09T13:01:37+00:00</lastmod>
       
     </url>
   
@@ -3970,7 +3970,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/create-authentication-keys-96-later-task.html</loc>
       
-      <lastmod>2021-11-11T19:48:01+00:00</lastmod>
+      <lastmod>2022-12-14T12:09:50+00:00</lastmod>
       
     </url>
   
@@ -4544,7 +4544,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/s3-config/create-s3-object-store-server-task.html</loc>
       
-      <lastmod>2022-07-15T15:08:11+00:00</lastmod>
+      <lastmod>2022-12-14T13:10:56+00:00</lastmod>
       
     </url>
   
@@ -5314,7 +5314,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/delete-key-management-database-task.html</loc>
       
-      <lastmod>2022-02-01T21:53:43+00:00</lastmod>
+      <lastmod>2022-12-14T12:09:50+00:00</lastmod>
       
     </url>
   
@@ -6266,7 +6266,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/smb-hyper-v-sql/display-smb-statistics-hyper-v-task.html</loc>
       
-      <lastmod>2021-10-21T22:41:12+00:00</lastmod>
+      <lastmod>2022-12-07T19:32:30+00:00</lastmod>
       
     </url>
   
@@ -7071,14 +7071,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-hw-task.html</loc>
       
-      <lastmod>2022-04-13T04:11:51+00:00</lastmod>
+      <lastmod>2022-12-14T12:22:01+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-nve-task.html</loc>
       
-      <lastmod>2022-04-13T04:11:51+00:00</lastmod>
+      <lastmod>2022-12-14T12:09:50+00:00</lastmod>
       
     </url>
   
@@ -7806,7 +7806,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/fast-zeroing-drives-concept.html</loc>
       
-      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
+      <lastmod>2022-12-13T22:46:02+00:00</lastmod>
       
     </url>
   
@@ -10067,7 +10067,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/multi-admin-verify/manage-groups-task.html</loc>
       
-      <lastmod>2022-04-13T09:02:49+00:00</lastmod>
+      <lastmod>2022-12-14T12:58:32+00:00</lastmod>
       
     </url>
   
@@ -10697,7 +10697,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/migrate_a_lif.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-12-07T13:51:23+00:00</lastmod>
       
     </url>
   
@@ -10753,7 +10753,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/smb-admin/modify-branchcache-config-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-12-07T13:51:23+00:00</lastmod>
       
     </url>
   
@@ -10802,7 +10802,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/modify-external-key-server-96-later-task.html</loc>
       
-      <lastmod>2022-04-13T04:11:51+00:00</lastmod>
+      <lastmod>2022-12-14T12:09:50+00:00</lastmod>
       
     </url>
   
@@ -10977,7 +10977,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/smb-admin/monitor-encryption-statistics-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-12-07T21:13:20+00:00</lastmod>
       
     </url>
   
@@ -11005,7 +11005,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/smb-admin/monitor-signed-session-statistics-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2022-12-08T11:09:17+00:00</lastmod>
       
     </url>
   
@@ -12776,7 +12776,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/remove-external-key-server-93-later-task.html</loc>
       
-      <lastmod>2021-11-11T19:48:01+00:00</lastmod>
+      <lastmod>2022-12-14T12:09:50+00:00</lastmod>
       
     </url>
   
@@ -12937,7 +12937,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/encryption-at-rest/replace-ssl-certificates-task.html</loc>
       
-      <lastmod>2022-06-20T13:23:56+00:00</lastmod>
+      <lastmod>2022-12-06T15:04:42+00:00</lastmod>
       
     </url>
   
@@ -13658,7 +13658,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2022-12-14T16:59:26+00:00</lastmod>
+      <lastmod>2022-12-14T21:07:00+00:00</lastmod>
       
     </url>
   
@@ -14638,7 +14638,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/snapshot-lock-concept.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-12-07T23:17:23+00:00</lastmod>
       
     </url>
   

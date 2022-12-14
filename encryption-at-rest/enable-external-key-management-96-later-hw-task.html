@@ -37107,11 +37107,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-13 04:11:51 +0000">04/13/2022</time>
+    <time datetime="2022-12-14 12:22:01 +0000">12/14/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
     <img  class="avatar avatar-small"
           alt="netapp-ahibbard"
@@ -37151,6 +37159,9 @@
 <li>
 <p>You must configure the MetroCluster environment before you configure an external key manager.</p>
 </li>
+<li>
+<p>In a MetroCluster environment, you must install the KMIP SSL certificate on both clusters.</p>
+</li>
 </ul>
 </div>
 <div class="olist arabic">
@@ -37168,8 +37179,15 @@
 <img src="/us-en/ontap/images/note.svg" alt="Note">
 </td>
 <td class="content">
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>The <code>security key-manager external enable</code> command replaces the <code>security key-manager setup</code> command. You can run the <code>security key-manager external modify</code> command to change the external key management configuration. For complete command syntax, see the man pages.</p>
+</li>
+<li>
+<p>In a MetroCluster environment, if you are configuring external key management for the admin SVM, you must repeat the <code>security key-manager external enable</code> command on the partner cluster.</p>
+</li>
+</ul>
 </div>
 </td>
 </tr>

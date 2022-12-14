@@ -37107,7 +37107,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-20 13:23:56 +0000">06/20/2022</time>
+    <time datetime="2022-12-06 15:04:42 +0000">12/06/2022</time>
     
   
 
@@ -37117,6 +37117,14 @@
           alt="netapp-ahibbard"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/85892662?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -37147,6 +37155,9 @@
 </li>
 <li>
 <p>You must be a cluster or SVM administrator to perform this task.</p>
+</li>
+<li>
+<p>In a MetroCluster environment, you must replace the KMIP SSL certificate on both clusters.</p>
 </li>
 </ul>
 </div>
@@ -37182,6 +37193,12 @@ You can install the replacement client and server certificates on the KMIP serve
 <div class="paragraph">
 <p><code>security key-manager external modify -vserver &lt;&gt; -client-cert &lt;&gt; -server-ca-certs &lt;&gt;</code></p>
 </div>
+<div class="paragraph">
+<p>If you are running ONTAP 9.6 or later in a MetroCluster environment, and you want to modify the key manager configuration on the admin SVM, you must run the command on both clusters in the configuration.</p>
+</div>
+</li>
+</ol>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -37193,9 +37210,6 @@ Updating the key manager configuration to use the newly installed certificates w
 </td>
 </tr>
 </table>
-</div>
-</li>
-</ol>
 </div>
 
     </article>

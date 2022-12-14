@@ -37107,7 +37107,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-29 21:22:22 +0000">08/29/2022</time>
+    <time datetime="2022-12-13 22:46:02 +0000">12/13/2022</time>
     
   
 
@@ -37126,13 +37126,28 @@
 </p>
 
 <div class="paragraph lead">
-<p>Beginning with ONTAP 9.4, you can automatically and quickly zero drives (both SSDs and HDDs) before provisioning without experiencing long wait times.</p>
+<p>On systems freshly installed with ONTAP 9.4 or later and systems reinitialized with ONTAP 9.4 or later, <em>fast zeroing</em> is used to zero drives.</p>
 </div>
 <div class="paragraph">
-<p>For systems that are freshly installed with ONTAP 9.4 or later or systems that are reinitialized with ONTAP 9.4 or later, drive zeroing takes place automatically and is completed in seconds.</p>
+<p>With <em>fast zeroing</em>, drives are zeroed in seconds.  This is done automatically before provisioning and greatly reduces the time it takes to initialize the system, create aggregates, or expand aggregates when spare drives are added.</p>
 </div>
 <div class="paragraph">
-<p>If you need to manually zero a drive, you can use one of the following methods:</p>
+<p><em>Fast zeroing</em> is supported on both SSDs and HDDs.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+<em>Fast zeroing</em> is not supported on systems upgraded from ONTAP 9.3 or earlier.  ONTAP 9.4 or later must be freshly installed or the system must be reinitialized. In ONTAP 9.3 and earlier, drives are also automatically zeroed by ONTAP, however, the process takes longer.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you need to manually zero a drive, you can use one of the following methods.  In ONTAP 9.4 and later, manually zeroing a drive also takes only seconds.</p>
 </div>
 <div class="exampleblock tabbed-block">
 <div class="content">
