@@ -14310,6 +14310,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -34530,6 +34532,13 @@
         Overview
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Object limits"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/consistency-group/limits.html">
+        Object limits
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Configure a single consistency group"
       data-li-level="3#" 
       class=" "
@@ -37157,7 +37166,7 @@
 <p>Consistency groups support any FlexVol volume regardless of protocol (NAS, SAN, or NVMe) and can be managed through the ONTAP REST API or in System Manager under the <strong>Storage &gt; Consistency Groups</strong> menu item.</p>
 </div>
 <div class="paragraph">
-<p>Consistency groups can exist on their own or in a hierarchical relationship. An individual consistency group is a collection of volumes. Volumes can have their own volume-granular snapshot policy. In addition, the consistency group the volume is associated with can have its own snapshot policy. The consistency group can only have one SM-BC relationship and shared SM-BC policy, which can be used to recover the entire consistency group.</p>
+<p>Consistency groups can exist as individual entities or in a hierarchical relationship. An individual consistency group is a collection of volumes. Volumes can have their own volume-granular snapshot policy. In addition, the consistency group the volume is associated with can have its own snapshot policy. The consistency group can only have one SM-BC relationship and shared SM-BC policy, which can be used to recover the entire consistency group.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../media/consistency-group-single-diagram.gif" alt="Diagram of a single consistency group with its constituent volumes and local Snapshot policy"></span></p>
@@ -37260,72 +37269,6 @@ SM-BC relationships cannot be established on volumes mounted for NAS access.
 </div>
 <div class="paragraph">
 <p>Snapshots created with the ONTAPI commands <code>cg-start</code> and <code>cg-commit</code> will not be recognized as consistency group Snapshots and thus cannot be managed through System Manager&#8217;s Consistency Group interface or the consistency group endpoints in the ONTAP API.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="consistency-group-object-limits">Consistency group object limits</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock">Consistency Groups</p></th>
-<th class="tableblock halign-left valign-top"><p class="tableblock">Scope</p></th>
-<th class="tableblock halign-left valign-top"><p class="tableblock">Minimum</p></th>
-<th class="tableblock halign-left valign-top"><p class="tableblock">Maximum</p></th>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Number of consistency groups</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Same as maximum volume count in cluster</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Number of parent consistency groups</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Same as maximum volume count in cluster</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Number of individual and parent consistency groups</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Same as maximum volume count in cluster</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Consistency group</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Same as maximum volume count in cluster</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">80</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Number of volumes in the child of a parent consistency group</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Parent consistency group</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">80</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Number of volumes in a child consistency group</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Child consistency group</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">80</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Number of child consistency groups in a parent consistency group</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Parent consistency group</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>If you are using SM-BC, refer to <a href="../smbc/smbc_plan_additional_restrictions_and_limitations.html#volumes">SM-BC restrictions and limitations for limits</a>.</p>
 </div>
 </div>
 </div>

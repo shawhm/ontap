@@ -14310,6 +14310,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -34530,6 +34532,13 @@
         Overview
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Object limits"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/consistency-group/limits.html">
+        Object limits
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Configure a single consistency group"
       data-li-level="3#" 
       class=" "
@@ -37107,7 +37116,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-25 17:23:09 +0000">08/25/2022</time>
+    <time datetime="2022-12-16 16:10:26 +0000">12/16/2022</time>
     
   
 
@@ -37177,6 +37186,20 @@
 <div class="paragraph">
 <div class="title">About this task</div>
 <p>New volumes are created by default with ARP in disabled mode, but you can change this setting in System Manager and at the CLI. Volumes enabled by default are set to ARP in learning mode.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Enabling ARP by default for new volumes in an SVM does not automatically enable ARP for existing volumes in that SVM. Learn how to <a href="enable-task.html">enable ARP in an existing volume</a>.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="exampleblock tabbed-block">
 <div class="title">Example 1. Steps</div>

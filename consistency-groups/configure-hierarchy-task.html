@@ -14298,6 +14298,8 @@
 
 
 
+
+
     <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
   
 
@@ -34530,6 +34532,13 @@
         Overview
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Object limits"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/consistency-group/limits.html">
+        Object limits
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Configure a single consistency group"
       data-li-level="3#" 
       class=" "
@@ -37107,7 +37116,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-11 01:50:17 +0000">11/11/2022</time>
+    <time datetime="2022-12-16 19:56:41 +0000">12/16/2022</time>
     
   
 
@@ -37136,7 +37145,10 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>If your application workload consists of more than one subset of volumes, where each subset is consistent across its own associated volumes, ONTAP allows you to create a hierarchical consistency group. Hierarchical consistency groups have a parent that can include up to five individual consistency groups. Hierarchical consistency groups can support different local Snapshot policies across consistency groups or individual volumes. If you use a remote SM-BC policy, that will apply for the entire hierarchical consistency group (parent and children).</p>
+<p>If your application workload consists of more than one subset of volumes, where each subset is consistent across its own associated volumes, ONTAP allows you to create a hierarchical consistency group.</p>
+</div>
+<div class="paragraph">
+<p>Hierarchical consistency groups have a parent that can include up to five individual consistency groups. Hierarchical consistency groups can support different local Snapshot policies across consistency groups or individual volumes. If you use a remote SM-BC policy, that will apply for the entire hierarchical consistency group (parent and children).</p>
 </div>
 <div class="paragraph">
 <p>For object limits on consistency groups, see <a href="index.html#consistency-group-object-limits">Object limits for consistency groups</a>.</p>
