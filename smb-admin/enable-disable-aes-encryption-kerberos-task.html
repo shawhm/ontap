@@ -37116,11 +37116,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-10 17:09:35 +0000">12/10/2021</time>
+    <time datetime="2022-12-19 11:09:00 +0000">12/19/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-forry">
+    <img  class="avatar avatar-small"
+          alt="netapp-forry"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/51911827?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
     <img  class="avatar avatar-small"
           alt="netapp-ahibbard"
@@ -37139,13 +37147,106 @@
 </div>
 <div class="paragraph">
 <div class="title">About this task</div>
+<p>Beginning with ONTAP 9.12.1, AES encryption is enabled and disabled using the <code>-advertised-enc-types</code> option, which allows you to specify the encryption types advertised to the AD KDC. The default setting is <code>rc4</code> and <code>des</code>, but when an AES type is specified, AES encryption is enabled. You can also use the option to explicitly disable the weaker RC4 and DES encryption types. In earlier ONTAP releases, you must use the <code>-is-aes-encryption-enabled</code> option to enable and disable AES encryption, and encryption types cannot be specified.</p>
+</div>
+<div class="paragraph">
 <p>To enhance security, the storage virtual machine (SVM) changes its machine account password in the AD each time the AES security option is modified. Changing the password might require administrative AD credentials for the organizational unit (OU) that contains the machine account.</p>
 </div>
 <div class="paragraph">
 <p>If an SVM is configured as a disaster recovery destination where the identity is not preserved (the <code>-identity-preserve</code> option is set to <code>false</code> in the SnapMirror configuration), the non-default SMB server security settings are not replicated to the destination. If you have enabled AES encryption on the source SVM, you must manually enable it on the destination SVM after the destination becomes read-write (after the SnapMirror relationship is broken).</p>
 </div>
+<div class="exampleblock tabbed-block">
+<div class="title">Example 1. Steps</div>
+<div class="content">
+<div class="openblock">
+<div class="title">ONTAP 9.12.1 and later</div>
+<div class="content">
 <div class="olist arabic">
-<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Perform one of the following actions:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">If you want the AES encryption types for Kerberos communication to be&#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">Enter the command&#8230;&#8203;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Enabled</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>vserver cifs security modify -vserver vserver_name -advertised-enc-types aes-128,aes-256</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Disabled</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>vserver cifs security modify -vserver vserver_name -advertised-enc-types des,rc4</code></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Note:</strong> The <code>-is-aes-encryption-enabled</code> option is deprecated in ONTAP 9.12.1 and might be removed in a later release.</p>
+</div>
+</li>
+<li>
+<p>Verify that AES encryption is enabled or disabled as desired: <code>vserver cifs security show -vserver vserver_name -fields advertised-enc-types</code></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Examples</div>
+<p>The following example enables the AES encryption types for the SMB server on SVM vs1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster1::&gt; vserver cifs security modify -vserver vs1 -advertised-enc-types aes-128,aes-256
+
+cluster1::&gt; vserver cifs security show -vserver vs1 -fields advertised-enc-types
+
+vserver  advertised-enc-types
+-------- --------------------
+vs1      aes-128,aes-256</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example enables the AES encryption types for the SMB server on SVM vs2. The administrator is prompted to enter the administrative AD credentials for the OU containing the SMB server.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster1::&gt; vserver cifs security modify -vserver vs2 -advertised-enc-types aes-128,aes-256
+
+Info: In order to enable SMB AES encryption, the password for the SMB server
+machine account must be reset. Enter the username and password for the
+SMB domain "EXAMPLE.COM".
+
+Enter your user ID: administrator
+
+Enter your password:
+
+cluster1::&gt; vserver cifs security show -vserver vs2 -fields advertised-enc-types
+
+vserver  advertised-enc-types
+-------- --------------------
+vs2      aes-128,aes-256</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">ONTAP 9.11.1 and earlier</div>
+<div class="content">
+<div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>Perform one of the following actions:</p>
@@ -37189,14 +37290,15 @@
 </ol>
 </div>
 <div class="paragraph">
-<div class="title">Example</div>
-<p>The following example enables the AES encryption types for the CIFS server on SVM vs1:</p>
+<div class="title">Examples</div>
+<p>The following example enables the AES encryption types for the SMB server on SVM vs1:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre>cluster1::&gt; vserver cifs security modify -vserver vs1 -is-aes-encryption-enabled true
 
 cluster1::&gt; vserver cifs security show -vserver vs1 -fields is-aes-encryption-enabled
+
 vserver  is-aes-encryption-enabled
 -------- -------------------------
 vs1      true</pre>
@@ -37209,7 +37311,7 @@ vs1      true</pre>
 <div class="content">
 <pre>cluster1::&gt; vserver cifs security modify -vserver vs2 -is-aes-encryption-enabled true
 
-Info: In order to enable SMB AES encryption, the password for the SMB server
+Info: In order to enable SMB AES encryption, the password for the CIFS server
 machine account must be reset. Enter the username and password for the
 SMB domain "EXAMPLE.COM".
 
@@ -37217,11 +37319,15 @@ Enter your user ID: administrator
 
 Enter your password:
 
-
 cluster1::&gt; vserver cifs security show -vserver vs2 -fields is-aes-encryption-enabled
+
 vserver  is-aes-encryption-enabled
 -------- -------------------------
 vs2      true</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 

@@ -37116,11 +37116,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-09 22:31:46 +0000">12/09/2021</time>
+    <time datetime="2022-12-19 11:09:00 +0000">12/19/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-forry">
+    <img  class="avatar avatar-small"
+          alt="netapp-forry"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/51911827?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -37135,7 +37143,7 @@
 </p>
 
 <div class="paragraph lead">
-<p>For strongest security with Kerberos-based communication, you can enable AES-256 and AES-128 encryption on the SMB server. By default, when you create a SMB server on the SVM, AES encryption is disabled. You must enable it to take advantage of the strong security provided by Advanced Encryption Standard (AES) encryption.</p>
+<p>For strongest security with Kerberos-based communication, you can enable AES-256 and AES-128 encryption on the SMB server. By default, when you create a SMB server on the SVM, Advanced Encryption Standard (AES) encryption is disabled. You must enable it to take advantage of the strong security provided by AES encryption.</p>
 </div>
 <div class="paragraph">
 <p>Kerberos-related communication for SMB is used during SMB server creation on the SVM, as well as during the SMB session setup phase. The SMB server supports the following encryption types for Kerberos communication:</p>
@@ -37143,21 +37151,27 @@
 <div class="ulist">
 <ul>
 <li>
-<p>RC4-HMAC</p>
-</li>
-<li>
-<p>DES</p>
+<p>AES 256</p>
 </li>
 <li>
 <p>AES 128</p>
 </li>
 <li>
-<p>AES 256</p>
+<p>DES</p>
+</li>
+<li>
+<p>RC4-HMAC</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>If you want to use the highest security encryption type for Kerberos communication, you should enable AES encryption for Kerberos communication on the SVM.</p>
+</div>
+<div class="paragraph">
+<p>When the SMB server is created, the domain controller creates a computer machine account in Active Directory. At this time, the KDC becomes aware of the encryption capabilities of the particular machine account. Subsequently, a particular encryption type is selected for encrypting the service ticket that the client presents to the server during authentication.</p>
+</div>
+<div class="paragraph">
+<p>Beginning with ONTAP 9.12.1, you can specify which encryption types to advertise to the Active Directory (AD) KDC. You can use the <code>-advertised-enc-types</code> option to enable recommended encryption types, and you can use it to disable weaker encryption types. Learn how to <a href="enable-disable-aes-encryption-kerberos-task.html">enable and disable encryption types for Kerberos-based communication</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -37172,9 +37186,6 @@
 </td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p>When the SMB server is created, the domain controller creates a computer machine account in Active Directory. At this time, the KDC becomes aware of the encryption capabilities of the particular machine account. Subsequently, a particular encryption type is selected for encrypting the service ticket that the client presents to the server during authentication.</p>
 </div>
 <div class="paragraph">
 <div class="title">Related information</div>
