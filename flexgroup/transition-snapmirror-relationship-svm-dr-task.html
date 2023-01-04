@@ -37116,7 +37116,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-30 18:56:04 +0000">06/30/2022</time>
+    <time datetime="2023-01-04 01:05:14 +0000">01/04/2023</time>
     
   
 
@@ -37156,18 +37156,21 @@
 </li>
 <li>
 <p>Create the FlexGroup SVM DR SnapMirror relationship. Use the same SnapMirror policy which is configured on the FlexGroup volume SnapMirror relationships: <code>snapmirror create -destination-path dest_svm: -source-path src_svm: -identity-preserve true -policy MirrorAllSnapshots</code></p>
-</li>
-</ol>
-</div>
-<div class="exampleblock">
-<div class="content">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
 <div class="paragraph">
 <p>You must use the <code>-identity-preserve true</code> option of the <code>snapmirror create</code> command when you create your replication relationship.</p>
 </div>
+</td>
+</tr>
+</table>
 </div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>Verify the relationship is broken off: <code>snapmirror show -destination-path dest_svm: -source-path src_svm:</code></p>
 <div class="listingblock">
