@@ -218,7 +218,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/add-disks-local-tier-aggr-task.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2023-01-03T19:53:03+00:00</lastmod>
       
     </url>
   
@@ -834,7 +834,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/autocommit-files-worm-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
@@ -2157,14 +2157,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/commit-files-worm-state-manual-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html</loc>
       
-      <lastmod>2022-06-06T22:28:15+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
@@ -2186,13 +2186,6 @@
       <loc>https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html</loc>
       
       <lastmod>2022-12-01T22:54:50+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/ontap/cloud/data-sense-concept.html</loc>
-      
-      <lastmod>2022-01-05T21:13:37+00:00</lastmod>
       
     </url>
   
@@ -3935,7 +3928,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/create-aggregates-auto-provision-task.html</loc>
       
-      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
+      <lastmod>2022-12-13T20:23:16+00:00</lastmod>
       
     </url>
   
@@ -4313,7 +4306,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/create-locked-snapshot-task.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
@@ -4670,14 +4663,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/create-snaplock-security-administrator-account-task.html</loc>
       
-      <lastmod>2022-02-28T21:05:04+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/create-snaplock-volume-task.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-12-16T20:16:26+00:00</lastmod>
       
     </url>
   
@@ -4873,7 +4866,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/create-worm-appendable-file-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
@@ -5060,6 +5053,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap/cloud/data-sense-concept.html</loc>
+      
+      <lastmod>2023-01-06T15:42:24+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap/cloud/data-sovereignty-concept.html</loc>
       
       <lastmod>2021-10-14T21:50:12+00:00</lastmod>
@@ -5167,7 +5167,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/default-raid-policies-aggregates-concept.html</loc>
       
-      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
+      <lastmod>2022-12-13T20:23:16+00:00</lastmod>
       
     </url>
   
@@ -5434,6 +5434,13 @@
       <loc>https://docs.netapp.com/us-en/ontap/data-protection/delete-volume-replication-relationship-task.html</loc>
       
       <lastmod>2022-03-01T21:47:07+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/snaplock/delete-worm-files-concept.html</loc>
+      
+      <lastmod>2023-01-02T02:09:45+00:00</lastmod>
       
     </url>
   
@@ -7302,7 +7309,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/enable-snapshot-lock-task.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
@@ -7477,7 +7484,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/event-based-retention-feature-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
@@ -8611,7 +8618,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/hold-tamper-proof-files-indefinite-period-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
@@ -8765,7 +8772,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/implement-privileged-delete-functionality-task.html</loc>
       
-      <lastmod>2021-10-25T16:49:50+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
@@ -8947,7 +8954,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/</loc>
       
-      <lastmod>2022-01-06T22:11:48+00:00</lastmod>
+      <lastmod>2022-12-30T15:06:53+00:00</lastmod>
       
     </url>
   
@@ -9234,7 +9241,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/initialize-complianceclock-task.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
@@ -9311,7 +9318,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/install-license-task.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2022-12-16T20:16:26+00:00</lastmod>
       
     </url>
   
@@ -10429,6 +10436,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap/snaplock/manage-worm-files-concept.html</loc>
+      
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/manage_routing_in_an_svm_overview.html</loc>
       
       <lastmod>2021-05-15T00:30:31+00:00</lastmod>
@@ -10718,7 +10732,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/mirror-worm-files-task.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
@@ -11089,7 +11103,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/mount-snaplock-volume-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
@@ -11152,14 +11166,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/move-snaplock-volume-concept.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/move-snaplock-volume-task.html</loc>
       
-      <lastmod>2022-07-13T00:04:03+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
@@ -13112,7 +13126,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/reset-complianceclock-ntp-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
@@ -13623,7 +13637,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/sanitize-disk-maintenance-mode-task.html</loc>
       
-      <lastmod>2022-09-28T13:47:59+00:00</lastmod>
+      <lastmod>2023-01-03T21:28:55+00:00</lastmod>
       
     </url>
   
@@ -13665,7 +13679,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2023-01-04T18:30:12+00:00</lastmod>
+      <lastmod>2023-01-09T18:22:04+00:00</lastmod>
       
     </url>
   
@@ -13819,7 +13833,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/set-default-retention-period-task.html</loc>
       
-      <lastmod>2022-07-23T01:15:26+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
@@ -13903,14 +13917,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/set-retention-period-task.html</loc>
       
-      <lastmod>2022-11-18T16:16:24+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/set-retention-time-file-explicitly-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
@@ -14512,7 +14526,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/snaplock-concept.html</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/snaplock/snaplock-config-overview-concept.html</loc>
+      
+      <lastmod>2022-12-16T20:16:26+00:00</lastmod>
       
     </url>
   
@@ -14645,7 +14666,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/snapshot-lock-concept.html</loc>
       
-      <lastmod>2022-12-07T23:17:23+00:00</lastmod>
+      <lastmod>2023-01-04T18:54:22+00:00</lastmod>
       
     </url>
   
@@ -17431,7 +17452,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/volume-append-mode-create-worm-appendable-files-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
@@ -17641,7 +17662,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/snaplock/workflow-concept.html</loc>
       
-      <lastmod>2021-11-23T00:54:29+00:00</lastmod>
+      <lastmod>2023-01-02T03:26:13+00:00</lastmod>
       
     </url>
   
