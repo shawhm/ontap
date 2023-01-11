@@ -14178,8 +14178,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -34284,13 +34282,6 @@
         Create an audit log
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Set the file retention period after an event"
-      data-li-level="3#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/event-based-retention-feature-task.html">
-        Set the file retention period after an event
-      </a></li><li 
-      data-pdf-exists="true" 
       data-pdf-filename="Move a SnapLock volume"
       data-li-level="3#" 
       class=" "
@@ -36912,7 +36903,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-01-02 03:26:13 +0000">01/02/2023</time>
+    <time datetime="2023-01-11 00:02:50 +0000">01/11/2023</time>
     
   
 
@@ -36941,7 +36932,7 @@
 <h2 id="commit-files-to-worm-manually">Commit files to WORM manually</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You commit a file to WORM manually by making the file read-only. You can use any suitable command or program over NFS or CIFS to change the read-write attribute of a file to read-only.</p>
+<p>You commit a file to WORM manually by making the file read-only. You can use any suitable command or program over NFS or CIFS to change the read-write attribute of a file to read-only. You might choose to manually commit files if you want to ensure an application has finished writing to a file so that the file isn&#8217;t committed prematurely or if there are scaling issues for the autocommit scanner because of a high number of volumes.</p>
 </div>
 <div class="ulist">
 <div class="title">What you&#8217;ll need</div>
@@ -36988,7 +36979,8 @@
 <h2 id="commit-files-to-worm-automatically">Commit files to WORM automatically</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The SnapLock autocommit feature enables you to commit files to WORM automatically.</p>
+<p>The SnapLock autocommit feature enables you to commit files to WORM automatically. The autocommit feature commits a file to WORM state on a SnapLock volume if the file did not change for the autocommit-period
+duration. The autocommit feature is disabled by default.</p>
 </div>
 <div class="ulist">
 <div class="title">What you&#8217;ll need</div>

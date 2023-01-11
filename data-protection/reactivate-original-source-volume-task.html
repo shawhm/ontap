@@ -14178,8 +14178,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -34284,13 +34282,6 @@
         Create an audit log
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Set the file retention period after an event"
-      data-li-level="3#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/event-based-retention-feature-task.html">
-        Set the file retention period after an event
-      </a></li><li 
-      data-pdf-exists="true" 
       data-pdf-filename="Move a SnapLock volume"
       data-li-level="3#" 
       class=" "
@@ -36912,7 +36903,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-02 19:39:44 +0000">02/02/2022</time>
+    <time datetime="2023-01-10 19:37:39 +0000">01/10/2023</time>
     
   
 
@@ -36975,32 +36966,57 @@
 <div class="paragraph">
 <p>For complete command syntax, see the man page.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
 <div class="paragraph">
-<p>You must run this command from the destination SVM or the destination cluster. Although resync does not require a baseline transfer, it can be time-consuming. You might want to run the resync in off-peak hours.</p>
+<p>You must run this command from the original source SVM or the original source cluster. Although resync does not require a baseline transfer, it can be time-consuming. You might want to run the resync in off-peak hours. The command fails if a common Snapshot copy does not exist on the source and destination. Use <code>snapmirror initialize</code> to re-initialize the relationship.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>The following example reverses the relationship between the original source volume, <code>volA</code> on <code>svm1</code>, and the volume you are serving data from, <code>volA_dst</code> on <code>svm_backup</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cluster_dst::&gt; snapmirror resync -source-path svm_backup:volA_dst -destination-path svm1:volA</pre>
+<pre>cluster_src::&gt; snapmirror resync -source-path svm_backup:volA_dst -destination-path svm1:volA</pre>
 </div>
 </div>
 </li>
 <li>
-<p>Stop the source SVM for the reversed relationship:</p>
+<p>When you are ready to reestablish data access to the original source, stop access to the original destination volume. One way to do this is to stop the original destination SVM:</p>
 <div class="paragraph">
 <p><code>vserver stop -vserver <em>SVM</em></code></p>
 </div>
 <div class="paragraph">
 <p>For complete command syntax, see the man page.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
 <div class="paragraph">
-<p>The following example stops the source SVM for the reversed relationship:</p>
+<p>You must run this command from the original destination SVM or the original destination cluster. This command stops user access to the entire original destination SVM. You may want to stop access to the original destination volume using other methods.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following example stops the original destination SVM:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cluster_src::&gt; vserver stop svm_backup</pre>
+<pre>cluster_dst::&gt; vserver stop svm_backup</pre>
 </div>
 </div>
 </li>
@@ -37020,7 +37036,7 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You must run this command from the destination SVM or the destination cluster.The command fails if a common Snapshot copy does not exist on the source and destination. Use <code>snapmirror initialize</code> to re-initialize the relationship.</p>
+<p>You must run this command from the original source SVM or the original source cluster.</p>
 </div>
 </td>
 </tr>
@@ -37031,12 +37047,12 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cluster_dst::&gt; snapmirror update -source-path svm_backup:volA_dst -destination-path svm1:volA</pre>
+<pre>cluster_src::&gt; snapmirror update -source-path svm_backup:volA_dst -destination-path svm1:volA</pre>
 </div>
 </div>
 </li>
 <li>
-<p>Stop scheduled transfers for the reversed relationship:</p>
+<p>From the original source SVM or the original source cluster, stop scheduled transfers for the reversed relationship:</p>
 <div class="paragraph">
 <p><code>snapmirror quiesce -source-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203; -destination-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203;</code></p>
 </div>
@@ -37051,54 +37067,23 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You must run this command from the destination SVM or the destination cluster.</p>
+<p>You must run this command from the original source SVM or the original source cluster.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>The following example stops scheduled transfers between the volume you are serving data from, <code>volA_dst</code> on <code>svm_backup</code>, and the original source volume, <code>volA</code> on <code>svm1</code>:</p>
+<p>The following example stops scheduled transfers between the original destination volume, <code>volA_dst</code> on <code>svm_backup</code>, and the original source volume, <code>volA</code> on <code>svm1</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cluster_dst::&gt; snapmirror quiesce -source-path svm_backup:volA_dst -destination-path svm1:volA</pre>
+<pre>cluster_src::&gt; snapmirror quiesce -source-path svm_backup:volA_dst -destination-path svm1:volA</pre>
 </div>
 </div>
 </li>
 <li>
-<p>Stop ongoing transfers for the reversed relationship:</p>
-<div class="paragraph">
-<p><code>snapmirror abort -source-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203; -destination-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203;</code></p>
-</div>
-<div class="paragraph">
-<p>For complete command syntax, see the man page.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>You must run this command from the destination SVM or the destination cluster.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The following example stops ongoing transfers between the volume you are serving data from, <code>volA_dst</code> on <code>svm_backup</code>, and the original source volume, <code>volA</code> on <code>svm1</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>cluster_dst::&gt; snapmirror abort -source-path svm_backup:volA_dst -destination-path svm1:volA</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Break the reversed relationship:</p>
+<p>When the final update is complete and the relationship indicates "Quiesced" for the relationship status, run the following command from the original source SVM or the original source cluster to break the reversed relationship::</p>
 <div class="paragraph">
 <p><code>snapmirror break -source-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203; -destination-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203;</code></p>
 </div>
@@ -37113,48 +37098,42 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You must run this command from the destination SVM or the destination cluster.</p>
+<p>You must run this command from the original source SVM or the source cluster.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>The following example breaks the relationship between the volume you are serving data from, <code>volA_dst</code> on <code>svm_backup</code>, and the original source volume, <code>volA</code> on <code>svm1</code>:</p>
+<p>The following example breaks the relationship between the original destination volume, <code>volA_dst</code> on <code>svm_backup</code>, and the original source volume, <code>volA</code> on <code>svm1</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cluster_dst::&gt; snapmirror break -source-path svm_backup:volA_dst -destination-path svm1:volA</pre>
+<pre>cluster_scr::&gt; snapmirror break -source-path svm_backup:volA_dst -destination-path svm1:volA</pre>
 </div>
 </div>
 </li>
 <li>
-<p>Start the original source SVM:</p>
-<div class="paragraph">
-<p><code>vserver start -vserver <em>SVM</em></code></p>
-</div>
-<div class="paragraph">
-<p>For complete command syntax, see the man page.</p>
-</div>
-<div class="paragraph">
-<p>The following example starts the original source SVM:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>cluster_dst::&gt; vserver start svm1</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Delete the reversed data protection relationship:</p>
+<p>From the original source SVM or the original source cluster, delete the reversed data protection relationship:</p>
 <div class="paragraph">
 <p><code>snapmirror delete -source-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203; -destination-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203;</code></p>
 </div>
 <div class="paragraph">
 <p>For complete command syntax, see the man page.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
 <div class="paragraph">
-<p>You must run this command from the source SVM or the source cluster for the reversed relationship.</p>
+<p>You must run this command from the original source SVM or the original source cluster.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>The following example deletes the reversed relationship between the original source volume, <code>volA</code> on <code>svm1</code>, and the volume you are serving data from, <code>volA_dst</code> on <code>svm_backup</code>:</p>
@@ -37166,7 +37145,56 @@
 </div>
 </li>
 <li>
-<p>Reestablish the original data protection relationship:</p>
+<p>Release the reversed relationship from the original destination SVM or the original destination cluster.</p>
+<div class="paragraph">
+<p><code>snapmirror release -source-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203; -destination-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203;</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You must run this command from the original destination SVM or the original destination cluster.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following example releases the reversed relationship between the original destination volume, <code>volA_dst</code> on <code>svm_backup</code>, and the original source volume, <code>volA</code> on <code>svm1</code>:</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster_dst::&gt; snapmirror release -source-path svm_backup:volA_dst -destination-path svm1:volA</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>If needed, start the original destination SVM:</p>
+<div class="paragraph">
+<p><code>vserver start -vserver <em>SVM</em></code></p>
+</div>
+<div class="paragraph">
+<p>For complete command syntax, see the man page.</p>
+</div>
+<div class="paragraph">
+<p>The following example starts the original destination SVM:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster_dst::&gt; vserver start svm_backup</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Reestablish the original data protection relationship from the original destination:</p>
 <div class="paragraph">
 <p><code>snapmirror resync -source-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203; -destination-path <em>SVM:volume</em>|<em>cluster://SVM/volume</em>, &#8230;&#8203;</code></p>
 </div>

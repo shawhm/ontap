@@ -14176,8 +14176,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -34284,13 +34282,6 @@
         Create an audit log
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Set the file retention period after an event"
-      data-li-level="3#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/event-based-retention-feature-task.html">
-        Set the file retention period after an event
-      </a></li><li 
-      data-pdf-exists="true" 
       data-pdf-filename="Move a SnapLock volume"
       data-li-level="3#" 
       class=" "
@@ -36912,24 +36903,24 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-13 18:07:03 +0000">05/13/2022</time>
+    <time datetime="2023-01-11 16:31:22 +0000">01/11/2023</time>
     
   
 
 <span>Contributors
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lenida">
-    <img  class="avatar avatar-small"
-          alt="netapp-lenida"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/54081920?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
     <img  class="avatar avatar-small"
           alt="netapp-ahibbard"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/85892662?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lenida">
+    <img  class="avatar avatar-small"
+          alt="netapp-lenida"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54081920?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -36949,74 +36940,8 @@
 <h2 id="ontap-mediator">ONTAP mediator</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>During normal operation, the Mediator state should be connected. If it is in any other state, this might indicate an error condition. You can review the Event Management System (EMS) messages to determine the error and appropriate corrective actions.</p>
+<p>During normal operation, the Mediator state should be connected. If it is in any other state, this might indicate an error condition. You can review the <a href="https://docs.netapp.com/us-en/ontap-ems-9121/sm-mediator-events.html" target="_blank" rel="noopener">Event Management System (EMS) messages</a> to determine the error and appropriate corrective actions.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">EMS Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sm.mediator.added</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mediator is added successfully</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sm.mediator.removed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mediator is removed successfully</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sm.mediator.unusable</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mediator is unusable due to a corrupted Mediator server</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sm.mediator.misconfigured</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mediator is repurposed or the Mediator package is no longer installed on the Mediator server</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sm.mediator.unreachable</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mediator is unreachable</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sm.mediator.removed.force</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mediator is removed from the cluster using the "force" option</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sm.mediator.cacert.expiring</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mediator certificate authority (CA) certificate is due to expire in 30 days or less</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sm.mediator.serverc.expiring</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mediator server certificate is due to expire in 30 days or less</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sm.mediator.clientc.expiring</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mediator client certificate is due to expire in 30 days or less</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sm.mediator.cacert.expired</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mediator certificate authority (CA) certificate has expired</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sm.mediator.serverc.expired</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mediator server certificate has expired</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sm.mediator.clientc.expired</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mediator client certificate has expired</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sm.mediator.in.quorum</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">All the SM-BC records are resynchronized with Mediator</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 <div class="sect1">
@@ -37039,30 +36964,8 @@
 </div>
 </div>
 <div class="paragraph">
-<p>You can also review the following messages to determine if there is an error and take the appropriate corrective actions.</p>
+<p>Refer to the <a href="https://docs.netapp.com/us-en/ontap-ems-9121/smbc-pfo-events.html" target="_blank" rel="noopener">EMS reference</a> to learn about event messages and corrective actions.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">EMS Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">smbc.pfo.failed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SMBC planned failover operation failed. Destination path:</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">smbc.pfo.start. Destination path:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SMBC planned failover operation started</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 <div class="sect1">
@@ -37087,38 +36990,8 @@ Last Progress Update: -
 </div>
 </div>
 <div class="paragraph">
-<p>You can also review the following messages to determine if there is an error and take the appropriate corrective actions.</p>
+<p>Refer to the <a href="https://docs.netapp.com/us-en/ontap-ems-9121/smbc-aufo-events.html" target="_blank" rel="noopener">EMS reference</a> to learn about event messages and about corrective actions.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">EMS Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">smbc.aufo.failed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SnapMirror automatic planned failover operation failed. Destination path:</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">smbc.aufo.start</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SMBC planned failover operation started. Destination path:</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">smbc.aufo.completed:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SnapMirror automatic planned failover operation completed. Destination path:</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">smbc.aufo.failover.incapable</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">block.giveback.during.aufo</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 <div class="sect1">
