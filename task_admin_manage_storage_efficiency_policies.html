@@ -36903,7 +36903,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-09 22:31:46 +0000">12/09/2021</time>
+    <time datetime="2023-01-13 00:52:39 +0000">01/13/2023</time>
     
   
 
@@ -36929,6 +36929,8 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
 <p>Beginning with ONTAP 9.8, you can use System Manager to enable, disable, add, edit, or delete efficiency policies for storage VMs on FAS systems.</p>
 </div>
@@ -36976,6 +36978,96 @@ This function is not available on AFF systems.
 <p><strong>Delete</strong> an efficiency policy by clicking on <span class="image"><img src="./media/icon_kabob.gif" alt="the kebab icon"></span> to the right of the policy name and selecting <strong>Delete</strong>.</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="efficiency-policies-list">Efficiency policies list</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Auto</strong></p>
+<div class="paragraph">
+<p>Specifies that deduplication is continuously performed in the background. This policy is set for all newly created volumes and for all upgraded volumes that have not been manually configured for background deduplication. If you change the policy to &#8220;default&#8221; or any other policy, the &#8220;auto&#8221; policy is disabled.</p>
+</div>
+<div class="paragraph">
+<p>If a volume moves from a non-AFF system to an AFF system, the &#8220;auto&#8221; policy is enabled on the destination node by default. If a volume moves from an AFF node to a non-AFF node, the &#8220;auto&#8221; policy on the destination node is replaced by the &#8220;inline-only&#8221; policy by default.</p>
+</div>
+</li>
+<li>
+<p><strong>Policy</strong></p>
+<div class="paragraph">
+<p>Specifies the name of an efficiency policy.</p>
+</div>
+</li>
+<li>
+<p><strong>Status</strong></p>
+<div class="paragraph">
+<p>Specifies the status of an efficiency policy. The status can be one of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enabled</p>
+<div class="paragraph">
+<p>Specifies that the efficiency policy can be assigned to a deduplication operation.</p>
+</div>
+</li>
+<li>
+<p>Disabled</p>
+<div class="paragraph">
+<p>Specifies that the efficiency policy is disabled. You can enable the policy by using the status drop-down menu and assign it later to a deduplication operation.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Run By</strong></p>
+<div class="paragraph">
+<p>Specifies whether the storage efficiency policy is run based on a schedule or based on a threshold value (change log threshold).</p>
+</div>
+</li>
+<li>
+<p><strong>QoS Policy</strong></p>
+<div class="paragraph">
+<p>Specifies the QoS type for the storage efficiency policy. The QoS type can be one of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Background</p>
+<div class="paragraph">
+<p>Specifies that the QoS policy is running in the background, which reduces potential performance impact on the client operations.</p>
+</div>
+</li>
+<li>
+<p>Best-effort</p>
+<div class="paragraph">
+<p>Specifies that the QoS policy is running on a best-effort basis, which enables you to maximize the utilization of system resources.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Maximum Runtime</strong></p>
+<div class="paragraph">
+<p>Specifies the maximum run-time duration of an efficiency policy. If this value is not specified, the efficiency policy is run till the operation is complete.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="details-area">Details area</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The area below the efficiency policy list displays additional information about the selected efficiency policy, including the schedule name and the schedule details for a schedule-based policy, and the threshold value for a threshold-based policy.</p>
+</div>
+</div>
 </div>
 
     </article>
