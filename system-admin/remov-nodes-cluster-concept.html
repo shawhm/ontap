@@ -36903,7 +36903,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-01-11 17:23:50 +0000">01/11/2023</time>
+    <time datetime="2023-01-12 17:14:07 +0000">01/12/2023</time>
     
   
 
@@ -37001,7 +37001,10 @@
 <p>All VLANs on the node have been <a href="../networking/configure_vlans_over_physical_ports.html#delete-a-vlan">deleted</a>.</p>
 </li>
 <li>
-<p>If the nodes you are removing contains LUNs that use Selective LUN Mapping, you should remove the nodes from the LUN map before removing the nodes from the cluster.</p>
+<p>If you have LUNs on the node to be removed, you should <a href="https://docs.netapp.com/us-en/ontap/san-admin/modify-slm-reporting-nodes-task.html">modify the Selective LUN Map (SLM) reporting-nodes list</a> before you remove the node.</p>
+<div class="paragraph">
+<p>If you do not remove the node and its HA partner from the SLM reporting-nodes list, access to the LUNs previously on the node can be lost even though the volumes containing the LUNs were moved to another node.</p>
+</div>
 </li>
 </ul>
 </div>
