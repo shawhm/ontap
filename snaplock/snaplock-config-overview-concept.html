@@ -14089,6 +14089,10 @@
             Configure SnapLock
           </a>
           
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
 
 
 
@@ -14133,32 +14137,7 @@
 
 
 
-    
-      <ul class="subfolders" style="display:none;">
-        <li class="pdf-ux-container">
-          
-          
-          
-          <a target="_blank" 
-            
-              href="/us-en/ontap/pdfs/sidebar/Delete_WORM_files.pdf" 
-            
-          >
-            <img src="/us-en/ontap/images/pdf.png" alt="" width="16" height="16"/>
-            Delete WORM files
-          </a>
-          
 
-
-
-
-
-
-        </li>
-      </ul>
-    
-
-  
 
 
         </li>
@@ -34157,12 +34136,19 @@
       data-pdf-exists="true" 
       data-pdf-filename="Configure SnapLock"
       data-li-level="3" 
-      class="subfolders  active "
-    ><a href="/us-en/ontap/snaplock/snaplock-config-overview-concept.html">
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> Configure SnapLock</div>
       </a>
       <ul style="display: none;">
         <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Overview"
+      data-li-level="4#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/snaplock-config-overview-concept.html">
+        Overview
+      </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Install the license"
       data-li-level="4#" 
@@ -34209,11 +34195,18 @@
       data-pdf-filename="Manage WORM files"
       data-li-level="3" 
       class="subfolders "
-    ><a href="/us-en/ontap/snaplock/manage-worm-files-concept.html">
+    ><a href="#">
         <div class="na-navbar-padding"> Manage WORM files</div>
       </a>
       <ul style="display: none;">
         <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Overview"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/manage-worm-files-concept.html">
+        Overview
+      </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Commit files to WORM"
       data-li-level="4#" 
@@ -34244,34 +34237,11 @@
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Delete WORM files"
-      data-li-level="4" 
-      class="subfolders "
-    ><a href="/us-en/ontap/snaplock/delete-worm-files-concept.html">
-        <div class="na-navbar-padding"> Delete WORM files</div>
-      </a>
-      <ul style="display: none;">
-        <li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Create a SnapLock administrator account"
-      data-li-level="5#" 
+      data-li-level="4#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/create-compliance-administrator-account-task.html">
-        Create a SnapLock administrator account
-      </a></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Enable the privileged delete feature"
-      data-li-level="5#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/enable-privileged-delete-task.html">
-        Enable the privileged delete feature
-      </a></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Delete Enterprise-mode WORM files"
-      data-li-level="5#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/implement-privileged-delete-functionality-task.html">
-        Delete Enterprise-mode WORM files
-      </a></li></ul></li></ul></li><li 
+    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/delete-worm-files-concept.html">
+        Delete WORM files
+      </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Create an audit log"
       data-li-level="3#" 
@@ -34283,7 +34253,7 @@
       data-pdf-filename="Move a SnapLock volume"
       data-li-level="3#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/create-snaplock-security-administrator-account-task.html">
+    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/move-snaplock-volume-concept.html">
         Move a SnapLock volume
       </a></li><li 
       data-pdf-exists="true" 
@@ -36901,7 +36871,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-01-11 00:02:50 +0000">01/11/2023</time>
+    <time datetime="2023-01-17 05:08:09 +0000">01/17/2023</time>
     
   
 
@@ -36922,16 +36892,16 @@
 <div class="paragraph lead">
 <p>Before you use SnapLock, you need to configure SnapLock by completing the following tasks:</p>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p><a href="https://docs.netapp.com/us-en/ontap/snaplock/install-license-task.html">Install the license</a>.</p>
+<p><a href="https://docs.netapp.com/us-en/ontap/snaplock/install-license-task.html">Install the SnapLock license</a>.</p>
 </li>
 <li>
-<p><a href="https://docs.netapp.com/us-en/ontap/snaplock/initialize-complianceclock-task.html">Initialize Compliance Clock</a>.</p>
+<p><a href="https://docs.netapp.com/us-en/ontap/snaplock/initialize-complianceclock-task.html">Initialize Compliance Clock to ensure against tampering</a>.</p>
 </li>
 <li>
-<p><a href="https://docs.netapp.com/us-en/ontap/snaplock/create-snaplock-aggregate-task.html">Create a SnapLock aggregate</a> (For releases earlier than ONTAP 9.10.1, only).</p>
+<p><a href="https://docs.netapp.com/us-en/ontap/snaplock/create-snaplock-aggregate-task.html">Create a SnapLock aggregate</a> (releases earlier than ONTAP 9.10.1 only).</p>
 </li>
 <li>
 <p><a href="https://docs.netapp.com/us-en/ontap/snaplock/create-snaplock-volume-task.html">Create a SnapLock volume</a>.</p>
@@ -36940,38 +36910,12 @@
 <p><a href="https://docs.netapp.com/us-en/ontap/snaplock/mount-snaplock-volume-task.html">Mount a SnapLock volume</a>.</p>
 </li>
 <li>
-<p>Set the retention time:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.netapp.com/us-en/ontap/snaplock/set-retention-time-file-explicitly-task.html">Set the retention time for a file explicityly</a>.</p>
+<p><a href="https://docs.netapp.com/us-en/ontap/snaplock/set-retention-period-task.htm">Set the retention time using a default or by setting it explicitly</a>.</p>
 </li>
 <li>
-<p><a href="https://docs.netapp.com/us-en/ontap/snaplock/set-default-retention-period-task.html">Set the default retention period</a>.</p>
+<p><a href="https://docs.netapp.com/us-en/ontap/snaplock/verify-file-volume-settings-file-fingerprint-task.html">Verify the SnapLock settings</a>.</p>
 </li>
-</ul>
-</div>
-</li>
-<li>
-<p><a href="https://docs.netapp.com/us-en/ontap/snaplock/verify-file-volume-settings-file-fingerprint-task.html">Verify the SnapLock settings</a></p>
-</li>
-<li>
-<p>Commit to WORM:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.netapp.com/us-en/ontap/snaplock/commit-files-worm-state-manual-task.html">Commit files to WORM manually</a>.</p>
-</li>
-<li>
-<p><a href="https://docs.netapp.com/us-en/ontap/snaplock/autocommit-files-worm-task.html">Autocommit files to WORM</a>.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><a href="https://docs.netapp.com/us-en/ontap/snaplock/mirror-worm-files-task.html">Mirror WORM files for disaster recovery</a>.</p>
-</li>
-</ul>
+</ol>
 </div>
 
     </article>

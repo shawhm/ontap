@@ -14103,6 +14103,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -14135,32 +14137,7 @@
 
 
 
-    
-      <ul class="subfolders" style="display:none;">
-        <li class="pdf-ux-container">
-          
-          
-          
-          <a target="_blank" 
-            
-              href="/us-en/ontap/pdfs/sidebar/Delete_WORM_files.pdf" 
-            
-          >
-            <img src="/us-en/ontap/images/pdf.png" alt="" width="16" height="16"/>
-            Delete WORM files
-          </a>
-          
 
-
-
-
-
-
-        </li>
-      </ul>
-    
-
-  
 
 
         </li>
@@ -34160,11 +34137,18 @@
       data-pdf-filename="Configure SnapLock"
       data-li-level="3" 
       class="subfolders "
-    ><a href="/us-en/ontap/snaplock/snaplock-config-overview-concept.html">
+    ><a href="#">
         <div class="na-navbar-padding"> Configure SnapLock</div>
       </a>
       <ul style="display: none;">
         <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Overview"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/snaplock-config-overview-concept.html">
+        Overview
+      </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Install the license"
       data-li-level="4#" 
@@ -34211,11 +34195,18 @@
       data-pdf-filename="Manage WORM files"
       data-li-level="3" 
       class="subfolders "
-    ><a href="/us-en/ontap/snaplock/manage-worm-files-concept.html">
+    ><a href="#">
         <div class="na-navbar-padding"> Manage WORM files</div>
       </a>
       <ul style="display: none;">
         <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Overview"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/manage-worm-files-concept.html">
+        Overview
+      </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Commit files to WORM"
       data-li-level="4#" 
@@ -34246,34 +34237,11 @@
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Delete WORM files"
-      data-li-level="4" 
-      class="subfolders "
-    ><a href="/us-en/ontap/snaplock/delete-worm-files-concept.html">
-        <div class="na-navbar-padding"> Delete WORM files</div>
-      </a>
-      <ul style="display: none;">
-        <li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Create a SnapLock administrator account"
-      data-li-level="5#" 
+      data-li-level="4#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/create-compliance-administrator-account-task.html">
-        Create a SnapLock administrator account
-      </a></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Enable the privileged delete feature"
-      data-li-level="5#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/enable-privileged-delete-task.html">
-        Enable the privileged delete feature
-      </a></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Delete Enterprise-mode WORM files"
-      data-li-level="5#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/implement-privileged-delete-functionality-task.html">
-        Delete Enterprise-mode WORM files
-      </a></li></ul></li></ul></li><li 
+    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/delete-worm-files-concept.html">
+        Delete WORM files
+      </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Create an audit log"
       data-li-level="3#" 
@@ -34285,7 +34253,7 @@
       data-pdf-filename="Move a SnapLock volume"
       data-li-level="3#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/create-snaplock-security-administrator-account-task.html">
+    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/move-snaplock-volume-concept.html">
         Move a SnapLock volume
       </a></li><li 
       data-pdf-exists="true" 
@@ -36903,7 +36871,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-17 23:01:38 +0000">05/17/2022</time>
+    <time datetime="2023-01-17 01:31:07 +0000">01/17/2023</time>
     
   
 
@@ -36957,18 +36925,6 @@
 <div class="sectionbody">
 <div class="paragraph lead">
 <p>Create a mirror and vault of a volume to protect data in case of a disaster and to have multiple archived versions of data to which you can roll back. Beginning with ONTAP 9.11.1, you can use System Manager to select pre-created and custom mirror and vault policies, to display and select legacy policies, and to override the transfer schedules defined in a protection policy when protecting volumes and storage VMs. This capability is also available in ONTAP 9.8P12 and later patches of ONTAP 9.8.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
-If you are using ONTAP 9.8P12 or later ONTAP 9.8 patch release and you configured SnapMirror using System Manager, you should contact NetApp Support before upgrading to ONTAP 9.9.1 or ONTAP 9.10.1 patch releases.
-</td>
-</tr>
-</table>
 </div>
 <div class="paragraph">
 <p>This procedure creates a data protection policy on a remote cluster. The source cluster and destination cluster use intercluster network interfaces for exchanging data. The procedure assumes the <a href="task_dp_prepare_mirror.html">intercluster network interfaces are created and the clusters containing the volumes are peered</a> (paired). You can also peer storage VMs for data protection; however, if storage VMs are not peered, but permissions are enabled, storage VMs are automatically peered when the protection relationship is created.</p>
