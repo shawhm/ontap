@@ -160,7 +160,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Prepare SnapMirror relationships for a nondisruptive upgrade](https://docs.netapp.com/us-en/ontap/upgrade/task_preparing_snapmirror_relationships_for_a_nondisruptive_upgrade_or_downgrade.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/upgrade/task_preparing_snapmirror_relationships_for_a_nondisruptive_upgrade.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Prepare SnapMirror relationships for a nondisruptive upgrade](https://docs.netapp.com/us-en/ontap/upgrade/task_preparing_snapmirror_relationships_for_a_nondisruptive_upgrade_or_downgrade.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/upgrade/task_preparing_snapmirror_relationships_for_a_nondisruptive_upgrade_or_downgrade.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -36871,7 +36871,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-09 22:31:46 +0000">12/09/2021</time>
+    <time datetime="2023-01-17 00:39:54 +0000">01/17/2023</time>
     
   
 
@@ -36893,17 +36893,21 @@
 <p>It is recommended that you quiesce your SnapMirror operations before performing a nondisruptive upgrade of ONTAP.</p>
 </div>
 <div class="olist arabic">
+<div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p>Use the snapmirror show command to determine the destination path for each SnapMirror relationship.</p>
+<p>Use the <code>snapmirror show</code> command to determine the destination path for each SnapMirror relationship.</p>
 </li>
 <li>
-<p>For each destination volume, suspend future SnapMirror transfers: <code>snapmirror quiesce -destination-path destination</code></p>
+<p>For each destination volume, suspend future SnapMirror transfers:</p>
 <div class="paragraph">
-<p>If there are no active transfers for the SnapMirror relationship, this command sets its status to Quiesced. If the relationship has active transfers, the status is set to Quiescing until the transfer is completed, and then the status becomes Quiesced.</p>
+<p><code>snapmirror quiesce -destination-path destination</code></p>
 </div>
 <div class="paragraph">
-<p>This example quiesces transfers involving the destination volume vol1 from SVMvs0.example.com:</p>
+<p>If there are no active transfers for the SnapMirror relationship, this command sets its status to "Quiesced". If the relationship has active transfers, the status is set to "Quiescing" until the transfer is completed, and then the status becomes "Quiesced".</p>
+</div>
+<div class="paragraph">
+<p>This example quiesces transfers involving the destination volume "vol1" from "SVMvs0.example.com":</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -36912,7 +36916,10 @@
 </div>
 </li>
 <li>
-<p>Verify that all SnapMirror relationships are quiesced: <code>snapmirror show -status !Quiesced</code></p>
+<p>Verify that all SnapMirror relationships are quiesced:</p>
+<div class="paragraph">
+<p><code>snapmirror show -status !Quiesced</code></p>
+</div>
 <div class="paragraph">
 <p>This command displays any SnapMirror relationships that are <em>not</em> quiesced.</p>
 </div>
@@ -36945,15 +36952,21 @@ There are no entries matching your query.</pre>
 <p>Wait for the transfers to finish before performing the ONTAP upgrade.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>After each transfer finishes, the relationship changes to Quiesced status.</p>
+<p>After each transfer finishes, the relationship changes to "Quiesced" status.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Stop the transfers: <code>snapmirror abort -destination-path destination -h</code>    <strong>Note:</strong> You must use the -foreground true parameter if you are aborting load-sharing mirror transfers.</p>
+<p>Stop the transfers:</p>
+</div>
+<div class="paragraph">
+<p><code>snapmirror abort -destination-path destination -h</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Note:</strong> You must use the <code>-foreground true</code> parameter if you are aborting load-sharing mirror transfers.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>This command stops the SnapMirror transfer and restores the destination volume to the last Snapshot copy that was successfully transferred. The relationship is set to Quiesced status.</p>
+<p>This command stops the SnapMirror transfer and restores the destination volume to the last Snapshot copy that was successfully transferred. The relationship is set to "Quiesced" status.</p>
 </div></div></td>
 </tr>
 </tbody>

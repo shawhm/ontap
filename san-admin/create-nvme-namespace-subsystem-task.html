@@ -36871,11 +36871,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-18 16:34:31 +0000">11/18/2022</time>
+    <time datetime="2023-01-17 00:39:54 +0000">01/17/2023</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
+    <img  class="avatar avatar-small"
+          alt="netapp-thomi"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54111336?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
     <img  class="avatar avatar-small"
           alt="netapp-aoife"
@@ -36897,6 +36905,8 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
 <p>If a procedure for your specific host is not available, you can use these steps to create namespaces and provision storage for any NVMe supported host.</p>
 </div>
@@ -36910,28 +36920,24 @@
 <p>Beginning with ONTAP 9.8, when you provision storage, QoS is enabled by default. You can disable QoS or choose a custom QoS policy during the provisioning process or at a later time.</p>
 </div>
 <div class="exampleblock tabbed-block">
-<div class="title">Example 1. Steps</div>
 <div class="content">
 <div class="openblock">
 <div class="title">System Manager</div>
 <div class="content">
 <div class="paragraph">
-<p>Create namespaces to provide storage using the NVMe protocol with ONTAP System Manager (9.7 and later).</p>
+<p>Using ONTAP System Manager (9.7 and later), create namespaces to provide storage using the NVMe protocol.</p>
 </div>
 <div class="olist arabic">
+<div class="title">Steps</div>
 <ol class="arabic">
 <li>
 <p>In System Manager, click <strong>Storage &gt; NVMe Namespaces</strong> and then click <strong>Add</strong>.</p>
 <div class="paragraph">
 <p>If you need to create a new subsystem, click <strong>More Options</strong>.</p>
 </div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+</li>
 <li>
 <p>If you are running ONTAP 9.8 or later and you want to disable QoS or choose a custom QoS policy, click <strong>More Options</strong> and then, under <strong>Storage and Optimization</strong> select <strong>Performance Service Level</strong>.</p>
-</li>
-</ol>
-</div>
 </li>
 </ol>
 </div>
@@ -36957,7 +36963,7 @@
 <div class="title">CLI</div>
 <div class="content">
 <div class="paragraph">
-<p>Create namespaces to provide storage using the NVMe protocol with the ONTAP CLI.</p>
+<p>Using the ONTAP CLI, create namespaces to provide storage using the NVMe protocol.</p>
 </div>
 <div class="paragraph">
 <p>This procedure creates an NVMe namespace and subsystem on an existing storage VM which has already been configured for the NVMe protocol, then maps the namespace to the subsystem to allow data access from your host system.</p>
@@ -37032,9 +37038,13 @@
 </div>
 </div>
 </div>
-<div class="paragraph">
-<p>== About NVMe subsystems</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="about-nvme-subsystems">About NVMe subsystems</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>An NVMe subsystem includes one or more controllers, one or more namespaces, one or more non-volatile memory (NVM) subsystem ports (FC-NVMe or RDMA transport ports), an NVM storage medium, and an interface between the controllers and the NVM storage medium. For controller mapping and management, an NVM subsystem maps to a vserver in ONTAP.</p>
 </div>
