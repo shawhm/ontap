@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Modern RAID technologies protect against disk failure by rebuilding a failed disk’s data on a spare disk. The system compares index information on a “parity ...">
-  <meta name="keywords" content=" aggregate, local tier,  raid group, raid-dp, parity disk"><!-- Icons -->
+  <meta name="keywords" content=" aggregate, local tier, raid group, raid-dp, parity disk"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -36873,7 +36873,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-29 21:22:22 +0000">08/29/2022</time>
+    <time datetime="2023-01-18 14:54:58 +0000">01/18/2023</time>
     
   
 
@@ -36895,7 +36895,7 @@
 <p>Modern RAID technologies protect against disk failure by rebuilding a failed disk&#8217;s data on a spare disk. The system compares index information on a &#8220;parity disk&#8221; with data on the remaining healthy disks to reconstruct the missing data, all without downtime or a significant performance cost.</p>
 </div>
 <div class="paragraph">
-<p>A local tier (aggregate) consists of one or more <em>RAID groups.</em> The <em>RAID type</em> of the local tier determines the number of parity disks in the RAID group and the number of simultaneous disk failures that the RAID configuration protects against.</p>
+<p>A local tier (aggregate) consists of one or more <em>RAID groups</em>. The <em>RAID type</em> of the local tier determines the number of parity disks in the RAID group and the number of simultaneous disk failures that the RAID configuration protects against.</p>
 </div>
 <div class="paragraph">
 <p>The default RAID type, RAID-DP (RAID-double parity), requires two parity disks per RAID group and protects against data loss in the event of two disks failing at the same time. For RAID-DP, the recommended RAID group size is between 12 and 20 HDDs and between 20 and 28 SSDs.</p>
