@@ -36871,7 +36871,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-01-11 16:57:35 +0000">01/11/2023</time>
+    <time datetime="2023-01-19 21:32:05 +0000">01/19/2023</time>
     
   
 
@@ -37048,9 +37048,6 @@ ARP depends on distinguishing incoming data as encrypted or unencrypted. If the 
 <p>Restricted volumes</p>
 </li>
 <li>
-<p>SnapMirror-protected volumes (ONTAP 9.11.1 and earlier releases)</p>
-</li>
-<li>
 <p>SnapLock volumes</p>
 </li>
 <li>
@@ -37076,10 +37073,13 @@ ARP depends on distinguishing incoming data as encrypted or unencrypted. If the 
 <h2 id="snapmirror-and-arp-interoperability">SnapMirror and ARP interoperability</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Beginning with ONTAP 9.12.1, ARP is supported on SnapMirror destination volumes. If a SnapMirror source volume is ARP-enabled, the SnapMirror destination volume automatically acquires the ARP configuration state of source volume.</p>
+<p>Beginning with ONTAP 9.12.1, ARP is supported on SnapMirror destination volumes. If a SnapMirror source volume is ARP-enabled, the SnapMirror destination volume automatically acquires the ARP configuration state (learning, enabled, etc), ARP training data, and ARP-created Snapshot of the source volume. No explicit enablement is required.</p>
 </div>
 <div class="paragraph">
 <p>While the destination volume consists of read-only (RO) Snapshot copies, no ARP processing is done on its data. However, when the SnapMirror destination volume is converted to read-write (RW), ARP is automatically enabled on the RW-converted destination volume. The destination volume does not require any additional learning procedure besides what is already recorded on the source volume.</p>
+</div>
+<div class="paragraph">
+<p>In ONTAP 9.10.1 and 9.11.1, SnapMirror does not transfer the ARP configuration state, training data, and Snapshot copies from source to destination volumes. Hence when the SnapMirror destination volume is converted to RW, ARP on the destination volume must be explicitly enabled in learning mode after conversion.</p>
 </div>
 </div>
 </div>

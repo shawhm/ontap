@@ -9,14 +9,14 @@
   <meta property="og:title" content="Update firmware" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/task_admin_update_firmware.html" />
-	<meta property="og:description" content="You can apply a firmware updated to supported devices in your cluster, such as disks, disk shelves, the Disk Qualification Package (DQP), the service process..." />
+	<meta property="og:description" content="You can apply a firmware updated to supported devices in your cluster, such as disks, disk shelves, the service processor (SP), or the Baseboard Management C..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can apply a firmware updated to supported devices in your cluster, such as disks, disk shelves, the Disk Qualification Package (DQP), the service process...">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can apply a firmware updated to supported devices in your cluster, such as disks, disk shelves, the service processor (SP), or the Baseboard Management C...">
   <meta name="keywords" content=" system manager, netapp, ontap, upgrade, nondisruptive, firmware,  disk, shelves, qualification, package, service, processor, baseboard, management, controller, dqp, sp, bmc, software patch, upgrade, recommendation, recommended, storage firmware, storage devices, disks, shelves, service processors, modules"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
@@ -36871,7 +36871,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-01-17 17:58:38 +0000">01/17/2023</time>
+    <time datetime="2023-01-19 23:58:33 +0000">01/19/2023</time>
     
   
 
@@ -36908,7 +36908,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>With System Manager, you can apply a firmware update to supported devices in your cluster, such as disks, disk shelves, the Disk Qualification Package (DQP), the service processor (SP), or the Baseboard Management Controller (BMC).</p>
+<p>With System Manager, you can apply a firmware update to supported devices in your cluster, such as disks, disk shelves, the service processor (SP), or the Baseboard Management Controller (BMC).</p>
 </div>
 <div class="paragraph">
 <p>You can apply firmware updates manually or automatically.  Select either procedure:</p>
@@ -36931,26 +36931,6 @@
 <div class="paragraph">
 <div class="title">About this task</div>
 <p>Beginning with ONTAP 9.9.1, you can receive alerts from Active IQ that inform you when firmware updates are pending on the cluster.  Then, you can download the firmware image and upload it using System Manager.</p>
-</div>
-<div class="paragraph">
-<div class="title">Before you begin</div>
-<p>You must have one of the following entitlements:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>AIQEXPERT</p>
-</li>
-<li>
-<p>AIQADVISOR</p>
-</li>
-<li>
-<p>AIQUPGRADE</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>You can learn more about entitlements and which ones you have at <a href="/system-admin/manage-licenses-concept.html">Manage licenses overview (cluster administrators only)</a>.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/workflow_admin_update_firmware.gif" alt="workflow diagram of update firmware task"></span></p>
@@ -37041,7 +37021,7 @@ For ONTAP 9.8, you must navigate to the NetApp Support Site to download an updat
 <td class="tableblock halign-left valign-top"><div class="content"><div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>On the <strong>Update</strong> page, for the firmware update that you want to perform, click on the link that says *Download from NetApp Support Site".</p>
+<p>On the <strong>Update</strong> page, for the firmware update that you want to perform, click on <strong>Download from NetApp Support Site</strong>.</p>
 <div class="paragraph">
 <p>The NetApp Support Site is displayed.</p>
 </div>
@@ -37092,7 +37072,7 @@ For ONTAP 9.8, you must navigate to the NetApp Support Site to download an updat
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>ONTAP 9.10.0 or earlier</p>
+<p>ONTAP 9.8, 9.9.x, or 9.10.0</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="olist arabic">
 <ol class="arabic">
@@ -37107,7 +37087,7 @@ For ONTAP 9.8, you must navigate to the NetApp Support Site to download an updat
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>ONTAP 9.10.1</p>
+<p>ONTAP 9.10.1 and later</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Note:</strong> To schedule fixes and updates to occur automatically and receive recommendations about updating, see <a href="#update-firmware-automatically">Update firmware automatically</a>.</p>
@@ -37185,6 +37165,25 @@ You can monitor or verify updates under <strong>Firmware Update Summary</strong>
 </div>
 <div class="paragraph">
 <div class="title">Before you begin</div>
+<p>You must have one of the following entitlements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>AIQEXPERT</p>
+</li>
+<li>
+<p>AIQADVISOR</p>
+</li>
+<li>
+<p>AIQUPGRADE</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can learn more about entitlements and which ones you have at <a href="/system-admin/manage-licenses-concept.html">Manage licenses overview (cluster administrators only)</a>.</p>
+</div>
+<div class="paragraph">
 <p>The Automatic Update feature requires AutoSupport connectivity over HTTPS.  To troubleshoot connectivity problems, see <a href="./system-admin/troubleshoot-autosupport-http-https-task.html">Troubleshoot AutoSupport message delivery over HTTP or HTTPS</a>.</p>
 </div>
 <div class="paragraph">
@@ -37194,7 +37193,7 @@ You can monitor or verify updates under <strong>Firmware Update Summary</strong>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Storage firmware</strong>:  Storage devices, Disk Qualification Package (DQP), disks, and disk shelves</p>
+<p><strong>Storage firmware</strong>:  Storage devices, disks, and disk shelves</p>
 </li>
 <li>
 <p><strong>SP/BMC firmware</strong>:  Service processors and BMC modules</p>
@@ -37265,7 +37264,7 @@ You can monitor or verify updates under <strong>Firmware Update Summary</strong>
 <p>In System Manager, click <strong>Cluster &gt; Settings</strong>.</p>
 </li>
 <li>
-<p>In the <strong>Automatic Update</strong> section, click <span class="image"><img src="./media/icon_kabob.gif" alt="kebab icon"></span> to view a list of actions.</p>
+<p>In the <strong>Automatic Update</strong> section, click <span class="image"><img src="./media/icon_kabob.gif" alt="make a choice"></span> to view a list of actions.</p>
 </li>
 <li>
 <p>Click <strong>Edit Automatic Update Settings</strong>.</p>
@@ -37305,13 +37304,13 @@ You can monitor or verify updates under <strong>Firmware Update Summary</strong>
 <p>Click <strong>Cluster &gt; Overview</strong>.</p>
 </li>
 <li>
-<p>In the <strong>Overview</strong> section, click <strong>More</strong> <span class="image"><img src="./media/icon_kabob.gif" alt="kebab icon"></span>, then click <strong>ONTAP Update</strong>.</p>
+<p>In the <strong>Overview</strong> section, click <strong>More</strong> <span class="image"><img src="./media/icon_kabob.gif" alt="make a choice"></span>, then click <strong>ONTAP Update</strong>.</p>
 </li>
 <li>
 <p>Select the <strong>Firmware Update</strong> tab.</p>
 </li>
 <li>
-<p>On the <strong>Firmware Update</strong> tab, click <strong>More</strong> <span class="image"><img src="./media/icon_kabob.gif" alt="kebab icon"></span>, then click <strong>View All Automatic Updates</strong>.</p>
+<p>On the <strong>Firmware Update</strong> tab, click <strong>More</strong> <span class="image"><img src="./media/icon_kabob.gif" alt="make a choice"></span>, then click <strong>View All Automatic Updates</strong>.</p>
 </li>
 </ol>
 </div></div></td>
@@ -37321,7 +37320,7 @@ You can monitor or verify updates under <strong>Firmware Update Summary</strong>
 <p>Click <strong>Cluster &gt; Settings</strong>.</p>
 </li>
 <li>
-<p>In the <strong>Automatic Update</strong> section, click <span class="image"><img src="./media/icon_kabob.gif" alt="kebab icon"></span>, then click <strong>View All Automatic Updates</strong>.</p>
+<p>In the <strong>Automatic Update</strong> section, click <span class="image"><img src="./media/icon_kabob.gif" alt="make a choice"></span>, then click <strong>View All Automatic Updates</strong>.</p>
 </li>
 </ol>
 </div></div></td>
@@ -37335,7 +37334,7 @@ You can monitor or verify updates under <strong>Firmware Update Summary</strong>
 </div>
 </li>
 <li>
-<p>Click <span class="image"><img src="./media/icon_kabob.gif" alt="kebab icon"></span> next to the description to view a list of actions you can perform on the recommendation.</p>
+<p>Click <span class="image"><img src="./media/icon_kabob.gif" alt="make a choice"></span> next to the description to view a list of actions you can perform on the recommendation.</p>
 <div class="paragraph">
 <p>You can perform one of the following actions, depending on the state of the recommendation:</p>
 </div>
