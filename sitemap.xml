@@ -512,7 +512,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/concepts/aggregates-raid-groups-concept.html</loc>
       
-      <lastmod>2023-01-18T14:54:58+00:00</lastmod>
+      <lastmod>2023-01-20T15:38:48+00:00</lastmod>
       
     </url>
   
@@ -2535,7 +2535,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/authentication/config-worksheets-reference.html</loc>
       
-      <lastmod>2023-01-19T16:44:15+00:00</lastmod>
+      <lastmod>2023-01-20T15:38:48+00:00</lastmod>
       
     </url>
   
@@ -3025,7 +3025,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/ndmp/configure-lifs-node-scoped-task.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2023-01-12T17:37:39+00:00</lastmod>
       
     </url>
   
@@ -3487,7 +3487,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/configure_firewall_policies_for_lifs.html</loc>
       
-      <lastmod>2022-10-10T11:32:40+00:00</lastmod>
+      <lastmod>2023-01-12T17:37:39+00:00</lastmod>
       
     </url>
   
@@ -3522,7 +3522,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/configure_lifs_@cluster_administrators_only@_overview.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2023-01-12T17:37:39+00:00</lastmod>
       
     </url>
   
@@ -4061,7 +4061,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/s3-config/create-data-lifs-task.html</loc>
       
-      <lastmod>2022-05-24T19:37:03+00:00</lastmod>
+      <lastmod>2023-01-12T17:37:39+00:00</lastmod>
       
     </url>
   
@@ -4236,14 +4236,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nfs-config/create-lif-task.html</loc>
       
-      <lastmod>2021-12-09T22:31:46+00:00</lastmod>
+      <lastmod>2023-01-12T17:37:39+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/smb-config/create-lif-task.html</loc>
       
-      <lastmod>2022-03-07T14:39:14+00:00</lastmod>
+      <lastmod>2023-01-12T17:37:39+00:00</lastmod>
       
     </url>
   
@@ -4936,7 +4936,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/create_an_snmp_community_and_assigning_it_to_a_lif.html</loc>
       
-      <lastmod>2021-05-14T01:04:54+00:00</lastmod>
+      <lastmod>2023-01-12T17:37:39+00:00</lastmod>
       
     </url>
   
@@ -6427,7 +6427,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/display_network_port_information_@cluster_administrators_only@.html</loc>
       
-      <lastmod>2023-01-18T14:54:58+00:00</lastmod>
+      <lastmod>2023-01-20T15:38:48+00:00</lastmod>
       
     </url>
   
@@ -6735,7 +6735,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/s3-multiprotocol/enable-client-users-task.html</loc>
       
-      <lastmod>2023-01-18T14:54:58+00:00</lastmod>
+      <lastmod>2023-01-20T15:38:48+00:00</lastmod>
       
     </url>
   
@@ -9794,7 +9794,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/concepts/logical-ports-concept.html</loc>
       
-      <lastmod>2023-01-18T14:54:58+00:00</lastmod>
+      <lastmod>2023-01-20T15:38:48+00:00</lastmod>
       
     </url>
   
@@ -12097,7 +12097,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/peering/prerequisites-cluster-peering-reference.html</loc>
       
-      <lastmod>2022-01-17T11:43:32+00:00</lastmod>
+      <lastmod>2023-01-12T17:37:39+00:00</lastmod>
       
     </url>
   
@@ -12776,7 +12776,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/system-admin/remov-nodes-cluster-concept.html</loc>
       
-      <lastmod>2023-01-12T17:14:07+00:00</lastmod>
+      <lastmod>2023-01-23T18:21:26+00:00</lastmod>
       
     </url>
   
@@ -12839,7 +12839,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/disks-aggregates/remove-ownership-disk-task.html</loc>
       
-      <lastmod>2022-08-29T21:22:22+00:00</lastmod>
+      <lastmod>2023-01-23T16:10:24+00:00</lastmod>
       
     </url>
   
@@ -13679,7 +13679,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2023-01-21T00:04:09+00:00</lastmod>
+      <lastmod>2023-01-24T00:31:51+00:00</lastmod>
       
     </url>
   

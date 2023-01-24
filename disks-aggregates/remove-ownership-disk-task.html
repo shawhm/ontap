@@ -36871,7 +36871,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-29 21:22:22 +0000">08/29/2022</time>
+    <time datetime="2023-01-23 16:10:24 +0000">01/23/2023</time>
     
   
 
@@ -36952,13 +36952,38 @@
 </div>
 </li>
 <li>
-<p>If the disk is partitioned for root-data partitioning, remove ownership from the partitions by entering both of the following commands:</p>
-<div class="paragraph">
+<p>If the disk is partitioned for root-data partitioning, remove ownership from the partitions:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">For ONTAP 9.9.1 and earlier</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">For ONTAP 9.10.1 and later</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Enter both commands:</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><code>storage disk removeowner -disk <em>disk_name</em> -root true</code></p>
 </div>
 <div class="paragraph">
 <p><code>storage disk removeowner -disk <em>disk_name</em> -data true</code></p>
-</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Enter the following command:</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>storage disk removeowner -disk <em>disk_name</em></code></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Both partitions are no longer owned by any node.</p>
 </div>
