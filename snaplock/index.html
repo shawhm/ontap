@@ -36921,10 +36921,42 @@
 <p>Using SnapLock, you commit files and Snapshot copies to WORM storage, and set retention periods for WORM-protected data.</p>
 </div>
 <div class="paragraph">
-<p>There are two SnapLock versions: SnapLock: Compliance and SnapLock Enterprise. Both versions run on NetApp systems with all storage types. This flexibility enables you to buy the type and amount of storage that fits your business needs for SnapLock WORM storage.</p>
+<p>The supported open file protocols for SnapLock are NFS (versions 2, 3, and 4) and CIFS (SMB 1.0, 2.0, and 3.0).</p>
 </div>
 <div class="paragraph">
-<p>SnapLock WORM storage uses NetApp Snapshot™ technology and can leverage NetApp SnapMirror® replication software, and NetApp SnapVault® backup feature as the base technology for providing backup recovery protection for data.</p>
+<p>SnapLock does not require any special hardware. SnapLock is supported on all AFF and FAS systems as well as ONTAP Select.
+SnapLock is not a software-only solution; it is an integrated hardware and software solution. This distinction is important for strict WORM regulations such as SEC 17a-4, which requires an integrated hardware and software solution. For more information, refer to SEC Interpretation: Electronic Storage of Broker-Dealer Records.</p>
+</div>
+<div class="paragraph">
+<p>You can use an application to commit files to WORM over NFS or CIFS, or use the SnapLock autocommit feature to commit files to WORM automatically. You can use a <em>WORM appendable file</em> to retain data that is written incrementally, like log information. For more information see <a href="https://docs.netapp.com/us-en/ontap/snaplock/volume-append-mode-create-worm-appendable-files-task.html">Use volume append mode to create WORM appendable files</a>.</p>
+</div>
+<div class="paragraph">
+<p>SnapLock supports data protection methods that should satisfy most compliance requirements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You can use SnapLock for SnapVault to WORM-protect Snapshot copies on secondary storage. See <a href="https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html">Commit Snapshot copies to WORM</a>.</p>
+</li>
+<li>
+<p>You can use SnapMirror to replicate WORM files to another geographic location for disaster recovery. See <a href="https://docs.netapp.com/us-en/ontap/snaplock/mirror-worm-files-task.html">Mirror WORM files</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>SnapLock is a license-based feature of NetApp ONTAP. A single license entitles you to use SnapLock in strict Compliance mode, to satisfy external mandates like SEC Rule 17a-4, and a looser Enterprise mode, to meet internally mandated regulations for the protection of digital assets. SnapLock licenses are part of the Security and Compliance bundle.</p>
+</div>
+<div class="paragraph">
+<p>The scope of SnapLock support has evolved with ONTAP 9 releases. The most significant expansions are:</p>
+</div>
+<div class="paragraph">
+<p>Storage efficiency: Beginning with ONTAP 9.9.1, SnapLock supports storage efficiency features, such as data compaction, cross-volume-deduplication, and adaptive compression for SnapLock volumes and aggregates. For more information about storage efficiency, see <a href="https://docs.netapp.com/us-en/ontap/volumes/index.html">Logical storage management overview with the CLI</a>.</p>
+</div>
+<div class="paragraph">
+<p>FlexGroup volumes: Beginning with ONTAP 9.11.1, SnapLock supports FlexGroup volumes except when using Legal Hold, event-based retention and SnapLock for SnapVault. Beginning with ONTAP 9.12.1, SnapLock for SnapVault is support with FlexGroup volumes.</p>
+</div>
+<div class="paragraph">
+<p>SnapLock WORM storage uses NetApp Snapshot™ technology and can leverage SnapMirror® replication, and SnapVault® backups as the base technology for providing backup recovery protection for data.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -36943,103 +36975,6 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="file-access-protocols-supported">File access protocols supported</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The supported open file protocols for SnapLock are NFS (versions 2, 3, and 4) and CIFS (SMB 1.0, 2.0, and 3.0).</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="licensing">Licensing</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>SnapLock is a license-based feature of NetApp ONTAP. A single license entitles you to use SnapLock in strict Compliance mode, to satisfy external mandates like SEC Rule 17a-4, and a looser Enterprise mode, to meet internally mandated regulations for the protection of digital assets. SnapLock licenses are part of the Security and Compliance bundle.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="when-you-can-use-snaplock">When you can use SnapLock</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You should use SnapLock in the following situations:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>You want to create Compliance or Enterprise aggregates to host SnapLock audit log volumes on MetroCluster configurations, with the following limitation:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>SnapLock Enterprise is supported on mirrored and unmirrored aggregates.</p>
-</li>
-<li>
-<p>SnapLock Compliance is supported on unmirrored aggregates only.</p>
-<div class="paragraph">
-<p>All MetroCluster configurations support mirrored aggregates. See the <a href="https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508">ONTAP release notes</a> to determine if your MetroCluster configuration supports unmirrored aggregates.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>You want to use SnapLock Enterprise aggregates with FabricPool.</p>
-<div class="paragraph">
-<p>Beginning with ONTAP 9.8, SnapLock Enterprise aggregates are supported with <a href="https://docs.netapp.com/us-en/ontap/fabricpool/index.html">FabricPool</a>.</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="when-you-should-not-use-snaplock">When you should not use SnapLock</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You should not use SnapLock if the following situations apply:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>You are using SAN LUNs. SAN LUNs are not supported on SnapLock volumes. Although it is possible to move SAN LUNs onto a SnapLock volume using legacy technology, this is not a supported operation, nor is any other operation involving SAN LUNs on a SnapLock volume.</p>
-</li>
-<li>
-<p>You are using SMTape.</p>
-</li>
-<li>
-<p>You are creating Compliance aggregates for array LUNs. SnapLock Compliance aggregates do not support array LUNs.</p>
-</li>
-<li>
-<p>You are creating Compliance aggregates with the SyncMirror option. SnapLock Compliance aggregates do not support SyncMirror plexes.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>SSDs and Flash Pool aggregates are supported by SnapLock beginning with ONTAP 9.1.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="integrated-hardware-and-software">Integrated hardware and software</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>SnapLock does not require any special hardware. SnapLock is a licensed feature of Data ONTAP and is supported on all AFF and FAS systems that support ONTAP 9. It is also supported on ONTAP Select.
-SnapLock is not a software-only solution; it is an integrated hardware and software solution. This distinction is important for strict WORM regulations such as SEC 17a-4, which requires an integrated hardware and software solution. For more information, refer to SEC Interpretation: Electronic Storage of Broker-Dealer Records.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="what-you-can-do-with-snaplock">What you can do with SnapLock</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -37054,7 +36989,7 @@ SnapLock is not a software-only solution; it is an integrated hardware and softw
 <p>Manage WORM files for disaster recovery</p>
 </li>
 <li>
-<p>Commit files to WORM for XYZ</p>
+<p>Commit files to WORM</p>
 </li>
 <li>
 <p>Commit Snapshot copies to WORM for secondary storage</p>
@@ -37088,7 +37023,7 @@ SnapLock is not a software-only solution; it is an integrated hardware and softw
 </div>
 </div>
 <div class="sect1">
-<h2 id="differences-between-compliance-and-enterprise-modes">Differences between Compliance and Enterprise modes</h2>
+<h2 id="snaplock-compliance-and-enterprise-modes">SnapLock Compliance and Enterprise modes</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>SnapLock Compliance and Enterprise modes differ mainly in the level at which each mode protects WORM files:</p>
@@ -37251,132 +37186,7 @@ SnapLock is not a software-only solution; it is an integrated hardware and softw
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SAN</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SnapMirror Synchronous</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SnapMirror Business Continuity</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Single-file SnapRestore</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Yes</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SnapRestore</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Yes</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>FlexClone</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>You can clone SnapLock volumes, but you cannot clone files on a SnapLock volume.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>You can clone SnapLock volumes, but you cannot clone files on a SnapLock volume.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>LUNs</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SMTape</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>MetroCluster configurations</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Yes, under the following conditions:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Beginning with ONTAP 9.3, SnapLock Compliance is supported on unmirrored MetroCluster aggregates.</p>
-</li>
-<li>
-<p>Beginning with ONTAP 9.3, SnapLock Compliance is supported on mirrored aggregates, but only if the aggregate is used to host SnapLock audit log volumes.</p>
-</li>
-<li>
-<p>SVM-specific SnapLock configurations can be replicated to primary and secondary sites using MetroCluster.</p>
-</li>
-</ul>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Yes, under the following conditions:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Beginning with ONTAP 9, SnapLock Enterprise aggregates are supported.</p>
-</li>
-<li>
-<p>Beginning with ONTAP 9.3, SnapLock Enterprise aggregates with privileged delete are supported.</p>
-</li>
-<li>
-<p>SVM-specific SnapLock configurations can be replicated to both sites using MetroCluster.</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Support FabricPools on SnapLock aggregates</p>
+<p>FabricPools on SnapLock aggregates</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -37397,6 +37207,28 @@ SnapLock is not a software-only solution; it is an integrated hardware and softw
 </td>
 </tr>
 </table>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Flash Pool aggregates</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Yes, beginning with ONTAP 9.1.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Yes, beginning with ONTAP 9.1.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>FlexClone</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>You can clone SnapLock volumes, but you cannot clone files on a SnapLock volume.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>You can clone SnapLock volumes, but you cannot clone files on a SnapLock volume.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -37462,6 +37294,131 @@ SnapLock is not a software-only solution; it is an integrated hardware and softw
 </ul>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>LUNs</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>MetroCluster configurations</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Yes, under the following conditions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Beginning with ONTAP 9.3, SnapLock Compliance is supported on unmirrored MetroCluster aggregates.</p>
+</li>
+<li>
+<p>Beginning with ONTAP 9.3, SnapLock Compliance is supported on mirrored aggregates, but only if the aggregate is used to host SnapLock audit log volumes.</p>
+</li>
+<li>
+<p>SVM-specific SnapLock configurations can be replicated to primary and secondary sites using MetroCluster.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Yes, under the following conditions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Beginning with ONTAP 9, SnapLock Enterprise aggregates are supported.</p>
+</li>
+<li>
+<p>Beginning with ONTAP 9.3, SnapLock Enterprise aggregates with privileged delete are supported.</p>
+</li>
+<li>
+<p>SVM-specific SnapLock configurations can be replicated to both sites using MetroCluster.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>SAN</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Single-file SnapRestore</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Yes</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>SnapMirror Business Continuity</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>SnapRestore</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Yes</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>SMTape</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>SnapMirror Synchronous</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>SSDs</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Yes, beginning with ONTAP 9.1.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Yes, beginning with ONTAP 9.1.</p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -37477,40 +37434,6 @@ SnapLock is not a software-only solution; it is an integrated hardware and softw
 </div>
 <div class="paragraph">
 <p>When Site A is brought back online and the volume switchback is performed, the Site A SCC clock restarts while the VCC of the volume continues to be updated. Because the VCC is continuously updated, regardless of switchover and switchback operations, the file retention times do not depend on SCC clocks and do not stretch.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="commit-files-to-worm">Commit files to WORM</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can use an application to commit files to WORM over NFS or CIFS, or use the SnapLock autocommit feature to commit files to WORM automatically. You can use a <em>WORM appendable file</em> to retain data that is written incrementally, like log information. For more information see <a href="https://docs.netapp.com/us-en/ontap/snaplock/volume-append-mode-create-worm-appendable-files-task.html">Use volume append mode to create WORM appendable files</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="data-protection">Data protection</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>SnapLock supports data protection methods that should satisfy most compliance requirements:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>You can use SnapLock for SnapVault to WORM-protect Snapshot copies on secondary storage. See <a href="https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html">Commit Snapshot copies to WORM</a>.</p>
-</li>
-<li>
-<p>You can use SnapMirror to replicate WORM files to another geographic location for disaster recovery. See <a href="https://docs.netapp.com/us-en/ontap/snaplock/mirror-worm-files-task.html">Mirror WORM files</a>.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="storage-efficiency">Storage efficiency</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Beginning with ONTAP 9.9.1, SnapLock supports storage efficiency features, such as data compaction, cross-volume-deduplication, and adaptive compression for SnapLock volumes and aggregates. For more information about storage efficiency, see <a href="https://docs.netapp.com/us-en/ontap/volumes/index.html">Logical storage management overview with the CLI</a>.</p>
 </div>
 </div>
 </div>
