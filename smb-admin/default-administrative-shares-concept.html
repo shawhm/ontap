@@ -9,14 +9,14 @@
   <meta property="og:title" content="What the default administrative shares are" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/smb-admin/default-administrative-shares-concept.html" />
-	<meta property="og:description" content="When you create a CIFS server on your storage virtual machine (SVM), three default administrative shares are automatically created. You should understand wha..." />
+	<meta property="og:description" content="When you create a CIFS server on your storage virtual machine (SVM), default administrative shares are automatically created. You should understand what thos..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="When you create a CIFS server on your storage virtual machine (SVM), three default administrative shares are automatically created. You should understand wha...">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="When you create a CIFS server on your storage virtual machine (SVM), default administrative shares are automatically created. You should understand what thos...">
   <meta name="keywords" content=" create, cifs, server, storage, virtual, machine, svm, default, administrative, share, automatic, what the default administrative shares are"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
@@ -36871,7 +36871,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-09 22:31:46 +0000">12/09/2021</time>
+    <time datetime="2023-01-25 17:23:30 +0000">01/25/2023</time>
     
   
 
@@ -36892,10 +36892,22 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>When you create a CIFS server on your storage virtual machine (SVM), three default administrative shares are automatically created. You should understand what those default shares are and how they are used.</p>
+<p>When you create a CIFS server on your storage virtual machine (SVM), default administrative shares are automatically created. You should understand what those default shares are and how they are used.</p>
 </div>
 <div class="paragraph">
 <p>ONTAP creates the following default administrative shares when you create the CIFS server:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Beginning with ONTAP 9.8, the admin$ share is no longer created by default.
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
 <ul>
@@ -36903,7 +36915,7 @@
 <p>ipc$</p>
 </li>
 <li>
-<p>admin$</p>
+<p>admin$ (ONTAP 9.7 and earlier only)</p>
 </li>
 <li>
 <p>c$</p>
@@ -36930,7 +36942,19 @@
 </div>
 </li>
 <li>
-<p>admin$ share</p>
+<p>admin$ share (ONTAP 9.7 and earlier only)</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Beginning with ONTAP 9.8, the admin$ share is no longer created by default.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>The admin$ share is used during remote administration of the SVM. The path of this resource is always the path to the SVM root. You cannot change the share settings, share properties, or ACLs for the admin$ share. You also cannot rename or delete the admin$ share.</p>
 </div>
