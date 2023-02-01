@@ -14101,6 +14101,10 @@
 
 
 
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
 
 
         </li>
@@ -14142,10 +14146,6 @@
       </ul>
     
 
-  
-
-
-    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
   
 
 
@@ -34185,6 +34185,13 @@
         Set the retention time
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Create an audit log"
+      data-li-level="4#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/create-audit-log-task.html">
+        Create an audit log
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Verify SnapLock settings"
       data-li-level="4#" 
       class=" "
@@ -34242,13 +34249,6 @@
     ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/delete-worm-files-concept.html">
         Delete WORM files
       </a></li></ul></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Create an audit log"
-      data-li-level="3#" 
-      class="  active "
-    ><a class="na-navbar-padding" href="/us-en/ontap/snaplock/create-audit-log-task.html">
-        Create an audit log
-      </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Move a SnapLock volume"
       data-li-level="3#" 
@@ -36871,7 +36871,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-06 21:08:31 +0000">05/06/2022</time>
+    <time datetime="2023-01-31 21:20:32 +0000">01/31/2023</time>
     
   
 
@@ -36980,7 +36980,7 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The minimum default retention period for audit log files is six months. If the retention period of an affected file is longer than the retention period of the audit log, the retention period of the log inherits the retention period of the file. So, if the retention period for a file deleted using privileged delete is 10 months, and the retention period of the audit log is 8 months, the retention period of the log is extended to 10 months.</p>
+<p>The minimum default retention period for audit log files is six months. If the retention period of an affected file is longer than the retention period of the audit log, the retention period of the log inherits the retention period of the file. So, if the retention period for a file deleted using privileged delete is 10 months, and the retention period of the audit log is 8 months, the retention period of the log is extended to 10 months. For more information about retention time and default retention period, see <a href="https://docs.netapp.com/us-en/ontap/snaplock/set-retention-period-task.htm">Set the retention time</a>.</p>
 </div>
 </td>
 </tr>
