@@ -9,15 +9,15 @@
   <meta property="og:title" content="ONTAP support for NFSv4.2" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/nfs-admin/ontap-support-nfsv42-concept.html" />
-	<meta property="og:description" content="Beginning with ONTAP 9.8, the NFSv4.2 protocol is supported to allow access for NFSv4.2 clients." />
+	<meta property="og:description" content="Beginning with ONTAP 9.8, the NFSv4.2 protocol is supported to allow access for NFSv4.2-enabled clients." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Beginning with ONTAP 9.8, the NFSv4.2 protocol is supported to allow access for NFSv4.2 clients.">
-  <meta name="keywords" content=" ontap, support, nfsv4.2"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Beginning with ONTAP 9.8, the NFSv4.2 protocol is supported to allow access for NFSv4.2-enabled clients.">
+  <meta name="keywords" content=" ontap, support, nfsv4.2, MAC-labelled NFS, extended attributes, xattrs"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -195,15 +195,12 @@
           <li class="n-top-hat__list-item">
             <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Customer Stories</a>
           </li>
-          <li class="n-top-hat__list-item">
-            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
-          </li>
         </ul>
       </div>
       <div class="n-top-hat__utils">
         <ul class="n-top-hat__list">
           <li class="n-top-hat__list-item">
-            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+            <a href="https://www.netapp.com/company/contact-us/" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
           </li>
         </ul>
       </div>
@@ -287,47 +284,20 @@
         </li><li>
           <a href="https://docs.netapp.com/ja-jp/ontap/nfs-admin/ontap-support-nfsv42-concept.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
         </li><li>
+          <a href="https://docs.netapp.com/ko-kr/ontap/nfs-admin/ontap-support-nfsv42-concept.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
           <a href="https://docs.netapp.com/zh-cn/ontap/nfs-admin/ontap-support-nfsv42-concept.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
           <a href="https://docs.netapp.com/zh-tw/ontap/nfs-admin/ontap-support-nfsv42-concept.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ko-kr/ontap/nfs-admin/ontap-support-nfsv42-concept.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+          <a href="https://docs.netapp.com/de-de/ontap/nfs-admin/ontap-support-nfsv42-concept.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li><li>
           <a href="https://docs.netapp.com/fr-fr/ontap/nfs-admin/ontap-support-nfsv42-concept.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
-        </li><li>
-          <a href="https://docs.netapp.com/de-de/ontap/nfs-admin/ontap-support-nfsv42-concept.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
   </div>
-  <script>
-    $(function(){
-        var currentLocalization = $('html').attr('lang');
-
-        var localizationsDictionary = {
-            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
-            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
-            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
-            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
-            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
-            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
-            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
-            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
-            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
-            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
-            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
-            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
-            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
-            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
-            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
-        };
-
-        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
-            $('.n-property-bar__property-link').attr('href', '/');
-        }
-    });
-  </script>
   <!-- End property bar -->
 </header>
 
@@ -36871,11 +36841,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-14 21:50:12 +0000">10/14/2021</time>
+    <time datetime="2023-01-27 19:20:09 +0000">01/27/2023</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-forry">
+    <img  class="avatar avatar-small"
+          alt="netapp-forry"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/51911827?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -36884,7 +36862,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Beginning with ONTAP 9.8, the NFSv4.2 protocol is supported to allow access for NFSv4.2 clients.</p>
+<p>Beginning with ONTAP 9.8, the NFSv4.2 protocol is supported to allow access for NFSv4.2-enabled clients.</p>
 </div>
 <div class="paragraph">
 <p>NFSv4.2 is enabled by default in ONTAP 9.9.1 and later. In ONTAP 9.8, you can enable v4.2 by specifying the <code>-v4.1</code> option and setting it to <code>enabled</code> when creating an NFS server on the storage virtual machine (SVM). Enabling NFSv4.1 also enables clients to use the NFSv4.1 features while mounted as v4.2.</p>
@@ -36892,15 +36870,38 @@
 <div class="paragraph">
 <p>The following NFSv4.2 optional features are supported:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Beginning with ONTAP 9.9.1, Mandatory Access Control (MAC) labelled NFS is supported when NFSv4.2 is enabled.</p>
-</li>
-<li>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">Supported beginning with &#8230;&#8203;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Mandatory Access Control (MAC) labelled NFS</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ONTAP 9.9.1</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>NFS extended attributes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ONTAP 9.12.1</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
 <p>Additional NFSv4.2 optional features will be added in a later ONTAP release.</p>
-</li>
-</ul>
 </div>
 </div>
 </div>
@@ -36914,21 +36915,10 @@
 <p>With NFS v4.2 security labels, ONTAP NFS servers are Mandatory Access Control (MAC) aware, storing and retrieving sec_label attributes sent by clients.</p>
 </div>
 <div class="paragraph">
-<p>For more information, see <a href="https://tools.ietf.org/html/rfc7204">RFC7240</a></p>
+<p>For more information, see <a href="https://tools.ietf.org/html/rfc7204" target="_blank" rel="noopener">RFC 7240</a></p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
 <div class="paragraph">
-<p>NFS v4.2 security labels are not currently supported for NDMP dump operations. If security labels are encountered on files or directories, the dump fails.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>Beginning with ONTAP 9.12.1, NFS v4.2 security labels are supported for NDMP dump operations. If security labels are encountered on files or directories in earlier releases, the dump fails.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
@@ -36942,10 +36932,27 @@
 <li>
 <p>Enable security labels:</p>
 <div class="paragraph">
-<p><code>vserver nfs modify -vserver svm_name -v4.2-seclabel enabled</code></p>
+<p><code>vserver nfs modify -vserver <em>svm_name</em> -v4.2-seclabel enabled</code></p>
 </div>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="enable-nfs-extended-attributes">Enable NFS extended attributes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Beginning with ONTAP 9.12.1, NFS extended attributes (xattrs) are enabled by default.</p>
+</div>
+<div class="paragraph">
+<p>Extended attributes are standard NFS attributes defined by <a href="https://tools.ietf.org/html/rfc8276" target="_blank" rel="noopener">RFC 8276</a> and enabled in modern NFS clients. They can be used to attach user-defined metadata to file system objects, and are of interest in advanced security deployments.</p>
+</div>
+<div class="paragraph">
+<p>NFS extended attributes are not currently supported for NDMP dump operations. If extended attributes are encountered on files or directories, the dump proceeds but does not back up the extended attributes on those files or directories.</p>
+</div>
+<div class="paragraph">
+<p>If you need to disable extended attributes, use the <code>vserver nfs modify -v4.2-xattrs disabled</code> command.</p>
 </div>
 </div>
 </div>
@@ -36965,7 +36972,7 @@
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2023 NetApp, Inc.</a>
+              <a href="https://www.netapp.com/company/legal/copyright/">© 2023 NetApp, Inc.</a>
             </li>
             <li class="n-footer__copyright-link">
               <a href="https://www.netapp.com/company/legal/terms-of-use/">Terms of Use</a>
