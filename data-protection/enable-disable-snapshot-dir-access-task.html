@@ -36841,7 +36841,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-02 23:19:48 +0000">02/02/2022</time>
+    <time datetime="2023-02-02 18:08:12 +0000">02/02/2023</time>
     
   
 
@@ -36867,10 +36867,8 @@
 <ol class="arabic">
 <li>
 <p>Check the Snapshot directory access status:</p>
-<div class="literalblock">
-<div class="content">
-<pre>`volume show -vserver _SVM_name_ -volume _vol_name_ -fields snapdir-access`</pre>
-</div>
+<div class="paragraph">
+<p><code>volume show -vserver <em>SVM_name</em> -volume <em>vol_name</em> -fields snapdir-access</code></p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -36887,14 +36885,14 @@ vs0     vol1   false</pre>
 <li>
 <p>Enable or disable the Snapshot copy directory access:</p>
 <div class="paragraph">
-<p><code>volume modify -volume <em>vol_name</em> -snapdir-access true|false</code></p>
+<p><code>volume modify -vserver <em>SVM_name</em> -volume <em>vol_name</em> -snapdir-access true|false</code></p>
 </div>
 <div class="paragraph">
 <p>The following example enables Snapshot copy directory access on vol1:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>clus1::&gt; volume modify -volume vol1 -snapdir-access true
+<pre>clus1::&gt; volume modify -vserver vs0 -volume vol1 -snapdir-access true
 Volume modify successful on volume vol1 of Vserver vs0.</pre>
 </div>
 </div>
