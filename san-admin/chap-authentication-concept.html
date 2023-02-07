@@ -36841,7 +36841,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-14 21:50:12 +0000">10/14/2021</time>
+    <time datetime="2023-02-06 21:29:25 +0000">02/06/2023</time>
     
   
 
@@ -36887,13 +36887,27 @@
 <p>Passwords can be hexadecimal values or strings. For hexadecimal values, you should enter the value with a prefix of &#8220;0x&#8221; or &#8220;0X&#8221;. A null password is not allowed.</p>
 </div>
 </li>
-<li>
-<p>For additional restrictions, you should see the initiator&#8217;s documentation.</p>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>ONTAP allows the use of special characters, non-English letters, numbers and spaces for CHAP passwords (secrets).  However, this is subject to host restrictions.  If any of these are not allowed by your specific host, they cannot be used.</p>
+</div>
 <div class="paragraph">
 <p>For example, the Microsoft iSCSI software initiator requires both the initiator and target CHAP passwords to be at least 12 bytes if IPsec encryption is not being used. The maximum password length is 16 bytes regardless of whether IPsec is used.</p>
 </div>
-</li>
-</ul>
+<div class="paragraph">
+<p>For additional restrictions, you should see the initiator&#8217;s documentation.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
