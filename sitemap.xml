@@ -8919,7 +8919,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/svm-migrate/</loc>
       
-      <lastmod>2023-02-06T21:21:03+00:00</lastmod>
+      <lastmod>2023-02-07T22:39:32+00:00</lastmod>
       
     </url>
   
@@ -9185,7 +9185,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/nfs-rdma/</loc>
       
-      <lastmod>2022-11-11T01:50:17+00:00</lastmod>
+      <lastmod>2023-02-06T19:35:40+00:00</lastmod>
       
     </url>
   
@@ -12090,7 +12090,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/flexcache/prepopulate-volume-task.html</loc>
       
-      <lastmod>2022-11-03T17:39:24+00:00</lastmod>
+      <lastmod>2023-02-07T23:58:39+00:00</lastmod>
       
     </url>
   
@@ -12140,6 +12140,13 @@
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/prevent-loss-connectivity-x1133a-r6-adapter-concept.html</loc>
       
       <lastmod>2021-10-22T16:28:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/san-admin/prevent_port_overlap_between_switchover.html</loc>
+      
+      <lastmod>2023-02-08T15:26:08+00:00</lastmod>
       
     </url>
   
@@ -13679,7 +13686,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2023-02-07T18:48:13+00:00</lastmod>
+      <lastmod>2023-02-08T22:25:56+00:00</lastmod>
       
     </url>
   
@@ -14624,7 +14631,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-synchronous-disaster-recovery-basics-concept.html</loc>
       
-      <lastmod>2023-01-10T20:58:40+00:00</lastmod>
+      <lastmod>2023-02-07T21:46:17+00:00</lastmod>
       
     </url>
   

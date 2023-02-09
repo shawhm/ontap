@@ -10613,7 +10613,32 @@
   
 
 
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/ontap/pdfs/sidebar/SAN_configurations_in_a_MetroCluster_environment.pdf" 
+            
+          >
+            <img src="/us-en/ontap/images/pdf.png" alt="" width="16" height="16"/>
+            SAN configurations in a MetroCluster environment
+          </a>
+          
     <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
   
 
 
@@ -29822,11 +29847,27 @@
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="SAN configurations in a MetroCluster environment"
-      data-li-level="3#" 
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> SAN configurations in a MetroCluster environment</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Overview"
+      data-li-level="4#" 
       class="  active "
     ><a class="na-navbar-padding" href="/us-en/ontap/san-admin/san-config-mcc-concept.html">
-        SAN configurations in a MetroCluster environment
+        Overview
       </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prevent port overlap between switchover and switchback"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/san-admin/prevent_port_overlap_between_switchover.html">
+        Prevent port overlap between switchover and switchback
+      </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="SAN concepts"
       data-li-level="3" 
@@ -36868,13 +36909,13 @@
 <p>MetroCluster configurations do not support front-end FC fabric &#8220;routed&#8221; vSAN configurations.</p>
 </li>
 <li>
-<p>MetroCluster configurations do not support front-end NVMe host connectivity.</p>
+<p>Beginning with ONTAP 9.12.1, four-node MetroCluster IP configurations are supported on NVMe/FC. MetroCluster configurations are not supported for NVMe prior to ONTAP 9.12.1.</p>
 </li>
 <li>
-<p>Other SAN protocols are supported on MetroCluster configurations.</p>
+<p>Other SAN protocols such as iSCSI, FC, and FCoE are supported on MetroCluster configurations.</p>
 </li>
 <li>
-<p>When using SAN client configurations, you must check whether any special considerations for MetroCluster configurations are included in the notes that are provided in the Interoperability Matrix Tool (IMT).</p>
+<p>When using SAN client configurations, you must check whether any special considerations for MetroCluster configurations are included in the notes that are provided in the <a href="https://mysupport.netapp.com/matrix" target="_blank" rel="noopener">NetApp Interoperability Matrix Tool</a> (IMT).</p>
 </li>
 <li>
 <p>Operating systems and applications must provide an I/O resiliency of 120 seconds to support MetroCluster automatic unplanned switchover and Tiebreaker or Mediator-initiated switchover.</p>
@@ -36884,156 +36925,18 @@
 </li>
 </ul>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="Note">
-</td>
-<td class="content">
-During switchover, the FC port on the surviving site might log in to the fabric before the fabric has detected that the FC port on the disaster site is offline and has removed this port from the name and directory services. If the FC port on the disaster is not yet removed, the fabric login attempt of the FC port at the surviving site might be rejected due to a duplicate WWPN. This behavior of the FC switches can be changed to honor the login of the previous device and not the existing one. You should verify the effects of this behavior on other fabric devices. Contact the switch vendor for more information.
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
-<p>To learn more, see:</p>
+<div class="title">Related information</div>
+<p><a href="https://docs.netapp.com/us-en/ontap-metrocluster/manage/concept_understanding_mcc_data_protection_and_disaster_recovery.html" target="_blank" rel="noopener">Understanding MetroCluster data protection and disaster recovery</a></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.netapp.com/us-en/ontap-metrocluster/manage/concept_understanding_mcc_data_protection_and_disaster_recovery.html">Understanding MetroCluster data protection and disaster recovery</a></p>
-</li>
-<li>
-<p><a href="https://docs.netapp.com/us-en/ontap-metrocluster/manage/task_perform_switchover_for_tests_or_maintenance.html">Performing switchover for tests or maintenance</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Steps</div>
-<p>To avoid overlap when the old port goes offline and the new port comes online, use the following steps to configure the front-end switches:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 80%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock">For a&#8230;&#8203;</p></th>
-<th class="tableblock halign-left valign-top"><p class="tableblock">Use these steps:</p></th>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Cisco switch</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Connect to the switch and log in.</p>
-</li>
-<li>
-<p>Enter configuration mode:</p>
-<div class="literalblock">
-<div class="content">
-<pre>switch# config t
-switch(config)#</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Overwrite the first device entry in the name server database with the new device:</p>
-<div class="listingblock">
-<div class="content">
-<pre>switch(config)# no fcns reject-duplicate-pwwn vsan 1</pre>
-</div>
-</div>
-</li>
-<li>
-<p>In switches that are running NX-OS 8.x, confirm that the flogi quiesce timeout is set to zero:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Display the quiesce timerval:</p>
-<div class="paragraph">
-<p><code>switch(config)# show flogi interval info | i quiesce</code></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> Stats:  fs flogi quiesce timerval:  0</pre>
-</div>
-</div>
-</li>
-<li>
-<p>If the output in the previous step does not indicate that the
-timerval is zero, then set it to zero:</p>
-<div class="paragraph">
-<p><code>switch(config)# flogi scale enable</code></p>
-</div>
-<div class="paragraph">
-<p><code>switch(config)$ flogi quiesce timeout 0</code></p>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Brocade switch</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Connect to the switch and log in.</p>
-</li>
-<li>
-<p>Enter the <code>switchDisable</code> command.</p>
-</li>
-<li>
-<p>Enter the <code>configure</code> command, and press <code>y</code> at the prompt.</p>
-<div class="literalblock">
-<div class="content">
-<pre> F-Port login parameters (yes, y, no, n): [no] y</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Choose setting 1:</p>
-<div class="literalblock">
-<div class="content">
-<pre>- 0: First login take precedence over the second login (default)
-- 1: Second login overrides first login.
-- 2: the port type determines the behavior
-Enforce FLOGI/FDISC login: (0..2) [0] 1</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Respond to the remaining prompts, or press <strong>Ctrl + D</strong>.</p>
-</li>
-<li>
-<p>Enter the <code>switchEnable</code> command.</p>
-</li>
-</ol>
-</div></div></td>
-</tr>
-</tbody>
-</table>
 <div class="paragraph">
 <p>For further MetroCluster-specific host information, refer to the following NetApp Knowledge Base articles:</p>
 </div>
 <div class="paragraph">
-<p><a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/MetroCluster/What_are_AIX_Host_support_considerations_in_a_MetroCluster_configuration%3F">What are AIX Host support considerations in a MetroCluster configuration?</a></p>
+<p><a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/MetroCluster/What_are_AIX_Host_support_considerations_in_a_MetroCluster_configuration%3F" target="_blank" rel="noopener">What are AIX Host support considerations in a MetroCluster configuration?</a></p>
 </div>
 <div class="paragraph">
-<p><a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/MetroCluster/Solaris_host_support_considerations_in_a_MetroCluster_configuration">Solaris host support considerations in a MetroCluster configuration</a></p>
-</div>
-<div class="paragraph">
-<div class="title">Related information</div>
-<p><a href="https://mysupport.netapp.com/matrix" target="_blank" rel="noopener">NetApp Interoperability Matrix Tool</a></p>
+<p><a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/MetroCluster/Solaris_host_support_considerations_in_a_MetroCluster_configuration" target="_blank" rel="noopener">Solaris host support considerations in a MetroCluster configuration</a></p>
 </div>
 
     </article>
