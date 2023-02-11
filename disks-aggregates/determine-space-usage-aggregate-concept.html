@@ -985,8 +985,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -1017,6 +1015,8 @@
             What should I verify before I upgrade with or without Upgrade Advisor?
           </a>
           
+
+
 
 
 
@@ -15870,6 +15870,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -16787,13 +16789,6 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_identifying_current_cluster_activity.html">
         Current cluster activity
-      </a></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="How firmware is updated during upgrade"
-      data-li-level="5#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_how_firmware_is_updated_during_upgrade.html">
-        How firmware is updated during upgrade
       </a></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="What should I verify before I upgrade with or without Upgrade Advisor?"
@@ -16824,6 +16819,13 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verifying_storage_health_verifying_that_the_cluster_is_ready.html">
         Storage health
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Reboot SP or BMC"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_how_firmware_is_updated_during_upgrade.html">
+        Reboot SP or BMC
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="SVM routing configuration"
@@ -36720,6 +36722,13 @@
         Take corrective action based on analytics
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Role-based access control"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/file-system-analytics/role-based-access-control-task.html">
+        Role-based access control
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Considerations"
       data-li-level="3#" 
       class=" "
@@ -36882,7 +36891,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-13 18:17:16 +0000">09/13/2022</time>
+    <time datetime="2023-02-07 19:00:16 +0000">02/07/2023</time>
     
   
 
@@ -36902,6 +36911,12 @@
 
 <div class="paragraph lead">
 <p>You can view how much space is used by all of the volumes in one or more local tiers (aggregates) so that you can take actions to free more space.</p>
+</div>
+<div class="paragraph">
+<p>WAFL reserves 10% of the total disk space for aggregate level metadata and performance.  The space used for maintaining the volumes in the aggregate comes out of the WAFL reserve and cannot be changed.</p>
+</div>
+<div class="paragraph">
+<p>Beginning in ONTAP 9.12.1 and later, for All Flash FAS (AFF) and the FAS500f platforms, the WAFL reserve for aggregates greater than 30TB is reduced from 10% to 5%, resulting in increased usable space in the aggregate.</p>
 </div>
 <div class="paragraph">
 <p>You can view space usage by all volumes in one or more aggregates with the <code>aggregate show-space</code> command. This helps you see which volumes are consuming the most space in their containing aggregates so that you can take actions to free more space.</p>
@@ -36970,6 +36985,11 @@
       Total Used                              6.07GB         5%
       Total Physical Used                    34.82KB         0%</pre>
 </div>
+</div>
+<div class="paragraph">
+<div class="title">Related Information</div>
+<p><a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/Space_Usage">Knowledge based article: Space Usage</a>
+<a href="https://www.netapp.com/blog/free-up-storage-capacity-upgrade-ontap/">Free up 5% of your storage capacity by upgrading to ONTAP 9.12.1</a></p>
 </div>
 
     </article>

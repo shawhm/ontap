@@ -987,8 +987,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -1019,6 +1017,8 @@
             What should I verify before I upgrade with or without Upgrade Advisor?
           </a>
           
+
+
 
 
 
@@ -15870,6 +15870,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -16787,13 +16789,6 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_identifying_current_cluster_activity.html">
         Current cluster activity
-      </a></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="How firmware is updated during upgrade"
-      data-li-level="5#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_how_firmware_is_updated_during_upgrade.html">
-        How firmware is updated during upgrade
       </a></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="What should I verify before I upgrade with or without Upgrade Advisor?"
@@ -16824,6 +16819,13 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verifying_storage_health_verifying_that_the_cluster_is_ready.html">
         Storage health
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Reboot SP or BMC"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_how_firmware_is_updated_during_upgrade.html">
+        Reboot SP or BMC
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="SVM routing configuration"
@@ -36720,6 +36722,13 @@
         Take corrective action based on analytics
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Role-based access control"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/file-system-analytics/role-based-access-control-task.html">
+        Role-based access control
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Considerations"
       data-li-level="3#" 
       class=" "
@@ -36882,7 +36891,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-22 20:36:00 +0000">11/22/2022</time>
+    <time datetime="2023-02-10 18:09:29 +0000">02/10/2023</time>
     
   
 
@@ -37067,7 +37076,32 @@ If a direct or direct multi-hop path is not available for your non-adjacent targ
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">9.10.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">direct</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>direct</p>
+</div>
+<div class="paragraph">
+<p><strong>Attention Metrocluster configurations</strong>:<br>
+If you are upgrading a MetroCluster IP configuration from 9.8 to 9.10.1 on any of the following platforms, you must upgrade to 9.9.1 before you upgrade to 9.10.1.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>FAS2750</p>
+</li>
+<li>
+<p>FAS500f</p>
+</li>
+<li>
+<p>AFF A220</p>
+</li>
+<li>
+<p>AFF A250</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MetroCluster IP configurations on these platforms, cannot upgrade from 9.8 directly to 9.10.1.</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">9.9.1</p></td>

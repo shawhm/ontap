@@ -9,14 +9,14 @@
   <meta property="og:title" content="Enable Activity Tracking" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/file-system-analytics/activity-tracking-task.html" />
-	<meta property="og:description" content="Activity Tracking to view hot files, directories, clients, and users in a specified volume for real-time performance troubleshooting with" />
+	<meta property="og:description" content="Activity Tracking feature that allows you to identify hot objects and download them as a CSV file." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Activity Tracking to view hot files, directories, clients, and users in a specified volume for real-time performance troubleshooting with">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Activity Tracking feature that allows you to identify hot objects and download them as a CSV file.">
   <meta name="keywords" content=" monitor, volume, ontap, FSA, File System Analytics,"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
@@ -985,8 +985,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -1017,6 +1015,8 @@
             What should I verify before I upgrade with or without Upgrade Advisor?
           </a>
           
+
+
 
 
 
@@ -15870,6 +15870,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -16787,13 +16789,6 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_identifying_current_cluster_activity.html">
         Current cluster activity
-      </a></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="How firmware is updated during upgrade"
-      data-li-level="5#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_how_firmware_is_updated_during_upgrade.html">
-        How firmware is updated during upgrade
       </a></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="What should I verify before I upgrade with or without Upgrade Advisor?"
@@ -16824,6 +16819,13 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verifying_storage_health_verifying_that_the_cluster_is_ready.html">
         Storage health
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Reboot SP or BMC"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_how_firmware_is_updated_during_upgrade.html">
+        Reboot SP or BMC
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="SVM routing configuration"
@@ -36720,6 +36722,13 @@
         Take corrective action based on analytics
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Role-based access control"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/file-system-analytics/role-based-access-control-task.html">
+        Role-based access control
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Considerations"
       data-li-level="3#" 
       class=" "
@@ -36882,7 +36891,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-11 01:50:17 +0000">11/11/2022</time>
+    <time datetime="2023-02-10 21:52:55 +0000">02/10/2023</time>
     
   
 
@@ -36954,7 +36963,7 @@
 </div>
 <div class="paragraph">
 <div class="title">About this task</div>
-<p>If you use RBAC with the ONTAP REST API or System Manager, you will need to create custom roles to manage access to Activity Tracking. See <a href="#role-based-access-control-rbac-and-activity-tracking">Role-based access control (RBAC) and Activity Tracking</a> for this process.</p>
+<p>If you use RBAC with the ONTAP REST API or System Manager, you will need to create custom roles to manage access to Activity Tracking. See <a href="role-based-access-control-task.html">Role-based access control</a> for this process.</p>
 </div>
 <div class="exampleblock tabbed-block">
 <div class="content">
@@ -37014,7 +37023,7 @@
 </div>
 <div class="paragraph">
 <div class="title">About this task</div>
-<p>If you use RBAC with the ONTAP REST API or System Manager, you will need to create custom roles to manage access to Activity Tracking. See <a href="#role-based-access-control-rbac-and-activity-tracking">Role-based access control (RBAC) and Activity Tracking</a> for this process.</p>
+<p>If you use RBAC with the ONTAP REST API or System Manager, you will need to create custom roles to manage access to Activity Tracking. See <a href="#Role-based access control (RBAC) and Activity Tracking">[Role-based access control (RBAC) and Activity Tracking]</a> for this process.</p>
 </div>
 <div class="exampleblock tabbed-block">
 <div class="content">
@@ -37054,74 +37063,6 @@
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="role-based-access-control-rbac-and-activity-tracking">Role-based access control (RBAC) and Activity Tracking</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>If you use <a href="../concepts/administrator-authentication-rbac-concept.html">role-based access control</a> (RBAC) in System Manager or the ONTAP REST API, you will need to create a dedicated role to moderate access to Activity Tracking in File System Analytics.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Steps</div>
-<ol class="arabic">
-<li>
-<p>Create a default role to have access to all features.</p>
-<div class="paragraph">
-<p>This needs to be done before creating the restrictive role to ensure the role is only restrictive on the Activity Tracking:</p>
-</div>
-<div class="paragraph">
-<p><code>security login role create -cmddirname DEFAULT -access all -role storageAdmin</code></p>
-</div>
-</li>
-<li>
-<p>Create the restrictive role:</p>
-<div class="paragraph">
-<p><code>security login role create -cmddirname "volume file show-disk-usage" -access none -role storageAdmin</code></p>
-</div>
-</li>
-<li>
-<p>Authorize roles to access the SVM&#8217;s web services:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>rest</code> for REST API calls</p>
-</li>
-<li>
-<p><code>security</code> for password protection</p>
-</li>
-<li>
-<p><code>sysmgr</code> for System Manager access</p>
-<div class="paragraph">
-<p><code>vserver services web access create -vserver <em>svm-name</em> -name_ -name rest -role storageAdmin</code></p>
-</div>
-<div class="paragraph">
-<p><code>vserver services web access create -vserver <em>svm-name</em> -name security -role storageAdmin</code></p>
-</div>
-<div class="paragraph">
-<p><code>vserver services web access create -vserver <em>svm-name</em> -name sysmgr -role storageAdmin</code></p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Create a user.</p>
-<div class="paragraph">
-<p>You must issue a distinct create command for each application you would like to apply to the user. Calling create multiple times on the same user simply applies all the applications to that one user and does not create a new user each time. The <code>http</code> parameter for application type applies for the ONTAP REST API and System Manager.</p>
-</div>
-<div class="paragraph">
-<p><code>security login create -user-or-group-name storageUser -authentication-method password -application http -role storageAdmin</code></p>
-</div>
-</li>
-<li>
-<p>With the new user credentials, you can now log in to System Manager or use the ONTAP REST API to access File Systems Analytics data.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><a href="https://docs.netapp.com/us-en/ontap-automation/rest/rbac_overview.html" target="_blank" rel="noopener">Learn more about RBAC roles and the ONTAP REST API</a></p>
 </div>
 </div>
 </div>

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>How firmware is updated during the ONTAP upgrade</title>
+  <title>Prepare for firmware update</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="How firmware is updated during the ONTAP upgrade" />
+  <meta property="og:title" content="Prepare for firmware update" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/upgrade/concept_how_firmware_is_updated_during_upgrade.html" />
-	<meta property="og:description" content="Because upgrading ONTAP includes upgrading your firmware, you do not need to update firmware manually." />
+	<meta property="og:description" content="You do not need to manually update your firmware prior to an ONTAP upgrade.  The firmware for your cluster is included with the ONTAP upgrade package and is ..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Because upgrading ONTAP includes upgrading your firmware, you do not need to update firmware manually.">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You do not need to manually update your firmware prior to an ONTAP upgrade.  The firmware for your cluster is included with the ONTAP upgrade package and is ...">
   <meta name="keywords" content=" ontap, upgrade, how, firmware, updated, during"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
@@ -160,7 +160,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[How firmware is updated during the ONTAP upgrade](https://docs.netapp.com/us-en/ontap/upgrade/concept_how_firmware_is_updated_during_upgrade.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/upgrade/concept_how_firmware_is_updated_during_upgrade.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Prepare for firmware update](https://docs.netapp.com/us-en/ontap/upgrade/concept_how_firmware_is_updated_during_upgrade.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/upgrade/concept_how_firmware_is_updated_during_upgrade.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -985,10 +985,6 @@
 
 
 
-    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
-  
-
-
         </li>
       </ul>
     
@@ -1023,6 +1019,10 @@
 
 
 
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
 
 
 
@@ -15870,6 +15870,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -16787,13 +16789,6 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_identifying_current_cluster_activity.html">
         Current cluster activity
-      </a></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="How firmware is updated during upgrade"
-      data-li-level="5#" 
-      class="  active "
-    ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_how_firmware_is_updated_during_upgrade.html">
-        How firmware is updated during upgrade
       </a></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="What should I verify before I upgrade with or without Upgrade Advisor?"
@@ -16824,6 +16819,13 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verifying_storage_health_verifying_that_the_cluster_is_ready.html">
         Storage health
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Reboot SP or BMC"
+      data-li-level="4#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_how_firmware_is_updated_during_upgrade.html">
+        Reboot SP or BMC
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="SVM routing configuration"
@@ -36720,6 +36722,13 @@
         Take corrective action based on analytics
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Role-based access control"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/file-system-analytics/role-based-access-control-task.html">
+        Role-based access control
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Considerations"
       data-li-level="3#" 
       class=" "
@@ -36875,14 +36884,14 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">How firmware is updated during the ONTAP upgrade</h1>
+  <h1 class="n-doc__component-detail-heading">Prepare for firmware update</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-04-25 21:42:29 +0000">04/25/2022</time>
+    <time datetime="2023-02-10 15:21:07 +0000">02/10/2023</time>
     
   
 
@@ -36901,7 +36910,7 @@
 </p>
 
 <div class="paragraph lead">
-<p>Because upgrading ONTAP includes upgrading your firmware, you do not need to update firmware manually. When you perform an ONTAP upgrade, the firmware for your cluster included with the ONTAP upgrade package is copied to each node&#8217;s boot device, and the new firmware is installed automatically.</p>
+<p>You do not need to manually update your firmware prior to an ONTAP upgrade.  The firmware for your cluster is included with the ONTAP upgrade package and is copied to each node&#8217;s boot device.  The new firmware is then installed as part of the upgrade process.</p>
 </div>
 <div class="paragraph">
 <p>Firmware for the following components is updated automatically if the version in your cluster is older than the firmware that is bundled with the ONTAP upgrade package:</p>
@@ -36926,7 +36935,34 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>If desired, you can also update firmware manually in between ONTAP upgrades.</p>
+<p>To prepare for a smooth update, you should reboot the SP or BMC before the upgrade begins.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Step</div>
+<ol class="arabic">
+<li>
+<p>Reboot the SP or BMC prior to the upgrade: <code>system service-processor reboot-sp -node node_name</code></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If desired, you can also <a href="https://docs.netapp.com/us-en/ontap/task_admin_update_firmware.html#update-firmware-manually">update firmware manually</a> in between ONTAP upgrades.  If you have Active IQ, you can <a href="https://activeiq.netapp.com/system-firmware/">view the list of firmware versions currently included in your ONTAP image</a>.</p>
+</div>
+<div class="paragraph">
+<p>Updated firmware version are available as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://mysupport.netapp.com/site/downloads/firmware/system-firmware-diagnostics">System firmware (BIOS, BMC, SP)</a></p>
+</li>
+<li>
+<p><a href="https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware">Shelf firmware</a></p>
+</li>
+<li>
+<p><a href="https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware">Disk and flash cache firmware</a></p>
+</li>
+</ul>
 </div>
 
     </article>
