@@ -14166,11 +14166,11 @@
           
           <a target="_blank" 
             
-              href="/us-en/ontap/pdfs/sidebar/Consistency_Groups_management.pdf" 
+              href="/us-en/ontap/pdfs/sidebar/Consistency_groups_management.pdf" 
             
           >
             <img src="/us-en/ontap/images/pdf.png" alt="" width="16" height="16"/>
-            Consistency Groups management
+            Consistency groups management
           </a>
           
 
@@ -34284,11 +34284,11 @@
         SnapLock APIs
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Consistency Groups management"
+      data-pdf-filename="Consistency groups management"
       data-li-level="2" 
       class="subfolders "
     ><a href="#">
-        <div class="na-navbar-padding"> Consistency Groups management</div>
+        <div class="na-navbar-padding"> Consistency groups management</div>
       </a>
       <ul style="display: none;">
         <li 
@@ -34300,11 +34300,11 @@
         Overview
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Object limits"
+      data-pdf-filename="Consistency group limits"
       data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/consistency-groups/limits.html">
-        Object limits
+        Consistency group limits
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a single consistency group"
@@ -36891,7 +36891,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-01-02 03:26:13 +0000">01/02/2023</time>
+    <time datetime="2023-02-13 18:59:56 +0000">02/13/2023</time>
     
   
 
@@ -36977,7 +36977,7 @@ You cannot rename a Snapshot copy that is committed to the WORM state.
 <img src="/us-en/ontap/images/note.svg" alt="Note">
 </td>
 <td class="content">
-LUNs are not supported on SnapLock volumes. Although it is possible to move LUNs onto a SnapLock volume using legacy technology, this is not a supported operation, nor is any other operation involving LUNs on a SnapLock volume.
+LUNs are not supported on SnapLock volumes. Although it is possible to move LUNs onto a SnapLock volume using legacy technology, this is not a supported operation, nor is any other operation involving LUNs on a SnapLock volume. Beginning with ONTAP 9.9.0, LUNs on a SnapLock volume are supported in SnapLock <em>only</em> for SnapVault relationships where a Snapshot copy of a non-SnapLock source volume is replicated and locked on a SnapLock destination. These Snapshot copies can contain LUNs.
 </td>
 </tr>
 </table>

@@ -14164,11 +14164,11 @@
           
           <a target="_blank" 
             
-              href="/us-en/ontap/pdfs/sidebar/Consistency_Groups_management.pdf" 
+              href="/us-en/ontap/pdfs/sidebar/Consistency_groups_management.pdf" 
             
           >
             <img src="/us-en/ontap/images/pdf.png" alt="" width="16" height="16"/>
-            Consistency Groups management
+            Consistency groups management
           </a>
           
 
@@ -34284,11 +34284,11 @@
         SnapLock APIs
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Consistency Groups management"
+      data-pdf-filename="Consistency groups management"
       data-li-level="2" 
       class="subfolders "
     ><a href="#">
-        <div class="na-navbar-padding"> Consistency Groups management</div>
+        <div class="na-navbar-padding"> Consistency groups management</div>
       </a>
       <ul style="display: none;">
         <li 
@@ -34300,11 +34300,11 @@
         Overview
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Object limits"
+      data-pdf-filename="Consistency group limits"
       data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/consistency-groups/limits.html">
-        Object limits
+        Consistency group limits
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a single consistency group"
@@ -36891,7 +36891,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-02-02 15:56:51 +0000">02/02/2023</time>
+    <time datetime="2023-02-10 21:50:09 +0000">02/10/2023</time>
     
   
 
@@ -36920,16 +36920,19 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Consistency groups can be created with existing volumes or with new LUNs. Once a volume is associated with a consistency group, it cannot be added to another consistency group.</p>
+<p>Consistency groups can be created with existing volumes or new LUNs. Once a volume is associated with a consistency group, it cannot be added with another consistency group.</p>
 </div>
 <div class="paragraph">
-<p>In ONTAP 9.10.1 through 9.11.1, you cannot add or remove volumes from a consistency group once it has been created. Beginning in ONTAP 9.12.1, you can add or remove <em>existing</em> volumes to a consistency group after it has been created. For more information on this process, refer to <a href="modify-task.html">Modify a consistency group</a>.</p>
+<p>Beginning in ONTAP 9.12.1, you can modify the member volumes of a consistency group. For more information on this process, refer to <a href="modify-task.html">Modify a consistency group</a>. In ONTAP 9.10.1 through 9.11.1, modifying the member volumes of a consistency group is not supported.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="create-a-consistency-group-with-new-luns">Create a consistency group with new LUNs</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Creating a consistency group with new LUNs allows you to create and configure new LUNs in a new consistency group and set protection policies.</p>
+</div>
 <div class="olist arabic">
 <div class="title">Steps</div>
 <ol class="arabic">
@@ -36937,7 +36940,7 @@
 <p>Select <strong>Storage &gt; Consistency groups</strong>.</p>
 </li>
 <li>
-<p>Select <strong>+Add.</strong> then <strong>Using New LUNs</strong>.</p>
+<p>Select <strong>+Add</strong> then <strong>Using New LUNs</strong>.</p>
 </li>
 <li>
 <p>Name the consistency group. Designate the number of LUNs and capacity per LUN.</p>
@@ -36953,13 +36956,13 @@
 <p>Select the host operating system and LUN format. Enter the host initiator information.</p>
 </li>
 <li>
-<p>To configure protection policies, add a child consistency group, or show more options about host initiators, select <strong>More options</strong></p>
+<p>To configure protection policies, add a child consistency group, or show more options about host initiators, select <strong>More options</strong>.</p>
 </li>
 <li>
 <p>Select <strong>Save</strong>.</p>
 </li>
 <li>
-<p>Confirm your consistency group has been created by returning to the main consistency group menu where it will appear once the ONTAP job completes. If you set a protection policy, look under the appropriate policy, remote or local, which should display a green shield with a checkmark.</p>
+<p>Confirm your consistency group has been created by returning to the main consistency group menu where it will appear once the job completes. If you set a protection policy, you will know it has been applied when you see a green shield under look under the appropriate policy, remote or local.</p>
 </li>
 </ol>
 </div>
@@ -36968,6 +36971,9 @@
 <div class="sect1">
 <h2 id="create-a-consistency-group-with-existing-volumes">Create a consistency group with existing volumes</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>You can use existing volumes to create a consistency group.</p>
+</div>
 <div class="olist arabic">
 <div class="title">Steps</div>
 <ol class="arabic">
@@ -36975,7 +36981,7 @@
 <p>Select <strong>Storage &gt; Consistency groups</strong>.</p>
 </li>
 <li>
-<p>Select <strong>+Add.</strong> then <strong>Using existing volumes</strong>.</p>
+<p>Select <strong>+Add</strong> then <strong>Using existing volumes</strong>.</p>
 </li>
 <li>
 <p>Name the consistency group and select the storage VM.</p>

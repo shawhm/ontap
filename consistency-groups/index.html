@@ -9,15 +9,15 @@
   <meta property="og:title" content="Consistency groups overview" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/consistency-groups/index.html" />
-	<meta property="og:description" content="You can use consistency groups in ONTAP, including hierarchical and singular consistency groups, protection policies, and upgrade considerations." />
+	<meta property="og:description" content="A consistency group is a collection of volumes that are organized as a single unit, facilitating ease of management and protection for workloads spanning mul..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can use consistency groups in ONTAP, including hierarchical and singular consistency groups, protection policies, and upgrade considerations.">
-  <meta name="keywords" content=" consistency groups, consistency group protection, application protection"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="A consistency group is a collection of volumes that are organized as a single unit, facilitating ease of management and protection for workloads spanning mul...">
+  <meta name="keywords" content=" consistency group protection, application protection, metrocluster, write-order, application management, workload"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -14164,11 +14164,11 @@
           
           <a target="_blank" 
             
-              href="/us-en/ontap/pdfs/sidebar/Consistency_Groups_management.pdf" 
+              href="/us-en/ontap/pdfs/sidebar/Consistency_groups_management.pdf" 
             
           >
             <img src="/us-en/ontap/images/pdf.png" alt="" width="16" height="16"/>
-            Consistency Groups management
+            Consistency groups management
           </a>
           
     <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
@@ -34284,11 +34284,11 @@
         SnapLock APIs
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Consistency Groups management"
+      data-pdf-filename="Consistency groups management"
       data-li-level="2" 
       class="subfolders "
     ><a href="#">
-        <div class="na-navbar-padding"> Consistency Groups management</div>
+        <div class="na-navbar-padding"> Consistency groups management</div>
       </a>
       <ul style="display: none;">
         <li 
@@ -34300,11 +34300,11 @@
         Overview
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Object limits"
+      data-pdf-filename="Consistency group limits"
       data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/consistency-groups/limits.html">
-        Object limits
+        Consistency group limits
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a single consistency group"
@@ -36908,14 +36908,6 @@
           style="border-radius: 50%;"/>
   </a>
   
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
-    <img  class="avatar avatar-small"
-          alt="netapp-thomi"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/54111336?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aherbin">
     <img  class="avatar avatar-small"
           alt="netapp-aherbin"
@@ -36932,36 +36924,50 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>A consistency group is a collection of volumes that provides a write-order consistency guarantee for an application workload spanning multiple volumes.</p>
+<p>A consistency group is a collection of volumes that are a managed as a single unit. In ONTAP, consistency groups provides easy of management and a protection guarantee for an application workload spanning multiple volumes.</p>
+</div>
+<div class="paragraph">
+<p>You can use consistency groups to simplify your storage management. Imagine you have an important database spanning twenty LUNs. You could manage the LUNs on an individual basis, or treat the LUNs as a solitary dataset, grouping them into a single consistency group.</p>
 </div>
 <div class="paragraph">
 <p>Consistency groups facilitate application workload management, providing easy management of local and remote protection policies and providing simultaneous crash-consistent or application-consistent Snapshot copies of a collection of volumes at a point in time. Snapshots in consistency groups enable an entire application workload to be restored.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="features">Features</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Consistency groups support any FlexVol volume regardless of protocol (NAS, SAN, or NVMe) and can be managed through the ONTAP REST API or in System Manager under the <strong>Storage &gt; Consistency Groups</strong> menu item.</p>
 </div>
 <div class="paragraph">
-<p>Consistency groups can exist as individual entities or in a hierarchical relationship. An individual consistency group is a collection of volumes. Volumes can have their own volume-granular snapshot policy. In addition, the consistency group the volume is associated with can have its own snapshot policy. The consistency group can only have one SM-BC relationship and shared SM-BC policy, which can be used to recover the entire consistency group.</p>
+<p>Consistency groups can exist as individual entities or in a hierarchical relationship. An individual consistency group is a collection of volumes. Volumes can have their own volume-granular snapshot policy. In addition, the consistency group the volume is associated with can have its own snapshot policy. The consistency group can only have one SnapMirror Business Continuity (SM-BC) relationship and shared SM-BC policy, which can be used to recover the entire consistency group.</p>
+</div>
+<div class="paragraph">
+<p>The following diagram illustrates how you might use an individual consistency group. The data for an application hosted on <code>SVM1</code> spans two volumes: <code>vol1</code> and <code>vol2</code>. A Snapshot policy on the consistency group captures snapshots of the data every 15 minutes.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../media/consistency-group-single-diagram.gif" alt="Diagram of a single consistency group with its constituent volumes and local Snapshot policy"></span></p>
 </div>
 <div class="paragraph">
-<p>Larger application workloads might require multiple consistency groups. In these situations, multiple consistency groups can be placed together in a hierarchical relationship. In this configuration, single consistency groups become the child components of a parent consistency group. The parent consistency group can include up to five child consistency groups. Like in individual consistency groups, a remote SM-BC protection policy can be applied to the entire configuration of consistency groups (parent and children) to recover the application workload.</p>
+<p>Larger application workloads might require multiple consistency groups. In these situations, you can create hierarchical consistency groups, where a single consistency group become the child components of a parent consistency group. The parent consistency group can include up to five child consistency groups. Like in individual consistency groups, a remote SM-BC protection policy can be applied to the entire configuration of consistency groups (parent and children) to recover the application workload.</p>
+</div>
+<div class="paragraph">
+<p>In the following example, an application is hosted on <code>SVM1</code>. The administrator has created a parent consistency group, <code>SVM1_app</code>, which includes two child consistency groups: <code>SVM1appDataCG</code> for the data and <code>SVM1app_logCG</code> for the logs. Each child consistency group has its own snapshot policy. Snapshots of the volumes in <code>SVM1appDataCG</code> are taken every 15 minutes. Snapshots of <code>SVM1app_logCG</code> are taken hourly. The parent consistency group <code>SVM1_app</code> has an SM-BC policy which replicates the data to ensure continued service in the event of a disaster.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../media/consistency-group-nested-diagram.gif" alt="Diagram of a nested consistency group with its associated volumes"></span></p>
 </div>
 <div class="paragraph">
-<p>Beginning with ONTAP 9.12.1, consistency groups support <a href="clone-task.html">cloning</a> and modifying the members of the consistency by <a href="modify-task.html">adding or removing volumes</a> in both System Manager and the ONTAP REST API. Beginning in ONTAP 9.12.1, the ONTAP REST API also supports:</p>
+<p>Beginning with ONTAP 9.12.1, consistency groups support <a href="clone-task.html">cloning</a> and modifying the members of the consistency by <a href="modify-task.html">adding or removing volumes</a> in both System Manager and the ONTAP REST API. Beginning in ONTAP 9.12.1, the ONTAP REST API also supports:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Creating a consistency group with new NFS or SMB volumes or NVMe namespaces.</p>
+<p>Creating consistency groups with new NFS or SMB volumes or NVMe namespaces.</p>
 </li>
 <li>
-<p>Adding new or existing NFS or SMB volumes or NVMe namespaces to an existing consistency group.</p>
+<p>Adding new or existing NFS or SMB volumes or NVMe namespaces to existing consistency groups.</p>
 </li>
 </ul>
 </div>
@@ -36974,10 +36980,23 @@
 <h2 id="protection">Protection</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Consistency groups offer local protection through Snapshot policies and remote protection through SnapMirror Business Continuity (SM-BC). Creating a consistency group does not automatically enable protection. Local and/or remote protection policies can be set when creating or after creating a consistency group.</p>
+<p>Consistency groups offer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Local protection through Snapshot policies</p>
+</li>
+<li>
+<p>Remote protection with <a href="../smbc/index.html">SnapMirror Business Continuity (SM-BC)</a> or <a href="#mcc">MetroCluster</a></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>To configure local protection with consistency groups, see <a href="protect-task.html">Protect a consistency group</a>. Beginning in ONTAP 9.11.1, consistency groups offer <a href="protect-task.html#two-phase-CG-snapshot-creation">two-phase consistency group snapshot creation</a>.</p>
+<p>Creating a consistency group does not automatically enable protection. Local and/or remote protection policies can be set when creating or after creating a consistency group.</p>
+</div>
+<div class="paragraph">
+<p>To configure local protection on a consistency group, see <a href="protect-task.html">Protect a consistency group</a>.</p>
 </div>
 <div class="paragraph">
 <p>In order to utilize remote protection, you must meet the requirements for <a href="../smbc/smbc_plan_prerequisites.html#licensing">SnapMirror Business Continuity deployments</a>.</p>
@@ -36994,6 +37013,9 @@ SM-BC relationships cannot be established on volumes mounted for NAS access.
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>Beginning in ONTAP 9.11.1, consistency groups also support <a href="protect-task.html#two-phase-CG-snapshot-creation">two-phase consistency group snapshot creation</a>.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -37003,32 +37025,42 @@ SM-BC relationships cannot be established on volumes mounted for NAS access.
 <p>Beginning in ONTAP 9.12.1, consistency groups support component and application tagging. Application and component tags are a management tool, enabling you to filter and identify different workloads in your consistency groups.</p>
 </div>
 <div class="paragraph">
-<p>Application tags apply to individual and parent consistency groups. Application tags provide labeling for workloads such as MongoDB, Oracle, or SQL Server. The default application tag for consistency groups is Other. Children in hierarchal consistency groups have component tags instead of application tags. The options for component tags are "data", "logs", or "other". The default value is Other.</p>
+<p>There are two types of tags:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Application tags</strong>: these apply to individual and parent consistency groups. Application tags provide labeling for workloads such as MongoDB, Oracle, or SQL Server. The default application tag for consistency groups is Other.</p>
+</li>
+<li>
+<p><strong>Component tags</strong>: Children in hierarchal consistency groups have component tags instead of application tags. The options for component tags are "data", "logs", or "other". The default value is Other.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>You can apply tags when creating a consistency group or after the consistency group has been created. If the consistency group has an SM-BC relationship, you must use <strong>Other</strong> as the application or component tag.</p>
+<p>You can apply tags when creating consistency groups or after the consistency groups have been created. If the consistency group has an SM-BC relationship, you must use <strong>Other</strong> as the application or component tag.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="consistency-groups-in-metrocluster-configurations">Consistency groups in MetroCluster configurations</h2>
+<h2 id="mcc">Consistency groups in MetroCluster configurations</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Beginning with ONTAP 9.11.1, you can provision consistency groups with new volumes on a cluster within a MetroCluster configuration. These volumes are provisioned on mirrored aggregates.</p>
 </div>
 <div class="paragraph">
-<p>After they are provisioned, you can move volumes associated with consistency groups between mirrored and unmirrored aggregates. Therefore, they can be located on mirrored aggregates, unmirrored aggregates, or both. You can modify mirrored aggregates containing volumes associated with consistency groups to become unmirrored. Similarly, you can modify unmirrored aggregates containing volumes associated with consistency groups to enable mirroring.</p>
+<p>After they are provisioned, you can move volumes associated with consistency groups between mirrored and unmirrored aggregates. Therefore, volumes associated with consistency groups can be located on mirrored aggregates, unmirrored aggregates, or both. You can modify mirrored aggregates containing volumes associated with consistency groups to become unmirrored. Similarly, you can modify unmirrored aggregates containing volumes associated with consistency groups to enable mirroring.</p>
 </div>
 <div class="paragraph">
 <p>Volumes associated with consistency groups placed on mirrored aggregates and their Snapshots, including any consistency group Snapshots, are replicated to the remote site (site B). The contents of the volumes on site B are consistency group semantics-compliant. You can access replicated consistency group Snapshots using consistency group Snapshot REST API and System Manager on clusters running ONTAP 9.11.1 or later.</p>
 </div>
 <div class="paragraph">
-<p>If some or all of the volumes associated with a consistency group are located on unmirrored aggregates that are not currently accessible, GET or DELETE operations on the consistency group behave as if the local volumes or hosting aggregates are offline.</p>
+<p>If some or all the volumes associated with a consistency group are located on unmirrored aggregates that are not currently accessible, GET or DELETE operations on the consistency group behave as if the local volumes or hosting aggregates are offline.</p>
 </div>
 <div class="sect2">
 <h3 id="consistency-group-configuration-replication">Consistency group configuration replication</h3>
 <div class="paragraph">
-<p>If site B is running ONTAP 9.10.1 or earlier, only the volumes associated with the consistency groups located on mirrored aggregates are replicated to site B. The consistency group configurations are only replicated to site B, if both sites are running ONTAP 9.11.1 or later.After site B is upgraded to ONTAP 9.11.1, data for consistency groups on site A that have all their associated volumes placed on mirrored aggregates are replicated to site B.</p>
+<p>If site B is running ONTAP 9.10.1 or earlier, only the volumes associated with the consistency groups located on mirrored aggregates are replicated to site B. The consistency group configurations are only replicated to site B, if both sites are running ONTAP 9.11.1 or later. After site B is upgraded to ONTAP 9.11.1, data for consistency groups on site A that have all their associated volumes placed on mirrored aggregates are replicated to site B.</p>
 </div>
 </div>
 </div>
@@ -37040,10 +37072,19 @@ SM-BC relationships cannot be established on volumes mounted for NAS access.
 <p>Consistency groups created with SM-BC in ONTAP 9.8 and 9.9.1 will automatically be upgraded and become manageable under <strong>Storage &gt; Consistency Groups</strong> in System Manager or the ONTAP REST API when upgrading to ONTAP 9.10.1. For more information about upgrading, see <a href="../smbc/smbc_admin_upgrade_and_revert_considerations.html">SM-BC upgrade and revert considerations</a>.</p>
 </div>
 <div class="paragraph">
-<p>Consistency group snapshots created with the ONTAP REST API can be managed through System Manager’s Consistency Group interface and through consistency group API endpoints.</p>
+<p>Consistency group snapshots created with the ONTAP REST API can be managed through System Manager&#8217;s Consistency Group interface and through consistency group API endpoints.</p>
 </div>
-<div class="paragraph">
-<p>Snapshots created with the ONTAPI commands <code>cg-start</code> and <code>cg-commit</code> will not be recognized as consistency group Snapshots and thus cannot be managed through System Manager&#8217;s Consistency Group interface or the consistency group endpoints in the ONTAP API.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Snapshots created with the ONTAPI commands <code>cg-start</code> and <code>cg-commit</code> will not be recognized as consistency group Snapshots and thus cannot be managed through System Manager&#8217;s consistency group interface or the consistency group endpoints in the ONTAP API.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -37054,6 +37095,14 @@ SM-BC relationships cannot be established on volumes mounted for NAS access.
 <div class="content">
 <iframe width="848" height="480" src="https://www.youtube.com/embed/j0jfXDcdyzE?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
+</div>
+<div class="ulist">
+<div class="title">More information</div>
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/ontap-automation/" target="_blank" rel="noopener">ONTAP Automation documentation</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>

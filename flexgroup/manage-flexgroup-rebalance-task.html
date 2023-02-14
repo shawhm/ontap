@@ -14166,11 +14166,11 @@
           
           <a target="_blank" 
             
-              href="/us-en/ontap/pdfs/sidebar/Consistency_Groups_management.pdf" 
+              href="/us-en/ontap/pdfs/sidebar/Consistency_groups_management.pdf" 
             
           >
             <img src="/us-en/ontap/images/pdf.png" alt="" width="16" height="16"/>
-            Consistency Groups management
+            Consistency groups management
           </a>
           
 
@@ -34284,11 +34284,11 @@
         SnapLock APIs
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Consistency Groups management"
+      data-pdf-filename="Consistency groups management"
       data-li-level="2" 
       class="subfolders "
     ><a href="#">
-        <div class="na-navbar-padding"> Consistency Groups management</div>
+        <div class="na-navbar-padding"> Consistency groups management</div>
       </a>
       <ul style="display: none;">
         <li 
@@ -34300,11 +34300,11 @@
         Overview
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Object limits"
+      data-pdf-filename="Consistency group limits"
       data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/consistency-groups/limits.html">
-        Object limits
+        Consistency group limits
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a single consistency group"
@@ -36891,7 +36891,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-01-31 00:12:34 +0000">01/31/2023</time>
+    <time datetime="2023-02-13 18:45:23 +0000">02/13/2023</time>
     
   
 
@@ -36941,10 +36941,10 @@
 <li>
 <p>FlexVol to FlexGroup conversion</p>
 <div class="paragraph">
-<p>It is recommended that you do <em>not</em> use automatic FlexGroup rebalancing after a FlexVol to FlexGroup conversion. Instead, you can use the disruptive retroactive file move feature available in ONTAP 9.10.1 and later, by entering the <code>volume rebalance file-move</code> command. For command syntax, see the <code>volume rebalance file-move start</code> man page.</p>
+<p>It is recommended that you <em>not</em> use automatic FlexGroup rebalancing after a FlexVol to FlexGroup conversion. Instead, you can use the disruptive retroactive file move feature available in ONTAP 9.10.1 and later, by entering the <code>volume rebalance file-move</code> command. For command syntax, see the <code>volume rebalance file-move start</code> man page.</p>
 </div>
 <div class="paragraph">
-<p>Rebalancing creates multipart inodes which in large numbers can degrade performance.  In a conversion, an estimated 50 to 85 percent of the data on a FlexVol volume is moved to a new constituent, resulting in the creation of many multipart inodes for those files.</p>
+<p>Rebalancing with the non-disruptive retroactive file move feature can degrade performance when moving large numbers of files, like when you perform a FlexVol to FlexGroup conversion, and as much as 50 to 85% of the data on the FlexVol volume is moved to a new constituent.</p>
 </div>
 </li>
 <li>

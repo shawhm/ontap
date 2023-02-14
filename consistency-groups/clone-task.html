@@ -14164,11 +14164,11 @@
           
           <a target="_blank" 
             
-              href="/us-en/ontap/pdfs/sidebar/Consistency_Groups_management.pdf" 
+              href="/us-en/ontap/pdfs/sidebar/Consistency_groups_management.pdf" 
             
           >
             <img src="/us-en/ontap/images/pdf.png" alt="" width="16" height="16"/>
-            Consistency Groups management
+            Consistency groups management
           </a>
           
 
@@ -34284,11 +34284,11 @@
         SnapLock APIs
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Consistency Groups management"
+      data-pdf-filename="Consistency groups management"
       data-li-level="2" 
       class="subfolders "
     ><a href="#">
-        <div class="na-navbar-padding"> Consistency Groups management</div>
+        <div class="na-navbar-padding"> Consistency groups management</div>
       </a>
       <ul style="display: none;">
         <li 
@@ -34300,11 +34300,11 @@
         Overview
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Object limits"
+      data-pdf-filename="Consistency group limits"
       data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/consistency-groups/limits.html">
-        Object limits
+        Consistency group limits
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a single consistency group"
@@ -36891,11 +36891,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-11 01:50:17 +0000">11/11/2022</time>
+    <time datetime="2023-02-10 21:50:09 +0000">02/10/2023</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
+    <img  class="avatar avatar-small"
+          alt="netapp-ahibbard"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/85892662?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aherbin">
     <img  class="avatar avatar-small"
           alt="netapp-aherbin"
@@ -36916,7 +36924,7 @@
 <p>When cloning a consistency group, you can clone it with its current configuration, but with volume contents as they are or based on an existing consistency group Snapshot.</p>
 </div>
 <div class="paragraph">
-<p>Cloning a consistency group is only supported for the entire consistency group. You cannot clone an individual child consistency group in a hierarchical relationship: only the complete consistency group configuration can be cloned.</p>
+<p>Cloning a consistency group is supported only for the entire consistency group. You cannot clone an individual child consistency group in a hierarchical relationship: only the complete consistency group configuration can be cloned.</p>
 </div>
 <div class="paragraph">
 <p>When you clone a consistency group, the following components are not cloned:</p>
@@ -36938,10 +36946,10 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>When you clone a consistency group, ONTAP will not create SMB shares for the cloned volumes if a share name is not specified. Cloned consistency groups will not be mounted if a junction path is not specified. If you attempt to clone a consistency group based on a Snapshot that does not reflect the consistency group&#8217;s current configuration, the operation will fail.</p>
+<p>When you clone a consistency group, ONTAP will not create SMB shares for the cloned volumes if a share name is not specified. Cloned consistency groups are not mounted if a junction path is not specified. If you attempt to clone a consistency group based on a Snapshot that does not reflect the consistency group&#8217;s current configuration, the operation will fail.</p>
 </div>
 <div class="paragraph">
-<p>After you clone a consistency group, you will need to perform the appropriate mapping operation. Refer to <a href="../task_san_map_igroups_to_multiple_luns.html">Map igroups to multiple LUNs</a> or <a href="../san-admin/map-nvme-namespace-subsystem-task.html">Map an NVMe namespace to a subsystem</a> for more information.</p>
+<p>After you clone a consistency group, you need to perform the appropriate mapping operation. Refer to <a href="../task_san_map_igroups_to_multiple_luns.html">Map igroups to multiple LUNs</a> or <a href="../san-admin/map-nvme-namespace-subsystem-task.html">Map an NVMe namespace to a subsystem</a> for more information.</p>
 </div>
 <div class="paragraph">
 <p>Cloning a consistency group is not supported for a consistency group in a SnapMirror Business Continuity relationship or with any associated DP volumes.</p>
@@ -36949,6 +36957,9 @@
 <div class="olist arabic">
 <div class="title">Steps</div>
 <ol class="arabic">
+<li>
+<p>Select <strong>Storage &gt; Consistency groups</strong>.</p>
+</li>
 <li>
 <p>Select the consistency group you want to clone from the <strong>Consistency Group</strong> menu.</p>
 </li>
@@ -36960,7 +36971,7 @@
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Choose if you want to enable <strong>Thin Provisioning</strong>.</p>
+<p>Choose if you want to enable <a href="../concepts/thin-provisioning-concept.html" target="_blank" rel="noopener"><strong>Thin Provisioning</strong></a>.</p>
 </li>
 <li>
 <p>Choose <strong>Split Clone</strong> if you want to dissociate the consistency group from its source and allocate additional disk space for the cloned consistency group.</p>
