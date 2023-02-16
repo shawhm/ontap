@@ -555,6 +555,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -1533,6 +1535,8 @@
             Cluster management with System Manager
           </a>
           
+
+
 
 
 
@@ -16327,6 +16331,13 @@
         Compression
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Capacity measurements in System Manager"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/concepts/capacity-measurements-in-sm-concept.html">
+        Capacity measurements in System Manager
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="FlexClone volumes, files, and LUNs"
       data-li-level="4#" 
       class=" "
@@ -17535,6 +17546,13 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap/task_admin_view_submit_support_cases.html">
         View and submit support cases
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitor capacity with System Manager"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap/task_admin_monitor_capacity_in_sm.html">
+        Monitor capacity with System Manager
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Monitor risks with Active IQ Digital Advisor"
@@ -36891,7 +36909,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-02-10 15:21:07 +0000">02/10/2023</time>
+    <time datetime="2023-02-16 15:58:47 +0000">02/16/2023</time>
     
   
 
@@ -36904,19 +36922,19 @@
           style="border-radius: 50%;"/>
   </a>
   
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
-    <img  class="avatar avatar-small"
-          alt="netapp-ahibbard"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/85892662?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aherbin">
     <img  class="avatar avatar-small"
           alt="netapp-aherbin"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/38955266?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
+    <img  class="avatar avatar-small"
+          alt="netapp-ahibbard"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/85892662?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -36929,6 +36947,22 @@
 <div class="sectionbody">
 <div class="paragraph lead">
 <p>With System Manager, you can apply a firmware update to supported devices in your cluster, such as disks, disk shelves, the service processor (SP), or the Baseboard Management Controller (BMC).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="prepare-for-firmware-update">Prepare for firmware update</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To prepare for a smooth firmware update, you should reboot the SP or BMC before the update begins.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Step</div>
+<ol class="arabic">
+<li>
+<p>Reboot the SP or BMC prior to the upgrade: <code>system service-processor reboot-sp -node node_name</code></p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -36998,18 +37032,12 @@ For ONTAP 9.8, you must navigate to the NetApp Support Site to download an updat
 <div class="title">Steps</div>
 <p>Perform the procedure that is appropriate for the version of ONTAP that is installed on the cluster.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock">For ONTAP 9.8 and ONTAP 9.9.1, if you are not registered with Active IQ, then perform these steps&#8230;&#8203;</p></th>
-<th class="tableblock halign-left valign-top"><p class="tableblock">Beginning with ONTAP 9.9.1, if you are registered with Active IQ, then perform these steps&#8230;&#8203;</p></th>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="olist arabic">
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">ONTAP 9.8 and ONTAP 9.9.1 if you are not registered with Active IQ</div>
+<div class="content">
+<div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>Navigate to the NetApp Support Site.</p>
@@ -37024,8 +37052,13 @@ For ONTAP 9.8, you must navigate to the NetApp Support Site to download an updat
 <p>Copy the files to an HTTP or FTP server on your network or to a local folder.</p>
 </li>
 </ol>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="olist arabic">
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">ONTAP 9.9.1 and later if you are registered with Active IQ</div>
+<div class="content">
+<div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>On the <strong>Update</strong> page, for the firmware update that you want to perform, click on <strong>Download from NetApp Support Site</strong>.</p>
@@ -37043,18 +37076,27 @@ For ONTAP 9.8, you must navigate to the NetApp Support Site to download an updat
 <p>Copy the files to an HTTP or FTP server on your network or to a local folder.</p>
 </li>
 </ol>
-</div></div></td>
-</tr>
-</tbody>
-</table>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="update-the-cluster-firmware">Update the cluster firmware</h3>
 <div class="paragraph">
-<p>After the firmware package files are downloaded, you can update the cluster firmware.</p>
+<p>After the firmware package files are downloaded, you can update the cluster firmware. In ONTAP 9.10.1 or later, to schedule fixes and updates to occur automatically and receive recommendations about updating, see <a href="#update-firmware-automatically">Update firmware automatically</a>.</p>
 </div>
-<div class="olist arabic">
+<div class="paragraph">
 <div class="title">Steps</div>
+<p>Perform the procedure that is appropriate for the version of ONTAP that is installed on the cluster.</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">ONTAP 9.8, 9.9.x, or 9.10.0</div>
+<div class="content">
+<div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>In System Manager, click <strong>Cluster &gt; Overview</strong>.</p>
@@ -37063,26 +37105,8 @@ For ONTAP 9.8, you must navigate to the NetApp Support Site to download an updat
 <p>In the right corner of the <strong>Overview</strong> pane, click <strong>More</strong> <span class="image"><img src="./media/icon_kabob.gif" alt="menu icon"></span> and select <strong>ONTAP Update</strong>.</p>
 </li>
 <li>
-<p>Click the <strong>Firmware Update</strong> tab, and then perform one of the following procedures, depending on which version of ONTAP you are using:</p>
+<p>Click <strong>Firmware Update</strong>.</p>
 </li>
-</ol>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock">ONTAP version</p></th>
-<th class="tableblock halign-left valign-top"><p class="tableblock">Procedure</p></th>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>ONTAP 9.8, 9.9.x, or 9.10.0</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="olist arabic">
-<ol class="arabic">
 <li>
 <p>Select <strong>From Server</strong> or <strong>Local Client</strong></p>
 </li>
@@ -37090,21 +37114,25 @@ For ONTAP 9.8, you must navigate to the NetApp Support Site to download an updat
 <p>Provide the server URL or the file location.</p>
 </li>
 </ol>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>ONTAP 9.10.1 and later</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Note:</strong> To schedule fixes and updates to occur automatically and receive recommendations about updating, see <a href="#update-firmware-automatically">Update firmware automatically</a>.</p>
 </div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">ONTAP 9.10.1 and later</div>
+<div class="content">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>In the list of recommended updates, select the <strong>Actions</strong> button to perform the following tasks:</p>
-<div class="openblock">
-<div class="content">
+<p>In System Manager, click <strong>Cluster &gt; Overview</strong>.</p>
+</li>
+<li>
+<p>In the right corner of the <strong>Overview</strong> pane, click <strong>More</strong> <span class="image"><img src="./media/icon_kabob.gif" alt="menu icon"></span> and select <strong>ONTAP Update</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Firmware Update</strong>.</p>
+</li>
+<li>
+<p>In the list of recommended updates, select <strong>Actions</strong> to perform the following tasks:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -37115,18 +37143,10 @@ For ONTAP 9.8, you must navigate to the NetApp Support Site to download an updat
 </li>
 <li>
 <p><strong>Dismiss</strong>: Remove the recommendation notice form the list.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
 <div class="paragraph">
 <p>If the update has been schedule, the options of the <strong>Actions</strong> button are:</p>
 </div>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p><strong>Update</strong>: Install the update now.</p>
 </li>
@@ -37138,17 +37158,16 @@ For ONTAP 9.8, you must navigate to the NetApp Support Site to download an updat
 </li>
 </ul>
 </div>
-</div>
-</div>
 </li>
 <li>
 <p>If you want to update manually, select the <strong>Update Firmware</strong> button.</p>
 </li>
 </ol>
-</div></div></td>
-</tr>
-</tbody>
-</table>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -37188,7 +37207,7 @@ You can monitor or verify updates under <strong>Firmware Update Summary</strong>
 </ul>
 </div>
 <div class="paragraph">
-<p>You can learn more about entitlements and which ones you have at <a href="/system-admin/manage-licenses-concept.html">Manage licenses overview (cluster administrators only)</a>.</p>
+<p>You can learn more about entitlements and which ones you have at <a href="./system-admin/manage-licenses-concept.html">Manage licenses overview (cluster administrators only)</a>.</p>
 </div>
 <div class="paragraph">
 <p>The Automatic Update feature requires AutoSupport connectivity over HTTPS.  To troubleshoot connectivity problems, see <a href="./system-admin/troubleshoot-autosupport-http-https-task.html">Troubleshoot AutoSupport message delivery over HTTP or HTTPS</a>.</p>
@@ -37215,19 +37234,6 @@ You can monitor or verify updates under <strong>Firmware Update Summary</strong>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/sm-firmware-auto-update.gif" alt="Automatic update workflow"></span></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#ensure-the-automatic-update-feature-is-enabled">Ensure the Automatic Update feature is enabled</a></p>
-</li>
-<li>
-<p><a href="#specify-default-actions-for-update-recommendations">Specify default actions for update recommendations</a></p>
-</li>
-<li>
-<p><a href="#manage-automatic-update-recommendations">Manage automatic update recommendations</a></p>
-</li>
-</ul>
 </div>
 <div class="sect2">
 <h3 id="ensure-the-automatic-update-feature-is-enabled">Ensure the Automatic Update feature is enabled</h3>
