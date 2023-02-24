@@ -4300,8 +4300,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -21367,13 +21365,6 @@
         Overview
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="How a quota report accounts for disk space and file usage"
-      data-li-level="6#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/volumes/quota-report-accounts-disk-space-file-usage-concept.html">
-        How a quota report accounts for disk space and file usage
-      </a></li><li 
-      data-pdf-exists="true" 
       data-pdf-filename="How the ls command accounts for space usage"
       data-li-level="6#" 
       class=" "
@@ -36917,16 +36908,26 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-14 21:50:12 +0000">10/14/2021</time>
+    <time datetime="2023-02-02 20:41:12 +0000">02/02/2023</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mdavidson">
+    <img  class="avatar avatar-small"
+          alt="netapp-mdavidson"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/115569087?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
 <p>The value of used disk space that is displayed in a quota report for a FlexVol volume or qtree can be different from the value displayed by a UNIX client for the same volume or qtree. The difference in usage values is because of the difference in methods followed by the quota report and the UNIX commands for calculating the data blocks in the volume or qtree.</p>
 </div>
@@ -36935,6 +36936,22 @@
 </div>
 <div class="paragraph">
 <p>Similarly, the space usage values shown in a quota report can also differ from the values shown as a result of UNIX commands such as <code>df</code> and <code>du</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="how-a-quota-report-accounts-for-disk-space-and-file-usage">How a quota report accounts for disk space and file usage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The number of files used and the amount of disk space specified in a quota report for a FlexVol volume or a qtree depend on the count of the used data blocks corresponding to every inode in the volume or the qtree.</p>
+</div>
+<div class="paragraph">
+<p>The block count includes both direct and indirect blocks used for regular and stream files. The blocks used for directories, Access Control Lists (ACLs), stream directories, and metafiles do not get accounted for in the quota report. In case of UNIX sparse files, empty data blocks are not included in the quota report.</p>
+</div>
+<div class="paragraph">
+<p>The quota subsystem is designed to consider and include only user controllable aspects of the filesystem. Directories, ACLs, and snapshot space are all examples of space excluded from quota calculations. Quotas are used to enforce limits, not guarantees, and they only operate on the active filesystem. Quota accounting does not count certain filesystem constructs, nor does it account for storage efficiency (such as compression or deduplication).</p>
+</div>
+</div>
 </div>
 
     </article>

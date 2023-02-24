@@ -4298,8 +4298,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -21367,13 +21365,6 @@
         Overview
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="How a quota report accounts for disk space and file usage"
-      data-li-level="6#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/volumes/quota-report-accounts-disk-space-file-usage-concept.html">
-        How a quota report accounts for disk space and file usage
-      </a></li><li 
-      data-pdf-exists="true" 
       data-pdf-filename="How the ls command accounts for space usage"
       data-li-level="6#" 
       class=" "
@@ -36917,7 +36908,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-19 17:21:53 +0000">10/19/2021</time>
+    <time datetime="2023-02-23 16:59:13 +0000">02/23/2023</time>
     
   
 
@@ -36952,7 +36943,7 @@
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p>Delete the default share ACL:<code>vserver cifs share access-control delete -vserver <em>vserver_name</em> -share <em>share_name</em> -user-or-group everyone</code></p>
+<p>Delete the default share ACL:`vserver cifs share access-control delete -vserver <em>vserver_name</em> -share <em>share_name</em> -user-or-group everyone`</p>
 </li>
 <li>
 <p>Configure the new ACL:</p>
@@ -36973,7 +36964,7 @@
 <p>Windows user</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>vserver cifs share access-control create -vserver <em>vserver_name</em> -share <em>share_name</em> -user-group-type windows -user-or-group <em>Windows_domain_name\\user_name</em> -permission <em>access_right</em></code></p>
+<p><code>vserver cifs share access-control create -vserver <em>vserver_name</em> -share <em>share_name</em> -user-group-type windows -user-or-group <em>Windows_domain_name\user_name</em> -permission <em>access_right</em></code></p>
 </div></div></td>
 </tr>
 <tr>
@@ -36981,7 +36972,7 @@
 <p>Windows group</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>vserver cifs share access-control create -vserver <em>vserver_name</em> -share <em>share_name</em> -user-group-type windows -user-or-group <em>Windows_group_name</em> -permission <em>access_right</em></code></p>
+<p><code>vserver cifs share access-control create -vserver <em>vserver_name</em> -share <em>share_name</em> -user-group-type windows -user-or-group <em>Windows_domain_name\group_name</em> -permission <em>access_right</em></code></p>
 </div></div></td>
 </tr>
 <tr>
@@ -37010,28 +37001,28 @@
 </div>
 <div class="paragraph">
 <div class="title">Example</div>
-<p>The following command gives <code>Change</code> permissions to the &#8220;Sales Team&#8221; Windows group for the &#8220;sales&#8221; share on the "`vs1.example.com`"SVM:</p>
+<p>The following command gives <code>Change</code> permissions to the &#8220;Sales Team&#8221; Windows group for the &#8220;sales&#8221; share on the "`vs1.example.com` "SVM:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cluster1::&gt; vserver cifs share access-control create -vserver vs1.example.com -share sales -user-or-group "Sales Team" -permission Change
+<pre>cluster1::&gt; vserver cifs share access-control create -vserver vs1.example.com -share sales -user-or-group "DOMAIN\Sales Team" -permission Change
 
-cluster1::&gt; vserver cifs share access-control show
+cluster1::&gt; vserver cifs share access-control show -vserver vs1.example.com
                  Share       User/Group              User/Group  Access
 Vserver          Name        Name                    Type        Permission
 ---------------- ----------- --------------------    ---------   -----------
 vs1.example.com  c$          BUILTIN\Administrators  windows     Full_Control
-vs1.example.com  sales       DOMAIN\"Sales Team"     windows     Change</pre>
+vs1.example.com  sales       DOMAIN\Sales Team     windows     Change</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The following command gives <code>Read</code> permission to the &#8220;engineering&#8221; UNIX group for the &#8220;eng&#8221; share on the "`vs2.example.com`"SVM:</p>
+<p>The following command gives <code>Read</code> permission to the &#8220;engineering&#8221; UNIX group for the &#8220;eng&#8221; share on the "`vs2.example.com` "SVM:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cluster1::&gt; vserver cifs share access-control create -vserver vs2.example.com -share eng -user-group-type unix-group -user-or-group  eng -permission Read
+<pre>cluster1::&gt; vserver cifs share access-control create -vserver vs2.example.com -share eng -user-group-type unix-group -user-or-group  engineering -permission Read
 
-cluster1::&gt; vserver cifs share access-control show
+cluster1::&gt; vserver cifs share access-control show -vserver vs2.example.com
                  Share       User/Group               User/Group  Access
 Vserver          Name        Name                     Type        Permission
 ---------------- ----------- -------------------      ----------- -----------
@@ -37040,7 +37031,7 @@ vs2.example.com  eng         engineering              unix-group  Read</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The following commands give <code>Change</code> permission to the local Windows group named &#8220;Tiger Team&#8221; and <code>Full_Control</code> permission to the local Windows user named &#8220;Sue Chang&#8221; for the &#8220;datavol5&#8221; share on the "`vs1`"SVM:</p>
+<p>The following commands give <code>Change</code> permission to the local Windows group named &#8220;Tiger Team&#8221; and <code>Full_Control</code> permission to the local Windows user named &#8220;Sue Chang&#8221; for the &#8220;datavol5&#8221; share on the "`vs1` "SVM:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -37053,8 +37044,8 @@ cluster1::&gt; vserver cifs share access-control show -vserver vs1
 Vserver        Name        Name                        Type        Permission
 -------------- ----------- --------------------------- ----------- -----------
 vs1            c$          BUILTIN\Administrators      windows     Full_Control
-vs1            datavol5    DOMAIN\"Tiger Team"         windows     Change
-vs1            datavol5    DOMAIN\"Sue Chang"          windows     Full_Control</pre>
+vs1            datavol5    Tiger Team         windows     Change
+vs1            datavol5    Sue Chang          windows     Full_Control</pre>
 </div>
 </div>
 

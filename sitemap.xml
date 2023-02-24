@@ -4439,7 +4439,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/create-nvme-namespace-subsystem-task.html</loc>
       
-      <lastmod>2023-01-17T00:39:54+00:00</lastmod>
+      <lastmod>2023-02-23T17:09:59+00:00</lastmod>
       
     </url>
   
@@ -4635,7 +4635,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/smb-admin/create-share-access-control-lists-task.html</loc>
       
-      <lastmod>2021-10-19T17:21:53+00:00</lastmod>
+      <lastmod>2023-02-23T16:59:13+00:00</lastmod>
       
     </url>
   
@@ -11838,7 +11838,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/networking/ontap_port_usage_on_a_storage_system_overview.html</loc>
       
-      <lastmod>2021-12-14T22:02:42+00:00</lastmod>
+      <lastmod>2023-02-23T16:50:47+00:00</lastmod>
       
     </url>
   
@@ -12342,7 +12342,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/volumes/quota-report-accounts-disk-space-file-usage-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2022-11-18T17:27:36+00:00</lastmod>
       
     </url>
   
@@ -13700,7 +13700,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
       
-      <lastmod>2023-02-22T02:04:42+00:00</lastmod>
+      <lastmod>2023-02-24T01:02:59+00:00</lastmod>
       
     </url>
   
@@ -14043,14 +14043,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/setup-aws-s3-cloud-tier-task.html</loc>
       
-      <lastmod>2022-08-12T23:18:55+00:00</lastmod>
+      <lastmod>2023-02-21T23:13:25+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/setup-azure-blob-storage-cloud-tier-task.html</loc>
       
-      <lastmod>2022-08-12T23:18:55+00:00</lastmod>
+      <lastmod>2023-02-21T23:13:25+00:00</lastmod>
       
     </url>
   
@@ -14064,14 +14064,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/setup-google-storage-cloud-tier-task.html</loc>
       
-      <lastmod>2022-08-12T23:18:55+00:00</lastmod>
+      <lastmod>2023-02-21T23:13:25+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/fabricpool/setup-ibm-object-storage-cloud-tier-task.html</loc>
       
-      <lastmod>2022-08-12T23:18:55+00:00</lastmod>
+      <lastmod>2023-02-21T23:13:25+00:00</lastmod>
       
     </url>
   
@@ -14764,7 +14764,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/volumes/space-display-quota-report-unix-client-concept.html</loc>
       
-      <lastmod>2021-10-14T21:50:12+00:00</lastmod>
+      <lastmod>2023-02-02T20:41:12+00:00</lastmod>
       
     </url>
   
@@ -17221,7 +17221,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap/san-admin/verify-license-fc-iscsi-task.html</loc>
       
-      <lastmod>2022-09-26T19:48:09+00:00</lastmod>
+      <lastmod>2023-02-23T17:09:06+00:00</lastmod>
       
     </url>
   
