@@ -36908,11 +36908,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-09 22:31:46 +0000">12/09/2021</time>
+    <time datetime="2023-02-23 19:31:58 +0000">02/23/2023</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lenida">
+    <img  class="avatar avatar-small"
+          alt="netapp-lenida"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54081920?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -36933,9 +36941,12 @@
 <div class="title">Step</div>
 <ol class="arabic">
 <li>
-<p>Reduce the size of the FlexGroup volume: <code>volume size -vserver vserver_name -volume fg_name -size new_size</code></p>
+<p>Check the current FlexGroup volume size: 'volume size -vserver <em>vserver_name</em> -volume <em>fg_name</em>'</p>
+</li>
+<li>
+<p>Reduce the size of the FlexGroup volume: <code>volume size -vserver <em>vserver_name</em> -volume <em>fg_name</em> <em>new_size</em></code></p>
 <div class="paragraph">
-<p><code>new_size</code> is the size of the FlexGroup volume. You can either specify a lower value than the current size or a negative value by which the current size of the FlexGroup volume is reduced.</p>
+<p>When you specify the new size, you can specify either a lower value than the current size or a negative value using the minus sign (-) by which the current size of the FlexGroup volume is reduced.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -36951,14 +36962,32 @@
 </tr>
 </table>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>cluster1::&gt; volume size -vserver svm1 -volume volX -size 10TB</pre>
-</div>
+<div class="paragraph">
+<p>The following example displays the current volume size for the FlexGroup volume named volX and resizes the volume to 10TB:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cluster1::&gt; volume size -vserver svm1 -volume volX -size -5TB</pre>
+<pre>cluster1::&gt; volume size -vserver svm1 -volume volX
+(volume size)
+vol size: FlexGroup volume 'svm1:volX' has size 15TB.
+
+cluster1::&gt; volume size -vserver svm1 -volume volX 10TB
+(volume size)
+vol size: FlexGroup volume 'svm1:volX' size set to 10TB.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example displays the current volume size for the FlexGroup volume named volX and reduces the size of the volume by 5TB:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster1::&gt; volume size -vserver svm1 -volume volX
+(volume size)
+vol size: FlexGroup volume 'svm1:volX' has size 15TB.
+
+cluster1::&gt; volume size -vserver svm1 -volume volX -5TB
+(volume size)
+vol size: FlexGroup volume 'svm1:volX' size set to 10TB.</pre>
 </div>
 </div>
 </li>
