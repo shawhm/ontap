@@ -36908,7 +36908,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-29 21:22:22 +0000">08/29/2022</time>
+    <time datetime="2023-02-27 22:50:51 +0000">02/27/2023</time>
     
   
 
@@ -36918,6 +36918,14 @@
           alt="netapp-thomi"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/54111336?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lenida">
+    <img  class="avatar avatar-small"
+          alt="netapp-lenida"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54081920?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -36936,7 +36944,7 @@
 <p>SSD storage pools are divided into four equal allocation units. SSDs added to the storage pool are divided into four partitions and one partition is assigned to each of the four allocation units. The SSDs in the storage pool must be owned by the same HA pair. By default, two allocation units are assigned to each node in the HA pair. Allocation units must be owned by the node that owns the local tier it is serving. If more Flash cache is required for local tiers on one of the nodes, the default number of allocation units can be shifted to decrease the number on one node and increase the number on the partner node.</p>
 </div>
 <div class="paragraph">
-<p>You can use only one spare SSD for a storage pool. If the storage pool provides allocation units to Flash Pool local tiers owned by both nodes in the HA pair, then the spare SSD can be owned by either node. However, if the storage pool provides allocation units only to Flash Pool local tiers owned by one of the nodes in the HA pair, then the SSD spare must be owned by that same node.</p>
+<p>You use spare SSDs to add to an SSD storage pool. If the storage pool provides allocation units to Flash Pool local tiers owned by both nodes in the HA pair, then the spare SSDs can be owned by either node. However, if the storage pool provides allocation units only to Flash Pool local tiers owned by one of the nodes in the HA pair, then the SSD spares must be owned by that same node.</p>
 </div>
 <div class="paragraph">
 <p>The following illustration is an example of Flash Pool SSD partitioning. The SSD storage pool provides cache to two Flash Pool local tiers:</p>
