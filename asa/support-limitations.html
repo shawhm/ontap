@@ -36908,7 +36908,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-11 01:50:17 +0000">11/11/2022</time>
+    <time datetime="2023-03-06 16:07:31 +0000">03/06/2023</time>
     
   
 
@@ -36929,22 +36929,42 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>You should use the tested and supported maximum configuration limits established for AFF All SAN Array (ASA) controllers.</p>
+<p>ASA configuration limits and support varies by ONTAP version. The most current details on supported configuration limits are available in <a href="https://hwu.netapp.com/" target="_blank" rel="noopener">NetApp Hardware Universe</a>.</p>
 </div>
-<div class="paragraph">
-<p>For reliable operations, you should not exceed the current tested and supported limits listed in <a href="https://hwu.netapp.com/" target="_blank" rel="noopener">NetApp Hardware Universe</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="asa-configuration-limits">ASA configuration limits</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Beginning with ONTAP 9.9.1 AFF ASA controllers can support up to 12 nodes for non-MetroCluster IP configurations and up to 8 nodes for MetroCluster IP configurations.</p>
-</div>
-<div class="paragraph">
-<p>Also beginning with ONTAP 9.9.1, NVMe-oF protocol is supported on all AFF ASA controllers except those configured for MetroCluster.  Metrocluster configurations do not support NVMe-oF.</p>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Beginning with&#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">AFF ASA controllers support&#8230;&#8203;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9.12.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NVMe/FC protocol on 4-node MetroCluster IP configurations</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9.9.1</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Up to 12 nodes for non-MetroCluser IP configurations</p>
+</li>
+<li>
+<p>Up to 8 nodes for MetroCluster IP configurations</p>
+</li>
+<li>
+<p>NVMe-oF protocol except those configured for MetroCluster</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect1">
@@ -36983,17 +37003,6 @@
 </div>
 <div class="paragraph">
 <p>For more information on persistent ports, see <a href="http://www.netapp.com/us/media/tr-4080.pdf" target="_blank" rel="noopener">NetApp Technical Report 4080: Best Practices for Scalable SAN ONTAP 9</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="support-for-nvme-of-protocol">Support for NVMe-oF protocol</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Beginning with ONTAP 9.9.1, All SAN Arrays support NVMe-oF protocol.</p>
-</div>
-<div class="paragraph">
-<p>Beginning with ONTAP 9.12.1, 4-node MetroCluster IP configurations support NVMe/FC. MetroCluster configurations are not supported for NVMe prior to 9.12.1.</p>
 </div>
 </div>
 </div>

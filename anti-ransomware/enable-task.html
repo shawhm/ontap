@@ -36908,7 +36908,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-11 20:48:49 +0000">11/11/2022</time>
+    <time datetime="2023-03-06 17:56:49 +0000">03/06/2023</time>
     
   
 
@@ -36943,7 +36943,7 @@
 </p>
 
 <div class="paragraph lead">
-<p>Beginning with ONTAP 9.10.1, Autonomous Ransomware Protection (ARP) can be enabled on new or existing volumes. You first enable ARP in learning mode, in which the system analyzes the workload to characterize normal behavior, then you switch to active mode, in which abnormal activity is flagged for your evaluation.</p>
+<p>Beginning with ONTAP 9.10.1, Autonomous Ransomware Protection (ARP) can be enabled on new or existing volumes. You first enable ARP in learning mode, in which the system analyzes the workload to characterize normal behavior. Then you switch to active mode, in which abnormal activity is flagged for your evaluation.</p>
 </div>
 <div class="ulist">
 <div class="title">What you&#8217;ll need</div>
@@ -36997,16 +36997,10 @@
 </div>
 <div class="paragraph">
 <div class="title">About this task</div>
-<p>NetApp ARP includes an initial learning period (also known as “dry run”), in which an ONTAP system learns which file extensions are valid and uses the analyzed data to develop alert profiles. After running ARP in learning mode for enough time to assess workload characteristics, you can switch to active mode and start protecting your data. Anti-ransomware continues to collect and analyze data to refine alert profiles.</p>
+<p>NetApp ARP includes an initial learning period (also known as “dry run”), in which an ONTAP system learns which file extensions are valid and uses the analyzed data to develop alert profiles. After running ARP in learning mode for enough time to assess workload characteristics, you can switch to active mode and start protecting your data. In active mode, if a file extension is flagged as abnormal, but then you evaluate it and mark it as a false positive, the alert profile is refined to so that the extension is not flagged as abnormal in future alerts.</p>
 </div>
 <div class="paragraph">
-<p>During the learning period, the system automatically learns the workload characteristics of a configured volume, performing special observations and pattern analysis.</p>
-</div>
-<div class="paragraph">
-<p>A learning period of 30 days is recommended. Although you can switch from learning to active mode anytime, switching early may lead to too many false positives.</p>
-</div>
-<div class="paragraph">
-<p>In the ONTAP CLI, you can use the <code>security anti-ransomware volume workload-behavior show</code> command to show file extensions detected to date. However, it is recommended that you not use this tool to shorten the learning period.</p>
+<p>Although you can switch from learning to active mode anytime, a learning period of 30 days is recommended. Switching early may lead to too many false positives.  In the ONTAP CLI, you can use the <code>security anti-ransomware volume workload-behavior show</code> command to show file extensions detected to date. It is recommended that you not use this tool to shorten the learning period.</p>
 </div>
 <div class="paragraph">
 <p>You can enable ARP on an existing volume, or you can create a new volume and enable ARP from the beginning.</p>
@@ -37024,7 +37018,7 @@ In existing volumes, learning and active modes only apply to newly-written data,
 </table>
 </div>
 <div class="paragraph">
-<p>In the ONTAP CLI, a new command family has been introduced to manage this feature: <code>security anti-ransomware volume</code>. You can also use the <code>volume modify</code> command with the <code>-anti-ransomware</code> parameter to manage the feature.</p>
+<p>To manage this feature in the ONTAP CLI, you can use the <code>security anti-ransomware volume</code> command. You can also use the <code>volume modify</code> command with the <code>-anti-ransomware</code> parameter.</p>
 </div>
 <div class="exampleblock tabbed-block">
 <div class="title">Example 1. Steps</div>
