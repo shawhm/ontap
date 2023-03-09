@@ -9,14 +9,14 @@
   <meta property="og:title" content="Mixed version requirements" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/upgrade/concept_mixed_version_requirements.html" />
-	<meta property="og:description" content="Beginning with ONTAP 9.3, by default, you cannot join new nodes to the cluster that are running a version of ONTAP that is different from the version running..." />
+	<meta property="og:description" content="Beginning with ONTAP 9.3, by default, you cannot add new nodes to the cluster that are running a version of ONTAP that is different from the version running ..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Beginning with ONTAP 9.3, by default, you cannot join new nodes to the cluster that are running a version of ONTAP that is different from the version running...">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Beginning with ONTAP 9.3, by default, you cannot add new nodes to the cluster that are running a version of ONTAP that is different from the version running ...">
   <meta name="keywords" content=" ontap, upgrade, mixed, version, requirements"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
 
@@ -36908,7 +36908,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-25 21:42:29 +0000">04/25/2022</time>
+    <time datetime="2023-03-08 17:23:43 +0000">03/08/2023</time>
     
   
 
@@ -36927,26 +36927,46 @@
 </p>
 
 <div class="paragraph lead">
-<p>Beginning with ONTAP 9.3, by default, you cannot join new nodes to the cluster that are running a version of ONTAP that is different from the version running on the existing nodes.</p>
+<p>Beginning with ONTAP 9.3, by default, you cannot add new nodes to the cluster that are running a version of ONTAP that is different from the version running on the existing nodes.</p>
 </div>
 <div class="paragraph">
 <p>If you plan to add new nodes to your cluster that are running a version of ONTAP that is later than the nodes in your existing cluster, you should upgrade the nodes in your cluster to the later version first, then add the new nodes.</p>
 </div>
 <div class="paragraph">
-<p>Mixed version clusters are not recommended, but in certain cases you might need to temporarily enter a mixed version state. For example, you need to enter a mixed version state if you are upgrading to a later version of ONTAP that is not supported on certain nodes in your existing cluster. In this case, you should upgrade the nodes that do support the later version of ONTAP, then unjoin the nodes that do not support the version of ONTAP you are upgrading to using the advanced privilege <code>cluster unjoin -skip-lastlow-version-node check</code> command.</p>
+<p>Mixed version clusters are not recommended, but in certain cases you might need to temporarily enter a mixed version state. For example, you need to enter a mixed version state if you are upgrading to a later version of ONTAP that is not supported on certain nodes in your existing cluster. In this case, you should upgrade the nodes that do support the later version of ONTAP, then remove the nodes that do not support the version of ONTAP you are upgrading to using the following command:</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ONTAP version</th>
+<th class="tableblock halign-left valign-top">Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ONTAP 9.3</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>cluster unjoin -skip-last-low-version-node-check</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ONATP 9.4 and later</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>cluster remove-node -skip-last-low-version-node-check</code></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
-<p>You might also need to enter a mixed version state for a technical refresh or an interrupted upgrade. In such cases you can override ONTAP default behavior and join nodes of a different version using the following advanced privilege commands:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>cluster join -allow-mixed-version-join</code></p>
-</li>
-<li>
-<p><code>cluster add-node -allow-mixed-version-join</code></p>
-</li>
-</ul>
+<p>You might also need to enter a mixed version state for a technical refresh or an interrupted upgrade. In such cases you can override ONTAP default behavior and add nodes of a different version using the <code>cluster add-node -allow-mixed-version-join</code> advanced privilege command.</p>
 </div>
 <div class="paragraph">
 <p>When you have to enter a mixed version state, you should complete the upgrade as quickly as possible. An HA pair must not run an ONTAP version from a release that is different from other HA pairs in the cluster for more than seven days. For correct cluster operation, the period the cluster is in a mixed version state should be as short as possible.</p>

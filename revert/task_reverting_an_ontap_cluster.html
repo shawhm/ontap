@@ -36908,7 +36908,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-01-18 15:08:50 +0000">01/18/2023</time>
+    <time datetime="2023-03-08 16:07:17 +0000">03/08/2023</time>
     
   
 
@@ -36946,9 +36946,9 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Set the privilege level to advanced, entering <strong>y</strong> when prompted to continue: <code>set -privilege advanced</code></p>
+<p>Set the privilege level to advanced: <code>set -privilege advanced</code></p>
 <div class="paragraph">
-<p>The advanced prompt (<code>*&gt;</code>) appears.</p>
+<p>Enter <strong>y</strong> when prompted to continue.</p>
 </div>
 </li>
 <li>
@@ -36974,6 +36974,12 @@ node1
 </li>
 <li>
 <p>Disable all of the data LIFs in the cluster: <code>network interface modify {-role data} -status-admin down</code></p>
+</li>
+<li>
+<p>Determine if you have inter-cluster flexcache relationships: <code>flexcache origin show-caches -relationship-type inter-cluster</code></p>
+</li>
+<li>
+<p>If inter-cluster flexcaches are present, disable the data lifs on the cache cluster: <code>network interface modify -vserver vserver_name -lif lif_name -status-admin down</code></p>
 </li>
 <li>
 <p>If the cluster consists of only two nodes, disable cluster HA: <code>cluster ha modify -configured false</code></p>

@@ -36908,7 +36908,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-25 21:56:03 +0000">08/25/2022</time>
+    <time datetime="2023-03-08 18:59:24 +0000">03/08/2023</time>
     
   
 
@@ -36935,7 +36935,7 @@
 </p>
 
 <div class="paragraph lead">
-<p>Snapshot copies named “Anti_ransomware_backup” are created when Autonomous Ransomware Protection (ARP) detects a potential attack. You can restore data from these ARP copies or other Snapshot copies.</p>
+<p>Snapshot copies named “Anti_ransomware_backup” are created when Autonomous Ransomware Protection (ARP) detects a potential attack. You can restore data from these ARP copies or from other Snapshot copies.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -36949,6 +36949,10 @@ If a ransomware attack occurs, see the Knowledge Base article <a href="https://k
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<div class="title">About this task</div>
+<p>If the volume has SnapMirror relationships, manually replicate all mirror copies of the volume immediately after you restore from a Snapshot copy. Not doing so can result in unusable mirror copies that must be deleted and recreated.</p>
+</div>
 <div class="ulist">
 <div class="title">What you’ll need</div>
 <ul>
@@ -36960,8 +36964,11 @@ If a ransomware attack occurs, see the Knowledge Base article <a href="https://k
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<div class="title">Steps</div>
+<p>You can use System Manager or the ONTAP CLI to restore your data.</p>
+</div>
 <div class="exampleblock tabbed-block">
-<div class="title">Example 1. Steps</div>
 <div class="content">
 <div class="openblock">
 <div class="title">System Manager</div>
@@ -36969,12 +36976,54 @@ If a ransomware attack occurs, see the Knowledge Base article <a href="https://k
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Display the Snapshot copies in volumes identified in a potential attack:<br>
-Click <strong>Storage &gt; Volumes</strong>, select the volume, then click the Snapshot Copies tab.</p>
+<p>If you want to restore data from earlier Snapshot copies, instead of from the ARP copies, you must do the following to release the anti-ransomware Snapshot lock.  If you want to restore from the ARP copies, it is not necessary to release the lock and you can skip this step.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">If a system attack was identified do this&#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">If a system attack was not identified do this&#8230;&#8203;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Click <strong>Storage &gt; Volumes</strong>.</p>
 </li>
 <li>
-<p>Restore the desired copies according to these instructions:<br>
-<a href="../task_dp_recover_snapshot.html">Recover from Snapshot copies</a></p>
+<p>Select <strong>Security</strong>, and click <strong>View Suspected File Types</strong></p>
+</li>
+<li>
+<p>Mark the files as "False Positive" .</p>
+</li>
+<li>
+<p>Click <strong>Update</strong> and <strong>Clear Suspect File Types</strong></p>
+</li>
+</ol>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>To release the Snapshot lock, you must restore from the ARP copies before you restore from earlier Snapshot copies.</p>
+</div>
+<div class="paragraph">
+<p>Follow steps 2-3 to restore data from the ARP copies, then repeat the process to restore from earlier Snapshot copies.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Display the Snapshot copies in volumes:</p>
+<div class="paragraph">
+<p>Click <strong>Storage &gt; Volumes</strong>, select the volume, and click <strong>Snapshot Copies</strong>.</p>
+</div>
+</li>
+<li>
+<p>Click <span class="image"><img src="../media/icon_kabob.gif" alt="Menu Option"></span> next to the Snapshot copy you want to restore, and select <strong>Restore</strong>.</p>
 </li>
 </ol>
 </div>
@@ -36986,12 +37035,86 @@ Click <strong>Storage &gt; Volumes</strong>, select the volume, then click the S
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Display the Snapshot copies in volumes identified in a potential attack:<br>
-<code>volume snapshot show -vserver <em>svm_name</em> -volume <em>vol_name</em></code></p>
+<p>If you want to restore data from earlier Snapshot copies, instead of from the ARP copies, you must do the following to release the anti-ransomware Snapshot lock.  If you want to restore from the ARP copies, it is not necessary to release the lock and you can skip this step.</p>
+<div class="listingblock">
+<div class="content">
+<pre>It is only necessary to release the anti-ransomware Snaplock before restoring from earlier Snapshot copies if you are using the `volume snap restore`` command as outline below.  If you are restoring data using Flex Clone, Single File Snap Restore or other methods, this is not necessary.</pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">If a system attack was identified do this&#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">If a system attack was not identified do this&#8230;&#8203;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Mark the attack as a "false positive" and "clear suspect".</p>
+</div>
+<div class="paragraph">
+<p><code>anti-ransomware volume attack clear-suspect -vserver <em>svm_name</em> -volume <em>vol_name</em> [<em>extension identifiers</em>] -false-positive true</code></p>
+</div>
+<div class="paragraph">
+<p>Use one of the following parameters to identify the extensions:<br>
+<code>[-seq-no <em>integer</em>]</code> Sequence number of the file in the suspect list.<br>
+<code>[-extension <em>text</em>, … ]</code> File extensions<br>
+<code>[-start-time <em>date_time</em> -end-time <em>date_time</em>]</code> Starting and ending times for the range of files to be cleared, in the form "MM/DD/YYYY HH:MM:SS".</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>To release the Snapshot lock, you must restore from the ARP copies before you restore from earlier Snapshot copies.</p>
+</div>
+<div class="paragraph">
+<p>Follow steps 2-3 to restore data from the ARP copies, then repeat the process to restore from earlier Snapshot copies.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
-<p>Restore the desired copies according to these instructions:<br>
-<a href="../data-protection/restore-contents-volume-snapshot-task.html">Restoring files from Snapshot copies</a></p>
+<p>List the Snapshot copies in a volume:</p>
+<div class="paragraph">
+<p><code>volume snapshot show -vserver <em>SVM</em> -volume <em>volume</em></code></p>
+</div>
+<div class="paragraph">
+<p>The following example shows the Snapshot copies in <code>vol1</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>clus1::&gt; volume snapshot show -vserver vs1 -volume vol1
+
+Vserver Volume Snapshot                State    Size  Total% Used%
+------- ------ ---------- ----------- ------   -----  ------ -----
+vs1	 vol1   hourly.2013-01-25_0005  valid   224KB     0%    0%
+               daily.2013-01-25_0010   valid   92KB      0%    0%
+               hourly.2013-01-25_0105  valid   228KB     0%    0%
+               hourly.2013-01-25_0205  valid   236KB     0%    0%
+               hourly.2013-01-25_0305  valid   244KB     0%    0%
+               hourly.2013-01-25_0405  valid   244KB     0%    0%
+               hourly.2013-01-25_0505  valid   244KB     0%    0%
+
+7 entries were displayed.</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Restore the contents of a volume from a Snapshot copy:</p>
+<div class="paragraph">
+<p><code>volume snapshot restore -vserver <em>SVM</em> -volume <em>volume</em> -snapshot <em>snapshot</em></code></p>
+</div>
+<div class="paragraph">
+<p>The following example restores the contents of <code>vol1</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster1::&gt; volume snapshot restore -vserver vs0 -volume vol1 -snapshot daily.2013-01-25_0010</pre>
+</div>
+</div>
 </li>
 </ol>
 </div>
