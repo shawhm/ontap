@@ -20537,7 +20537,7 @@
       data-pdf-filename="Capacity measurements"
       data-li-level="3#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/ontap/concept_capacity_measurements_in_sm.html">
+    ><a class="na-navbar-padding" href="/us-en/ontap/concepts/capacity-measurements-in-sm-concept.html">
         Capacity measurements
       </a></li></ul></li><li 
       data-pdf-exists="true" 
@@ -36909,6 +36909,14 @@
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-lenida">
+    <img  class="avatar avatar-small"
+          alt="netapp-lenida"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54081920?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aherbin">
     <img  class="avatar avatar-small"
           alt="netapp-aherbin"
@@ -36958,7 +36966,7 @@
 <p>This mapping is accomplished by presenting a specified NAS directory hierarchy as an S3 bucket. Each file in the directory hierarchy is represented as an S3 object whose name is relative from the mapped directory downwards, with directory boundaries represented by the slash character ('/').</p>
 </div>
 <div class="paragraph">
-<p>Normal ONTAP-defined S3 users can access this storage, as governed by the bucket policies defined for the bucket that maps to the NAS directory. For this to be possible, mappings must be defined between the S3 users and SMB/NFS users. The credentials of the SMB/NFS uses will be used for the NAS permissions checking and included in any audit records resulting from these accesses.</p>
+<p>Normal ONTAP-defined S3 users can access this storage, as governed by the bucket policies defined for the bucket that maps to the NAS directory. For this to be possible, mappings must be defined between the S3 users and SMB/NFS users. The credentials of the SMB/NFS user will be used for the NAS permissions checking and included in any audit records resulting from these accesses.</p>
 </div>
 <div class="paragraph">
 <p>When created by SMB or NFS clients, a file is immediately placed in a directory, and therefore visible to clients, before any data is written to it. S3 clients expect different semantics, in which the new object is not visible in the namespace until all its data has been written. This mapping of S3 to NAS storage creates files using S3 semantics, keeping the files invisible externally until the S3 creation command completes.</p>
@@ -36969,7 +36977,7 @@
 <h2 id="data-protection-for-s3-nas-buckets">Data protection for S3 NAS buckets</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>S3 NAS “buckets” are simply mappings of NAS data for S3 clients, they are not standard S3 buckets. Therefore, there is no need to protect S3 NAS buckets using NetApp S3 SnapMirror functionality. Instead, you can replicate source SVMs containing S3 NAS buckets using a standard SnapMirror data protection relationship with destination SVMs.</p>
+<p>S3 NAS “buckets” are simply mappings of NAS data for S3 clients, they are not standard S3 buckets. Therefore, there is no need to protect S3 NAS buckets using NetApp S3 SnapMirror functionality. Instead, you can replicate source SVMs containing S3 NAS buckets using SVM DR, a standard SnapMirror data protection relationship with destination SVMs. SVM DR is the only supported SnapMirror replication method with S3 multiprotocol. SnapMirror Synchronous is not supported.</p>
 </div>
 <div class="paragraph">
 <p>Learn about <a href="../data-protection/snapmirror-svm-replication-concept.html">SnapMirror SVM replication</a>.</p>
