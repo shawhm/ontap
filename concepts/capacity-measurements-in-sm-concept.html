@@ -32,6 +32,16 @@
   <link rel="stylesheet" href="/us-en/ontap/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/us-en/ontap/css/tabbed-blocks.css" type="text/css">
   <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/us-en/ontap/concepts/capacity-measurements-in-sm-concept.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/ontap/concepts/capacity-measurements-in-sm-concept.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/ontap/concepts/capacity-measurements-in-sm-concept.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/ontap/concepts/capacity-measurements-in-sm-concept.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/ontap/concepts/capacity-measurements-in-sm-concept.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/ontap/concepts/capacity-measurements-in-sm-concept.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/ontap/concepts/capacity-measurements-in-sm-concept.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/ontap/concepts/capacity-measurements-in-sm-concept.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/ontap/concepts/capacity-measurements-in-sm-concept.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/ontap/concepts/capacity-measurements-in-sm-concept.html" />
   <link rel='stylesheet' href='/us-en/ontap/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
     function addAdobeLaunch(adobeId) {
       var head = document.getElementsByTagName('head')[0];
@@ -36910,7 +36920,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-03-14 17:35:34 +0000">03/14/2023</time>
+    <time datetime="2023-03-28 12:51:08 +0000">03/28/2023</time>
     
   
 
@@ -36942,7 +36952,7 @@
 <p><strong>Physical capacity</strong>:  Physical space refers to the physical blocks of storage used in the volume or local tier. The value for physical used capacity is typically smaller than the value for logical used capacity due to the reduction of data from storage efficiency features (such as deduplication and compression).</p>
 </li>
 <li>
-<p><strong>Logical capacity</strong>: Logical space refers to the usable space (the logical blocks) in a volume nor local tier. Logical space refers to how theoretical space can be used, without accounting for results of deduplication or compression.  The value for logical space used is derived from the amount of physical space used plus the savings from storage efficiency features (such as deduplication and compression) that have been configured.  This measurement often appears larger than the physical used capacity because it includes Snapshot copies, clones, and other components, and it does not reflect the data compression and other reductions in the physical space. Thus, the total logical capacity could be higher than the provisioned space.</p>
+<p><strong>Logical capacity</strong>: Logical space refers to the usable space (the logical blocks) in a volume or local tier. Logical space refers to how theoretical space can be used, without accounting for results of deduplication or compression.  The value for logical space used is derived from the amount of physical space used plus the savings from storage efficiency features (such as deduplication and compression) that have been configured.  This measurement often appears larger than the physical used capacity because it includes Snapshot copies, clones, and other components, and it does not reflect the data compression and other reductions in the physical space. Thus, the total logical capacity could be higher than the provisioned space.</p>
 </li>
 </ul>
 </div>
