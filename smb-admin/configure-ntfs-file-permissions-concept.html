@@ -36918,7 +36918,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-11-29 16:52:03 +0000">11/29/2021</time>
+    <time datetime="2023-03-29 16:30:15 +0000">03/29/2023</time>
     
   
 
@@ -36928,6 +36928,14 @@
           alt="netapp-ahibbard"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/85892662?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mdavidson">
+    <img  class="avatar avatar-small"
+          alt="netapp-mdavidson"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/115569087?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -36944,6 +36952,29 @@
 </div>
 <div class="paragraph">
 <p>You can only configure NTFS file permissions using the command line. You cannot configure NFSv4 ACLs by using the CLI.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Create an NTFS security descriptor.</p>
+<div class="paragraph">
+<p><code>vserver security file-directory ntfs create -vserver <em>svm_name</em> -ntfs-sd <em>ntfs_security_descriptor_name</em> -owner <em>owner_name</em> -group <em>primary_group_name</em> -control-flags-raw <em>raw_control_flags</em></code></p>
+</div>
+</li>
+<li>
+<p>Add DACLs to the NTFS security descriptor.</p>
+<div class="paragraph">
+<p><code>vserver security file-directory ntfs dacl add -vserver <em>svm_name</em> -ntfs-sd <em>ntfs_security_descriptor_name</em> -access-type {deny|allow} -account <em>account_name</em> -rights {no-access|full-control|modify|read-and-execute|read|write} -apply-to {this-folder|sub-folders|files}</code></p>
+</div>
+</li>
+<li>
+<p>Create a file/directory security policy.</p>
+<div class="paragraph">
+<p><code>vserver security file-directory policy create -vserver <em>svm_name</em> -policy-name <em>policy_name</em></code></p>
+</div>
+</li>
+</ol>
 </div>
 
     </article>
