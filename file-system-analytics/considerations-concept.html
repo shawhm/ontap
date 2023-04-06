@@ -36918,7 +36918,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-10-21 14:06:57 +0000">10/21/2022</time>
+    <time datetime="2023-04-04 18:33:30 +0000">04/04/2023</time>
     
   
 
@@ -36959,6 +36959,58 @@
 </div>
 <div class="paragraph">
 <p>If you experience a notable increase in latency, refer to the Knowledge Base article <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/High_or_fluctuating_latency_after_turning_on_NetApp_ONTAP_File_System_Analytics" target="_blank" rel="noopener">High or fluctuating latency after turning on NetApp ONTAP File System Analytics</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="scan-considerations">Scan considerations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you enable capacity analytics, ONTAP conducts an initialization scan. The scan accesses metadata for all files in volumes for which capacity analytics is enabled. No file data is read during the scan.</p>
+</div>
+<div class="paragraph">
+<p>After the scan completes, File System Analytics is continuously updated in real time as the filesystem changes without the need to run the scan again.</p>
+</div>
+<div class="paragraph">
+<p>The time required for the scan is proportional to the number of directories and files on the volume. Because the scan collects metadata, file size does not impact the scan time.</p>
+</div>
+<div class="sect2">
+<h3 id="best-practices">Best practices</h3>
+<div class="paragraph">
+<p>You should start the scan on volumes that do not share aggregates. You can see which aggregates are currently hosting which volumes using the command:</p>
+</div>
+<div class="paragraph">
+<p><code>volume show -volume <em>comma-separated-list_of_volumes</em> -fields aggr-list</code></p>
+</div>
+<div class="paragraph">
+<p>While the scan runs, volumes continue to serve client traffic. It&#8217;s recommended you start the scan during periods where you anticipate lower client traffic.</p>
+</div>
+<div class="paragraph">
+<p>If client traffic increases, it will consume system resources and cause the scan to take longer.</p>
+</div>
+<div class="paragraph">
+<p>Beginning in ONTAP 9.12.1, you can pause data collection in System Manager and with the ONTAP CLI.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you are using the ONTAP CLI:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>You can pause data collection with the command: <code>volume analytics initialization pause -vserver <em>svm_name</em> -volume <em>volume_name</em></code></p>
+</li>
+<li>
+<p>Once client traffic has slowed, you can resume data collection with the command: <code>volume analytics initialization resume -vserver <em>svm_name</em> -volume <em>volume_name</em></code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If you are using System Manager, in the <strong>Explorer</strong> view of the volume menu, you use the <strong>Pause Data Collection</strong> and <strong>Resume Data Collection</strong> buttons to manage the scan.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
