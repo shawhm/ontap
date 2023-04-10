@@ -49,6 +49,6 @@ cluster1-01           true    true
 cluster1-02           true    true
 ----
 +
-You can access the Cluster Setup wizard to change any of the values you entered for the admin SVM or node SVM by using the cluster setup command.
+You can access the Cluster Setup wizard to change any of the values you entered for the admin SVM or node SVM by using the `cluster setup` command.
 
 . Repeat this task for each remaining node.
