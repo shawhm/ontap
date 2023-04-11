@@ -17,7 +17,7 @@ A node's eligibility to participate in the cluster can be modified at the advanc
 
 [NOTE]
 ====
-You cannot modify node eligibility locally. It must be modified from a different node. Node eligiblity also cannot be modified with a cluster HA configuration.
+You cannot modify node eligibility locally. It must be modified from a different node. Node eligibility also cannot be modified with a cluster HA configuration.
 ====
 
 [NOTE]
